@@ -1,7 +1,6 @@
-version="1.2.1"
+version="2.0"
 tags={
-	"Gameplay"
+	"Alternative History"
 }
-name="Legate's Multiplayer Enhancement 1.2.1"
+name="Legate Multiplayer Enhancements"
 supported_version="1.30.4"
-remote_file_id="2256382295"
