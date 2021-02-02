@@ -1,0 +1,40 @@
+
+# Timurids
+timurid_disputed_succession = {
+	opinion = -150
+	yearly_decay = 2.5
+}
+timurid_broke_free = {
+	opinion = -150
+	yearly_decay = 3
+}
+
+treaty_of_uzkend = {
+	opinion = -200
+}
+
+timurid_isolation = {
+	opinion = -200
+}
+
+timurid_raided_us = {
+	opinion = -25
+	yearly_decay = 2.5
+}
+
+timurid_ruined_delhi = {
+	opinion = -75
+	yearly_decay = 2.5
+}
+
+#China
+
+is_a_weak_emperor = {
+	opinion = -125
+	yearly_decay = 2
+}	
+
+defyed_me = {
+	opinion = -125
+	yearly_decay = 2
+}	

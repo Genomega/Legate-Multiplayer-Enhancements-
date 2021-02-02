@@ -1,0 +1,357 @@
+Ming_units = {
+
+	country_trigger = {
+		OR = {
+			tag = MNG
+			tag = MIN
+			tag = YUE
+			tag = SHU
+			tag = NNG
+			tag = CHC
+			tag = TNG
+			tag = WUU
+			tag = QIC
+			tag = YAN
+			tag = JIN
+			tag = LNG
+			tag = QIN
+			tag = HUA
+			tag = CGS
+			tag = CMI
+			tag = FRM
+			tag = CSH
+			tag = X31
+			tag = CXI
+		}
+	}
+	
+	sprite_infantry = {
+		0 = MNG_INFANTRY_1
+		1 = MNG_INFANTRY_2
+		2 = MNG_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = MNG_CAVALRY_1
+		1 = MNG_CAVALRY_2
+		2 = MNG_CAVALRY_3
+		3 = MNG_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = MNG_ARTILLERY_1
+		1 = MNG_ARTILLERY_2
+		2 = MNG_ARTILLERY_3
+		3 = MNG_ARTILLERY_4
+	}
+}
+
+WU_units = {
+
+	country_trigger = {
+		OR = {
+			tag = WUU
+			tag = X14
+		}
+	}
+	
+	sprite_infantry = {
+		0 = WUU_INFANTRY_1
+		1 = NNG_INFANTRY_2
+		2 = CHC_INFANTRY_4
+		3 = CGS_INFANTRY_4
+	}
+}
+
+Qi_units = {
+
+	country_trigger = {
+		OR = {
+			tag = QIC
+			tag = JIN
+		}
+	}
+	
+	sprite_infantry = {
+		0 = QIC_INFANTRY_1
+		1 = MNG_INFANTRY_3
+		2 = QNG_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = asiangfx_CAVALRY_1
+		1 = asiangfx_CAVALRY_2
+		2 = asiangfx_CAVALRY_3
+		3 = asiangfx_CAVALRY_3
+	}
+}
+
+
+Shun_units = {
+
+	country_trigger = {
+		OR = {
+			tag = CSH
+			tag = X05
+			tag = X06
+		}
+	}
+	
+	sprite_infantry = {
+		0 = CSH_INFANTRY_1
+		1 = CSH_INFANTRY_2
+		2 = CSH_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = asiangfx_CAVALRY_1
+		1 = asiangfx_CAVALRY_2
+		2 = asiangfx_CAVALRY_3
+		3 = asiangfx_CAVALRY_3
+	}
+}
+
+Jin_units = {
+
+	country_trigger = {
+		OR = {
+			tag = X22
+			tag = X21
+			tag = X34
+			tag = X29
+		}
+	}
+	
+	sprite_infantry = {
+		0 = YAN_INFANTRY_1
+		1 = YAN_INFANTRY_2
+		2 = QNG_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+	
+	sprite_cavalry = {
+		0 = asiangfx_CAVALRY_1
+		1 = asiangfx_CAVALRY_2
+		2 = asiangfx_CAVALRY_3
+		3 = asiangfx_CAVALRY_3
+	}	
+}
+
+Yan_units = {
+
+	country_trigger = {
+		OR = {
+			tag = YAN
+			tag = X30
+			tag = X03
+			tag = X28
+			tag = X04
+			tag = QIN
+		}
+	}
+	
+	sprite_infantry = {
+		0 = YAN_INFANTRY_1
+		1 = YAN_INFANTRY_2
+		2 = QNG_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+	
+	sprite_cavalry = {
+		0 = asiangfx_CAVALRY_1
+		1 = asiangfx_CAVALRY_2
+		2 = asiangfx_CAVALRY_3
+		3 = asiangfx_CAVALRY_3
+	}	
+}
+
+Liang_units = {
+
+	country_trigger = {
+		OR = {
+			tag = LNG		
+		}
+	}
+	
+	sprite_infantry = {
+		0 = LNG_INFANTRY_1
+		1 = YAN_INFANTRY_2
+		2 = QNG_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+
+}
+
+Miao_units = {
+
+	country_trigger = {
+		OR = {
+			tag = CMI
+			tag = CYI
+			tag = X07
+			tag = X08
+			tag = X09
+			tag = X32
+			tag = X11
+			tag = X10				
+		}
+	}
+	
+	sprite_infantry = {
+		0 = CMI_INFANTRY_1
+		1 = CMI_INFANTRY_2
+		2 = CHC_INFANTRY_4
+		3 = CGS_INFANTRY_4
+	}
+}
+
+
+Tang_units = {
+
+	country_trigger = {
+		OR = {
+			tag = TNG
+			tag = X27
+			tag = X01
+			tag = X02
+		}
+	}
+	
+	sprite_infantry = {
+		0 = TNG_INFANTRY_1
+		1 = MNG_INFANTRY_3
+		2 = QNG_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = asiangfx_CAVALRY_1
+		1 = asiangfx_CAVALRY_2
+		2 = asiangfx_CAVALRY_3
+		3 = asiangfx_CAVALRY_3
+	}
+}
+
+Chu_units = {
+
+	country_trigger = {
+		OR = {
+			tag = X24
+			tag = X35
+		}
+	}
+	
+	sprite_infantry = {
+		0 = CHC_INFANTRY_1
+		1 = NNG_INFANTRY_2
+		2 = CHC_INFANTRY_4
+		3 = CGS_INFANTRY_4
+	}
+}
+
+Yue_units = {
+
+	country_trigger = {
+		OR = {
+			tag = YUE
+			tag = X15
+			tag = X12
+			tag = X13
+		}
+	}
+	
+	sprite_infantry = {
+		0 = YUE_INFANTRY_1
+		1 = YUE_INFANTRY_2
+		2 = CHC_INFANTRY_4
+		3 = CGS_INFANTRY_4
+	}
+}
+
+
+Ning_units = {
+
+	country_trigger = {
+		OR = {
+			tag = NNG
+			tag = HUA
+			tag = X26
+			tag = X25
+			tag = X26
+			tag = CHC
+		}
+	}
+	
+	sprite_infantry = {
+		0 = NNG_INFANTRY_1
+		1 = NNG_INFANTRY_2
+		2 = CHC_INFANTRY_4
+		3 = CGS_INFANTRY_4
+	}
+}
+
+
+
+Shu_units = {
+
+	country_trigger = {
+		OR = {
+			tag = SHU
+			tag = X18
+			tag = X23
+			tag = X20
+			tag = X17
+			tag = X60
+		}
+	}
+	
+	sprite_infantry = {
+		0 = SHU_INFANTRY_1
+		1 = CGS_INFANTRY_3
+		2 = CHC_INFANTRY_4
+		3 = CGS_INFANTRY_4
+	}	
+}
+
+
+Changsheng_units = {
+
+	country_trigger = {
+		OR = {
+			tag = X16
+			tag = X19
+		}
+	}
+	
+	sprite_infantry = {
+		0 = TNNG_INFANTRY_1
+		1 = CGS_INFANTRY_3
+		2 = CHC_INFANTRY_4
+		3 = CGS_INFANTRY_4
+	}	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

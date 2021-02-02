@@ -1,0 +1,235 @@
+namespace = chinese_daimyo
+
+##Crisis of the Zhu
+country_event = {
+	id = chinese_daimyo.101
+	title = "chinese_daimyo.101.t"
+	desc = "chinese_daimyo.101.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		has_reform = zhu_ineffective_government
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = "chinese_daimyo.101.a"
+		custom_tooltip = chinese_daimyo.101.tt		
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_subject_of_type = chinese_commandery_vassal
+					is_subject_of = ROOT
+				}
+				country_event = { id = chinese_daimyo.102 }
+			}	
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_subject_of_type = tributary_state
+					is_subject_of = ROOT
+				}
+				country_event = { id = chinese_daimyo.102 }
+			}	
+		}		
+	}
+}
+
+##Information events to Tributes and Protectorates
+country_event = {
+	id = chinese_daimyo.102
+	title = "chinese_daimyo.101.t"
+	desc = "chinese_daimyo.102.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "chinese_daimyo.101.a"
+		custom_tooltip = chinese_daimyo.102.tt		
+	}
+}
+
+## Decline of the Zhu - End of Protectorates System
+country_event = {
+	id = chinese_daimyo.103
+	title = "chinese_daimyo.103.t"
+	desc = "chinese_daimyo.103.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		has_reform = zhu_ineffective_government
+		is_year = 1500
+		NOT = { has_global_flag = zhu_break_happenened }
+	}
+
+	mean_time_to_happen = {
+		months = 8
+	}
+	
+	option = { 
+		name = "chinese_daimyo.103.a"
+		remove_government_reform = zhu_ineffective_government
+		custom_tooltip = chinese_daimyo.103.tt		
+		set_global_flag = zhu_break_happenened
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_subject_of_type = chinese_commandery_vassal
+					is_subject_of = ROOT
+				}
+				country_event = { id = chinese_daimyo.104 }
+			}	
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_subject_of_type = tributary_state
+					is_subject_of = ROOT
+				}
+				country_event = { id = chinese_daimyo.105 }
+			}	
+		}		
+	}
+}
+
+##Protectorates become independent - Protectorates
+country_event = {
+	id = chinese_daimyo.104
+	title = "chinese_daimyo.104.t"
+	desc = "chinese_daimyo.104.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "chinese_daimyo.104.a"
+		custom_tooltip = chinese_daimyo.104.tt	
+		grant_independence = yes	
+		remove_country_modifier = rival_of_the_emperor_modifier
+		remove_country_modifier = loyalty_to_emperor
+		reverse_add_opinion = {
+			who = FROM
+			modifier = defyed_me
+		}
+		add_opinion = {
+			who = FROM
+			modifier = is_a_weak_emperor
+		}		
+	}
+}
+
+##Protectorates become independent - Tributes
+country_event = {
+	id = chinese_daimyo.105
+	title = "chinese_daimyo.104.t"
+	desc = "chinese_daimyo.104.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "chinese_daimyo.105.a"
+		custom_tooltip = chinese_daimyo.105.tt		
+	}
+}
+
+
+
+##Chinese 1-2 Daimyo becomes Protectorate
+country_event = {
+	id = chinese_daimyo.1
+	title = "chinese_daimyo.1.t"
+	desc = "chinese_daimyo.1.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		vassal = 1
+		has_reform = zhu_ineffective_government
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = "delhi_empire.99.a"
+		custom_tooltip = delhi_empire.104.tt
+		every_country = {
+			limit = {
+				is_subject_of_type = daimyo_vassal
+				is_subject_of = ROOT
+			}
+			country_event = { id = chinese_daimyo.2 }
+		}			
+	}
+}
+
+country_event = {
+	id = chinese_daimyo.2
+	title = "chinese_daimyo.2.t"
+	desc = "chinese_daimyo.2.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	option = { 
+		name = "delhi_empire.99.a"
+		custom_tooltip = delhi_empire.104.tt
+		FROM = {
+			create_subject = {
+				subject_type = chinese_commandery_vassal
+				subject = ROOT
+			}	
+		}		
+	}
+}
+
+country_event = { #Scripted Buff for Yan
+	id = chinese_daimyo.100
+	title = "chinese_daimyo.1.t"
+	desc = "chinese_daimyo.1.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = YAN
+	}
+	
+	option = { 
+		name = "delhi_empire.99.a"
+		add_manpower = 23
+		add_army_tradition = -15
+		add_mil_power = -40
+		add_treasury = 201
+		add_meritocracy = 1
+		add_meritocracy = -50
+		4911 = {
+			build_to_forcelimit = {
+				infantry = 0.35
+			}	
+		}	
+		2140 = {
+			build_to_forcelimit = {
+				infantry = 0.35
+			}	
+		}		
+	}
+}

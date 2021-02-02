@@ -1,0 +1,130 @@
+objectTypes = {
+	
+	###############################################################
+	#######   						 ######
+	#######                 World wonders			 ######
+	#######   						 ######
+	###############################################################
+
+pdxmesh = {
+		name = "Kush_pyramids"
+		file = "gfx/models/Buildings/World_wonders/Kush_pyramids.mesh"
+		scale = 0.27
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "pisa"
+		file = "gfx/models/Buildings/World_wonders/pisa.mesh"
+		scale = 6.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Damascus"
+		file = "gfx/models/Buildings/World_wonders/Damascus.mesh"
+		scale = 3.5
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Jaffa"
+		file = "gfx/models/Buildings/World_wonders/Jaffa.mesh"
+		scale = 3.5
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Yurt"
+		file = "gfx/models/Buildings/World_wonders/Yurt.mesh"
+		scale = 9.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Nomad_buildings"
+		file = "gfx/models/Buildings/World_wonders/Nomad_buildings.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Great_wall_china_01"
+		file = "gfx/models/Buildings/World_wonders/Great_wall_china_01.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Great_wall_china_02"
+		file = "gfx/models/Buildings/World_wonders/Great_wall_china_02.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Herat_city"
+		file = "gfx/models/Buildings/World_wonders/Herat_city.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Malta_fort"
+		file = "gfx/models/Buildings/World_wonders/Malta_fort.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Solovki_monastery"
+		file = "gfx/models/Buildings/World_wonders/Solovki_monastery.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Novgorod_city"
+		file = "gfx/models/Buildings/World_wonders/Novgorod_city.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Kiev_city"
+		file = "gfx/models/Buildings/World_wonders/Kiev_city.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Rochester_castle"
+		file = "gfx/models/Buildings/World_wonders/Rochester_castle.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "Mangup_city"
+		file = "gfx/models/Buildings/World_wonders/Mangup_city.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+
+pdxmesh = {
+		name = "Warsaw_royal_castle"
+		file = "gfx/models/Buildings/World_wonders/Warsaw_royal_castle.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+pdxmesh = {
+		name = "jerusalem"
+		file = "gfx/models/Buildings/World_wonders/jerusalem.mesh"
+		scale = 2.0
+		cull_distance = 700.0f
+	}
+
+
+}

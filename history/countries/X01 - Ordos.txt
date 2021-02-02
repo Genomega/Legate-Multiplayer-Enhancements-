@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = chinese_bandit_reform
+technology_group = chinese
+religion = tengri_pagan_reformed
+secondary_religion = vajrayana
+primary_culture = mongol
+capital = 701	#Canton
+government_rank = 1
+
+1444.1.1 = {
+	monarch = {
+		name = "Fen"
+		dynasty = "Liu"
+		birth_date = 1418.1.1
+		adm = 2
+		dip = 0
+		mil = 5
+	}
+}

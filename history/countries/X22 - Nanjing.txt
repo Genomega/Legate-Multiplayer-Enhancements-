@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_warlord_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = jianghuai
+capital = 1821	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Guanting"
+		dynasty = "Kang"
+		birth_date = 1418.1.1
+		adm = 5
+		dip = 3
+		mil = 3
+	}
+}

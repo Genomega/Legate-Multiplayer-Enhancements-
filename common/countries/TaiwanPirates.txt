@@ -1,0 +1,68 @@
+#Country Name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 244  232  109 }
+
+historical_idea_groups = {
+	trade_ideas
+	maritime_ideas
+	defensive_ideas
+	spy_ideas
+	religious_ideas
+	offensive_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Lontok #0" = 30
+	"Laboy #0" = 10
+	"Dula #0" = 30
+	"Magat Salamat #0" = 30
+	"Lubay #0" = 30
+	"Suko #0" = 10
+	"Gambang #0" = 10
+	"Alon #0" = 10
+	"Timamanukum #0" = 10
+	"Jayadewa #0" = 10
+	"Tagkan #0" = 10
+	"Palaba #0" = 10
+	"Kalamayin #0" = 10
+	"Bagtas #0" = 10
+	
+	"Sasaban #0" = -5
+	"Panginoan #0" = -5
+	"Malyag #0" = -5
+	"Lahat #0" = -5
+}
+
+leader_names = {
+	Zhu Wu Geng Shang Zheng Zhao Li Shi Liu Guo Yang Wang Qian Ma Meng Gao 
+	Chen Sun Sima Cao Xiao Qi Zu Zhou Huang Bai Qiu Tang Lu	Xu Chang 
+	Feng Deng Hua Gu Fei Fu Hu Mei Xue Liao Jin Ye He Lan Du Fang Mao Hao 
+	Kong Jiao Si Pan Zuo Ding Bao Yan Tan Han Luo Xie Yuan Qin Ruan	Niu Zeng
+	Dong Lin Shen Ouyang Su Yu Ren Chai Xia Mo Dai Jiang Yue Jia Xiong Cui
+	"Ou'yang" "Huangfu" "Dongfang" "Linghu"
+}
+
+ship_names = {
+	Beiji Tianshu Sifu Gouchen Tianzhu Zhushi Tianqiang Xuange
+	Taizun Beidou Santai Tianji Wenchang Qizhenjiangjun Tenshe
+	Liaoning Beiluoshimen Yujing Hongshi 
+	Qinglong Baihu Zhuque Xuanwu Zhaowu Yong'an Nan'an Longhai Fu'an Fuding Jinchang
+	Qingyuan Xining Xingyi Wu'an Xianning Ruichang Xinghua
+	Zhaoyuan Xingping Yongji Xiaoyi Yongkang Rende Anding
+	Yanping 
+}

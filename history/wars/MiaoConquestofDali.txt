@@ -1,0 +1,23 @@
+name = "Lu Huang Conquest of Dali"
+war_goal = {
+	type = take_capital_conquest
+	casus_belli = cb_chinese_unification
+	tag = X32
+	province = 4900
+}
+
+1443.5.2 = {
+	add_attacker = CMI
+	add_attacker = X11
+	add_defender = X32
+	add_defender = X08
+	add_defender = X09
+}
+
+1446.11.12 = { 
+	rem_attacker = CMI
+	rem_attacker = X11
+	rem_defender = X32
+	rem_defender = X08
+	rem_defender = X09
+}

@@ -1,0 +1,14 @@
+# country
+on_startup = {
+	events = {
+		flavor_tim.3455  #Pick School
+		chinese_daimyo.100
+		prices_jade.66
+	}
+}
+
+# on_siege_won_country = {
+	# random_events = {
+		# 100 = chinese_flavor.1 #30 Dev Chinese Province Sacked
+	# }
+# }

@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = chinese_governor_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = xibei
+add_harmonized_religion = vajrayana
+capital = 699	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Kun"
+		dynasty = "Shao"
+		birth_date = 1418.1.1
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}

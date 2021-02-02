@@ -1,0 +1,441 @@
+# OBS! Full modding not supported. Code support still needed to remove/rename the original subject types.
+# Custom ones CAN be created with scriptable diplomatic actions (see "dummy" at the bottom of this file), although this is not currently very functional.
+
+# If used, copy_from should be put at the very top ( things above it will be overwitten )
+
+# Triggers will be evaluated in the scope of the Subject, with the Overlord as its FROM scope.
+# Exception: is_potential_overlord is evaluated in the scope of the potential Overlord, with no particular subject in mind.
+
+# count = x is used (means it "counts as" x in some triggers).
+
+# copy_from copies everything except count, is_potential_overlord, and can_be_established
+
+# relative_power_class decides how Subjects are grouped together when considering relative strenghth towards overlord:
+# If it is 0 they won't consider relative power and if it is 1 they will only consider their own power (and those supporting their independence) compared to their Overlord's.
+# Otherwise they will sum up the power of every Subject of the same relative_power_class as themselves, and all countries who support either themselves or one of their allies in the same relative_power_class.
+
+# diplomacy_view_class decides how subjects are grouped together in diplomacy view and in foreign province view:
+# 0 means it won't be listed
+# 1 means it will be listed together only with the same subject type
+# Other values means it will be listed together with all subjects of the same diplomacy_view_class
+
+# The following status checks are considered in old triggers:
+
+# is_colonial_nation  & is_former_colonial_nation
+#        checks the 'has_colonial_parent = yes' attribute
+
+# is_lesser_in_union, junior_union_with, senior_union_with & years_in_union_under
+#		checks the 'has_overlords_ruler = yes' attribute
+
+
+# Forward declaring all subject types so they can refer to each other in triggers etc.
+
+#Test French Vassal type
+
+timurid_treaty_subject = {
+	copy_from = default
+	#count = vassal
+	# Graphics:
+	sprite = GFX_icon_feudalvassal
+	diplomacy_overlord_sprite = GFX_diplomacy_leadfeudalvassal # The one that the overlord sees
+	diplomacy_subject_sprite = GFX_diplomacy_amfeudalvassal	# The one that the subject sees
+	
+	#properties
+	pays_overlord = 0.0
+	gives_daimyo_bonuses = no
+	gets_help_with_rebels = yes
+	#separatists_become_subjects = yes Removed for now until more research can be done into this effect.
+	allows_taking_land_without_independence = yes
+	can_send_missionary_to_subject = yes	
+	counts_for_borders = yes	
+	can_use_claims = yes
+	share_rebel_popup = yes	
+	has_power_projection = yes
+	can_have_subjects_of_other_types = yes
+	can_be_integrated = no
+	can_be_annexed = no
+	overlord_can_be_subject = yes
+	can_transfer_in_peace = no #I assume this would result in others being able to get this vassal type?
+	#overlord_enforce_peace_attacking = yes #May need changed later
+	overlord_protects_external = yes
+	can_release_in_peace = no #May need changed for balance
+	joins_overlords_wars = no
+	
+	max_government_rank = 3
+	liberty_desire_same_dynasty = -10.0
+	liberty_desire_negative_prestige = -1.0
+	base_liberty_desire = -5.0
+
+	
+	trust_on_start = 0
+		
+	relative_power_class = 1
+	diplomacy_view_class = 1
+	
+
+	can_fight = {
+		#same_overlord = french_ducal_vassal
+		independent_nations = yes
+	}
+	can_rival = {
+		#same_overlord = french_ducal_vassal
+		independent_nations = yes
+	}
+	can_ally = {
+		#same_overlord = french_ducal_vassal
+		independent_nations = yes
+	}
+	can_marry = {
+		#same_overlord = french_ducal_vassal
+		independent_nations = yes
+	}
+	
+		# Subject Interactions
+	#(disable)
+	scutage = no
+	place_relative_on_throne = no
+	enforce_culture = no
+	seize_territory = no
+	return_land = no
+	embargo_rivals = no
+	divert_trade= no
+	#(enable)
+	subsidize_armies = yes
+	grant_core_claim = yes
+	grant_province = yes
+	enforce_religion = yes
+	conscript_general = yes
+	#contribute_to_capital = yes
+	#(special)
+	sword_hunt = no
+	sankin_kotai = no
+	expel_ronin = no
+	force_seppuku = no
+	force_isolation = no
+	
+		# Modifiers
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
+
+
+chinese_commandery_vassal = {
+	copy_from = vassal
+	count = vassal
+	
+	sprite = GFX_icon_protectorate
+	diplomacy_overlord_sprite = GFX_diplomacy_leadprotectorates
+	diplomacy_subject_sprite = GFX_diplomacy_inprotectorate	
+	
+	# Properties:
+	has_power_projection = yes
+	takes_diplo_slot = no
+	can_fight_independence_war = no
+	gives_daimyo_bonuses = yes
+	joins_overlords_wars = no
+	joins_colonial_wars = no	
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_use_claims = no
+	overlord_protects_external = yes
+	overlord_can_attack = yes
+	transfer_trade_power = no
+	overlord_can_fabricate_for = no
+	can_have_subjects_of_other_types = yes
+	overlord_can_attack = yes
+	counts_for_borders = no
+	can_transfer_in_peace = no
+
+	# Properties:
+	# transfer_trade_power = no
+	# can_fight_independence_war = no
+	# joins_overlords_wars = no
+	# joins_colonial_wars = no
+	# is_voluntary = yes
+	# overlord_can_attack = yes
+	# takes_diplo_slot = no
+	# relative_power_class = 1
+	# can_send_tribute = yes
+	# can_have_subjects_of_other_types = yes
+	# uses_military_focus = no
+	# overlord_protects_external = yes
+	# counts_for_borders = no
+	# can_use_claims = no
+	# share_rebel_popup = no
+	# can_transfer_in_peace = no
+	# can_set_mil_focus = no
+	# can_send_missionary_to_subject = no
+	# overlord_can_fabricate_for = no
+	# trust_on_start = 0
+
+
+	trust_on_start = 0
+	
+	max_government_rank = 2
+	base_liberty_desire = 5.0
+	military_focus = 1.2
+
+	relative_power_class = 1
+
+	# can_fight = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	# can_rival = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	# can_ally = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	# can_marry = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	
+	can_fight = {
+		independent_nations = yes
+		same_overlord = chinese_commandery_vassal
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = chinese_commandery_vassal
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = chinese_commandery_vassal
+		same_overlord = tributary_state
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = chinese_commandery_vassal
+		same_overlord = tributary_state
+		other_overlord = all
+	}	
+	
+	# Subject Interactions
+	#(disable)
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	placate_rulers = no
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	#(enable)
+	bestow_gifts = yes
+	#(special)
+	sword_hunt = yes
+	sankin_kotai = yes
+	expel_ronin = yes
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+	
+	
+	modifier_overlord = {
+		modifier = overlord_sword_hunt
+		trigger = {
+			has_country_modifier = subject_sword_hunt
+		}
+	}
+}
+
+turban_military_commission = {
+	copy_from = vassal
+	count = vassal
+	
+	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
+	diplomacy_subject_sprite = GFX_diplomacy_areclients	
+	
+	# Properties:
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	can_be_annexed = no
+	can_be_integrated = yes
+	allows_taking_land_without_independence = yes
+	can_use_claims = yes
+
+	trust_on_start = 0
+	
+	base_liberty_desire = -15.0
+	military_focus = 1.2
+
+	relative_power_class = 1
+
+	can_fight = {
+		same_overlord = daimyo_vassal
+	}
+	can_rival = {
+		same_overlord = daimyo_vassal
+	}
+	can_ally = {
+		same_overlord = daimyo_vassal
+	}
+	can_marry = {
+		same_overlord = daimyo_vassal
+	}
+	
+	# Subject Interactions
+	#(disable)
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	#(enable)
+	conscript_general = yes
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+}
+
+
+chinese_integrated_protectorate = {
+	copy_from = vassal
+	count = vassal
+	
+	sprite = GFX_icon_protectorate
+	diplomacy_overlord_sprite = GFX_diplomacy_leadclients
+	diplomacy_subject_sprite = GFX_diplomacy_areclients	
+	
+	# Properties:
+	has_power_projection = yes
+	takes_diplo_slot = no
+	gives_daimyo_bonuses = yes
+	joins_overlords_wars = no
+	joins_colonial_wars = no	
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = no
+	can_use_claims = yes
+	overlord_protects_external = yes
+	overlord_can_attack = yes
+	transfer_trade_power = no
+	overlord_can_fabricate_for = no
+	can_have_subjects_of_other_types = no
+	overlord_can_attack = no
+	counts_for_borders = no
+	can_transfer_in_peace = no
+	uses_military_focus = no
+
+	# Properties:
+	# transfer_trade_power = no
+	# can_fight_independence_war = no
+	# joins_overlords_wars = no
+	# joins_colonial_wars = no
+	# is_voluntary = yes
+	# overlord_can_attack = yes
+	# takes_diplo_slot = no
+	# relative_power_class = 1
+	# can_send_tribute = yes
+	# can_have_subjects_of_other_types = yes
+	# uses_military_focus = no
+	# overlord_protects_external = yes
+	# counts_for_borders = no
+	# can_use_claims = no
+	# share_rebel_popup = no
+	# can_transfer_in_peace = no
+	# can_set_mil_focus = no
+	# can_send_missionary_to_subject = no
+	# overlord_can_fabricate_for = no
+	# trust_on_start = 0
+
+
+	trust_on_start = 0
+	
+	base_liberty_desire = -10.0
+	military_focus = 1.0
+
+	relative_power_class = 1
+
+	# can_fight = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	# can_rival = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	# can_ally = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	# can_marry = {
+		# same_overlord = chinese_commandery_vassal
+	# }
+	
+	can_fight = {
+	}
+	can_rival = {
+	}
+	can_ally = {
+	}
+	can_marry = {
+	}
+	
+	# Subject Interactions
+	#(disable)
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = yes
+	demand_artifacts = yes
+	seize_territory = no
+	#(enable)
+	contribute_to_capital = yes
+	conscript_general = yes
+	demand_additional_tribute = yes
+	bestow_gifts = yes
+	placate_rulers = no
+	#(special)
+	sword_hunt = yes
+	sankin_kotai = yes
+	expel_ronin = yes
+	can_send_tribute = yes
+	embargo_rivals = yes
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+	
+	
+	modifier_overlord = {
+		modifier = overlord_sword_hunt
+		trigger = {
+			has_country_modifier = subject_sword_hunt
+		}
+	}
+}
+

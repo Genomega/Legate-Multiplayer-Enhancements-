@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_warlord_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = wu
+capital = 1824	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Hua"
+		dynasty = "Sun"
+		birth_date = 1424.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

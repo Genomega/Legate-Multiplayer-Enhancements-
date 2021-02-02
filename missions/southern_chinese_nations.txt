@@ -1,0 +1,1169 @@
+#This Mission-Page has been created using the MissionLayoutDesigner.
+#This has been developed by Petrus(Pbhuh) and Amyzonis and all rights belong to them.
+
+southern_wu_slot_1 = { 
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { tag = X21 }
+		OR = {
+			primary_culture = jianghuai
+			primary_culture = hubei
+			primary_culture = wu
+			primary_culture = gan
+			primary_culture = chimin
+			primary_culture = hakka
+			primary_culture = xiang
+			primary_culture = cantonese
+			primary_culture = miao
+		}	
+	}
+	has_country_shield = no
+
+	stablize_the_interior_yue = {
+		icon = mission_chinese_governor_icon
+		required_missions = {  }
+		position = 1
+
+		trigger = { 
+			stability = 1
+			is_at_war = no
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "secured_internal_politics"
+				duration = 3650
+			}			
+			capital_scope = {
+				every_neighbor_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+
+	proclaim_provincial_autonomy = {
+		icon = mission_chinese_imperial_state_icon
+		required_missions = { stablize_the_interior_yue }
+		position = 2
+
+		trigger = {
+			OR = {
+				AND = {
+					is_free_or_tributary_trigger = yes
+					is_year = 1500
+				}
+				AND = {
+					is_subject_of = YAN
+					total_development = 100
+				}	
+			}	
+		}
+
+		effect = {
+			custom_tooltip = reward_depends_on_choice_in_event.tt
+			custom_tooltip = if_after_1500_100_mil.tt
+			if = {
+				limit = {
+					is_free_or_tributary_trigger = yes
+				}
+				add_stability_or_adm_power = yes
+				add_mil_power = 100				
+			}			
+			if = {
+				limit = {
+					is_subject_of = YAN
+				}	
+				country_event = { id = chinese_flavor.1 }
+			}			
+		}
+	}
+
+	the_southern_kingdom = {
+		icon = mission_seize_the_dragon_throne
+		required_missions = { expand_our_influence  }
+		position = 3
+
+		trigger = { 
+			total_development = 300
+			prestige = 25
+			is_emperor_of_china = no
+		}
+
+		effect = { 
+			add_government_reform = chinese_kingdom
+			add_meritocracy = 100
+			change_heir_adm = 2
+			change_heir_mil = 1
+			change_adm = 2
+			change_mil = 1
+			YAN = {
+				add_mandate = -25
+			}	
+		}
+	}
+
+	legacy_of_wu = {
+		icon = fortify_the_passes
+		required_missions = { the_southern_kingdom  assert_hegemony }
+		position = 4
+
+		trigger = { 
+			has_reform = chinese_kingdom
+			custom_trigger_tooltip = {
+				tooltip = northern_chinese_dynasty.tooltip
+				has_country_flag = choose_imperial_dynatic_name
+			}			
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "legacy_of_sun_quan"
+				duration = -1
+			}	
+		}
+	}
+	
+	priciniples_of_the_sun = {
+		icon = reform_the_nomocanon
+		required_missions = { legacy_of_wu }
+		position = 5
+
+		trigger = { 
+			army_size = 40
+			army_tradition = 50
+			has_idea_group = quality_ideas
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "princinples_of_the_sun"
+				duration = -1	
+			}
+		}
+	}	
+
+	new_imperial_capital_yue = {
+		icon = mission_republic_of_china_icon
+		required_missions = { the_celestial_throne_yue }
+		position = 6
+
+		trigger = { 
+			is_emperor_of_china = yes
+			is_at_war = no
+		}
+
+		effect = { 
+			custom_tooltip = chinese_imperial_capital_note.tt
+			country_event = { id = chinese_flavor.5 }
+		}
+	}
+
+}
+southern_wu_slot_2 = { 
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { tag = X21 }
+		OR = {
+			primary_culture = jianghuai
+			primary_culture = hubei
+			primary_culture = wu
+			primary_culture = gan
+			primary_culture = chimin
+			primary_culture = hakka
+			primary_culture = xiang
+			primary_culture = cantonese
+			primary_culture = miao
+		}	
+	}
+	has_country_shield = no
+
+	grow_capital_commandery = {
+		icon = mission_asian_city
+		required_missions = {  }
+		position = 1
+
+		trigger = { 
+			capital_scope = {
+				num_of_times_improved = 5
+				development = 12
+			}	
+		}
+
+		effect = { 
+			add_treasury = 75
+			add_manpower = 1.5
+		}
+	}
+
+	expand_our_influence = {
+		icon = mission_alliances
+		required_missions = { grow_capital_commandery }
+		position = 2
+
+		trigger = { 
+			grown_by_development = 50
+			total_development = 150
+		}
+
+		effect = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				area = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "growth_of_capital"
+						duration = 3625 #10 years
+					}
+				}	
+			}	
+			chuanbei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			sichuan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			huguang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hunan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	assert_hegemony = {
+		icon = mission_asian_cannon
+		required_missions = { expand_our_influence }
+		position = 3
+
+		trigger = { 
+			prestige = 50
+			treasury = 500
+			OR = {
+				total_development = 250
+				has_reform = chinese_kingdom
+			}	
+		}
+
+		effect = { 
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}	
+			add_country_modifier = {
+				name = "south_china_hegemon"
+				duration = 9625
+			}	
+			hebei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			south_hebei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shandong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	dominate_the_ming_yue = {
+		icon = mission_chinese_general_riding
+		required_missions = { assert_hegemony }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = hebei_area
+				area = south_hebei_area
+				area = shandong_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			hebei_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_hebei_area = {
+				type = all
+				owned_by = ROOT
+			}
+			shandong_area = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_prestige = 50
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}	
+			add_country_modifier = {
+				name = "south_china_emperor"
+				duration = 7300
+			}	
+		}
+	}
+
+	the_celestial_throne_yue = {
+		icon = mission_chinese_bureaucracy_icon
+		required_missions = { dominate_the_ming_yue }
+		position = 5
+
+		trigger = {
+ 			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				OR = {
+					is_emperor_of_china = yes
+					custom_trigger_tooltip = {
+						tooltip = no_country_is_EoC
+						NOT = {
+							any_country = {
+								is_emperor_of_china = yes
+							}
+						}
+					}
+				}
+			}
+			num_of_owned_provinces_with = {
+				superregion = china_superregion
+				value = 35
+			}			
+		}
+
+		effect = { 
+			add_mandate = 10
+			add_meritocracy = 25
+			add_adm_power = 100
+			south_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_core = ROOT
+			}		
+		}
+	}
+
+	unify_china = {
+		icon = mission_chinese_governor_icon
+		required_missions = { the_celestial_throne_yue }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				region = south_china_region
+				region = xinan_region
+				region = north_china_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+
+		trigger = { 
+			south_china_region = {
+				type = all
+				owned_by = ROOT
+			}	
+			xinan_region = {
+				type = all
+				owned_by = ROOT
+			}	
+			north_china_region = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_prestige = 50
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}
+			add_country_modifier = {
+				name = "unifier_of_china"
+				duration = -1
+			}	
+		}
+	}
+
+}
+southern_wu_slot_3 = { 
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { tag = X21 }
+		OR = {
+			primary_culture = jianghuai
+			primary_culture = hubei
+			primary_culture = wu
+			primary_culture = gan
+			primary_culture = chimin
+			primary_culture = hakka
+			primary_culture = xiang
+			primary_culture = cantonese
+			primary_culture = miao
+		}	
+	}
+	has_country_shield = no
+
+	protect_against_the_turbans = {
+		icon = mission_great_wall
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			army_size_percentage = 1 #What you need to complete the mission, displayed for mission tooltip
+		}
+
+		effect = { #This is what you get after you finished your mission.
+			add_army_professionalism = 0.03
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
+			}
+		}
+	}
+
+	build_provincial_barracks = {
+		icon = mission_japanese_fort
+		required_missions = { protect_against_the_turbans }
+		position = 2
+
+		trigger = {
+			barracks = 5
+		}
+		effect = {
+			add_manpower = 5
+			add_country_modifier = {
+				name = "building_spree"
+				duration = 9125
+			}
+			add_country_modifier = {
+				name = "chinese_warlord_manpowerbuff"
+				duration = -1
+			}			
+		}
+	}
+
+	crush_the_turbans = {
+		icon = mission_purple_turbans_icon
+		required_missions = { build_provincial_barracks  }
+		position = 3
+
+		trigger = { 
+			OR = {
+				X23 = {
+					exists = no
+				}
+				X23 = {
+					NOT = { total_development = 20 }	
+				}	
+			}	
+		}
+
+		effect = { 
+			add_mil_power = 100
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}								
+		}
+	}
+
+	malayan_trade = {
+		icon = mission_junk_boat
+		required_missions = { invade_dai_viet_yue }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1361
+			}
+			has_discovered = ROOT
+		}	
+		
+		trigger = {
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}						
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "malayan_trade_networks"
+				duration = -1
+			}	
+			1361 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 35
+					key = chinese_trade_dominance
+				}
+			}			
+		}
+	}
+
+	colonial_australia = {
+		icon = settle_austrialasia
+		required_missions = { malayan_trade }
+		position = 6
+
+		provinces_to_highlight = {
+			colonial_region = colonial_australia
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				colonial_region = colonial_australia
+				is_city = yes
+			}
+		}
+
+		effect = { 
+			add_mercantilism = 10
+			add_prestige = 25
+		}
+	}
+
+}
+southern_wu_slot_4 = { 
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { tag = X21 }
+		OR = {
+			primary_culture = jianghuai
+			primary_culture = hubei
+			primary_culture = wu
+			primary_culture = gan
+			primary_culture = chimin
+			primary_culture = hakka
+			primary_culture = xiang
+			primary_culture = cantonese
+			primary_culture = miao
+		}	
+	}
+	has_country_shield = no
+
+	shangbang_privaleges = {
+		icon = balance_the_estates
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						has_reform = shannxi_admistrative_republic
+						has_reform = chinese_bandits_kingdoms
+						has_reform = chinese_bandit_reform
+					}	
+				}
+				stability = 2
+				adm_tech = 5
+				mil_tech = 5
+				dip_tech = 5
+			}		
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+			}
+		}
+
+		effect = { 
+			if = {
+				limit = {
+					NOT = { has_estate = estate_burghers }
+				}
+				add_stability_or_adm_power = yes
+			}
+			else = {
+				if = {
+					limit = {
+						NOT = { crown_land_share = 60 }
+					}
+					custom_tooltip = add_5_crown_land_share
+					hidden_effect = {
+						change_estate_land_share = {
+							estate = all
+							share = -5
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					add_estate_loyalty_modifier = {
+						estate = estate_burghers
+						desc = VAL_HAB_BALANCED_ESTATES
+						loyalty = 20
+						duration = 7300
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					add_country_modifier = {
+						name = "shangbang_bonus"
+						duration = 7300
+					}	
+				}				
+			}		
+		}
+	}
+
+	cantonese_trade_yue = {
+		icon = mission_market_place_with_asian_traders
+		required_missions = { shangbang_privaleges }
+		position = 2
+
+		trigger = {
+			home_trade_node = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				home_trade_node_effect_scope = {
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							is_capital = yes
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 20
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 25
+						}
+						save_event_target_as = reward_province
+					}
+					random_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							development = CAPITAL
+							is_capital = no
+							development = 30
+						}
+						save_event_target_as = reward_province
+					}
+				}
+			}
+			if = {
+				limit = { has_saved_event_target = reward_province }
+				event_target:reward_province = {
+					add_permanent_province_modifier = {
+						name = "dominant_trade_hub"
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = dominant_home_node_reward_tooltip
+			}
+		}
+	}
+
+	establish_a_fleet_yue = {
+		icon = mission_open_up_china
+		required_missions = { }
+		position = 3
+
+		trigger = { 
+			navy_size = 30 
+			OR = {
+				num_of_heavy_ship = 5 
+				num_of_galley = 15
+			}			
+		}
+
+		effect = { 
+			add_navy_tradition = 25
+			add_sailors = 2500
+			add_country_modifier = {
+				name = "chinese_naval_dominance"
+				duration = 3625
+			}
+			red_river_delta_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vietnam_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	invade_dai_viet_yue = {
+		icon = mission_conquer_siam
+		required_missions = { establish_a_fleet_yue }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				area = red_river_delta_area
+				area = vietnam_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = { 	
+			red_river_delta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			vietnam_area = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_prestige = 25
+			add_country_modifier = {
+				name = "conquered_dai_viet_china"
+				duration = 9125
+			}
+			north_laos_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_laos_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			khorat_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cambodia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			champa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mekong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	imperial_indochina_yue = {
+		icon = mission_scholar_officials
+		required_missions = { invade_dai_viet_yue }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = north_laos_area
+				area = south_laos_area
+				area = khorat_area
+				area = cambodia_area
+				area = champa_area
+				area = mekong_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = { 
+			north_laos_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_laos_area = {
+				type = all
+				owned_by = ROOT
+			}	
+			khorat_area = {
+				type = all
+				owned_by = ROOT
+			}
+			cambodia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			champa_area = {
+				type = all
+				owned_by = ROOT
+			}
+			mekong_area = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "imperial_indochina_china"
+				duration = -1
+			}			
+		}
+	}
+
+	colonial_mexico_yue = {
+		icon = mission_colonize_the_caribbean
+		required_missions = { colonize_hawaii }
+		position = 6
+
+		provinces_to_highlight = {
+			colonial_region = colonial_mexico
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_mexico
+				is_city = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "colonial_mexico_china"
+				duration = 18250
+			}
+			add_dip_power = 100
+			add_adm_power = 100
+			add_mil_power = 100
+		}
+	}
+
+}
+southern_wu_slot_5 = { 
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { tag = X21 }
+		OR = {
+			primary_culture = jianghuai
+			primary_culture = hubei
+			primary_culture = wu
+			primary_culture = gan
+			primary_culture = chimin
+			primary_culture = hakka
+			primary_culture = xiang
+			primary_culture = cantonese
+			primary_culture = miao
+		}	
+	}
+	has_country_shield = no
+
+	jade_trade = {
+		icon = mission_asian_trader
+		required_missions = {  }
+		position = 1
+
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { jade = 5 }
+					}
+				}
+				trade_goods = jade
+				has_discovered = ROOT
+			}
+			else = {
+				always = no
+			}
+		}
+		trigger = {
+			jade = 5
+		}
+		effect = {
+			add_country_modifier = {
+				name = "jade_trade_modifier"
+				duration = 7300
+			}
+			add_mercantilism = 5
+		}
+	}
+
+	riches_of_china_xx = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { jade_trade cantonese_trade_yue }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 701
+				province_id = 2172
+				province_id = 684
+				province_id = 667
+				province_id = 662
+			}
+			has_discovered = ROOT
+		}		
+
+		trigger = {
+			OR = {
+				1816 = {
+					is_strongest_trade_power = ROOT
+				}
+				701 = {
+					is_strongest_trade_power = ROOT
+				}
+			}
+			OR = {
+				2172 = {
+					is_strongest_trade_power = ROOT
+				}
+				684 = {
+					is_strongest_trade_power = ROOT
+				}
+			}	
+			OR = {
+				667 = {
+					is_strongest_trade_power = ROOT
+				}
+				662 = {
+					is_strongest_trade_power = ROOT
+				}
+			}				
+		}
+
+		effect = { 	
+			add_mercantilism = 10
+			1816 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			701 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			2172 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			684 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			667 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			662 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}				
+		}
+	}
+
+	taiwanese_frontier_yue = {
+		icon = mission_invade_island
+		required_missions = {  }
+		position = 4
+
+		trigger = { 
+			total_development = 150
+			num_of_ports = 6
+			treasury = 200
+			num_of_transport = 10
+		}
+
+		effect = { 
+			create_explorer = { tradition = 60 }
+			custom_tooltip = may_frontier_taiwan.tt
+			set_country_flag = may_colonized_taiwan
+			add_country_modifier = {
+				name = "chinese_colonial_company"
+				duration = -1
+			}	
+		}
+	}
+
+	colonize_hawaii = {
+		icon = mission_caribbean_cn
+		required_missions = { taiwanese_frontier_yue }
+		position = 5
+
+		provinces_to_highlight = {
+			province_id = 1240
+		}
+
+		trigger = { 
+			owns = 1240
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "the_unknown_frontier"
+				duration = 5475
+			}
+			add_dip_power = 50
+		}
+	}
+
+	colonial_california_yue = {
+		icon = mission_colonize_california
+		required_missions = { colonize_hawaii }
+		position = 6
+
+		provinces_to_highlight = {
+			colonial_region = colonial_california
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_california
+				is_city = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "jewel_of_china_california"
+				duration = -1
+			}
+			add_dip_power = 50
+		}
+	}
+
+}
+

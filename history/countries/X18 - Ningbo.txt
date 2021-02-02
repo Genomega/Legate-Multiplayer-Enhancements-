@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_purple_turban
+technology_group = chinese
+religion = mahayana
+primary_culture = wu
+capital = 2149	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Yazhu"
+		dynasty = "Xun"
+		birth_date = 1410.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

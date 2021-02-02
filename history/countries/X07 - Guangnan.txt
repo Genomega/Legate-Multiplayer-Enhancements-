@@ -1,0 +1,18 @@
+government = tribal
+add_government_reform = tribal_kingdom
+technology_group = chinese
+religion = buddhism
+primary_culture = bai
+capital = 663	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Guanyu"
+		dynasty = "Tan"
+		birth_date = 1418.1.1
+		adm = 5
+		dip = 4
+		mil = 2
+		female = yes
+	}
+}

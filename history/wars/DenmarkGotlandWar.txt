@@ -1,0 +1,20 @@
+name = "Eric Gryf War for Denmark"
+war_goal = {
+	type = take_capital_conquest
+	casus_belli = cb_restore_personal_union
+	tag = DAN
+}
+
+1443.1.1 = {
+	add_attacker = GOT
+	add_defender = DAN
+	add_defender = SWE
+	add_defender = NOR
+}
+
+1446.11.12 = { 
+	rem_attacker = GOT
+	rem_defender = DAN
+	rem_defender = SWE
+	rem_defender = NOR
+}

@@ -1,0 +1,28 @@
+government = monarchy
+add_government_reform = chinese_bandits_kingdoms
+technology_group = chinese
+religion = confucianism
+primary_culture = jin
+set_government_rank = 2
+capital = 693	#Taiyuan
+
+1444.1.1 = {
+	monarch = {
+		name = "Lin" #
+		dynasty = "Zhang"
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 5
+		leader = {	name = "Zhang Lin"	type = general 	fire = 3	shock = 4	manuever = 4 siege = 5	personality = goal_oriented_personality  female = yes }
+	}
+	add_ruler_modifier = {
+		name = bandit_queen_zhang_lin
+	}	
+	clear_scripted_personalities = yes
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = petty_personality
+	add_ruler_personality = strict_personality	
+	add_treasury = 75
+	add_prestige = 15	
+}

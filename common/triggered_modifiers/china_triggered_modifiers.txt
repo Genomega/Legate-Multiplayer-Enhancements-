@@ -1,0 +1,53 @@
+# mandate_of_heaven_legate = {
+	# potential = {
+		# has_reform = celestial_empire
+	# }
+	
+	# trigger = {	
+		# has_reform = celestial_empire
+	# }
+
+	# monarch_admin_power = 1
+	# monarch_diplomatic_power = 1
+	# monthly_splendor = 1
+	# rival_change_cost = -1
+	# meritocracy = 0.50
+	# diplomats = 1
+	# imperial_mandate = 100
+# }
+
+# chinese_economic_nerf = {
+	# potential = {
+		# culture_group = east_asian
+	# }
+
+	# trigger = {
+		# full_idea_group = economic_ideas
+	# }
+
+	# development_cost = 0.1
+# }
+
+# chinese_manpower_nerf = {
+	# potential = {
+		# culture_group = east_asian
+	# }
+
+	# trigger = {
+		# has_idea  = mass_army
+	# }
+
+	# global_manpower_modifier = -0.20
+# }
+
+# chinese_forcelimit_nerf = {
+	# potential = {
+		# culture_group = east_asian
+	# }
+
+	# trigger = {
+		# full_idea_group  = quantity_ideas
+	# }
+
+	# land_forcelimit_modifier  = -0.10
+# }
