@@ -6,6 +6,15 @@ princes_succession = {
 	heir_chance = -5
 }
 
+# Timurids Princes stuff 1.30
+timurid_prince_ccr_bonus = {
+	core_creation = -0.15
+	ae_impact = -0.10
+	global_manpower = 7.5
+	land_forcelimit = 5
+	nobles_loyalty_modifier = 0.15
+}	
+
 # Timurid Ilkhanate Missions
 
 timurid_abduallah_estate_morale = {

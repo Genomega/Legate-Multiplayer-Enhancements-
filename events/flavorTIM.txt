@@ -80,12 +80,8 @@ country_event = {
 					NOT = { tag = ROOT }
 					OR = {
 						is_neighbor_of = ROOT
-						dynasty = Timurid
 						any_owned_province = {
 							is_core = TIM
-						}
-						any_neighbor_country = {
-							dynasty = Timurid
 						}
 					}
 				}
@@ -380,7 +376,11 @@ country_event = { #Fate of the Timurid Empire
 	
 	#immediate = { remove_heir = yes  }
 	
-	option = { 
+	option = {
+		trigger = {
+			ai = no
+		}		
+		ai_chance = { factor = 0 }
 		name = "flavor_tim.5.a" # Ruler of Fars!
 		set_country_flag = timurid_ilkhanate
 		swap_non_generic_missions = yes
@@ -391,6 +391,7 @@ country_event = { #Fate of the Timurid Empire
 		add_stability = 1
 		override_country_name = FRS
 		hidden_effect = {
+			remove_country_modifier = "shahrukhs_empire"
 			remove_heir = yes
 			define_ruler = {
 				regency = yes
@@ -472,6 +473,10 @@ country_event = { #Fate of the Timurid Empire
 		}		
 	}
 	option = { 
+		trigger = {
+			ai = no
+		}		
+		ai_chance = { factor = 0 }
 		name = "flavor_tim.5.b" # Ruler of Transoxiana!
 		set_country_flag = timurid_mughals
 		swap_non_generic_missions = yes
@@ -485,6 +490,7 @@ country_event = { #Fate of the Timurid Empire
 		hidden_effect = {
 			release = KRM
 			release = YZD
+			remove_country_modifier = "shahrukhs_empire"
 			remove_heir = yes
 			define_ruler = {
 				regency = yes
@@ -661,10 +667,16 @@ country_event = { #Fate of the Timurid Empire
 			country_event = { id = flavor_tim.444 }				
 		}		
 	}
-	#option = { 
-	#	name = "flavor_tim.5.c" # Ruler of Herat!
-	#	custom_tooltip = flavor_tim.5.c.tt
-	#}	
+	option = { 
+		ai_chance = { factor = 100 }
+		trigger = {
+			ai = yes
+		}	
+		name = "flavor_tim.5.c" # And so we splinter...
+		TIM = {
+			country_event = { id = flavor_tim.8956 days = 183 }
+		}
+	}	
 }
 
 
@@ -3430,5 +3442,269 @@ country_event = { #Startup event for nations to discover stuff
 		}		
 	}	
 }
+
+country_event = { # Timurids is Partioned
+	id = flavor_tim.8956 
+	title = "flavor_tim.8956.t"
+	desc = "flavor_tim.8956.d"
+	picture = OVEREXTENSION_eventPicture
+	
+	is_triggered_only = yes
+	major = yes 
+	
+	option = { # Afghan Acceptance
+		name = "flavor_tim.8956.a"
+		custom_tooltip = flavor_tim.8956.b.tt
+		custom_tooltip = flavor_tim.8956b1.a.tt
+		custom_tooltip = flavor_tim.8956b2.a.tt
+		custom_tooltip = flavor_tim.8956b3.a.tt
+		custom_tooltip = flavor_tim.8956b4.a.tt
+		set_global_flag = timur_cb_enabled
+		hidden_effect = {
+			every_province = {
+				limit = {
+					OR = {
+						continent = asia
+					}
+					is_core = TIM
+				}
+				remove_core = TIM
+			}		
+		}
+		hidden_effect = {
+			every_province = { # Afghanistan Recieves it clay
+				limit = {
+					OR = {
+						province_id = 452
+						province_id = 2227
+						province_id = 450
+						province_id = 2228
+						province_id = 449
+					}
+					owned_by = TIM
+				}
+				cede_province = AFG
+				add_core = AFG
+			}	
+		}	
+		hidden_effect = {
+			every_province = { # Transoxiana Recieves it clay
+				limit = {
+					OR = {
+						province_id = 1968
+						province_id = 4343
+					}
+					owned_by = TIM
+				}
+				cede_province = TRS
+				add_core = TRS
+			}	
+		}	
+		hidden_effect = {
+			every_province = { # Khorasan Recieves it clay
+				limit = {
+					OR = {
+						province_id = 4325
+						province_id = 2221
+						province_id = 4326
+						province_id = 4336
+						province_id = 436
+						province_id = 4334
+					}
+					owned_by = TIM
+				}
+				cede_province = KHO
+				add_core = KHO
+			}	
+		}		
+		hidden_effect = {
+			every_province = { # Ajam Recieves it clay
+				limit = {
+					OR = {
+						province_id = 2222
+						province_id = 433
+					}
+					owned_by = TIM
+				}
+				cede_province = QOM
+				add_core = QOM
+			}	
+		}	
+		hidden_effect = {
+			every_province = { # Fars Recieves it clay
+				limit = {
+					OR = {
+						province_id = 2234
+						province_id = 432
+						province_id = 4345
+						province_id = 2220
+						province_id = 431
+						province_id = 4327						
+					}
+					owned_by = TIM
+				}
+				cede_province = FRS
+				add_core = FRS
+			}	
+		}	
+		hidden_effect = {
+			remove_country_modifier = "shahrukhs_empire"
+			TRS = {
+				grant_independence = yes
+			}
+			AFG = {
+				grant_independence = yes
+			}
+			FRS = {
+				grant_independence = yes
+			}
+			KHO = {
+				grant_independence = yes
+			}
+			SIS = {
+				grant_independence = yes
+			}
+			TRS = {
+				country_event = { id = flavor_tim.8957 days = 1 }
+			}	
+			AFG = {
+				country_event = { id = flavor_tim.8957 days = 1 }
+			}
+			FRS = {
+				country_event = { id = flavor_tim.8957 days = 1 }
+			}
+			KHO = {
+				country_event = { id = flavor_tim.8957 days = 1 }
+			}
+			QOM = {
+				country_event = { id = flavor_tim.8957 days = 1 }
+			}				
+			change_tag = HER
+			set_government_rank = 1	
+			reverse_add_opinion = {
+				who = AFG
+				modifier = timurid_disputed_succession
+			}
+			add_opinion = {
+				who = AFG
+				modifier = timurid_disputed_succession
+			}
+			reverse_add_opinion = {
+				who = TRS
+				modifier = timurid_disputed_succession
+			}
+			add_opinion = {
+				who = TRS
+				modifier = timurid_disputed_succession
+			}
+			reverse_add_opinion = {
+				who = FRS
+				modifier = timurid_disputed_succession
+			}
+			add_opinion = {
+				who = FRS
+				modifier = timurid_disputed_succession
+			}
+			reverse_add_opinion = {
+				who = KHO
+				modifier = timurid_disputed_succession
+			}
+			add_opinion = {
+				who = KHO
+				modifier = timurid_disputed_succession
+			}
+			reverse_add_opinion = {
+				who = SIS
+				modifier = timurid_disputed_succession
+			}
+			add_opinion = {
+				who = SIS
+				modifier = timurid_disputed_succession
+			}				
+		}				
+	}	
+}
+
+country_event = { # Event that notifies Princes and Qom of their gained territories
+	id = flavor_tim.8957 
+	title = "flavor_tim.8957.t"
+	desc = "flavor_tim.8957.d"
+	picture = OVEREXTENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { # Transoxiana Lands notified
+		highlight = yes
+		trigger = {
+			tag = TRS
+		}	
+		name = "flavor_tim.8957.a"
+		custom_tooltip = timurid_prince.trs.tt
+		custom_tooltip = flavor_tim.8956b3.a.tt
+		custom_tooltip = flavor_tim.8956b4.a.tt	
+		add_prestige = 10
+		add_country_modifier = {
+			name = timurid_prince_ccr_bonus
+			duration = 7300
+		}		
+	}	
+	option = { # Afghan Lands notified
+		highlight = yes
+		trigger = {
+			tag = AFG
+		}	
+		name = "flavor_tim.8957.a"
+		custom_tooltip = timurid_prince.afg.tt
+		custom_tooltip = flavor_tim.8956b3.a.tt
+		custom_tooltip = flavor_tim.8956b4.a.tt			
+		add_prestige = 10
+		add_country_modifier = {
+			name = timurid_prince_ccr_bonus
+			duration = 7300
+		}		
+	}
+	option = { # Fars Lands notified
+		highlight = yes
+		trigger = {
+			tag = FRS
+		}	
+		name = "flavor_tim.8957.a"
+		custom_tooltip = timurid_prince.frs.tt
+		custom_tooltip = flavor_tim.8956b3.a.tt
+		custom_tooltip = flavor_tim.8956b4.a.tt		
+		add_prestige = 10
+		add_country_modifier = {
+			name = timurid_prince_ccr_bonus
+			duration = 7300
+		}		
+	}	
+	option = { # Khorasan Lands notified
+		highlight = yes
+		trigger = {
+			tag = KHO
+		}	
+		name = "flavor_tim.8957.a"
+		custom_tooltip = timurid_prince.kho.tt
+		custom_tooltip = flavor_tim.8956b3.a.tt
+		custom_tooltip = flavor_tim.8956b4.a.tt			
+		add_prestige = 10
+		add_country_modifier = {
+			name = timurid_prince_ccr_bonus
+			duration = 7300
+		}		
+	}
+	option = { # Ajami Lands notified
+		highlight = yes
+		trigger = {
+			tag = QOM
+		}	
+		name = "flavor_tim.8957.a"
+		custom_tooltip = timurid_prince.qom.tt
+		custom_tooltip = flavor_tim.8956b3.a.tt
+		custom_tooltip = flavor_tim.8956b4.a.tt			
+		add_prestige = 10	
+	}	
+}
+
 
 

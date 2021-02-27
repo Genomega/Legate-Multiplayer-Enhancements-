@@ -34,6 +34,7 @@ monarchy = {
 				chinese_bandit_reform
 				timurid_regency_council
 				timurid_sultanate
+				timurid_princedom
 				mughal_timurid_sultanate
 				mughal_timurid_indian_sultanate
 				chinese_kingdom
@@ -176,6 +177,7 @@ monarchy = {
 		chinese_bandit_reform
 		timurid_regency_council
 		timurid_sultanate
+		timurid_princedom
 		mughal_timurid_sultanate
 		mughal_timurid_indian_sultanate	
 		chinese_kingdom
@@ -209,6 +211,7 @@ monarchy = {
 		chinese_bandit_reform
 		timurid_regency_council
 		timurid_sultanate
+		timurid_princedom
 		mughal_timurid_sultanate
 		mughal_timurid_indian_sultanate	
 		chinese_kingdom

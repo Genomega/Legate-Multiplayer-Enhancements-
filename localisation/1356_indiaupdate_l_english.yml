@@ -199,6 +199,8 @@
  desc_princes_succession: " While Shah Rukh's chosen heir, Ala al-Dawla is unlikely to have his claim taken seriously by the other Timurid princes. He also appears incapable of stirring an heir..."
  timurid_abduallah_estate_morale: "Supportive Amirs"
  desc_timurid_abduallah_estate_morale: "In return for more influence throughout the empire, the various Amirs have provided us with their most elite troops."
+ timurid_prince_ccr_bonus: "Timurid Pretender"
+ desc_timurid_prince_ccr_bonus: "Our ruler is considered major contender for the Timurid throne. However if we do not act quick enough our claim will surely fade out overtime."
  
  timurid_broke_free: "Broke free"
  timurid_isolation: "Timurid reliance"
@@ -222,7 +224,27 @@
  flavor_tim.5.c.tt: "§RThis will draw us closer to a Civil war with our subjects!§!"
  flavor_tim.5.a: "Enthrone Abdallah §G(Fars)§!"
  flavor_tim.5.b: "Enthrone Ulugh Beg §G(Transoxiana)§!"
- flavor_tim.5.c: "Keep Ala al-Dawla"
+ flavor_tim.5.c: "Keep Ala al-Dawla §R(The Empire will be Destroyed!)§!"
+ 
+ timurid_prince.trs.tt: "§GThe Provincial Governors of the Termez and Kulob provinces have defected to us!§!"
+ timurid_prince.frs.tt: "§GThe Provincial Governors of the Mogostan, Jask, Bam, Saidabad, Rafsanjan and Kerman provinces have defected to us!§!"
+ timurid_prince.kho.tt: "§GThe Provincial Governors of the Sabzevar, Nishapur, Mashhad, Sarakhs, Tabas, Tun, and Birjand provinces have defected to us!§!"
+ timurid_prince.afg.tt: "§GThe Provincial Governors of the Ghor, Maymana, Balkh, Kunduz, and Badakhshan provinces have defected to us!§!"
+ timurid_prince.qom.tt: "§GThe Provincial Governors of the Ardakan and Yazd provinces have defected to us!§!"
+ 
+ flavor_tim.8957.t: "The Heirs of Timur"
+ flavor_tim.8957.d: "With Shah Rukh now dead, his firm grip over the Timurid empire has come to an end. With the weak Ala al-Dawla now ruling as Sultan from Herat, many of the Amirs and provincial Governors throughout the Timurid empire who view his reign as destructive have begun pledging allegiances to various Princes throughout the empire. If a clear dominant power is not established soon, the empire of Tamerlane will be forever destroyed."
+ flavor_tim.8957.a: "Ala al-Dawla is too weak to rule the Timurid empire!"
+ 
+ 
+ flavor_tim.8956.t: "End of the Timurid Empire"
+ flavor_tim.8956.d: "The power vacuum left by Shah Rukh’s Death has caused the younger Timurid Princes to split from the elder's empire. With the new Sultan Ala al-Dawla far weaker than his predecessor, governors who were once loyal to Shah Rukh have now proclaimed allegiances to the various Timurid Princedoms. Reduced to the city of Herat and its few remaining loyal settlements, the Empire of Tamerlane is no more, destroyed by the ambition of descendants."
+ flavor_tim.8956.a: "§RAnd so we splinter...§!"
+ flavor_tim.8956.b.tt: "§RThe Timurid lands have been carved up by the various Timurid Princes in the Empire§!"
+ flavor_tim.8956b1.a.tt: "§RAll Timurids cores in the world will be removed.§!"
+ flavor_tim.8956b2.a.tt: "§GAla al-Dawla realm will be reduced to Herat, Ghuriyan and Ferah.§!"
+ flavor_tim.8956b3.a.tt: "§TAll Timurid Princes except Ajam will have access to ‘Legacy of Timur’ Casus Belli against each other until 1480.§!"
+ flavor_tim.8956b4.a.tt: "§TTimurid Princedoms can reform the Timurid Empire until 1500§!"
  
  flavor_tim.43.t: "The Sheikhdom of Herat"
  flavor_tim.43.d: "Despite being deposed by the Amirs of the realm, Ala al-Dawla is still heavily respected amongst the governors of Afghanistan and Sistan. When Ala al-Dawla abicated, he did so voluntarily as Ulugh ensured him that he would be protected as long as he stayed in court at Samarkand. While not a capable general, Ala al-Dawla has however proven himself a capable treasuer when it comes to managing the empire’s finances. Governor Mahmud Mihrabanid, one of Ulugh’s closest advisors, has been suggesting that we grant Herat to Ala al-Dawla and let him administer as a Sheikh. While this would make realm centralization slower for a time, it would raise support for Ulugh and his heirs throughout the empire."
@@ -779,6 +801,12 @@
  timurid_regency_council: "Timurid Interregnum"
  timurid_regency_council_legacy_desc: ""
  
+ cb_legacy_of_timur:0 "Legacy of Timur"
+ cb_legacy_of_timur_desc:0 "We are the rightful heirs of Timur!"
+ reclaim_timurid_empire:0 "Show Superiority"
+ reclaim_timurid_empire_desc:0 "War goal is to show them superiority by winning battles."
+ TIMURID_WAR_FOR_EMPIRE:0 "$ORDER$$FIRST$-$SECOND$ War of Timurid Succession"
+ 
  mughal_timurid_indian_sultanate_legacy: "Mughal Indian Sultanate"
  mughal_timurid_indian_sultanate: "Mughal Indian Sultanate"
  mughal_timurid_indian_sultanate_legacy_desc: "Ruled by a Muslim minority the Sultanates of India have had to evolve and expand the traditional Muslim ideas of Kingship. While they remain Islamic states the role of the Dhimmi, traditionally encompassing Jews and Christians, have been extended to the Dharmic religions."
@@ -790,6 +818,10 @@
  
  timurid_sultanate_legacy: "Timurid Sultanate"
  timurid_sultanate: "Timurid Sultanate"
+ 
+ timurid_princedom_legacy: "Timurid Princedom"
+ timurid_princedom_desc: "After Timur's death in 1405, Shah Rukh divided the Timurid Empire into multiple governances, each governed by a member of the Timurid dynasty. This system allowed the Timurids to effectively govern the multiple provinces in the Empire. It would ultimately however cause the Timurids to succumb to internal infighting after his death."
+ timurid_princedom: "Timurid Princedom"
  
  standardized_signal_book_timurids: "Timurid Standardized Signal Books"
  standardized_signal_book_timurids_desc: ""

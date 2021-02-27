@@ -88,8 +88,9 @@ add_army_professionalism = 0.1
 		mil = 3
 	}
 	add_piety = 0.5
-	add_ruler_modifier = {
+	add_country_modifier = {
 		name = shahrukhs_empire
+		duration = -1
 	}
 	add_ruler_modifier = {
 		name = princes_succession
@@ -109,7 +110,6 @@ add_army_professionalism = 0.1
 	add_country_modifier = {
 		name = zaidi_scholar_modifier
 		duration = 9125
-		hidden = yes
 	}	
 }
 

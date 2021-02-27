@@ -116,6 +116,36 @@ timurid_sultanate = {
 	}	
 }
 
+timurid_princedom = {
+	icon = "timurid_sultanate"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = timurid_princedom
+		}
+	}	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	#uses_revolutionary_zeal = yes
+	modifiers = {
+		unjustified_demands = -0.1
+		prestige = 0.5
+		fabricate_claims_cost = -0.25
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}	
+	custom_attributes = {
+		locked_government_type = yes
+	}	
+}
+
+
 
 chinese_bandits_kingdoms = {
 	icon = "bandit_kingdom"

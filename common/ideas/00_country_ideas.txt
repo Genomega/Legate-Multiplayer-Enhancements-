@@ -4128,19 +4128,21 @@ AFG_ideas = {
 	free = yes
 	
 	pashtunwali = {
-		war_exhaustion_cost = -0.10
+		war_exhaustion = -0.10
 	}
 	shadows_of_the_hindu_kush = {
 		defensiveness = 0.25
+		rival_border_fort_maintenance = -0.50
 	}
 	tureh = {
 		global_manpower_modifier = 0.2
 	}
 	afghan_diaspora = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 2
 	}
 	durrani_imperialism = {
-		cavalry_power = 0.15
+		cavalry_power = 0.25
+		cavalry_flanking = 1
 	}
 	institutionalized_loya_jirga = {
 		legitimacy = 1
@@ -11481,11 +11483,11 @@ AKK_ideas = {
 
 KHO_ideas = {
 	start = {
-		cavalry_power = 0.15
-		land_morale = 0.1
+		cavalry_power = 0.20
+		land_morale = 0.15
 	}
 	bonus = {
-		technology_cost = -0.05
+		technology_cost = -0.10
 	}
 	trigger = {
 		tag = KHO
@@ -11493,7 +11495,7 @@ KHO_ideas = {
 	free = yes
 	
 	kho_land_of_the_rising_sun = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 3
 	}
 	kho_rein_in_the_turko_mongol_emirs = {
 		army_tradition = 0.5
@@ -11508,17 +11510,17 @@ KHO_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	kho_great_sheiks_of_khorasan = {
-		tolerance_own = 2
+		tolerance_own = 3
 	}
 	kho_protect_the_caravan_routes = {
-		trade_efficiency = 0.10
+		trade_efficiency = 0.15
 	}
 }
 
 TRS_ideas = {
 	start = {
-		land_morale = 0.1
-		cavalry_cost = -0.1
+		land_morale = 0.10
+		cavalry_cost = -0.20
 	}
 	bonus = {
 		idea_cost = -0.1
@@ -11529,16 +11531,16 @@ TRS_ideas = {
 	free = yes
 	
 	trs_mawarannahr = {
-		cavalry_power = 0.2
+		cavalry_power = 0.25
 	}
 	trs_threshold_of_paradise = {
 		prestige = 1
 	}
 	trs_adept_diplomacy = {
-		spy_offence = 0.2
+		spy_offence = 0.25
 	}
 	trs_turkoman_cannoneers = { #Babur's ambition
-		artillery_cost = -0.15
+		artillery_cost = -0.20
 	}
 	trs_scientific_patronage = {
 		technology_cost = -0.05
@@ -11591,7 +11593,7 @@ QOM_ideas = {
 
 FRS_ideas = {
 	start = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.15
 		idea_cost = -0.1
 	}
 	bonus = {
@@ -11604,22 +11606,22 @@ FRS_ideas = {
 	
 	frs_land_of_the_persians = {
 		tolerance_own = 2
+		religious_unity = 0.25
 	}
 	frs_center_of_religion_and_philosophy = {
 		adm_tech_cost_modifier = -0.1
 	}
 	frs_diplomatic_prudence = {
-		improve_relation_modifier = 0.2
+		improve_relation_modifier = 0.25
 	}
 	frs_shirazi_wine = {
 		production_efficiency = 0.1
 	}
 	frs_shirazi_school = {
-		embracement_cost = -0.1
-		prestige = 0.5
+		discipline = 0.05
 	}
 	frs_integrate_the_qashqai = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.25
 	}
 	frs_capital_for_an_empire = { #The Zand Ambition
 		development_cost = -0.1
@@ -11851,10 +11853,10 @@ MSY_ideas = {
 SIS_ideas = {
 	start = {
 		shock_damage_received = -0.1
-		infantry_cost = -0.1
+		infantry_cost = -0.20
 	}
 	bonus = {
-		infantry_power = 0.1
+		infantry_power = 0.15
 	}
 	trigger = {
 		tag = SIS
@@ -11871,16 +11873,16 @@ SIS_ideas = {
 		global_autonomy = -0.05
 	}
 	sis_loyal_service = {
-		army_tradition = 0.5
+		army_tradition = 0.75
 	}
 	sis_overland_trade_routes = {
-		global_own_trade_power = 0.1
+		global_own_trade_power = 0.15
 	}
 	sis_chronicles_of_sistan = {
 		legitimacy = 1
 	}
 	sis_scholars_of_sistan = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.25
 	}
 }
 

@@ -1052,3 +1052,326 @@ naval_ideas = {
 		}
 	}
 }
+
+#Everything Below is 1356
+
+marcher_lord_ideas = {
+	category = DIP
+
+	bonus = {
+		power_projection_from_insults = 1
+	}
+	
+	feudal_levies = {
+		vassal_forcelimit_bonus = 1
+	}
+	honor_and_discipline = {
+		can_fabricate_for_vassals = yes
+		diplomatic_upkeep = 1
+	}
+	noble_marriage_efforts = {
+		liberty_desire_from_subject_development = -0.33
+	}
+	loyal_suzerainty = {
+		accept_vassalization_reasons = 25
+	}
+	imperial_fortifications = {
+		transfer_trade_power_reasons = 25
+	}
+	crown_supply_reforms = {
+		global_spy_defence = 0.25
+	}
+	marcher_officer_training = {
+		stability_cost_to_declare_war = -1
+	}
+
+	ai_will_do = {
+		factor = 0.5
+		
+		modifier = {
+			factor = 0.1
+			vassal = 0
+		}
+
+		#modifier = {
+		#	factor = 0.05
+		#	tributary = 1
+		#}
+
+		modifier = {
+			factor = 1.5
+			vassal = 1
+		}
+
+		modifier = {
+			factor = 3
+			march = 2
+		}
+
+		modifier = {
+			personal_union = 2
+			factor = 1.5
+		}
+		modifier = {
+			factor = 0.2
+			colony = 1
+		}
+	}
+}
+
+royal_education_ideas = {
+	category = ADM
+
+	bonus = {
+		may_recruit_female_generals = yes
+	}
+
+	royal_communications = {
+		reform_progress_growth = 0.25
+	}
+
+	the_royal_turn = {
+		adm_advisor_cost = -0.25
+	}
+
+	proper_education = {
+		institution_spread_from_true_faith = 0.30
+	}
+
+	laws_of_inheritance = {
+		heir_chance = 0.5
+	}
+	
+	ways_of_war = {
+		legitimacy = 1
+		republican_tradition = 0.75
+		devotion = 1
+		horde_unity = 0.75
+		meritocracy = 0.50
+	}
+
+	pragmatic_inheritance = {
+		relation_with_heretics = 25
+	}
+	
+	importance_of_public_works = {
+		free_policy = 1
+	}	
+
+	ai_will_do = {
+		factor = 0.3
+
+		modifier = {
+			factor = 2.5
+			government = monarchy
+		}
+	}
+}
+
+
+
+grand_court_ideas = {
+	category = DIP
+
+	bonus = {
+		development_cost = -0.1
+	}
+
+permanent_diplomacy = {
+	dip_advisor_cost = -0.25
+}
+	
+grand_viziers = {
+	global_unrest = -2
+}
+
+venerated_state_rituals = {
+	promote_culture_cost = -0.50
+	num_accepted_cultures = 2
+}
+courtly_tolerance = {
+	diplomats = 1
+	envoy_travel_time = -0.50
+}
+
+artists_and_mathematicians = {
+	monthly_splendor = 3
+}
+
+noble_pride = {
+	monarch_lifespan = 0.20
+}
+pride_of_subjects = {
+	prestige_decay = -0.01
+}
+
+	ai_will_do = {
+		factor = 0.75
+
+			modifier = {
+				factor = 5
+				OR = {
+				tag = BUR
+				tag = SIA
+				}
+			}
+	}
+}
+
+permanent_war_ideas = {
+	category = MIL
+
+	bonus = {
+		leader_siege = 1
+		free_leader_pool = 1
+	}
+	
+	tenacious_people = {
+		yearly_army_professionalism = 0.01
+		#mercenary_cost = 1
+	}
+	
+	army_infrastructure = {
+		mil_advisor_cost = -0.25
+	}
+	
+	stiff_upper_lip_jibm = {
+		drill_gain_modifier = 0.50
+	}
+
+	warfare_economics_jibm = {
+		reinforce_speed = 0.33
+	}
+
+	national_pride = {
+		movement_speed = 0.10
+	}
+	
+	staff_headquarters = {
+		global_supply_limit_modifier = 0.25
+	}
+	
+	volunteers = {
+		recover_army_morale_speed = 0.05
+	}
+
+	ai_will_do = {
+		factor = 0.33
+
+		modifier = {
+			factor = 4
+			OR = {
+			tag = SCO
+			tag = OIR
+			tag = PRU
+			tag = PER
+			}
+		}
+		modifier = {
+			factor = 4
+			is_march = yes
+		}
+	}
+}
+
+imperial_ideas = {
+	category = ADM
+
+	bonus = {
+		governing_capacity = 150
+	}
+	
+	robust_state_administration = {
+		core_creation = -0.1
+	}	
+	
+	imperial_land_grants = {
+		global_trade_goods_size_modifier = 0.1
+	}	
+	
+	imperial_engineering = {
+		state_maintenance_modifier = -0.25
+	}	
+	
+	courtly_education = {
+		global_autonomy = -0.075
+	}
+
+	1356_client_states = {
+		max_absolutism = 15
+		yearly_absolutism = 0.5
+	}
+
+	imperial_centralization = {
+		inflation_action_cost = -0.50
+	}
+
+	1356_compel_problem = {
+		administrative_efficiency = 0.025
+	}
+	
+	
+
+	ai_will_do = {
+		factor = 0.3
+		modifier = {
+			factor = 2
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 5
+			total_development = 600
+		}
+		modifier = {
+			factor = 3
+			vassal = 3
+		}
+	}
+}
+
+military_doctrine_ideas = {
+	category = MIL
+
+	bonus = {
+		reinforce_cost_modifier = -0.33
+	}
+
+	uniform_marshaling_points = {
+		#possible_condottieri = 1
+		shock_damage = 0.10
+		yearly_army_professionalism = -1
+	}
+	
+	military_mentorship = {
+		mercenary_cost = -0.25
+	}
+
+	academy_of_officers = {
+		merc_maintenance_modifier = -0.33
+	}
+
+	holding_the_line = {
+		mercenary_manpower= 0.50
+	}
+
+	1356_advisory_committee = {
+		mercenary_discipline = 0.075
+	}
+
+	standardized_calibres = { 
+		loot_amount = 1
+		available_province_loot = 0.50
+	}
+
+	unified_conscription_laws = {
+		prestige_from_land = 1
+	}
+
+	ai_will_do = {
+		factor = 0.5
+		modifier = {
+			factor = 8
+			has_idea_group = innovativeness_ideas
+		}
+	}
+}
