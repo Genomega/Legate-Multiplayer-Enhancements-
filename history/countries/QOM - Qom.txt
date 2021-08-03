@@ -23,7 +23,7 @@ historical_rival = QAR
 		mil = 4
 		culture = uzbehk
 		religion = sunni
-		leader = { name = "Baysonqor Timruid"	type = general	fire = 3	shock = 4	manuever = 2	siege = 2 }
+		leader = { name = "Baysonqor Timurid"	type = general	fire = 3	shock = 4	manuever = 2	siege = 2 }
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = bold_fighter_personality

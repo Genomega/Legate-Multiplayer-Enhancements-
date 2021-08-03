@@ -14475,12 +14475,12 @@ KHA_ideas = {
 
 CHG_ideas = {
 	start = {
-		cavalry_power = 0.25
+		cavalry_power = 0.20
 		raze_power_gain = 0.20
 	}
 	
 	bonus = {
-		culture_conversion_cost = -0.33
+		stability_cost_modifier = -0.1
 	}
 	
 	trigger = {
@@ -14490,7 +14490,6 @@ CHG_ideas = {
 	
 	CHG_border_wars = {
 		land_morale = 0.10
-		amount_of_banners = 0.10
 	}
 	the_mountain_khanate = {
 		hostile_attrition = 0.5
@@ -14498,7 +14497,6 @@ CHG_ideas = {
 	}
 	sons_of_chagatai = {
 		diplomatic_annexation_cost = -0.15
-		amount_of_banners = 0.05
 	}
 	CHG_chagatai_literature = {
 		prestige = 0.5
