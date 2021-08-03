@@ -1,1 +1,0 @@
-jade = { base_price = 5 }
