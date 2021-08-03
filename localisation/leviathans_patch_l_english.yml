@@ -1,0 +1,190 @@
+﻿l_english:
+
+  ## Music
+  the_blue_rose.ogg: "The Blue Rose"
+  fall_of_byzantium.ogg: "Fall of Byzantium"
+  
+  ## Legate Merc Companies
+  nogai_coalition_force: "Nogai Coalition Force"
+  anti_prussian_bridgage: "Anti-Prussian Brigade"
+  the_french_fleshlights: "The French Despoilers"
+  
+  
+ edict_imperial_encourage_development: "Imperial Encourage Development"
+ edict_imperial_promote_military_recruitment: "Imperial Increase Enlistment"
+ edict_imperial_religious_unity: "Imperial Enforce Religious Unity"
+ edict_imperial_martial_law: "Imperial Enact Martial Law"
+ 
+ estate_nobles_command_of_the_military_aristocratic: "§TAristocratic§! Command of the Army"
+ estate_nobles_command_of_the_military_aristocratic_desc: "The nobility are in control of the military, making us reliant on their favor to exert force."
+ estate_nobles_command_of_the_admiralty_plutocratic: "§TPlutocratic§! Command of the Admiralty"
+ estate_nobles_command_of_the_admiralty_plutocratic_desc: "The burghers are in control of the navy, making us reliant on their favor to exert force at sea and in trade."
+ 
+ 
+ grant_royal_charters_anglican.tt: "Gain §G+25.00§! Global Settler Increase and §G+5%§! Settler Chance for 10 years."
+ encourage_free_thought_anglican.tt: "Gain §G-7%§! Idea Cost and §G+25%§! Innovativeness Gain for 15 years."
+ crusade_against_hersey_ang.tt: "Gain §G+1§! Missionary and §G+2.0%§! Missionary Strength for 15 years."
+ inflame_zealous_fervor_ang.tt: "Gain §G+20%§! National Manpower Modifier and §G+20%§! Manpower Recovery Speed for 15 years."
+ 
+ grant_royal_charters_ang_aspect: "§YGrant Royal Charters§!"
+ desc_grant_royal_charters_ang_aspect: "The New World is an uncharted land that is endlessly vast. There also exist wealthy families throughout our nations who would like to establish settlements in these uncharted lands. We should issue Royal charters to these families allowing them to claim land for our nation overseas."
+ encourage_free_thought_ang_aspect: "§YEncourage Free Thought§!"
+ desc_encourage_free_thought_ang_aspect: "Accepting and having a higher tolerance of freethinking which allows people to form their own opinions and beliefs about religions leads to a boost in technology."
+ crusade_against_hersey_ang_aspect: "§YCrusade against Hersey§!"
+ desc_crusade_against_hersey_ang_aspect: "Their exists those in our lands who do not follow our faith, we should mount a religious crusade to convert these non believers!"
+ inflame_zealous_fervor_ang_aspect: "§YInflame Zealous Fervour§! §R(-100% Church Power)§!"
+ desc_inflame_zealous_fervor_ang_aspect: "Our great nation is currently being besieged by another, we should invoke the word of God in hopes of attracting more soldiers for our armies"
+ 
+ anglican_royal_charters: "Granted Royal Charters"
+ anglican_royal_charters_desc: ""
+ 
+ encourage_free_thought_anglican: "Encouraged Free Thought"
+ encourage_free_thought_anglican_desc: ""
+ 
+ crusade_against_hersey_anglican: "Crusade against Hersey"
+ crusade_against_hersey_anglican_desc: ""
+ inflame_zealous_fervor_anglican: "Inflamed Zealous Fervour"
+ inflame_zealous_fervor_anglican_desc: "Inflamed Zealous Fervour"
+ 
+ maj_campaign_1: "Majapahit Malayan Campaign"
+ maj_campaign_2: "Majapahit Indochina Campaign"
+ maj_campaign_3: "Majapahit Hegemon Campaign"
+ 
+ ## Policies
+ wei_suo_act_mer: "Wei-Suo Act"
+ wei_suo_act_mer_desc: ""
+ warrior_poets_act_1: "Warrior Poets Act"
+ warrior_poets_act_1_desc: ""
+ tranquil_defense_act_1: "Tranquil Defense Act"
+ tranquil_defense_act_1_desc: ""
+ restructured_navies_act_1: "Restructured Navies Act"
+ restructured_navies_act_1_desc: ""
+ celestial_treasure_fleets_act_1: "Expand Celestial Treasure Fleets Act"
+ celestial_treasure_fleets_act_1_desc: ""
+ lawful_serving_act_1: "Lawful Serving Act"
+ lawful_serving_act_1_desc: ""
+ promote_multicultural_adivsors_1: "Promote Multicultural Advisors Act"
+ promote_multicultural_adivsors_1_desc: ""
+ indigenous_integration_act_1: "Indigenous Integration Act"
+ indigenous_integration_act_1_desc: ""
+ open_to_global_trade_act_1: "Open to Global Trade Act"
+ open_to_global_trade_act_1_desc: ""
+ relax_tribute_request_act_1: "Relax Yearly Tribute Act"
+ relax_tribute_request_act_1_desc: ""
+ 
+ pragmatic_sanction_decision_enforced_title:0 "Enforce Pragmatic Sanction"
+ pragmatic_sanction_decision_enforced_desc:0 "Our heir is a woman but the Imperial crown can only pass to a man. It would be intolerable if our dynasty should lose their hold on the crown they worked so hard to acquire due to a mere technicality. Let us use our renowed national image to ensure our female heir will be considered as our successor when the time comes to elect a new Emperor of the Holy Roman Empire."
+ 
+  ## Great Projects
+ 
+ ## Tooltips
+ war_of_the_roses_anjou.tt: "§GWill gain unique options for the§! §Td'Anjou§! §Gin the War of the Roses§!"
+ anjou_general.tt: "§GHouse d'Anjou in Provence will send aid to us and provide us with a new elite general§!"
+ neville_joins_york: "§RGeneral Richard Neville will defect to the House of York§!"
+ john_talbot_joins_lancaster: "§RGeneral John Talbot will defect to the House of Lancaster§!"
+ margaret_leading_warning.tt: "§YAllowing Margaret to lead troops at her young age increases the chance of dying in Battle§!"
+ enables_female_generals_eng.tt: "§YFuture Female Monarchs will be able to become Generals§!"
+ 
+ 
+  ## Great Projects
+
+ wawel_cathedral_title:0 "Wawel Cathedral"
+ wawel_cathedral:0 "Wawel Cathedral"
+ great_project_wawel_cathedral:0 "Wawel Cathedral"
+ 
+ mukden_palace_mon: "Mukden Palace"
+ corvin_castle:0 "Corvin Castle" 
+ red_fort:0 "Lal Qila"
+ saint_basil_cathedral: "Saint Basil Cathedral"
+ penon_island_fortress: "Peñón Fortress"
+ copenhagen_dockyards: "Copenhagen Dockyards"
+ heidelburg_castle: "Heidelberg Palace"
+ niagara_falls: "Niagara Falls"
+ nubian_pyramids: "Nubian Pyramids"
+ brandenburg_gate_legate: "Brandenburg Gate"
+ the_great_wall_of_china_east: "Eastern Great Wall of China"
+ 
+ ## Decisions
+ embrace_parsi_faith_title: "Embrace Zoroastrianism"
+ embrace_parsi_faith_desc: "The Parsi people in our lands make a compelling case to convert to their ancestral religion of Zoroastrianism. While embracing such a isolated faith is dangerous for our external relations, the Dharmic and Buddhist followers in our lands would also support our conversion."
+ diovorce_consort_anglicans_title: "Divorce Consort"
+ diovorce_consort_anglicans_desc: "[Root.Monarch.GetTitle] [Root.Monarch.GetName] is concerned that [Root.Monarch.GetHerHis] consort has failed to give [Root.Monarch.GetHerHis] a suitable heir. Given [Root.Monarch.GetSheHe] is the head of the Church of [Root.GetName], [Root.Monarch.GetSheHe] could use [Root.Monarch.GetHerHis] power to annul their marriage."
+ marry_consort_anglicans_title: "Marry Local Noble"
+ marry_consort_anglicans_desc: "There are many eligible nobles in the nation willing to marry [Root.Monarch.GetTitle] [Root.Monarch.GetName]. Given our current lack of a consort, we should consider this pool of suitors."
+ 
+ end_the_estate_bankruptcy_title: "Rebuild the Bureaucracy"
+ end_the_estate_bankruptcy_desc: "Large strives have been made to rebuilding the nation's bureaucracy since our Bailout to the Estates. If we can successfully rebuild the Bureaucracy, we can retake the portions of our nation controlled by the Estates." 
+ 
+ ## Event Modifiers
+ integration_of_the_scottish_elite: "Integration of the Scottish Nobility"
+ integration_of_the_scottish_elite_desc: ""
+ desc_integration_of_the_scottish_elite: ""
+ divorced_consort_ang: "Divorced Consort"
+ desc_divorced_consort_ang: ""
+ divorced_consort_ang_desc: ""
+ support_for_blue_rose: "Supports the Blue Rose"
+ support_for_blue_rose_desc: "Margaret has consolidated much of the royal court and its surronding nobles and peasants to her cause. This province have declared their support for the blue rose."
+ 
+ married_local_noble_ang: "Married Local Noble"
+ married_local_noble_ang_desc: ""
+ desc_married_local_noble_ang: ""
+ eng_heir_problems_roses: "§RWar of the Roses Looming..§!"
+ desc_eng_heir_problems_roses: ""
+ eng_heir_problems_roses_desc: ""
+ 
+ eng_heir_problems_roses_block: "§Rtensions between House Lancaster and House York§!"
+ desc_eng_heir_problems_roses_block: ""
+ eng_heir_problems_roses_block_desc: ""
+ 
+ the_warrior_queen_eng: "The Warrior Queen"
+ desc_the_warrior_queen_eng: "Margaret presence on the battlefield has lead to her being regarded as the English Joan of Arc"
+ anjou_ruler_legitimate: "Legitimizing d'Anjou Rule"
+ desc_anjou_ruler_legitimate: "Margaret presence in the English royal court has begun to spread Pro-Anjou Sentiment across England."
+ 
+ female_general_check_eng: "Legacy of  Margaret d'Anjou"
+ female_general_check_eng_desc: ""
+ desc_female_general_check_eng: ""
+ 
+ new_zoroastrian_flame: "New Flame of Zoroaster"
+ desc_new_zoroastrian_flame: "We have established a new Zoroastrian state, the first in centuries. It now falls on us to protect those who still follow the teachings of Zoroaster."
+ 
+ conversion_zeal_zoroastrian: "Religious Zeal"
+ desc_conversion_zeal_zoroastrian: "After converting to a new faith, our missionaries are feeling more zealous than usual."
+ 
+ bankrupt_penalty: "Economic Bailout"
+ desc_bankrupt_penalty: "When we entered Bankruptcy, the Estates of our nation came in and payed off our debt, by doing so they forced us to relinquish a portion our of nation to them."
+ 
+ ## Renames
+ poland_lithuania_rename: "Poland-Lithuania"
+ poland_lithuania_rename_ADJ: "Polish-Lithuanian"
+ proclaim_poland_lithuania_title: "Rename to Poland-Lithuania"
+ proclaim_poland_lithuania_desc: "Changes the name of Commonwealth to Poland-Lithuania"
+ 
+ ## Events
+ war_of_the_roses.1.c: "Support the Blue Rose Faction."
+ anjou_england.1.t: "Margaret seeks to lead on the Battlefield"
+ anjou_england.1.d: "With the War of the Roses currently ongoing, Queen Margaret has intentions clear that she would like the ability to personally lead troops on the Battlefield against the York and Lancaster troops. While she was educated in the ways of Warfare during her tutelage in France, putting her on the battlefield comes with the risk of her potentially being killed. However doing so also comes with the potential that the English peasantry will see her as a Warrior Queen, perhaps even as our Joan of Arc."
+ anjou_england.1.a: "The Queen shall be allowed to directly command her armies"
+ anjou_england.1.b: "Margaret must remain at court to ensure legitimacy of d’Anjou rule"
+ 
+ how_to_get_rid_of_penalty.tt: "§YYou can get rid of this penalty by spending 100 Government Reform Progress and 150 Monarch Power in each category. The ‘Economic Bailout’ Modifier will not disappear until we take this decision. While we have this modifier, all lands except the Capital will have at least 7.5% Autonomy and Interest will increase by +1.§!"
+ 
+ 
+ legate_religions.3.t: "Bailout by the Estates"
+ legate_religions.3.d: "The Bankruptcy of our nation has forced us to be bailed out by our major estates. While we no longer suffer loans, we are massively indebted to our nation's estates and banks and for now they will control a portion of our nation’s economy."
+ legate_religions.3.a: "We should have been more careful"
+ 
+ anjou_england.2.t: "Provencal Anjou Retinue Arrives to Aid Us!"
+ anjou_england.2.d: "The d’Anjou branch in Provence have sent troops to aid us in the War of the Roses. While the Valois control the Duchy of Provence, the d’Anjou still possess a strong powerbase there. They have also sent a Provencal general to aid us on the field."
+ anjou_england.2.a: "Excellent"
+ legate_religions.1.t: "A Rekindled Flame"
+ legate_religions.1.d: "With the conversion of [Root.GetName] and its ruler, [Root.Monarch.GetTitle] [Root.Monarch.GetName] the world once again has an independent state that openly follows the teachings of Zoroaster. While only time will tell if this new state will survive like the Sassanid empire of old, those who still follow Zoroastrianism openly once again have a state to call home."
+ legate_religions.1.a: "It is up to us to keep the flame burning."
+ legate_religions.2.d: "Hussite traditions are still remembered amongst the people of [Root.GetName]. Now that the thesis of Luther has been widely known, more and more important people are openly declaring themselves to be Protestant rather than Hussite. We must decide whether to retain a distinct Hussite identity or join the wider Protestant Reformation."
+ 
+ ## Government Reforms
+ 
+ zoroastrian_indian_shahdom: "Indian Shahdom"
+ zoroastrian_indian_shahdom_desc: "During the harsh years of oppression in Persia many Zoroastrians left their ancestral homeland to resettle abroad. One of these branches of Zoroastrian Diaspora settled in India and eventually became known as the Parsi Diaspora. While a Zoroastrian state is likely to face opposition by the Sultanates of India, the strong ties developed between the Parsi and the Dharmic and Buddhist faiths can allow for a strong united state."
+ ethiopian_government_reform: "Solomonid Kingdom"
+ ethiopian_government_reform_desc: "Descended from the direct line of King Solomon, the Solomonid dynasty in Ethiopia has one of the most legitimate claim to divine right to rule. While the state is vunerable to Islamic pressure, the state will resist fiercely in defending its prized treasure, the Ark of the Convenant."

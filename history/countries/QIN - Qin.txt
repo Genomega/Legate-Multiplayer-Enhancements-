@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = shannxi_admistrative_republic
+technology_group = chinese
+religion = confucianism
+primary_culture = xibei
+add_accepted_culture = sichuanese
+add_accepted_culture = hubei
+capital = 700	#Xi'an
+
+1444.1.1 = {
+	monarch = {
+		name = "Huan"
+		dynasty = "Shi"
+		birth_date = 1420.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	add_treasury = 300
+}	

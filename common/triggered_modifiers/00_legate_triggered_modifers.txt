@@ -1,0 +1,40 @@
+##### Ideas Triggered Bonuses #####
+
+venerable_monarch_majesty = {
+	potential = {
+		has_idea = noble_pride
+	}
+
+	trigger = {
+		has_idea = noble_pride
+		ruler_age = 60
+	}
+
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}
+
+# chinese_manpower_nerf = {
+	# potential = {
+		# culture_group = east_asian
+	# }
+
+	# trigger = {
+		# has_idea  = mass_army
+	# }
+
+	# global_manpower_modifier = -0.20
+# }
+
+# chinese_forcelimit_nerf = {
+	# potential = {
+		# culture_group = east_asian
+	# }
+
+	# trigger = {
+		# full_idea_group  = quantity_ideas
+	# }
+
+	# land_forcelimit_modifier  = -0.10
+# }

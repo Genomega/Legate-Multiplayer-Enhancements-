@@ -1,0 +1,498 @@
+country_decisions = {
+
+	emerging_chinese_minor = {
+		major = yes
+		potential = {
+			ai = yes
+			OR = {
+				culture_group = east_asian
+			}
+			NOT = { 
+				has_reform = chinese_bandits_kingdoms
+				has_reform = chinese_warlord_nation
+				has_reform = chinese_governor_nation
+				has_reform = chinese_kingdom
+				has_reform = chinese_protecterate
+				has_reform = chinese_purple_turban
+				has_reform = chinese_united_purple_turban
+				has_reform = chinese_bandit_reform
+				has_reform = republic_of_china_reform
+				has_reform = shannxi_admistrative_republic
+				has_reform = nanzhao_kingdom
+				is_emperor_of_china = yes
+				culture = vietnamese
+				tag = LFA
+			}
+		}
+		allow = {
+			is_at_war = no
+			total_development = 3		
+		}
+		effect = {
+			add_government_reform = chinese_warlord_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+
+	warlord_to_governor = {
+		major = yes
+		potential = {
+			has_reform = chinese_warlord_nation	
+			is_emperor_of_china = no
+		}
+		allow = {
+			is_emperor_of_china = no
+			is_at_war = no
+			is_tribal = no
+			total_development = 150
+			prestige = 50		
+		}
+		effect = {
+			add_government_reform = chinese_governor_nation
+			custom_tooltip = chinese_governor_warlord.tt	
+			custom_tooltip = chinese_governor_warlord_2.tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	governor_to_kingdom = {
+		major = yes
+		potential = {
+			has_reform = chinese_governor_nation	
+			is_emperor_of_china = no
+		}
+		allow = {
+			is_at_war = no
+			is_tribal = no
+			is_free_or_tributary_trigger = yes
+			is_emperor_of_china = no
+			total_development = 400
+			prestige = 25		
+		}
+		effect = {
+			add_government_reform = chinese_kingdom
+			add_meritocracy = 75
+			set_country_flag = may_rename_country
+			custom_tooltip = chinese_governor_kingdom.tt
+			custom_tooltip = chinese_governor_kingdom_2.tt
+			custom_tooltip = chinese_governor_kingdom_3.tt			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	chinese_kingdoms_for_hordes = {
+		major = yes
+		potential = {
+			NOT = { has_reform = chinese_kingdom }
+			NOT = { has_reform = chinese_warlord_nation }
+			NOT = { has_reform = chinese_governor_kingdom }
+			NOT = { has_reform = chinese_bandit_reform }
+			NOT = { has_reform = chinese_bandits_kingdoms }
+			NOT = { has_reform = chinese_purple_turban }
+			NOT = { has_reform = chinese_protecterate }
+			NOT = { has_reform = chinese_united_purple_turban }
+			NOT = { has_reform = republic_of_china_reform }
+			NOT = { has_reform = shannxi_admistrative_republic }
+			OR = {
+				primary_culture = mongol
+				primary_culture = manchu_new
+				primary_culture = manchu
+				primary_culture = khalkha
+				primary_culture = oirats
+				primary_culture = uyghur
+				primary_culture = evenks
+				primary_culture = korean
+			}	
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_emperor_of_china = no
+			total_development = 400
+			prestige = 25
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 7 #out of 13 i.e. you can leave out Holstein and stuff
+					region = south_china_region
+					is_core = root
+				}
+				num_of_owned_provinces_with = {
+					value = 5 #out of 13 i.e. you can leave out Holstein and stuff
+					region = xinan_region
+					is_core = root
+				}
+				num_of_owned_provinces_with = {
+					value = 7 #out of 13 i.e. you can leave out Holstein and stuff
+					region = north_china_region
+					is_core = root
+				}	
+			}	
+		}
+		effect = {
+			change_technology_group = chinese
+			change_unit_type = chinese
+			change_government_to_monarchy = yes
+			add_government_reform = chinese_kingdom
+			add_meritocracy = 75
+			custom_tooltip = chinese_governor_kingdom.tt
+			custom_tooltip = chinese_governor_kingdom_3.tt			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	establish_frontiers_in_taiwan = {
+		major = yes
+		potential = {
+			has_country_flag = may_colonized_taiwan
+			NOT = { has_global_flag = taiwan_colonized }
+			2154 = {
+				is_empty = yes
+			}
+			2155 = {
+				is_empty = yes
+			}	
+			738 = {
+				is_empty = yes
+			}				
+		}
+		allow = {
+			is_at_war = no
+			is_tribal = no
+			is_emperor_of_china = no
+			total_development = 150
+			num_of_ports = 6
+			treasury = 200
+			num_of_transport = 10	
+			2154 = {
+				is_empty = yes
+			}
+			2155 = {
+				is_empty = yes
+			}	
+			738 = {
+				is_empty = yes
+			}	
+		}
+		effect = {
+			set_global_flag = taiwan_colonized
+			add_treasury = -200
+			add_country_modifier = {
+				name = "colonizing_taiwan_diplomatically"
+				duration = 1825
+			}
+			2154 = {
+				add_siberian_construction = 10
+			}
+			2155 = {
+				add_siberian_construction = 10
+			}
+			738 = {
+				add_siberian_construction = 10
+				add_center_of_trade_level = 1
+			}					
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	proclaim_chinese_dynasty = {
+		major = yes
+		potential = {
+			OR = { 
+				has_country_flag = may_rename_country
+				is_emperor_of_china = yes
+			}
+			NOT = { tag = JIN }
+			NOT = { tag = YAN }
+			NOT = { has_country_flag = choose_imperial_dynatic_name }
+		}
+		allow = {
+			is_at_war = no
+			is_tribal = no
+			is_free_or_tributary_trigger = yes
+			prestige = 50	
+			total_development = 400	
+		}
+		effect = {
+			set_country_flag = choose_imperial_dynatic_name
+			country_event = { id = chinese_flavor.2 }	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
+	
+	proclaim_chinese_dynasty_jin = {
+		major = yes
+		potential = {
+			tag = JIN
+			has_country_flag = may_rename_country
+			NOT = { has_country_flag = choose_imperial_dynatic_name }
+		}
+		allow = {
+			is_at_war = no
+			is_tribal = no
+			is_free_or_tributary_trigger = yes
+			prestige = 50		
+		}
+		effect = {
+			set_country_flag = choose_imperial_dynatic_name
+			country_event = { id = chinese_flavor.2 }	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
+	
+
+	bandit_clan_to_kingdom = {
+		major = yes
+		potential = {
+			has_reform = chinese_bandit_reform	
+			is_emperor_of_china = no
+		}
+		allow = {
+			is_at_war = no
+			is_tribal = no
+			# is_free_or_tributary_trigger = yes
+			is_emperor_of_china = no
+			total_development = 400
+			prestige = 50		
+		}
+		effect = {
+			add_government_reform = chinese_bandits_kingdoms
+			set_country_flag = may_rename_country
+			add_prestige = 25
+			custom_tooltip = chinese_governor_kingdom_2.tt
+			custom_tooltip = chinese_governor_kingdom_3.tt	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
+	
+	reinforce_bandit_kingdom = {
+		major = yes
+		potential = {
+			tag = JIN
+			is_emperor_of_china = no
+			NOT = { has_country_flag = may_rename_country }
+		}
+		allow = {
+			is_at_war = no
+			is_tribal = no
+			# is_free_or_tributary_trigger = yes
+			is_emperor_of_china = no
+			total_development = 400
+			prestige = 25		
+		}
+		effect = {
+			add_prestige = 50
+			set_country_flag = may_rename_country
+			custom_tooltip = chinese_governor_kingdom_2.tt
+			custom_tooltip = chinese_governor_kingdom_3.tt	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}		
+	
+	republic_of_china_turbans = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				has_reform = chinese_united_purple_turban
+				has_reform = chinese_purple_turban
+				has_reform = lanfang_chinese_republic_of_china
+			}	
+			NOT = { tag = X60 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1821
+				province_id = 680
+				province_id = 1816
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1821	# Nanjing
+			owns_core_province = 680	# Chongqing
+			owns_core_province = 1816	# Beijing
+			num_of_owned_provinces_with = {
+				value = 21 #out of 13 i.e. you can leave out Holstein and stuff
+				region = south_china_region
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 10 #out of 13 i.e. you can leave out Holstein and stuff
+				region = xinan_region
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 20 #out of 13 i.e. you can leave out Holstein and stuff
+				region = north_china_region
+				is_core = root
+			}			
+		}
+		effect = {
+			change_tag = X60
+			custom_tooltip = chinese_republic_ideas_note.tt	
+			remove_country_modifier = purple_turban_spirit
+			add_country_modifier = {
+				name = legacy_of_the_purple_turbans
+				duration = -1
+			}	
+			restore_country_name = yes
+			dismantle_empire_of_china = yes
+			1821 = {
+				move_capital_effect = yes
+			}
+			1821 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government_to_republic = yes
+			}					
+			add_government_reform = republic_of_china_reform
+			add_republican_tradition = 100
+			south_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = X60
+			}
+			xinan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = X60
+			}
+			north_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = X60
+			}			
+			set_country_flag = formed_china_flag
+			add_prestige = 50
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	republic_of_china_shaanxi = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				has_reform = shannxi_admistrative_republic
+			}	
+			NOT = { tag = X60 }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1821
+				province_id = 680
+				province_id = 1816
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1821	# Nanjing
+			owns_core_province = 680	# Chongqing
+			owns_core_province = 1816	# Beijing
+			num_of_owned_provinces_with = {
+				value = 21 #out of 13 i.e. you can leave out Holstein and stuff
+				region = south_china_region
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 10 #out of 13 i.e. you can leave out Holstein and stuff
+				region = xinan_region
+				is_core = root
+			}
+			num_of_owned_provinces_with = {
+				value = 20 #out of 13 i.e. you can leave out Holstein and stuff
+				region = north_china_region
+				is_core = root
+			}			
+		}
+		effect = {
+			change_tag = X60
+			dismantle_empire_of_china = yes
+			1821 = {
+				move_capital_effect = yes
+			}
+			1821 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government_to_republic = yes
+			}					
+			add_government_reform = republic_of_china_reform
+			add_republican_tradition = 100
+			south_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = X60
+			}
+			xinan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = X60
+			}
+			north_china_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = X60
+			}			
+			set_country_flag = formed_china_flag
+			add_prestige = 75
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+}

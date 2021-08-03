@@ -1,0 +1,975 @@
+#This Mission-Page has been created using the MissionLayoutDesigner.
+#This has been developed by Petrus(Pbhuh) and Amyzonis and all rights belong to them.
+
+xinan_slot_1 = { 
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = bai
+			primary_culture = yi
+			primary_culture = zhuang
+		}	
+	}
+	has_country_shield = no
+
+	stablize_the_interior = {
+		icon = mission_chinese_governor_icon
+		required_missions = {  }
+		position = 1
+
+		trigger = { 
+			stability = 1
+			is_at_war = no
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "secured_internal_politics"
+				duration = 3650
+			}			
+			capital_scope = {
+				every_neighbor_province = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	a_question_of_loyalty_qin = {
+		icon = mission_chinese_imperial_state_icon
+		required_missions = { stablize_the_interior }
+		position = 2
+
+		trigger = {
+			OR = {
+				AND = {
+					is_free_or_tributary_trigger = yes
+					is_year = 1500
+				}
+				AND = {
+					is_subject_of = YAN
+					total_development = 100
+				}	
+			}	
+		}
+
+		effect = {
+			custom_tooltip = reward_depends_on_choice_in_event.tt
+			custom_tooltip = if_after_1500_100_mil.tt
+			if = {
+				limit = {
+					is_free_or_tributary_trigger = yes
+				}
+				add_stability_or_adm_power = yes
+				add_mil_power = 100				
+			}			
+			if = {
+				limit = {
+					is_subject_of = YAN
+				}	
+				country_event = { id = chinese_flavor.1 }
+			}			
+		}
+	}
+
+	restore_nanzhao = {
+		icon = mission_advance_to_the_arabian_sea
+		required_missions = { new_miao_kingdom }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = kachin_area	
+				area = yun_gui_borderland_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			kachin_area = {
+				type = all
+				owned_by = ROOT
+			}
+			yun_gui_borderland_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = { 
+			add_prestige = 50
+			add_government_reform = nanzhao_kingdom
+			burma_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			override_country_name = great_nanzhou			
+		}
+	}
+
+	burman_highlands = {
+		icon = mission_conquer_lower_burma_tau
+		required_missions = { restore_nanzhao }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = upper_burma_area	
+				area = central_burma_area
+				area = lower_burma_area
+				area = arakan_area
+				area = chindwin_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			upper_burma_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_burma_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lower_burma_area = {
+				type = all
+				owned_by = ROOT
+			}			
+			arakan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			chindwin_area = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_prestige = 25
+			add_country_modifier = {
+				name = "the_burman_highlands"
+				duration = 7300
+			}	
+			gaur_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			west_bengal_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_bengal_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+			east_bengal_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+}
+xinan_slot_2 = { 
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = bai
+			primary_culture = yi
+			primary_culture = zhuang
+		}	
+	}
+	has_country_shield = no
+
+	safeguard_oral_traditions = {
+		icon = mission_hands_praying
+		required_missions = {  }
+		position = 1
+
+		trigger = { 
+			adm_power = 50
+			dip_power = 50
+			mil_power = 50
+			is_at_war = no
+		}
+
+		effect = { 
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			add_country_modifier = {
+				name = "safeguarded_oral_traditions"
+				duration = 7300
+			}	
+		}
+	}
+
+	adopt_chinese_bureracy = {
+		icon = mission_scholar_officials
+		required_missions = { safeguard_oral_traditions stablize_the_interior }
+		position = 2
+
+		trigger = { 
+			is_at_war = no
+			stability = 1
+			prestige = 25
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "adopted_chinese_government"
+				duration = 9125
+			}	
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government_to_monarchy = yes
+			}	
+			add_government_reform = chinese_protecterate
+			set_government_rank = 2
+			every_owned_province = {
+				add_institution_embracement = {
+					which = feudalism
+					value = 100
+				}
+			}				
+		}
+	}
+
+	new_miao_kingdom = {
+		icon = mission_portuguese_oman
+		required_missions = { adopt_chinese_bureracy reform_tribal_hierarchy }
+		position = 3
+
+		trigger = { 
+			total_development = 100
+			government = monarchy
+			has_country_modifier = hierarchy_reform
+			treasury = 100
+		}
+
+		effect = { 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			yun_gui_borderland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_core = ROOT
+			}
+			kham_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kachin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shan_hill_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			sichuan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	into_tibet_cmi = {
+		icon = mission_rule_indochina
+		required_missions = { new_miao_kingdom }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				region = tibet_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 6 #out of 13 i.e. you can leave out Holstein and stuff
+				region = tibet_region
+				is_core = root
+			}		
+		}
+
+		effect = { 
+			tibet_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	conquer_bengal_cmi = {
+		icon = mission_rb_take_indian_coast
+		required_missions = { into_tibet_cmi burman_highlands }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				area = gaur_area
+				area = west_bengal_area
+				area = north_bengal_area
+				area = east_bengal_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			gaur_area = {
+				type = all
+				owned_by = ROOT
+			}
+			west_bengal_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_bengal_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_bengal_area = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_adm_power = 150
+			add_country_modifier = {
+				name = "conquered_bengal_china"
+				duration = -1
+			}
+		}
+	}
+
+}
+xinan_slot_3 = { 
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = bai
+			primary_culture = yi
+			primary_culture = zhuang
+		}	
+	}
+	has_country_shield = no
+
+	unite_the_tribes_cmi = {
+		icon = mission_chinese_general_riding
+		required_missions = {  }
+		position = 1
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2167
+				province_id = 5100
+				province_id = 661
+				province_id = 2165
+				province_id = 2748
+				province_id = 662		
+				province_id = 675	
+				province_id = 5101	
+				province_id = 663	
+				province_id = 674	
+				province_id = 664	
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			2167 = {
+				owned_by = ROOT
+			}
+			5100 = {
+				owned_by = ROOT
+			}
+			661 = {
+				owned_by = ROOT
+			}
+			2165 = {
+				owned_by = ROOT
+			}
+			2748 = {
+				owned_by = ROOT
+			}
+			662 = {
+				owned_by = ROOT
+			}
+			675 = {
+				owned_by = ROOT
+			}
+			5101 = {
+				owned_by = ROOT
+			}
+			663 = {
+				owned_by = ROOT
+			}
+			674 = {
+				owned_by = ROOT
+			}
+			664 = {
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_prestige = 25
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 20
+			}			
+		}
+	}
+
+	reform_tribal_hierarchy = {
+		icon = mission_jawal_silver_mine
+		required_missions = { unite_the_tribes_cmi safeguard_oral_traditions }
+		position = 2
+
+		trigger = { 
+			government_reform_progress = 50
+			is_at_war = no
+		}
+
+		effect = { 
+			change_government_reform_progress = -50
+			add_country_modifier = {
+				name = "hierarchy_reform"
+				duration = -1
+			}	
+		}
+	}
+
+	secure_religious_unity = {
+		icon = mission_protect_jain_communities
+		required_missions = {  }
+		position = 3
+
+		trigger = { 
+			religious_unity = 0.80
+			is_at_war = no
+			total_development = 125
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "tolerated_religions_cmi"
+				duration = 7300
+			}	
+		}
+	}
+
+	reinforce_culture_animinist = {
+		icon = mission_court_education
+		required_missions = { secure_religious_unity }
+		position = 4
+
+		trigger = { 
+			is_at_war = no
+			total_development = 150
+			adm_power = 100
+			has_idea_group = religious_ideas
+		}
+
+		effect = { 
+			add_adm_power = -100
+			add_country_modifier = {
+				name = "expanded_religious_teachings"
+				duration = -1
+			}	
+		}
+	}
+
+	convert_tibet_cmi = {
+		icon = mission_buddhist_monk_praying
+		required_missions = { reinforce_culture_animinist into_tibet_cmi }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				region = tibet_region	
+			}
+			NOT = { religion = ROOT }
+		}
+		trigger = {
+			tibet_region = {
+				type = all
+				religion = ROOT
+			}			
+		}	
+
+		effect = { 
+			add_prestige = 50
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}			
+			add_country_modifier = {
+				name = "converted_tibet"
+				duration = -1
+			}	
+		}
+	}
+
+}
+xinan_slot_4 = { 
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = bai
+			primary_culture = yi
+			primary_culture = zhuang
+		}	
+	}
+	has_country_shield = no
+
+	reform_the_army_cmi = {
+		icon = mission_manchu_warrior
+		required_missions = { reform_tribal_hierarchy }
+		position = 3
+
+		trigger = {
+			total_development = 250
+			army_tradition = 50
+			mil_power = 100
+		}
+
+		effect = { 
+			add_army_tradition = -20
+			add_mil_power = -100
+			add_country_modifier = {
+				name = "cmi_reforming_army"
+				duration = 3650
+			}
+			add_country_modifier = {
+				name = "cmi_army_reformed"
+				duration = -1
+			}	
+			hunan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			jiangxi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			huguang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}					
+		}
+	}
+
+	into_eastern_china_cmi = {
+		icon = mission_asian_city
+		required_missions = { reform_the_army_cmi }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = hunan_area
+				area = jiangxi_area
+				area = huguang_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			hunan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			jiangxi_area = {
+				type = all
+				owned_by = ROOT
+			}
+			huguang_area = {
+				type = all
+				owned_by = ROOT
+			}		
+		}
+		effect = { 
+			add_adm_power = 250
+			add_prestige = 25
+			add_country_modifier = {
+				name = "cmi_eastern_china"
+				duration = 3650
+			}
+			anhui_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+			south_anhui_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			zhejiang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			south_jiangsu_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guangdong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+			west_guangdong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}					
+		}
+	}
+
+	contender_to_heaven = {
+		icon = mission_seize_the_dragon_throne
+		required_missions = { into_eastern_china_cmi }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				area = anhui_area
+				area = south_anhui_area
+				area = zhejiang_area
+				area = south_jiangsu_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			anhui_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_anhui_area = {
+				type = all
+				owned_by = ROOT
+			}
+			zhejiang_area = {
+				type = all
+				owned_by = ROOT
+			}	
+			south_jiangsu_area = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_army_tradition = 25
+			add_prestige = 25
+			add_country_modifier = {
+				name = "heavenly_contender"
+				duration = 7300
+			}	
+		}
+	}
+
+}
+xinan_slot_5 = { 
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			primary_culture = bai
+			primary_culture = yi
+			primary_culture = zhuang
+		}	
+	}
+	has_country_shield = no
+
+	jade_trade_xixan = {
+		icon = mission_asian_trader
+		required_missions = {  }
+		position = 1
+
+		provinces_to_highlight = {
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { jade = 3 }
+					}
+				}
+				trade_goods = jade
+				has_discovered = ROOT
+			}
+			else = {
+				always = no
+			}
+		}
+		trigger = {
+			jade = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = "jade_trade_modifier"
+				duration = 7300
+			}
+			add_mercantilism = 5
+		}
+	}
+
+	riches_of_china_xx_xinan = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { jade_trade_xixan trade_monopalies_qin }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+				province_id = 701
+				province_id = 2172
+				province_id = 684
+				province_id = 667
+				province_id = 662
+			}
+			has_discovered = ROOT
+		}		
+
+		trigger = {
+			OR = {
+				1816 = {
+					is_strongest_trade_power = ROOT
+				}
+				701 = {
+					is_strongest_trade_power = ROOT
+				}
+			}
+			OR = {
+				2172 = {
+					is_strongest_trade_power = ROOT
+				}
+				684 = {
+					is_strongest_trade_power = ROOT
+				}
+			}	
+			OR = {
+				667 = {
+					is_strongest_trade_power = ROOT
+				}
+				662 = {
+					is_strongest_trade_power = ROOT
+				}
+			}				
+		}
+
+		effect = { 	
+			add_mercantilism = 10
+			1816 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			701 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			2172 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			684 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			667 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}
+			662 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 15
+					key = chinese_trade_dominance
+				}
+			}				
+		}
+	}
+
+	annex_dai_viet_cmi = {
+		icon = mission_conquer_siam
+		required_missions = { reform_the_army_cmi  }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = red_river_delta_area
+				area = vietnam_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = { 	
+			red_river_delta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			vietnam_area = {
+				type = all
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			add_adm_power = 150
+			add_country_modifier = {
+				name = "conquered_dai_viet_china"
+				duration = 9125
+			}			
+		}
+	}
+
+	animist_dai_viet = {
+		icon = mission_court_education
+		required_missions = { annex_dai_viet_cmi }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = red_river_delta_area
+				area = vietnam_area
+			}
+			NOT = { religion = ROOT }
+		}
+
+		trigger = { 	
+			red_river_delta_area = {
+				type = all
+				religion = ROOT
+			}
+			vietnam_area = {
+				type = all
+				religion = ROOT
+			}			
+		}
+
+		effect = { 
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+	}	
+
+	seize_southern_points_cmi = {
+		icon = mission_asian_city
+		required_missions = { into_eastern_china_cmi }
+		position = 6
+
+		provinces_to_highlight = {
+			OR = {
+				area = guangdong_area
+				area = west_guangdong_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			guangdong_area = {
+				type = all
+				owned_by = ROOT
+			}
+			west_guangdong_area = {
+				type = all
+				owned_by = ROOT
+			}	
+		}
+		effect = { 
+			add_adm_power = 150
+			add_prestige = 25
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+			add_mercantilism = 5			
+		}
+	}	
+
+}
+

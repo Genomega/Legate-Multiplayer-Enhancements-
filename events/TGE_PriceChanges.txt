@@ -1,0 +1,158 @@
+namespace = prices_jade
+
+
+# Western Jade Trade
+country_event = {
+	id = prices_jade.2
+	title = prices_jade.2.t
+	desc = prices_jade.2.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		has_idea = quest_for_the_new_world
+		num_of_ports = 4
+		NOT = {
+			capital_scope = {
+				continent = asia
+			}
+		}
+		NOT = {
+			capital_scope = {
+				continent = oceania
+			}
+		}
+		has_discovered = 1371 # Canton Sea
+		technology_group = western
+		NOT = { has_global_flag = western_jade_trade }
+	}
+	
+	mean_time_to_happen = {
+		months = 32
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = western_jade_trade
+		}
+	}	
+	
+	option = {
+		name = prices_jade.2.a
+		random_owned_province = {
+			change_trade_goods = jade
+			add_base_production = 5
+			add_permanent_province_modifier = {
+				name = "western_jade_trade_center"
+				duration = -1
+			}
+		}
+		change_price = {
+			trade_goods = jade
+			key = western_jade_trade
+			value = 0.25
+			duration = -1
+		}
+		add_years_of_income  = 0.25
+		add_prestige = 20
+	}
+}
+
+# Decline of the Jade
+country_event = {
+	id = prices_jade.3
+	title = prices_jade.3.t
+	desc = prices_jade.3.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		is_year = 1580
+		capital_scope = { continent = asia }
+		religion_group = eastern
+		jade = 1
+		any_known_country = {
+			capital_scope = { continent = asia }
+			religion_group = eastern
+			jade = 1
+		}
+		NOT = { has_global_flag = decline_of_the_jade }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = decline_of_the_jade
+		}
+	}	
+	
+	option = {
+		name = prices_jade.3.a
+		change_price = {
+			trade_goods = jade
+			key = decline_of_jade
+			value = -0.50
+			duration = -1
+		}
+	}
+}
+
+# country_event = { # Removed 
+	# id = prices_jade.66
+	# title = prices_jade.66.t
+	# desc = prices_jade.66.d
+	# picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	# fire_only_once = yes
+	# hidden = yes
+
+	# trigger = {
+		# tag = PAW
+	# }
+	
+	
+	# option = {
+		# name = prices.2.a
+		# high_plains_area = {
+			# add_base_tax = 1
+			# add_permanent_province_modifier = {
+				# name = "great_plains_buffalo"
+				# duration = -1
+			# }
+		# }
+		# badlands_area = {
+			# add_base_tax = 1
+			# add_permanent_province_modifier = {
+				# name = "great_plains_buffalo"
+				# duration = -1
+			# }
+		# }
+		# central_plains_area = {
+			# add_base_tax = 1
+			# add_permanent_province_modifier = {
+				# name = "great_plains_buffalo"
+				# duration = -1
+			# }
+		# }
+		# dakota_area = {
+			# add_base_tax = 1
+			# add_permanent_province_modifier = {
+				# name = "great_plains_buffalo"
+				# duration = -1
+			# }
+		# }		
+	# }
+# }
+
+
+
+

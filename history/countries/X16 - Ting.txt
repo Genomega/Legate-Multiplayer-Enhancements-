@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = chinese_governor_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = chimin
+add_accepted_culture = wu
+add_accepted_culture = hakka
+capital = 2150	#
+
+1444.1.1 = { 
+	# They are considered one of the major candidates in the region like Purple Turbans and Taiyuan
+	add_treasury = 73
+	add_army_tradition = 15
+	add_prestige = 15
+	monarch = {
+		name = "Qiu"
+		dynasty = "Guo"
+		birth_date = 1423.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+	}	
+}
+
+1444.1.1 = { #Serious illness of Shahrukh. Goharshad makes Firuzshah (governor of Balkh) swear bayqat to Ala al-Dawla
+	heir = {
+		name = "Mao"
+		dynasty = "Guo"
+		birth_date = 1440.1.1
+		death_date = 1457.7.19
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}

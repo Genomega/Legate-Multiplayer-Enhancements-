@@ -1,0 +1,3 @@
+﻿l_english:
+ local_nobility:0 "Local Nobility"
+ local_nobility_desc:0 "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges, they will of course remember our largess and be more resistant to the inducements of foreign powers.\n§TReduces ‘Command of the Army’ Estate Privilege to +20% Nobility Influence. No longer reduces maximum Absolutism and removes Noble influence gained from recruit generals§!" 

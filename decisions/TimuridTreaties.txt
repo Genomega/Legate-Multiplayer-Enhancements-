@@ -1,0 +1,164 @@
+country_decisions = {
+	invoke_treaty_1 = {
+		major = yes
+		ai = no
+		potential = {
+			normal_or_historical_nations = yes
+			is_at_war = yes
+		    has_country_flag = treaty_of_uzkend
+			NOT = { has_country_flag = treaty_invoked_1 }
+			tag = TIM
+			NOT = { exists = MUG }
+		}
+		allow = {
+			NOT = { exists = ILK }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		effect = {
+			set_country_flag = treaty_invoked_1	
+			hidden_effect = {
+				country_event = { id = flavor_tim.41 }	
+			}	
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	invoke_treaty_2 = {
+		major = yes
+		ai = no
+		potential = {
+		    has_country_flag = treaty_of_uzkend
+			is_at_war = yes
+			tag = TIM
+			NOT = { exists = MUG }
+			has_country_flag = treaty_invoked_1
+			NOT = { has_country_flag = treaty_invoked_2 }
+			NOT = { has_country_flag = treaty_invoked_3 }
+			NOT = { has_country_flag = treaty_invoked_4 }
+			NOT = { has_country_flag = treaty_invoked_5 }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		allow = {
+			NOT = { exists = ILK }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		effect = {
+			set_country_flag = treaty_invoked_2			
+			hidden_effect = {
+				country_event = { id = flavor_tim.41 }	
+			}						
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	invoke_treaty_3 = {
+		major = yes
+		ai = no
+		potential = {
+		    has_country_flag = treaty_of_uzkend
+			is_at_war = yes
+			tag = TIM
+			NOT = { exists = MUG }
+			has_country_flag = treaty_invoked_1
+		    has_country_flag = treaty_invoked_2
+			NOT = { has_country_flag = treaty_invoked_3 }
+			NOT = { has_country_flag = treaty_invoked_4 }
+			NOT = { has_country_flag = treaty_invoked_5 }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		allow = {
+			NOT = { exists = ILK }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		effect = {
+			set_country_flag = treaty_invoked_3			
+			hidden_effect = {
+				country_event = { id = flavor_tim.41 }	
+			}							
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	invoke_treaty_4 = {
+		major = yes
+		ai = no
+		potential = {
+		    has_country_flag = treaty_of_uzkend
+			is_at_war = yes
+			tag = TIM
+			NOT = { exists = MUG }
+			has_country_flag = treaty_invoked_1
+		    has_country_flag = treaty_invoked_2
+			has_country_flag = treaty_invoked_3
+			NOT = { has_country_flag = treaty_invoked_4 }
+			NOT = { has_country_flag = treaty_invoked_5 }
+			NOT = { has_country_flag = treaty_only_3 }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		allow = {
+			NOT = { exists = ILK }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		effect = {
+			set_country_flag = treaty_invoked_4			
+			hidden_effect = {
+				country_event = { id = flavor_tim.41 }	
+			}							
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	invoke_treaty_5 = {
+		major = yes
+		ai = no
+		potential = {
+			normal_or_historical_nations = yes
+		    has_country_flag = treaty_of_uzkend
+			is_at_war = yes
+			tag = TIM
+			NOT = { exists = MUG }
+			has_country_flag = treaty_invoked_1
+		    has_country_flag = treaty_invoked_2
+			has_country_flag = treaty_invoked_3
+			has_country_flag = treaty_invoked_4
+			NOT = { has_country_flag = treaty_invoked_5 }
+			NOT = { has_country_flag = treaty_only_3 }
+			CHG = {
+				is_at_war = no
+			}				
+		}
+		allow = {
+			NOT = { exists = ILK }
+			CHG = {
+				is_at_war = no
+			}	
+		}
+		effect = {
+			set_country_flag = treaty_invoked_5			
+			hidden_effect = {
+				country_event = { id = flavor_tim.41 }	
+			}								
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}		
+}	

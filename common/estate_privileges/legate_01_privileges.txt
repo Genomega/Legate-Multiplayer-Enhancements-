@@ -1,0 +1,81 @@
+estate_nobles_timurid_ilkhanate_cossacks = {
+	icon = privilege_raise_host
+	land_share = 10
+	max_absolutism = -10
+	influence = 0.20
+	is_valid = {
+		#has_estate_privilege = estate_amirs_timurid_ilkhanate_cossacks
+		OR = {
+			tag = TIM
+			tag = ILK
+		}	
+	}	
+	can_select = {
+		tag = TIM
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	mechanics = {
+		enables_cossack_regiments
+	}
+	ai_will_do = {
+		factor = 1000
+		modifier = {
+			factor = 10
+			any_owned_province = {
+				has_terrain = desert
+			}
+		}
+	}
+}
+
+estate_nobles_command_of_the_military_aristocratic = {
+	icon = privilege_promote_purbias
+	land_share = 0
+	max_absolutism = -5
+	influence = 0.15
+	is_valid = {
+	}
+	can_select = {
+		has_idea = local_nobility
+	}
+	on_granted = {
+		#custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed
+	}
+	penalties = {
+	}
+	benefits = {
+		army_tradition = 0.9
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}
+
+estate_nobles_command_of_the_admiralty_plutocratic = {
+	icon = privilege_promote_purbias
+	land_share = 0
+	max_absolutism = -5
+	influence = 0.15
+	is_valid = {
+	}
+	can_select = {
+		has_idea = free_merchants
+	}
+	on_granted = {
+		#custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed
+	}
+	penalties = {
+	}
+	benefits = {
+		navy_tradition = 0.9
+		naval_tradition_from_trade = 0.20
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}

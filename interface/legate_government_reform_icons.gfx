@@ -1,0 +1,203 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_solomonid_state"
+		texturefile = "gfx//interface//government_reform_icons//solomonid_state.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_zoroastrian_shahdom"
+		texturefile = "gfx//interface//government_reform_icons//zoroastrian_shahdom.dds"
+	}	
+	spriteType = {
+		name = "government_reform_timurid_sultanate"
+		texturefile = "gfx//interface//government_reform_icons//timurid_sultanate.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_bandit_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//bandit_kingdom.dds"
+	}	
+	
+	spriteType = {
+		name = "government_reform_chinese_bandits"
+		texturefile = "gfx//interface//government_reform_icons//chinese_bandits.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_chinese_bureaucracy"
+		texturefile = "gfx//interface//government_reform_icons//chinese_bureaucracy.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_chinese_governor"
+		texturefile = "gfx//interface//government_reform_icons//chinese_governor.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_chinese_imperial_state"
+		texturefile = "gfx//interface//government_reform_icons//chinese_imperial_state.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_chinese_warlord"
+		texturefile = "gfx//interface//government_reform_icons//chinese_warlord.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_purple_turbans"
+		texturefile = "gfx//interface//government_reform_icons//purple_turbans.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_republic_of_china"
+		texturefile = "gfx//interface//government_reform_icons//republic_of_china.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_shaanxi_republic"
+		texturefile = "gfx//interface//government_reform_icons//shaanxi_republic.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_sca_government"
+		texturefile = "gfx//interface//government_reform_icons//sca_government.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_flagship_mass_load_cannons_timurids"
+		texturefile = "gfx//interface//mass_load_cannons_timurids.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_flagship_standardized_signal_book_timurids"
+		texturefile = "gfx//interface//standardized_signal_book_timurids.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_flagship_hull_sheating_timurids"
+		texturefile = "gfx//interface//hull_sheating_timurids.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "bandit_kingdom_mission_icon"
+		texturefile = "gfx//interface//missions/mission_bandit_kingdom.dds"
+	}	
+	
+	spriteType = {
+		name = "mission_chinese_bandits_icon"
+		texturefile = "gfx//interface//missions/mission_chinese_bandits.dds"
+	}
+
+	spriteType = {
+		name = "mission_chinese_bureaucracy_icon"
+		texturefile = "gfx//interface//missions/mission_chinese_bureaucracy.dds"
+	}	
+
+	spriteType = {
+		name = "mission_chinese_governor_icon"
+		texturefile = "gfx//interface//missions/mission_chinese_governor.dds"
+	}	
+	
+	spriteType = {
+		name = "mission_chinese_imperial_state_icon"
+		texturefile = "gfx//interface//missions/mission_chinese_imperial_state.dds"
+	}
+	
+	spriteType = {
+		name = "mission_purple_turbans_icon"
+		texturefile = "gfx//interface//missions/mission_purple_turbans.dds"
+	}	
+	
+	spriteType = {
+		name = "mission_republic_of_china_icon"
+		texturefile = "gfx//interface//missions/mission_republic_of_china.dds"
+	}	
+
+	spriteType = {
+		name = "mission_shaanxi_republic_icon"
+		texturefile = "gfx//interface//missions/mission_shaanxi_republic.dds"
+	}	
+
+	spriteType = { # Meritcratic
+		name = "GFX_idea_meritocratic_ideas"
+		texturefile = "gfx//interface//ideas//idea_meritocratic_ideas.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}	
+	
+	
+	spriteType = {
+		name = "GFX_royal_charters_ang_icon"
+		texturefile = "gfx/interface/royal_charters_ang_icon.dds"
+	}	
+	spriteType = {
+		name = "GFX_encourage_free_thought_ang_icon"
+		texturefile = "gfx/interface/encourage_free_thought_ang_icon.dds"
+	}	
+	spriteType = {
+		name = "GFX_crusade_against_hersey_ang_icon"
+		texturefile = "gfx/interface/crusade_against_hersey_ang_icon.dds"
+	}	
+	spriteType = {
+		name = "GFX_inflame_zealous_fervor_ang_icon"
+		texturefile = "gfx/interface/inflame_zealous_fervor_ang_icon.dds"
+	}	
+
+	# Great Projects Icons
+	spriteType = {
+		name = "GFX_great_project_wawel_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_wawel_cathedral.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_corvin_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_corvin_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_red_fort"	
+		texturefile = "gfx//interface//great_projects//great_project_red_fort.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_saint_basil_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_basil_cathedral.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_penon_island_fortress"	
+		texturefile = "gfx//interface//great_projects//great_project_penon_island_fortress.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_copenhagen_dockyards"	
+		texturefile = "gfx//interface//great_projects//great_project_copenhagen_dockyards.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_copenhagen_dockyards"	
+		texturefile = "gfx//interface//great_projects//great_project_copenhagen_dockyards.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_mukden_palace_mon"	
+		texturefile = "gfx//interface//great_projects//great_project_mukden_palace.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_heidelburg_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_heidelburg_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_niagara_falls"	
+		texturefile = "gfx//interface//great_projects//great_project_niagara_falls.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_nubian_pyramids"	
+		texturefile = "gfx//interface//great_projects//great_project_nubian_pyramids.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_brandenburg_gate_legate"	
+		texturefile = "gfx//interface//great_projects//great_project_brandenburg_gate_legate.dds"
+	}	
+	spriteType = {
+		name = "GFX_great_project_the_great_wall_of_china_east"	
+		texturefile = "gfx//interface//great_projects//great_project_the_great_wall_of_china.dds"
+	}	
+}
+

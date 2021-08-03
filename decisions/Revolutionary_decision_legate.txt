@@ -1,0 +1,135 @@
+country_decisions = {
+	weclome_the_revolutionaries = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = weclomed_the_revolutionaries }
+			NOT = { tag = PAP }
+			ai = no
+			revolution_spread = 0.20
+			NOT = { revolution_spread = 0.50 }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_tribal = no
+			revolution_spread = 0.2
+			NOT = { has_reform = revolutionary_empire_reform }
+			NOT = { revolution_spread = 0.50 }
+		}
+		effect = {
+			set_country_flag = weclomed_the_revolutionaries
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government_to_republic = yes
+			}
+			#enact_revolution_effect = yes
+			add_government_reform = revolutionary_republic_reform
+			add_revolutionary_zeal = 20
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	embrace_revolutionary_ideals = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_reform = revolutionary_empire_reform }
+			NOT = { has_country_flag = weclomed_the_revolutionaries }
+			NOT = { has_country_flag = embrace_revolutionary_ideals }
+			NOT = { tag = PAP }
+			ai = no
+			revolution_spread = 0.50
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_tribal = no
+			revolution_spread = 0.50
+			NOT = { revolution_spread = 0.70 }
+		}
+		effect = {
+			set_country_flag = embrace_revolutionary_ideals
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government_to_republic = yes
+			}
+			#enact_revolution_effect = yes
+			add_government_reform = revolutionary_republic_reform
+			kill_ruler = yes
+			add_stability_or_adm_power = yes
+			add_revolutionary_zeal = 50
+			add_country_modifier = {
+				name = the_reign_of_terror
+				duration = 3650
+			}			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	herald_of_the_revolution = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = herald_of_the_revolution }
+			NOT = { tag = PAP }
+			ai = no
+			revolution_spread = 0.70
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_tribal = no
+			revolution_spread = 0.70
+			revolution_target_exists = no
+		}
+		effect = {
+			set_country_flag = herald_of_the_revolution
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government_to_monarchy = yes
+			}
+			add_government_reform = revolutionary_empire_reform
+			#enact_revolution_effect = yes
+			set_revolution_target = ROOT
+			add_revolutionary_zeal = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
+}

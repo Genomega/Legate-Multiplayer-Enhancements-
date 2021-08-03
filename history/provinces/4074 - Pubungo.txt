@@ -1,0 +1,12 @@
+#Pubungo
+
+culture = acholi
+religion = shamanism #Fetishism
+capital = "Pubungo"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 2
+is_city = yes
+discovered_by = central_african

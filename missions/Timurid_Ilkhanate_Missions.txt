@@ -1,0 +1,1041 @@
+#This Mission-Page has been created using the MissionLayoutDesigner.
+#This has been developed by Petrus(Pbhuh) and Amyzonis and all rights belong to them.
+
+TIM_ILK_slot_1 = { 
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TIM
+		has_country_flag = timurid_ilkhanate
+	}
+	has_country_shield = yes
+
+}
+TIM_ILK_slot_2 = { 
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = TIM
+		has_country_flag = timurid_ilkhanate
+	}
+	has_country_shield = yes
+
+	concessions_to_the_amirs = {
+		icon = mission_general_land_assessment
+		required_missions = {  }
+		position = 1
+
+		trigger = {
+			estate_influence = {
+				estate = estate_nobles
+				influence = 40
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 90
+				}
+			}	
+		}
+
+		effect = { 
+			country_event = { id = flavor_tim.30 }
+		}
+	}
+
+	end_zoroastrian_persecutions = {
+		icon = mission_into_persia_2
+		required_missions = { concessions_to_the_amirs }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = isfahan_area
+			}
+			NOT = { owned_by = ROOT }
+		}		
+
+		trigger = { 
+			isfahan_area = {
+				type = all
+				owned_by = ROOT
+				is_state = yes
+				is_core = ROOT
+			}		
+		}
+
+		effect = { 
+			country_event = { id = flavor_tim.31 }
+		}	
+	}
+
+	acquire_tabarestan = {
+		icon = mission_market_place_with_asian_traders
+		required_missions = { reclaim_isfahan }
+		position = 3
+		
+		provinces_to_highlight = {
+			OR = {
+				area = tabarestan_area
+			}
+			NOT = { owned_by = ROOT }
+		}			
+
+		trigger = { 
+			tabarestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}		
+		}
+
+		effect = { 
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = "conquered_tabarestan"
+				duration = 10950
+			}
+			shirvan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}			
+	}
+
+	retake_azerbaijan = {
+		icon = mission_persian_soldiers
+		required_missions = { acquire_tabarestan capture_tehran }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = azerbaijan_area
+			}
+			NOT = { owned_by = ROOT }
+		}		
+		
+		trigger = { 
+			azerbaijan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}		
+		}
+
+		effect = { 
+			add_prestige = 10
+			azerbaijan_area = {
+				add_province_modifier = {
+					name = "province_reintegrated"
+					duration = 5475
+				}
+			}
+			tabriz_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shahrizor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	embrace_persian_identity = {
+		icon = mission_persianate_empire
+		required_missions = { retake_azerbaijan finish_the_rebellion }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					culture = persian
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					culture = luri
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					culture = khorasani
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					culture = mazandarani
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		
+		trigger = { 
+			is_at_war = no
+			stability = 2
+			custom_trigger_tooltip = {
+				tooltip = unify_the_persian_bulk
+				NOT = {
+					any_province = {
+						culture = persian
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				NOT = {
+					any_province = {
+						culture = luri
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				NOT = {
+					any_province = {
+						culture = khorasani
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				NOT = {
+					any_province = {
+						culture = mazandarani
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+			}		
+		}
+
+		effect = { 
+			country_event = { id = flavor_tim.500 }
+		}
+	}
+
+}
+TIM_ILK_slot_3 = { 
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = TIM
+		has_country_flag = timurid_ilkhanate
+	}
+	has_country_shield = yes
+
+	weaken_baysonqor = {
+		icon = mission_subdue_the_afghans
+		required_missions = {  }
+		position = 1
+
+		trigger = { 
+			OR = {
+				QOM = {
+					exists = no
+				}
+				AND = {
+					offensive_war_with = QOM
+					war_score_against = {
+						who = QOM
+						value = 33
+					}
+					2213 = {
+						controlled_by = ROOT
+					}
+					429 = {
+						controlled_by = ROOT
+					}	
+				}	
+			}	
+		}
+
+		effect = { 
+			if = {
+				limit = {
+					exists = QOM
+				}
+				country_event = { id = flavor_tim.32 }
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 25
+				}				
+			}			
+			if = {
+				limit = {
+					QOM = {
+						exists = no
+					}
+				}	
+				add_mil_power = 100
+			}	
+		}
+	}
+
+	reclaim_isfahan = {
+		icon = mission_central_asian_city
+		required_missions = { stablize_the_empire weaken_baysonqor }
+		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				area = isfahan_area
+			}
+			NOT = { owned_by = ROOT }
+		}		
+
+		trigger = { 
+			isfahan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}		
+		}
+
+		effect = {
+			add_army_tradition = 15
+			add_country_modifier = {
+				name = "timurid_reinsurgent"
+				duration = 9125
+			}		
+			isfahan_area = {
+				add_province_modifier = {
+					name = "province_reintegrated"
+					duration = 5475
+				}
+			}			
+		}
+	}
+
+	capture_tehran = {
+		icon = mission_afghan_frontier
+		required_missions = { reclaim_isfahan }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				area = iraq_e_ajam_area
+			}
+			NOT = { owned_by = ROOT }
+		}		
+
+		trigger = { 
+			iraq_e_ajam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}		
+		}
+
+		effect = { 
+			add_prestige = 10		
+			iraq_e_ajam_area = {
+				add_province_modifier = {
+					name = "province_reintegrated"
+					duration = 5475
+				}
+			}
+			azerbaijan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			luristan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
+		}
+	}
+
+	finish_the_rebellion = {
+		icon = mission_subdue_rajputana
+		required_missions = { capture_tehran }
+		position = 4
+
+		trigger = { 
+			QOM = {
+				exists = no
+			}
+			LRI = {
+				exists = no
+			}
+			ARD = {
+				exists = no
+			}	
+		}
+
+		effect = { 
+		    add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}			
+			add_country_modifier = {
+				name = "baysonqor_crushed"
+				duration = 7300
+			}	
+			khuzestan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			basra_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			iraq_arabi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}				
+		}
+	}
+
+	into_khuzestan = {
+		icon = mission_persian_soldiers
+		required_missions = { finish_the_rebellion }
+		position = 5
+
+		provinces_to_highlight = {
+			OR = {
+				area = khuzestan_area
+			}
+			NOT = { owned_by = ROOT }
+		}		
+
+		trigger = { 
+			khuzestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}		
+		}
+
+		effect = { 
+			add_mercantilism = 5
+			412 = {
+				add_trade_modifier = {
+					who = root
+					duration = 10950
+					power = 35
+					key = timurid_barsa_trade
+				}
+			}			
+			khuzestan_area = {
+				add_province_modifier = {
+					name = "province_reintegrated"
+					duration = 5475
+				}
+			}				
+		}
+	}
+
+	a_new_ilkhanate = {
+		icon = mission_abu_saids_dream
+		required_missions = { embrace_persian_identity into_khuzestan }
+		position = 6	
+		
+		provinces_to_highlight = {
+			OR = {
+				region = persia_region
+			}
+			NOT = { owned_by = ROOT }
+		}		
+		
+		trigger = {
+			tag = ILK
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}			
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = "a_new_ilkhanate_modifier"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "heirs_of_timur_ilk"
+				duration = -1
+			}			
+		}
+	}
+
+}
+TIM_ILK_slot_4 = { 
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = TIM
+		has_country_flag = timurid_ilkhanate
+	}
+	has_country_shield = yes
+
+	stablize_the_empire = {
+		icon = mission_restore_faith_in_the_throne
+		required_missions = {  }
+		position = 1
+
+		trigger = { 
+			stability = 1
+			is_at_war = no
+			war_exhaustion = 0
+			NOT = {
+				any_subject_country = {
+					liberty_desire = 20
+				}
+			}			
+		}
+
+		effect = { 
+			add_stability = 1
+			define_advisor = {
+				type = commandant
+				skill = 2
+				cost_multiplier = 0.25
+				culture = khorasani
+			}			
+			define_general = {
+				shock = 5
+				fire = 2
+				manuever = 6
+				siege = 3
+				trait = master_of_arms_personality
+			}			
+			add_country_modifier = {
+				name = "timurid_succession_secured"
+				duration = 5475
+			}
+			KHO = {
+				add_country_modifier = {
+					name = "timurid_loyalist"
+					duration = 5475
+				}	
+			}
+			SIS = {
+				add_country_modifier = {
+					name = "timurid_loyalist"
+					duration = 5475
+				}	
+			}			
+			isfahan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			iraq_e_ajam_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}				
+		}
+	}
+
+	shiite_tolerance = {
+		icon = mission_mosque
+		required_missions = { stablize_the_empire }
+		position = 2
+
+		trigger = { 
+			NOT = { religion = zoroastrian }
+			num_of_religion = {
+				religion = shiite
+				value = 0.5
+			}
+		}
+
+		effect = { 
+			country_event = { id = flavor_tim.36 }
+		}		
+	}
+
+	subdue_khorasan = {
+		icon = mission_ottoman_harem
+		required_missions = { }
+		position = 3
+
+		provinces_to_highlight = {
+			if = {
+				OR = {
+					province_id = 2214
+					province_id = 2236
+					province_id = 2235
+					province_id = 427
+				}
+			}
+		}		
+		
+		trigger = {
+			KHO = {
+				exists = no
+			}	
+			2214 = {
+				owned_by = ROOT
+			}
+			2236 = {
+				owned_by = ROOT
+			}
+			2235 = {
+				owned_by = ROOT
+			}
+			427 = {
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			2214 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			2236 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			2235 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			427 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}	
+		}
+	}
+
+	integrate_sistan = {
+		icon = mission_have_two_subjects
+		required_missions = { subdue_khorasan }
+		position = 4
+		provinces_to_highlight = {
+			if = {
+				OR = {
+					province_id = 2229
+					province_id = 2230
+					province_id = 435
+				}
+			}
+		}		
+		
+		trigger = {
+			SIS = {
+				exists = no
+			}	
+			2229 = {
+				owned_by = ROOT
+			}
+			2230 = {
+				owned_by = ROOT
+			}
+			435 = {
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			define_advisor = {
+				type = commandant
+				name = "Nusrat Mihrabanid"
+				skill = 3
+				cost_multiplier = 0.25
+				culture = khorasani
+			}
+			2229 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			2230 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			435 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+		}
+	}
+
+	persian_paper = {
+		icon = mission_ahmadabad_paper
+		required_missions = { }
+		position = 5
+
+		provinces_to_highlight = {
+			if = {
+				OR = {
+					province_id = 433
+					province_id = 432
+					province_id = 429
+					province_id = 4300
+					province_id = 446
+				}
+			}
+		}		
+		
+		trigger = {
+			433 = {
+				development = 20
+				has_building = workshop
+				owned_by = ROOT
+			}
+			432 = {
+				development = 20
+				has_building = workshop
+				owned_by = ROOT
+			}
+			429 = {
+				development = 20
+				has_building = workshop
+				owned_by = ROOT
+			}
+			4300 = {
+				development = 20
+				has_building = workshop
+				owned_by = ROOT
+			}
+			446 = {
+				development = 20
+				has_building = workshop
+				owned_by = ROOT
+			}			
+		}
+
+		effect = { 
+			set_country_flag = persian_paper_expansion
+			custom_tooltip = persian_paper_reward.tt
+			433 = {
+				add_province_modifier = {
+					name = "persian_paper"
+					duration = -1
+				}
+			}
+			432 = {
+				add_province_modifier = {
+					name = "persian_paper"
+					duration = -1
+				}
+			}
+			429 = {
+				add_province_modifier = {
+					name = "persian_paper"
+					duration = -1
+				}
+			}
+			4300 = {
+				add_province_modifier = {
+					name = "persian_paper"
+					duration = -1
+				}
+			}
+			446 = {
+				add_province_modifier = {
+					name = "persian_paper"
+					duration = -1
+				}
+			}		
+		}
+	}
+
+}
+TIM_ILK_slot_5 = { 
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = TIM
+		has_country_flag = timurid_ilkhanate
+	}
+	has_country_shield = yes
+
+	contest_the_straits = {
+		icon = mission_galleys_in_port
+		required_missions = {  }
+		position = 1
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 430
+				province_id = 4332
+				province_id = 2219
+				province_id = 431
+				province_id = 4327
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}			
+		
+		trigger = { 
+			treasury = 500
+			is_at_war = no
+			430 = {
+				owned_by = ROOT
+			}
+			4332 = {
+				owned_by = ROOT
+			}
+			2219 = {
+				owned_by = ROOT
+			}	
+			431 = {
+				owned_by = ROOT
+			}
+			4327 = {
+				owned_by = ROOT
+			}				
+		}
+
+		effect = { 
+			country_event = { id = flavor_tim.33 }
+		}
+	}
+
+	abdallah_flagship = {
+		icon = mission_bengal_entrepot
+		required_missions = { contest_the_straits stablize_the_empire }
+		position = 2
+
+		trigger = {
+			has_flagship = yes
+		}
+
+		effect = { 
+			add_navy_tradition = 20
+			change_mil = 2
+			change_dip = 1
+			add_ruler_modifier = {
+				name = "khan_of_the_seas"
+				duration = -1
+			}				
+			2999 = {
+				add_permanent_claim = ROOT
+			}				
+		}
+	}
+
+	conquer_hormuz = {
+		icon = mission_invade_island
+		required_missions = { abdallah_flagship }
+		position = 3
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2999
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}			
+		
+		trigger = { 
+			2999 = {
+				owned_by = ROOT
+			}			
+		}
+
+		effect = {
+			add_mercantilism = 5
+			2999 = {
+				add_trade_modifier = {
+					who = root
+					duration = 10950
+					power = 35
+					key = timurid_hormuz_trade
+				}
+			}		
+			oman_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mascat_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pirate_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}	
+		}	
+	}
+
+	conquer_oman = {
+		icon = mission_unite_home_region
+		required_missions = { conquer_hormuz }
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				area = oman_area
+				area = mascat_area
+				area = pirate_coast_area
+			}
+			NOT = { owned_by = ROOT }
+		}			
+		
+		trigger = { 
+			oman_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mascat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pirate_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}			
+		}
+
+		effect = { 
+			add_navy_tradition = 15
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = "conquered_oman"
+				duration = 9125
+			}
+		}
+	}
+
+	naval_supremancy = {
+		icon = mission_raid_christian_trade
+		required_missions = { conquer_oman }
+		position = 5
+
+		trigger = { 
+			heavy_ship_fraction = 0.60
+			naval_forcelimit = 50
+			is_year = 1550
+		}
+
+		effect = { 
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 15
+			}		
+			add_country_modifier = {
+				name = "gulf_hegmony"
+				duration = -1
+			}	
+		}
+	}
+
+	dominate_gulf_trade = {
+		icon = mission_arabian_ports
+		required_missions = { naval_supremancy persian_paper }
+		position = 6
+
+		provinces_to_highlight = {
+			if = {
+				limit = { is_random_new_world = no }
+				OR = {
+					province_id = 2999
+					province_id = 408
+					province_id = 388
+					province_id = 4457
+				}
+			}
+		}		
+		
+		trigger = {
+			naval_forcelimit = 70
+			2999 = { #Hormuz
+				trade_share = {
+					share = 75
+					country = ROOT
+				}
+			}
+			408 = { #Barsa
+				trade_share = {
+					share = 75
+					country = ROOT
+				}
+			}
+			388 = { #Gulf of Aden
+				trade_share = {
+					share = 33
+					country = ROOT
+				}
+			}
+			4457 = { #Gujarat
+				trade_share = {
+					share = 33
+					country = ROOT
+				}
+			}			
+		}
+
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 50
+			}			
+			2999 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 25
+					key = timurid_gulf_dominance
+				}
+			}
+			408 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 25
+					key = timurid_gulf_dominance
+				}
+			}
+			388 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 25
+					key = timurid_gulf_dominance
+				}
+			}
+			4457 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 25
+					key = timurid_gulf_dominance
+				}
+			}			
+		}
+	}
+
+}
+

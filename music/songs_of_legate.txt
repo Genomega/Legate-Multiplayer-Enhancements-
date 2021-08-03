@@ -1,0 +1,120 @@
+############
+
+
+
+
+song = {
+	name = "downfall_of_the_ming.ogg"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = eastern }
+			NOT = { any_owned_province = { continent = asia } }
+		}	
+		modifier = {
+			factor = 1
+			is_at_war = no
+			is_year = 1500
+			culture_group = east_asian
+		}				
+	}
+}
+
+
+song = {
+	name = "crisis_in_china.ogg"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = eastern }
+			NOT = { any_owned_province = { continent = asia } }
+		}	
+		modifier = {
+			factor = 1.25
+			is_at_war = yes
+			culture_group = east_asian
+		}			
+	}
+}
+
+song = {
+	name = "para_bellum.ogg"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			is_at_war = yes
+			factor = 0.75
+		}		
+	}
+}
+
+song = {
+	name = "to_the_east.ogg"
+	
+	chance = {
+		factor = 0.25
+		modifier = {
+			factor = 4.5
+			has_idea = quest_for_the_new_world
+			technology_group = chinese
+		}		
+	}
+}
+
+
+song = {
+	name = "ride_of_the_valyries.ogg"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			always = yes
+		}		
+	}
+}
+
+song = {
+	name = "the_blue_rose.ogg"
+	
+	chance = {
+		factor = 0.5
+		modifier = {
+			factor = 3
+			has_country_flag = support_blue_rose
+		}		
+	}
+}
+
+song = {
+	name = "fall_of_byzantium.ogg"
+	
+	chance = {
+		factor = 0.35
+		modifier = {
+			factor = 3.3
+			tag = TUR
+			government_rank = 3
+		}		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

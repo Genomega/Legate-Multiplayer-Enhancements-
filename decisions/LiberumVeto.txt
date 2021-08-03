@@ -1,0 +1,54 @@
+country_decisions = {
+
+	liberum_veto = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = librium_veto }
+			NOT = { has_country_modifier = librium_veto_legate }
+			NOT = { colony = 1 }
+			has_idea_group = aristocracy_ideas
+		}
+		allow = {
+			full_idea_group = aristocracy_ideas
+			is_at_war = yes
+			war_exhaustion = 2
+			num_of_cities = 6
+		}
+		effect = {
+			#set_country_flag = librium_veto
+			add_country_modifier = {
+				name = librium_veto_legate
+				duration = -1
+			}	
+			change_estate_land_share = {
+				estate = estate_nobles
+				share = 5
+			}				
+			add_war_exhaustion = -5
+			add_army_tradition = 15
+			add_mil_power = 50
+			random_owned_province = {
+				limit = { controlled_by = ROOT  }
+				cavalry = ROOT
+				cavalry = ROOT
+				cavalry = ROOT
+				cavalry = ROOT
+				cavalry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+				infantry = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

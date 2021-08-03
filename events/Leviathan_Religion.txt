@@ -1,0 +1,136 @@
+namespace = legate_religions
+
+# Zoroastrian Nation Arises in India
+country_event = {
+	id = legate_religions.1
+	title = legate_religions.1.t
+	desc = legate_religions.1.d
+	picture = COMET_SIGHTED_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+	
+	
+	option = {
+		name = legate_religions.1.a
+		add_country_modifier = {
+			name = "new_zoroastrian_flame"
+			duration = -1
+		}	
+		add_country_modifier = {
+			name = "conversion_zeal_zoroastrian"
+			duration = 3650
+		}		
+	}
+}
+
+# Hussite offer chance to convert to Protestantism after Reformation fires
+country_event = { 
+	id = legate_religions.2
+	title = flavor_boh.7.t
+	desc = legate_religions.2.d
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = ADULT_BAPTISME_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = POPE_PREACHING_eventPicture
+	}
+
+	major = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	trigger = {
+		religion = hussite
+		is_year = 1505
+		is_religion_enabled = protestant
+		NOT = { has_country_flag = hussite_question_decided }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = hussite_question_decided
+		}
+	}	
+	
+	option = { # Remain Hussite
+		ai_chance = {
+			factor = 20
+		}
+		trigger = {
+			religion = hussite
+		}
+		name = "flavor_boh.7.a"
+		if = {
+			limit = {
+				has_dlc = "Art of War"
+			}
+			custom_tooltip = remain_hussite_tt # warning that you won't get a side for the league war
+		}
+		add_prestige = 10
+		add_church_power = 25
+	}
+	
+	option = { # Switch to Protestant
+		ai_chance = {
+			factor = 80
+		}
+		trigger = {
+			religion = hussite
+		}
+		name = "flavor_boh.7.b"
+		add_prestige = 25
+		change_religion = protestant
+		every_owned_province = {
+			limit = {
+				religion = hussite
+			}
+			change_religion = protestant
+		}
+		hidden_effect = {
+			add_prestige = 100
+		}	
+	}
+}
+
+## Bankrupt Penalty
+
+country_event = { 
+	id = legate_religions.3
+	title = legate_religions.3.t
+	desc = legate_religions.3.d
+	picture = OVEREXTENSION_eventPicture
+
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		is_bankrupt = yes
+		NOT = { has_country_modifier = bankrupt_penalty }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = "bankrupt_penalty"
+				duration = -1
+			}	
+		}
+	}	
+	
+	option = { # Remain Hussite
+		name = "legate_religions.3.a"
+		custom_tooltip = how_to_get_rid_of_penalty.tt
+	}
+}

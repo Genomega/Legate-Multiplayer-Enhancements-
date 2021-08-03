@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = chinese_governor_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = xiang
+add_accepted_culture = gan
+add_accepted_culture = hakka
+add_harmonized_religion = pagan_group
+capital = 671	#Shiukwan
+
+1444.1.1 = {
+	monarch = {
+		name = "Wei"
+		dynasty = "Xuan"
+		birth_date = 1418.1.1
+		adm = 3
+		dip = 0
+		mil = 3
+	}
+}

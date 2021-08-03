@@ -1,0 +1,60 @@
+### Mercs companies rewarded for Hall of Fame
+
+nogai_coalition_force = { ## Awarded to No_balls June 2021 Ottoman Game
+    regiments_per_development = 0.04
+    home_province = 425 # Dagestan
+	cavalry_weight = 0.2
+	artillery_weight = 0.25
+	cost_modifier = 0.8
+	cavalry_cap = 5
+	sprites = { dlc080_qar_sprite_pack muslimgfx_sprite_pack }
+    trigger = {
+		religion_group = muslim
+		capital_scope = {
+			continent = asia
+		}
+	}
+	modifier = { 
+		infantry_power = 0.05
+		recover_army_morale_speed = 0.05
+	}
+}
+
+anti_prussian_bridgage = { # Awarded to Admiral Nepho for Austria October 2020
+    regiments_per_development = 0.04
+    home_province = 60 # Bautzen
+	cavalry_weight = 0.0
+	artillery_weight = 0.4
+	cost_modifier = 1.1
+	cavalry_cap = 5
+	sprites = { dlc053_hab_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		capital_scope = {
+			continent = europe
+		}
+	}
+	modifier = { 
+		land_morale = 0.05
+		fire_damage_received = -0.05	
+		discipline = -0.01
+	}
+}
+
+the_french_fleshlights = { # Awarded to Microsoft XP for France August 2020 ## Name localizaed differently for.. reasons
+    regiments_per_development = 0.04
+    home_province = 179 # Berry
+	cavalry_weight = 0.1
+	artillery_weight = 0.3
+	cost_modifier = 1
+	cavalry_cap = 5
+	sprites = { dlc001_fra_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack  westerngfx_sprite_pack }
+    trigger = {
+		capital_scope = {
+			continent = europe
+		}
+	}
+	modifier = { 
+		mercenary_manpower= 0.20
+		mercenary_discipline = 0.025
+	}
+}

@@ -1,0 +1,5 @@
+government = republic
+technology_group = chinese
+religion = confucianism
+primary_culture = zhuang
+capital = 680	#Canton

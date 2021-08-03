@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_warlord_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = jianghuai
+capital = 2145	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Yi"
+		dynasty = "Zheng"
+		birth_date = 1400.1.1
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}

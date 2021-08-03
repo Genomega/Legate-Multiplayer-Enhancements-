@@ -1,0 +1,30 @@
+music = {
+	name = "crisis_in_china.ogg"
+	file = "crisis_in_china.ogg"
+}
+music = {
+	name = "downfall_of_the_ming.ogg"
+	file = "downfall_of_the_ming.ogg"
+}
+music = {
+	name = "para_bellum.ogg"
+	file = "para_bellum.ogg"
+}
+music = {
+	name = "to_the_east.ogg"
+	file = "to_the_east.ogg"
+}
+music = {
+	name = "ride_of_the_valyries.ogg"
+	file = "ride_of_the_valyries.ogg"
+}
+
+music = {
+	name = "the_blue_rose.ogg"
+	file = "the_blue_rose.ogg"
+}
+
+music = {
+	name = "fall_of_byzantium.ogg"
+	file = "fall_of_byzantium.ogg"
+}

@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = chinese_purple_turban
+technology_group = chinese
+religion = confucianism
+primary_culture = wu
+capital = 2146	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Hanying"
+		dynasty = "Gong"
+		birth_date = 1418.1.1
+		adm = 5
+		dip = 3
+		mil = 5
+	}
+}

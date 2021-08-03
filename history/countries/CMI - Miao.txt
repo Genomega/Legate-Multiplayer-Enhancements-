@@ -1,0 +1,28 @@
+government = tribal
+add_government_reform = tribal_kingdom	
+primary_culture = bai
+add_accepted_culture = miao
+religion = animism
+technology_group = chinese
+add_accepted_culture = yi
+capital = 662	# Umung
+
+1444.1.1 = {
+	add_country_modifier = {
+		name = ritual_education_modifier
+		duration = -1
+	}	
+	add_country_modifier = {
+		name = religious_sacrifices
+		duration = -1
+	}		
+	monarch = {
+		name = "Huang"
+		dynasty = "Lu"
+		birth_date = 1420.1.1
+		adm = 3
+		dip = 3
+		mil = 4
+		leader = {	name = "Lu Huang"	type = general 	fire = 2	shock = 3	manuever = 6 siege = 1	}
+	}
+}	

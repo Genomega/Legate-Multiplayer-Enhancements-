@@ -1,0 +1,17 @@
+province = {
+    war = {
+        active = {
+           is_at_war = yes
+        }
+        eval_multiply = {
+            factor = -1.1
+            modifier = {
+				num_of_units_in_province = {
+					who = ROOT
+					amount = 32
+				}
+				unit_in_battle = no
+            }
+        }
+    }
+}

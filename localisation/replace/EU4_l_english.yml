@@ -1,0 +1,18 @@
+﻿l_english:
+ mississippi_river:0 "Lousiana"
+ the_great_wall_of_china: "Western Great Wall of China"
+ pragmatic_sanction_decision_title:0 "Enact Pragmatic Sanction Diplomatically"
+ pragmatic_sanction_decision_desc:0 "Our heir is a woman but the Imperial crown can only pass to a man. It would be intolerable if our dynasty should lose their hold on the crown they worked so hard to acquire due to a mere technicality. Let us use all our influence to ensure our female heir will be considered as our successor when the time comes to elect a new Emperor of the Holy Roman Empire." 
+ 
+ war_of_the_roses.1.t:0 "War of the Roses"
+ war_of_the_roses.1.d:0 "Henry VI has suddenly died! As the nation mourns, two junior branches of the old House of Plantagenet, the House of Lancaster and the House of York, both claim to be the rightful heir to the throne of England. Sporadic fights between their supporters have already broken out in a number of provinces around the country. Their heraldic symbols, a red rose and a white rose, have already become synonymous with the conflict now commonly known as the War of the Roses. Margaret of Anjou, the former King's consort has also slowly begun to consolidate power to her wing in the royal court. While her faction is weaker than that of the white and red rose, she could position herself as a third candidate, the blue rose and establish Anjou rule over England."
+ 
+  war_of_the_roses.106.d:0 "The War of the Roses finally comes to an end as [Root.Monarch.GetName] [Root.Monarch.Dynasty.GetName] succeeds in claiming the throne, becoming the new [Root.Monarch.GetTitle] of [Root.GetName]. With the ascension of the [Root.Monarch.Dynasty.GetName] dynasty, the old conflict between Yorkists and Lancasters is now a thing of the past and both factions have resolved to passively work against the [Root.Monarch.Dynasty.GetName] dynasty for now."
+  
+   belem_tower:0 "Belem Tower"
+ el_escorial:0 "El Escorial"
+ potosi:0 "Cerro Rico del Potosí"
+ kaaba:0 "Kaaba"
+ holy_city_jerusalem:0 "Holy City of Jerusalem"
+ great_mosque_djenne:0 "Great Mosque of Djenné"
+ imperial_city_hue:0 "Imperial City of Hue"
