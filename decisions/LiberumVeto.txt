@@ -1,12 +1,12 @@
 country_decisions = {
 
 	liberum_veto = {
-		major = yes
+		major = no
 		potential = {
 			NOT = { has_country_flag = librium_veto }
 			NOT = { has_country_modifier = librium_veto_legate }
-			NOT = { colony = 1 }
-			has_idea_group = aristocracy_ideas
+			#NOT = { colony = 1 }
+			#has_idea_group = aristocracy_ideas
 		}
 		allow = {
 			full_idea_group = aristocracy_ideas

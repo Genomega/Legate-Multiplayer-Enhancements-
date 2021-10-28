@@ -4,7 +4,7 @@ culture = muisca
 
 is_city = yes
 discovered_by = south_american
-discovered_by = MCA
+ 
 religion = animism
 capital = "Tairo"
 trade_goods = unknown

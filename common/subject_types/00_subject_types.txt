@@ -201,7 +201,13 @@ vassal = {
 	liberty_desire_same_dynasty = -5.0
 	pays_overlord = 1.0
 	forcelimit_bonus = 1.0
-	forcelimit_to_overlord = 0.1
+	forcelimit_to_overlord = 0.15
+	manpower_bonus = 1.0
+	manpower_to_overlord = 0.15
+	naval_forcelimit_bonus = 1.0
+	naval_forcelimit_to_overlord = 0.15# Kalmar should give more sailors and boats
+	sailors_bonus = 0.5
+	sailors_to_overlord = 0.15
 
 	relative_power_class = 2
 	should_quit_wars_on_activation = yes
@@ -330,11 +336,21 @@ daimyo_vassal = {
 	
 	# Modifiers
 	
+	forcelimit_bonus = 1.0
+	forcelimit_to_overlord = 0.04
+	manpower_bonus = 1.0
+	manpower_to_overlord = 0.04
+	naval_forcelimit_bonus = 1.0
+	naval_forcelimit_to_overlord = 0.04 # Kalmar should give more sailors and boats
+	sailors_bonus = 0.5
+	sailors_to_overlord = 0.04	
+	
+	
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
 	modifier_subject = clear #Ditto
-	modifier_subject = {
-		modifier = subject_nation
-	}
+	# modifier_subject = {
+		# modifier = subject_nation
+	# }
 	modifier_overlord = {
 		modifier = daimyo_subject
 	}
@@ -369,6 +385,16 @@ personal_union = {
 
 	liberty_desire_negative_prestige = 1.0
 	military_focus = 0.66
+	
+	forcelimit_bonus = 1.0
+	forcelimit_to_overlord = 0.10
+	manpower_bonus = 1.0
+	manpower_to_overlord = 0.10
+	naval_forcelimit_bonus = 1.0
+	naval_forcelimit_to_overlord = 0.10 # Kalmar should give more sailors and boats
+	sailors_bonus = 0.5
+	sailors_to_overlord = 0.10
+	
 
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes
@@ -451,7 +477,7 @@ colony = {
 	transfer_trade_power = yes
 	can_concentrate_development = no
 		
-	liberty_desire_development_ratio = 0.1
+	liberty_desire_development_ratio = 0.15
 
 	max_government_rank = 1
 	cities_required_for_bonuses = 10
@@ -499,13 +525,13 @@ crown_colony = {
 	count = colony
 
 	forcelimit_bonus = 1.0
-	forcelimit_to_overlord = 0.15
+	forcelimit_to_overlord = 0.10
 	manpower_bonus = 1.0
-	manpower_to_overlord = 0.25
+	manpower_to_overlord = 0.15
 	naval_forcelimit_bonus = 1.0
-	naval_forcelimit_to_overlord = 0.15
+	naval_forcelimit_to_overlord = 0.10
 	sailors_bonus = 0.5
-	sailors_to_overlord = 0.25
+	sailors_to_overlord = 0.15
 
 	# Subject Interactions:
 	embargo_rivals = yes
@@ -538,11 +564,11 @@ private_enterprise = {
 	forcelimit_bonus = 1.0
 	forcelimit_to_overlord = 0.0075
 	manpower_bonus = 0.5
-	manpower_to_overlord = 0.15
+	manpower_to_overlord = 0.10
 	naval_forcelimit_bonus = 1.0
 	naval_forcelimit_to_overlord = 0.075
 	sailors_bonus = 1.0
-	sailors_to_overlord = 0.15
+	sailors_to_overlord = 0.10
 
 	# Subject Interactions:
 	replace_governor = no
@@ -570,11 +596,11 @@ self_governing_colony = {
 	forcelimit_bonus = 1.0
 	forcelimit_to_overlord = 0.025
 	manpower_bonus = 1.0
-	manpower_to_overlord = 0.1
+	manpower_to_overlord = 0.05
 	naval_forcelimit_bonus = 1.0
 	naval_forcelimit_to_overlord = 0.025
 	sailors_bonus = 1.0
-	sailors_to_overlord = 0.1
+	sailors_to_overlord = 0.05
 
 	# Subject Interactions:
 	replace_governor = no
@@ -617,10 +643,12 @@ tributary_state = {
 		}
 		OR = {
 			has_reform = celestial_empire
-			is_nomad = yes
-			religion_group = eastern
-			technology_group = chinese
-			technology_group = polynesian_tech
+			has_reform = great_mongol_state_reform
+			tag = MAJ
+			#is_nomad = yes
+			#religion_group = eastern
+			#technology_group = chinese
+			#technology_group = polynesian_tech
 		}
 	}
 	

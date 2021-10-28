@@ -1,0 +1,40 @@
+#Define estate loyalty and influence modifiers here
+
+estate_colonial_governor = {
+	modifier_definition = {
+		type = loyalty
+		key = estate_colonial_governor_loyalty_modifier
+		trigger = {
+			#has_estate = estate_colonial_governor
+			always = yes
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = estate_colonial_governor_influence_modifier
+		trigger = {
+			#has_estate = estate_colonial_governor
+			always = yes
+		}
+	}
+}
+
+# estate_nestorian = {
+	# modifier_definition = {
+		# type = loyalty
+		# key = estate_nestorian_loyalty_modifier
+		# trigger = {
+			# has_estate = estate_nestorian
+		# }
+	# }
+
+	# modifier_definition = {
+		# type = influence
+		# key = estate_nestorian_influence_modifier
+		# trigger = {
+			# has_estate = estate_nestorian
+		# }
+	# }
+# }
+

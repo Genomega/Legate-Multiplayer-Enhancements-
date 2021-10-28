@@ -15,7 +15,7 @@ punishment_of_sins_aspect = {
 orphan_hetmans_aspect = {
 	cost = 100
 	modifier = {
-		army_tradition_decay = -0.007
+		army_tradition_decay = -0.005
 	}
 }
 

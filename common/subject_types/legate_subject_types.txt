@@ -123,8 +123,8 @@ timurid_treaty_subject = {
 
 
 chinese_commandery_vassal = {
-	copy_from = vassal
-	count = vassal
+	copy_from = tributary_state
+	count = tributary_state
 	
 	sprite = GFX_icon_protectorate
 	diplomacy_overlord_sprite = GFX_diplomacy_leadprotectorates
@@ -133,7 +133,9 @@ chinese_commandery_vassal = {
 	# Properties:
 	has_power_projection = yes
 	takes_diplo_slot = no
-	can_fight_independence_war = no
+	can_fight_independence_war = yes
+	should_quit_wars_on_activation = no
+	can_have_subjects_of_other_types = yes
 	gives_daimyo_bonuses = yes
 	joins_overlords_wars = no
 	joins_colonial_wars = no	
@@ -149,6 +151,8 @@ chinese_commandery_vassal = {
 	overlord_can_attack = yes
 	counts_for_borders = no
 	can_transfer_in_peace = no
+	can_send_tribute = yes
+	#can_be_integrated = yes
 
 	# Properties:
 	# transfer_trade_power = no
@@ -171,6 +175,17 @@ chinese_commandery_vassal = {
 	# can_send_missionary_to_subject = no
 	# overlord_can_fabricate_for = no
 	# trust_on_start = 0
+
+	# Subject Bonuses
+	#pays_overlord = 1.0 ### Bugs them for some reason
+	forcelimit_bonus = 1.0
+	forcelimit_to_overlord = 0.08
+	manpower_bonus = 1.0
+	manpower_to_overlord = 0.05
+	naval_forcelimit_bonus = 1.0
+	naval_forcelimit_to_overlord = 0.08 # Kalmar should give more sailors and boats
+	sailors_bonus = 0.5
+	sailors_to_overlord = 0.08
 
 
 	trust_on_start = 0
@@ -236,16 +251,18 @@ chinese_commandery_vassal = {
 	sankin_kotai = yes
 	expel_ronin = yes
 	can_concentrate_development = no
+	demand_artifacts = no
 	
 	# Modifiers
 	
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
 	modifier_subject = clear #Ditto
-	modifier_subject = {
-		modifier = subject_nation
-	}
+	
+	# modifier_subject = {
+		# modifier = subject_nation
+	# }
 	modifier_overlord = {
-		modifier = daimyo_subject
+		modifier = chinese_commandery_vassal_overlord
 	}
 	
 	
@@ -450,3 +467,64 @@ chinese_integrated_protectorate = {
 	}
 }
 
+
+
+kalmar_personal_union = {
+	copy_from = personal_union
+
+	# Graphics:
+	sprite = GFX_icon_brother_kingdom
+	diplomacy_overlord_sprite = GFX_diplomacy_leadbrother_kingdom
+	diplomacy_subject_sprite = GFX_diplomacy_ambrother_kingdom
+
+	# Properties:
+	has_overlords_ruler = yes
+	can_be_integrated = yes
+	overlord_can_attack = yes
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	can_have_subjects_of_other_types = yes
+	can_union_break = no
+	transfer_subjects_when_made = yes
+	can_concentrate_development = no
+
+	liberty_desire_negative_prestige = 1.0
+	military_focus = 0.66
+
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	restoration_cb = cb_restore_personal_union
+	
+	# Subject Bonuses
+	forcelimit_bonus = 1.0
+	forcelimit_to_overlord = 0.15
+	manpower_bonus = 1.0
+	manpower_to_overlord = 0.10
+	naval_forcelimit_bonus = 1.0
+	naval_forcelimit_to_overlord = 0.15 # Kalmar should give more sailors and boats
+	sailors_bonus = 0.5
+	sailors_to_overlord = 0.10
+	
+	# Subject Interactions:
+	placate_rulers = yes # Kalmar Abilities
+	enforce_culture = no # Kalmar Abilities
+	siphon_income = no  # Kalmar Abilities
+	support_loyalists = no # Kalmar Abilities
+	press_sailors = yes # Kalmar Abilities
+	conscript_general = yes # Kalmar Abilities
+	block_settlement_growth = yes # Kalmar Abilities
+	allow_settlement_growth = yes # Kalmar Abilities
+	divert_trade = yes # Kalmar Abilities
+
+	# Modifiers:
+	modifier_subject = {
+		modifier = kalmar_union_subject
+	}
+	modifier_overlord = {
+		modifier = kalmar_union_overlord
+	}
+
+	overlord_opinion_modifier = in_union
+	subject_opinion_modifier = in_union
+}

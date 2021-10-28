@@ -16,13 +16,13 @@ increase_force_limit_from_colony = {
 
 	modifier_overlord = {
 		land_forcelimit = 3
-		global_manpower = 2.5
+		global_manpower = 2
 		global_sailors = 1000
 	}
 
 	modifier_subject = {
 		land_forcelimit = -3
-		global_manpower = -2.5
+		global_manpower = -2
 		global_sailors = -1000 
 	}
 }
@@ -41,6 +41,7 @@ enlarge_the_gold_fleet = {
 
 	modifier_overlord = {
 		treasure_fleet_income = 0.10
+		inflation_reduction = -0.03
 	}
 	modifier_subject = {
 		global_tax_income = 12
@@ -64,9 +65,10 @@ increase_religious_control = {
 	}
 
 	modifier_subject = {
-		global_missionary_strength = 0.01
+		global_missionary_strength = 0.02
+		missionary_maintenance_cost = -0.33
 		missionaries = 2
-		tolerance_own = 1
+		tolerance_own = 2
 	}
 }
 
@@ -76,27 +78,27 @@ increase_integration_in_the_realm = {
 			is_subject_of_type = crown_colony
 			is_subject_of_type = private_enterprise
 		}	
-		adm_power = 100
+		adm_power = 50
 	}
 	
-	cost = 100
+	cost = 50
 	
 	effect = {
 		add_liberty_desire = 10
-		add_adm_power = -100
+		add_adm_power = -50
 	}
 
 	modifier_overlord = {
-		governing_capacity = -25
+		governing_capacity = -20
 		global_tariffs = 0.05
-		trade_efficiency = 0.05
-		global_trade_power = 0.03
+		trade_efficiency = 0.01
+		global_trade_power = 0.02
 	}
 	
 	modifier_subject = {
 		liberty_desire = -5
 		global_trade_goods_size_modifier = 0.1
-		trade_efficiency = 0.10
+		trade_efficiency = 0.15
 		global_tax_income = 24
 	}
 }

@@ -4194,7 +4194,7 @@ ambras_castle = {
 
 		#cost to upgrade to this level (0 for tier 0)
 		cost_to_upgrade = {
-			factor = 500
+			factor = 750
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
@@ -4211,7 +4211,8 @@ ambras_castle = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			prestige = 0.25
-			drill_gain_modifier = 0.1
+			#drill_gain_modifier = 0.1
+			yearly_army_professionalism = 0.001
 		}
 
 		#what effects happen when this tier is achieved
@@ -4233,7 +4234,7 @@ ambras_castle = {
 
 		#cost to upgrade to this level (0 for tier 0)
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 1500
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
@@ -4250,7 +4251,8 @@ ambras_castle = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			prestige = 0.5
-			drill_gain_modifier = 0.25
+			#drill_gain_modifier = 0.25
+			yearly_army_professionalism = 0.002
 		}
 
 		#what effects happen when this tier is achieved
@@ -4289,7 +4291,8 @@ ambras_castle = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			prestige = 0.8
-			drill_gain_modifier = 0.5
+			#drill_gain_modifier = 0.5
+			yearly_army_professionalism = 0.003
 		}
 
 		#what effects happen when this tier is achieved
@@ -9367,7 +9370,7 @@ el_escorial = {
 		country_modifiers = {
 			governing_capacity = 50
 			global_tariffs = 0.10
-			treasure_fleet_income = 0.15
+			treasure_fleet_income = 0.05
 		}
 
 		#what effects happen when this tier is achieved
@@ -9400,7 +9403,7 @@ el_escorial = {
 		country_modifiers = {
 			governing_capacity = 150
 			global_tariffs = 0.15
-			treasure_fleet_income = 0.25
+			treasure_fleet_income = 0.15
 		}
 
 		#what effects happen when this tier is achieved
@@ -9433,7 +9436,7 @@ el_escorial = {
 		country_modifiers = {
 			governing_capacity = 250
 			global_tariffs = 0.25
-			treasure_fleet_income = 0.35
+			treasure_fleet_income = 0.20
 		}
 
 		#what effects happen when this tier is achieved

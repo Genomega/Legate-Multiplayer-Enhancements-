@@ -2127,7 +2127,7 @@ estate_nobles_officer_corp = {
 	}
 	benefits = {
 		general_cost = -0.25
-		army_tradition_decay = -0.005
+		army_tradition_decay = -0.006
 	}
 	ai_will_do = {
 		factor = 0
@@ -4484,7 +4484,8 @@ estate_nobles_supremacy_over_crown = {
 		burghers_influence_modifier = 0.1
 		church_influence_modifier = 0.1
 		dhimmi_influence_modifier = 0.1
-		cossacks_influence_modifier = 0.1
+		
+		s_influence_modifier = 0.1
 		rajput_influence_modifier = 0.1
 		brahmins_hindu_influence_modifier = 0.1
 		brahmins_muslim_influence_modifier = 0.1
@@ -6963,7 +6964,6 @@ estate_cossacks_recruit_cossack_generals = {
 	}
 	benefits = {
 		army_tradition = 0.5
-		leader_land_shock = 1
 	}
 	ai_will_do = {
 		factor = 10
@@ -8367,30 +8367,30 @@ estate_church_lao_animism = {
 	}
 }
 
-# estate_nobles_command_of_the_military = {
-	# icon = privilege_promote_purbias
-	# land_share = 10
-	# max_absolutism = -10
-	# influence = 0.35
-	# is_valid = {
-		# NOT = { has_idea = local_nobility }	
-	# }
-	# can_select = {
-		# NOT = { has_idea = local_nobility }		
-	# }
-	# on_granted = {
-		#custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed 
-	# }
-	# penalties = {
-		# leader_cost = 0.2
-	# }
-	# benefits = {
-		# army_tradition = 0.8
-	# }
-	# ai_will_do = {
-		# factor = 0
-	# }
-# }
+estate_nobles_command_of_the_military = {
+	icon = privilege_promote_purbias
+	land_share = 10
+	max_absolutism = -10
+	influence = 0.35
+	is_valid = {
+		always = no
+	}
+	can_select = {
+		always = no	# Needs to be kept around to not prevent crash. always = no will make it never appear	
+	}
+	on_granted = {
+		## custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed 
+	}
+	penalties = {
+		leader_cost = 0.2
+	}
+	benefits = {
+		army_tradition = 0.8
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 
 estate_burghers_orang_laut_alliances = {
 	icon = privilege_diplo_power

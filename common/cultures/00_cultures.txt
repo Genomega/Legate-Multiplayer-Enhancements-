@@ -5642,6 +5642,8 @@ east_asian = {	# Chinese Group
 		}
 	}
 	jin = {
+		country = { has_banners = 1}
+		province = { local_has_banners = 1}	
 		primary = JIN
 		male_names = {
 			Zhanji Zhanjun Zhanyong Zhanyin Zhanshan Zhangang Zhan'ao Zhankai Zhanyan Jianrui Jianlin Jianti Jianchun 

@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = chinese_warlord_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = chimin
+capital = 1829	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Ying"
+		dynasty = "Beigong"
+		birth_date = 1407.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+	add_treasury = 100
+	add_army_tradition = 35
+	add_prestige = 25
+}

@@ -1,9 +1,9 @@
 # 2152 - Jianning
 
-owner = X16
-controller = X16
-add_core = X16
-culture = chimin
+owner = X41
+controller = X41
+add_core = X41
+culture = gan
 religion = confucianism
 capital = "Jianning"
 trade_goods = tea

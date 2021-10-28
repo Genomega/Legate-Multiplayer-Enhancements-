@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = chinese_bandit_reform
+technology_group = chinese
+religion = confucianism
+primary_culture = xiang
+add_accepted_culture = hubei
+capital = 5107	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Zhong"
+		dynasty = "Dongli"
+		birth_date = 1420.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

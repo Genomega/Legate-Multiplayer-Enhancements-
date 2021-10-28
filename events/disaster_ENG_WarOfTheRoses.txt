@@ -41,9 +41,9 @@ country_event = {
 			remove_consort = yes
 		}
 		define_ruler = {
-			name = "Edward"
 			dynasty = Lancaster
-			age = 31
+			min_age = 25
+			max_age = 45
 			fixed = yes
 			adm = 3
 			dip = 2
@@ -251,7 +251,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 1.5
 					leader = "Edward"
 					leader_dynasty = "Lancaster"
 					win = yes
@@ -280,7 +280,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 3
+					size = 1.5
 					leader = "Edward"
 					leader_dynasty = "Lancaster"
 					win = yes
@@ -301,7 +301,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3.5
 					leader = "Richard"
 					leader_dynasty = "York"
 					win = yes
@@ -330,7 +330,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 2.5
 					leader = "Richard"
 					leader_dynasty = "York"
 					win = yes

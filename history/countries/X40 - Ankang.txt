@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = chinese_bandit_reform
+technology_group = chinese
+religion = confucianism
+primary_culture = xiang
+add_accepted_culture = hubei
+capital = 5088	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Qi"
+		dynasty = "Zou"
+		birth_date = 1420.1.1
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	add_treasury = 50
+	add_army_tradition = 15
+	add_prestige = 20
+}

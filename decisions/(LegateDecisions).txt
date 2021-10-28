@@ -1,0 +1,47 @@
+country_decisions = {
+
+	establish_marine_corp = {
+		potential = {
+			OR = {
+				technology_group = western
+				technology_group = eastern
+				technology_group = indian
+				technology_group = ottoman
+				technology_group = muslim
+				technology_group = chinese
+			}
+			NOT = { has_country_modifier = established_a_marine_corp }
+		}	
+		allow = {
+			treasury = 200
+			is_at_war = no
+			OR = {
+				adm_tech = 7
+				dip_tech = 7
+				mil_tech = 7
+			}	
+			num_of_ports = 10
+			is_at_war = no
+			NOT = { overextension_percentage = 0.10 }
+			sailors_percentage = 0.50
+			dip_power = 50
+			mil_power = 50
+			adm_power = 50
+		}
+		effect = {
+			add_country_modifier = {
+				name = "established_a_marine_corp"
+				duration = -1
+			}	
+			add_sailors = -1000
+			add_treasury = -200
+			add_dip_power = -50
+			add_mil_power = -50
+			add_adm_power = -50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}	

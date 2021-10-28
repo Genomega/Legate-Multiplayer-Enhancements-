@@ -1,0 +1,60 @@
+namespace = debugging_events
+
+
+country_event = {
+	id = debugging_events.12
+	title = debugging_events.12.t
+	desc = debugging_events.12.d
+	picture = BATTLE_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	trigger = {
+		#has_country_flag = avoids_colonist_settlement_growth
+		num_of_colonists = 1
+		any_owned_province = { 
+			is_city = yes 
+			has_empty_adjacent_province = yes 
+		}		
+		OR = {
+			NOT = { government = native }
+			has_institution = feudalism
+		}
+		OR = {
+			capital_scope = { has_colonist = yes } #This lower intensity and AI like putting their settler in the capital
+			AND = {
+				NOT = { colony = 1 }
+				any_owned_province = {
+					has_colonist = yes
+					is_city = yes
+				}
+			}
+		}
+		ai = yes
+	}
+	
+	option = {
+		name = debug.6.a
+		every_owned_province = {
+			limit = { has_colonist = yes is_city = yes }
+			cancel_construction = yes
+			owner = { add_treasury = 48 } # Refund for the settlement growth
+		}
+		if = {	#Create a colony and don't take their colonist away if they need it
+			limit = { 
+				any_owned_province = { is_city = yes has_empty_adjacent_province = yes } #Don't take away their colonists if they need to make a colony
+			}
+			random_owned_province = {
+				limit = { is_city = yes has_empty_adjacent_province = yes }
+				random_empty_neighbor_province = {
+					limit = { development = 3 }	#Don't colonize 0 0 0
+					create_colony = 200	#Boosted or this colony will finish slowly as the AI doesn't send their colonists
+				}
+			}
+		}
+	}
+}

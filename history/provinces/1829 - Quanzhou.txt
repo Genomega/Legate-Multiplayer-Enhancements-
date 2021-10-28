@@ -1,8 +1,8 @@
 #1829 - Xiamen
 
-owner = YUE
-controller = YUE
-add_core = YUE
+owner = X46
+controller = X46
+add_core = X46
 culture = chimin
 religion = confucianism
 capital = "Quanzhou"

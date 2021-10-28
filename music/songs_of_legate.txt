@@ -41,25 +41,25 @@ song = {
 	}
 }
 
-song = {
-	name = "para_bellum.ogg"
+# song = {
+	# name = "para_bellum.ogg"
 	
-	chance = {
-		factor = 1
-		modifier = {
-			is_at_war = yes
-			factor = 0.75
-		}		
-	}
-}
+	# chance = {
+		# factor = 1
+		# modifier = {
+			# is_at_war = yes
+			# factor = 0.75
+		# }		
+	# }
+# }
 
 song = {
 	name = "to_the_east.ogg"
 	
 	chance = {
-		factor = 0.25
+		factor = 0.10
 		modifier = {
-			factor = 4.5
+			factor = 6.5
 			has_idea = quest_for_the_new_world
 			technology_group = chinese
 		}		
@@ -106,9 +106,78 @@ song = {
 
 
 
+song = {
+	name = "the_danelaw.ogg"
+	
+	chance = {
+		factor = 0.33
+		modifier = {
+			factor = 3.3
+			culture_group = scandinavian
+		}		
+	}
+}
 
 
+song = {
+	name = "battle_of_brunkeberg.ogg"
+	
+	chance = {
+		factor = 0.33
+		modifier = {
+			factor = 3.3
+			culture_group = scandinavian
+		}		
+	}
+}
 
+song = {
+	name = "return_to_estonia.ogg"
+	
+	chance = {
+		factor = 0.33
+		modifier = {
+			factor = 3.5
+			culture_group = scandinavian
+		}		
+	}
+}
+
+song = {
+	name = "scandinavia.ogg"
+	
+	chance = {
+		factor = 0.33
+		modifier = {
+			factor = 3.3
+			culture_group = scandinavian
+		}		
+	}
+}
+
+song = {
+	name = "gulf_of_riga.ogg"
+	
+	chance = {
+		modifier = {
+			factor = 0.75
+			is_at_war = yes
+		}			
+	}
+}
+
+# song = {
+	# name = "eu3_conquistor_theme.ogg"
+	
+	# chance = {
+		# factor = 0.25
+		# modifier = {
+			# factor = 4.0
+			# is_at_war = yes
+			# has_idea_group = exploration_ideas
+		# }		
+	# }
+# }
 
 
 

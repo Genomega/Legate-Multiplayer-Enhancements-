@@ -502,83 +502,83 @@ incident_pope = {
 	}
 }
 
-incident_holstein = {
-	event = holstein.1
-	default_option = 0
+# incident_holstein = {
+	# event = holstein.1
+	# default_option = 0
 	
-	can_stop = {
-		OR = {
-			exists = SHL
-			1775 = {
-				owner = {
-					is_part_of_hre = yes
-				}
-			}
-		}
-	}
+	# can_stop = {
+		# OR = {
+			# exists = SHL
+			# 1775 = {
+				# owner = {
+					# is_part_of_hre = yes
+				# }
+			# }
+		# }
+	# }
 	
-	0 = {
-		factor = 1
-		modifier = {
-			factor = 100
-			1775 = {
-				owner = {
-					OR = {
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_rivalry
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_hostile
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_threatened
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_outraged
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_disloyal
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_rebellious
-						}
-					}
-				}
-			}
-		}
-	}
+	# 0 = {
+		# factor = 1
+		# modifier = {
+			# factor = 100
+			# 1775 = {
+				# owner = {
+					# OR = {
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_rivalry
+						# }
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_hostile
+						# }
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_threatened
+						# }
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_outraged
+						# }
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_disloyal
+						# }
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_rebellious
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
 	
-	1 = {
-		factor = 1
-		modifier = {
-			factor = 100
-			1775 = {
-				owner = {
-					OR = {
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_friendly
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_loyal
-						}
-						ai_attitude = {
-							who = ROOT
-							attitude = attitude_allied
-						}
-					}
-				}
-			}
-		}
-	}
-}
+	# 1 = {
+		# factor = 1
+		# modifier = {
+			# factor = 100
+			# 1775 = {
+				# owner = {
+					# OR = {
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_friendly
+						# }
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_loyal
+						# }
+						# ai_attitude = {
+							# who = ROOT
+							# attitude = attitude_allied
+						# }
+					# }
+				# }
+			# }
+		# }
+	# }
+# }
 
 incident_shadow_kingdom = {
 	event = shadow_kingdom.2

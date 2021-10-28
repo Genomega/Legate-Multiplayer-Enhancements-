@@ -1,7 +1,7 @@
 #670 - Ganzhou
 
-owner = NNG
-controller = NNG
+owner = X48
+controller = X48
 culture = hakka
 religion = confucianism
 capital = "Ganzhou"
@@ -11,7 +11,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core = NNG
+add_core = X48
 
 
 

@@ -1,0 +1,1266 @@
+## Written by Genomega
+
+
+namespace = leg_danish_flavor
+
+##Worrying Succession of Christopher III
+country_event = {
+	id = leg_danish_flavor.1
+	title = "leg_danish_flavor.1.t"
+	desc = "leg_danish_flavor.1.d"
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			tag = DAN
+			AND = {
+				was_tag = DAN
+				NOT = { exists = DAN }
+				tag = SCA
+			}		
+		}
+		has_ruler = "Christopher III"
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				save_global_event_target_as = scandinvian_recess_location
+			}		
+			add_trust = {
+				who = SWE
+				value = -35
+				mutual = yes
+			}	
+			add_trust = {
+				who = NOR
+				value = -20
+				mutual = yes
+			}
+			remove_historical_friend = NOR
+			NOR = {
+				remove_historical_friend = DAN
+			}	
+			set_estate_privilege = estate_nobles_danish_union
+			12 = {
+				kill_units = {
+					who = owner
+					type = galley
+					amount = 7
+				}
+			}	
+			12 = {
+				heavy_ship = DAN
+			}
+			12 = {
+				heavy_ship = DAN
+			}
+			12 = {
+				heavy_ship = DAN
+			}
+			12 = {
+				heavy_ship = DAN
+			}
+			12 = {
+				heavy_ship = DAN
+			}
+			12 = {
+				heavy_ship = DAN
+			}	
+			ENG = {
+				add_navy_tradition = 41
+				add_manpower = 2.5
+				add_sailors = 2000
+				add_army_tradition = 15
+				236 = {
+					heavy_ship = ENG
+				}
+				236 = {
+					heavy_ship = ENG
+				}
+				236 = {
+					heavy_ship = ENG
+				}
+				236 = {
+					heavy_ship = ENG
+				}				
+			}	
+		}
+	}	
+	
+	option = { 
+		name = "leg_danish_flavor.1.a"
+		custom_tooltip = leg_danish_flavor.1.tt.a
+		custom_tooltip = leg_danish_flavor.1.tt.b
+		custom_tooltip = leg_danish_flavor.1.tt.c
+		custom_tooltip = leg_danish_flavor.1.tt.d		
+	}
+}
+
+country_event = {
+	id = leg_danish_flavor.2
+	title = "leg_danish_flavor.2.t"
+	desc = "leg_danish_flavor.2.d"
+	picture = DIET_DENMARK_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	# trigger = {
+		# OR = {
+			# tag = DAN
+			# AND = {
+				# was_tag = DAN
+				# NOT = { exists = DAN }
+				# tag = SCA
+			# }		
+		# }
+		# has_ruler = "Christopher III"
+	# }
+	
+	
+	immediate = {
+		hidden_effect = {
+			ENG = {
+				save_global_event_target_as = english_elected_heir
+			}
+			FRA = {
+				save_global_event_target_as = fra_elected_heir
+			}
+			HAB = {
+				save_global_event_target_as = austrian_elected_heir
+			}
+			POL = {
+				save_global_event_target_as = polish_elected_heir
+			}
+			SWE = {
+				save_global_event_target_as = swedish_elected_heir
+			}
+			NOR = {
+				save_global_event_target_as = norway_elected_heir
+			}			
+		}	
+	}	
+	
+	option = { 
+		name = "leg_danish_flavor.2.a"
+		ai_chance = { factor = 45 }		
+		DAN = {
+			define_heir = {
+				name = "Christian" 
+				dynasty = "von Oldenburg"
+				birth_date = 1426.2.1		
+				culture = hannoverian
+				claim = 90
+				no_consort_with_heir = yes
+				adm = 4
+				dip = 3
+				mil = 2
+				fixed = yes
+				block_disinherit = yes
+			}
+		}
+		add_stability = 1
+		set_country_flag = danish_succession_settled_over
+		reverse_add_opinion = {
+			who = OLD
+			modifier = elected_ruelr_of_culture
+		}
+		add_opinion = {
+			who = OLD
+			modifier = elected_ruelr_of_culture
+		}		
+	}
+	option = { 
+		name = "leg_danish_flavor.2.b"	
+		ai_chance = { factor = 3 }
+		DAN = {
+			define_heir = {
+				name = "Edward" 
+				birth_date = 1420.1.1 #Made up
+				dynasty = event_target:english_elected_heir
+				culture = event_target:english_elected_heir
+				no_consort_with_heir = yes
+				block_disinherit = yes
+			}
+		}
+		set_country_flag = danish_succession_settled_over
+		reverse_add_opinion = {
+			who = ENG
+			modifier = elected_ruelr_of_culture
+		}
+		add_opinion = {
+			who = ENG
+			modifier = elected_ruelr_of_culture
+		}		
+	}
+	option = { 
+		name = "leg_danish_flavor.2.c"	
+		ai_chance = { factor = 7 }
+		DAN = {
+			define_heir = {
+				name = "Jean" 
+				birth_date = 1421.1.1 #Made up
+				dynasty = event_target:fra_elected_heir
+				culture = event_target:fra_elected_heir
+				no_consort_with_heir = yes
+				block_disinherit = yes
+			}
+		}
+		set_country_flag = danish_succession_settled_over
+		reverse_add_opinion = {
+			who = FRA
+			modifier = elected_ruelr_of_culture
+		}
+		add_opinion = {
+			who = FRA
+			modifier = elected_ruelr_of_culture
+		}		
+	}
+	option = { 
+		name = "leg_danish_flavor.2.dd"	
+		ai_chance = { factor = 10 }
+		DAN = {
+			define_heir = {
+				name = "Albert" 
+				birth_date = 1417.1.1 #Made up
+				dynasty = event_target:austrian_elected_heir
+				culture = event_target:austrian_elected_heir
+				no_consort_with_heir = yes
+				block_disinherit = yes
+			}
+		}
+		set_country_flag = danish_succession_settled_over
+		reverse_add_opinion = {
+			who = HAB
+			modifier = elected_ruelr_of_culture
+		}
+		add_opinion = {
+			who = HAB
+			modifier = elected_ruelr_of_culture
+		}		
+	}
+	option = { 
+		name = "leg_danish_flavor.2.e"	
+		ai_chance = { factor = 5 }
+		DAN = {
+			define_heir = {
+				name = "Casimir" 
+				birth_date = 1413.1.1 #Made up
+				dynasty = event_target:polish_elected_heir
+				culture = event_target:polish_elected_heir
+				no_consort_with_heir = yes
+				block_disinherit = yes
+			}
+		}
+		set_country_flag = danish_succession_settled_over
+		reverse_add_opinion = {
+			who = POL
+			modifier = elected_ruelr_of_culture
+		}
+		add_opinion = {
+			who = POL
+			modifier = elected_ruelr_of_culture
+		}		
+	}
+	option = { 
+		name = "leg_danish_flavor.2.f"	
+		ai_chance = { factor = 15 }
+		DAN = {
+			define_heir = {
+				age = 27
+				claim = 85
+				name = "Haakon" 
+				dynasty = "Bjelke"
+				culture = event_target:norway_elected_heir
+				no_consort_with_heir = yes
+				block_disinherit = yes
+			}
+		}
+		set_country_flag = danish_succession_settled_over
+		reverse_add_opinion = {
+			who = NOR
+			modifier = elected_ruelr_of_culture
+		}
+		add_opinion = {
+			who = NOR
+			modifier = elected_ruelr_of_culture
+		}		
+		NOR = {
+			add_liberty_desire = -15
+		}		
+	}
+	option = { 
+		name = "leg_danish_flavor.2.g"	
+		ai_chance = { factor = 5 }
+		DAN = {
+			define_heir = {
+				age = 32
+				claim = 85
+				name = "Gottfrid" 
+				dynasty = "Hastfer"
+				culture = event_target:swedish_elected_heir
+				no_consort_with_heir = yes
+				block_disinherit = yes
+			}
+		}
+		reverse_add_opinion = {
+			who = SWE
+			modifier = elected_ruelr_of_culture
+		}
+		add_opinion = {
+			who = SWE
+			modifier = elected_ruelr_of_culture
+		}
+		set_country_flag = danish_succession_settled_over
+		SWE = {
+			add_liberty_desire = -15
+		}	
+	}
+	option = { 
+		name = "leg_danish_flavor.2.h"
+		ai_chance = { factor = 10 }
+		set_country_flag = danish_succession_settled_over
+		remove_government_reform = danish_confirmation_monarchy
+		add_government_reform = danish_elected_monarchy
+		add_prestige = 10
+	}
+	
+}
+
+country_event = { # Inheritance of Holstein
+	id = leg_danish_flavor.3
+	title = "leg_danish_flavor.3.t"
+	desc = "leg_danish_flavor.3.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	
+	option = { 
+		ai_chance = { factor = 20 }
+		name = "leg_danish_flavor.3.a"
+		custom_tooltip = leg_danish_flavor.3.tt.a	
+		hidden_effect = {
+			emperor = {
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					set_imperial_incident = incident_danish_entrance
+				}
+				else = {
+					country_event = {
+						id = leg_danish_flavor.4
+						days = 5
+					}
+				}
+			}
+		}		
+	}
+	option = { 
+		ai_chance = { factor = 80 }
+		name = "leg_danish_flavor.3.b"	
+		add_prestige = 10
+		add_legitimacy = 10
+	}	
+}
+
+
+country_event = { # Incident Dummy Event
+	id = leg_danish_flavor.4
+	title = "leg_danish_flavor.4.t"
+	desc = "leg_danish_flavor.4.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = "leg_danish_flavor.4.a"	
+		custom_tooltip = danish_imperial_yesman.tt
+		DAN = {
+			add_government_reform = danish_kingdom_hre
+			country_event = {
+				id = leg_danish_flavor.30
+			}	
+		}	
+		ai_chance = {
+			factor = 50		
+			modifier = {
+				factor = 1000
+				alliance_with = DAN
+			}		
+		}
+	}
+	option = { 
+		name = "leg_danish_flavor.4.b"	
+		custom_tooltip = danish_imperial_noman.tt
+		DAN = {
+			country_event = {
+				id = leg_danish_flavor.31
+			}	
+		}		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1000
+				is_rival = DAN
+			}
+		}	
+	}		
+}
+
+
+country_event = { # Treaty of the North Sea  - Denmark
+	id = leg_danish_flavor.5
+	title = "leg_danish_flavor.5.t"
+	desc = "leg_danish_flavor.5.d"
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = "leg_danish_flavor.5.a"	
+		ai_chance = {
+			factor = 10
+		}	
+		custom_tooltip = treaty_mission_reward.tt
+		ENG = {
+			country_event = {
+				id = leg_danish_flavor.6
+				days = 5
+			}	
+		}	
+	}
+	option = { 
+		name = "leg_danish_flavor.5.b"	
+		ai_chance = {
+			factor = 90
+		}		
+		custom_tooltip = viking_legacy_missions_enabled.tt
+		set_global_flag = denmark_viking_legacy_enabled
+		4368 = {
+			add_permanent_claim = DAN
+		}
+		4367 = {
+			add_permanent_claim = DAN
+		}		
+		ai_chance = {
+			factor = 10
+		}
+	}	
+}
+
+
+country_event = { # Treaty of the North Sea - England
+	id = leg_danish_flavor.6
+	title = "leg_danish_flavor.6.t"
+	desc = "leg_danish_flavor.6.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	option = {  #Agree
+		name = "leg_danish_flavor.6.a"
+		custom_tooltip = treaty_mission_reward.tt
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 1000
+				alliance_with = DAN
+			}			
+		}	
+		DAN = {
+			country_event = {
+				id = leg_danish_flavor.7
+				days = 5
+			}	
+		}	
+	}
+	option = { #Decline
+		name = "leg_danish_flavor.6.b"	
+		custom_tooltip = treaty_mission_reward_decline.tt
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 1000
+				is_rival = DAN
+			}			
+		}
+		DAN = {
+			country_event = {
+				id = leg_danish_flavor.8
+				days = 5
+			}	
+		}		
+	}	
+}
+
+country_event = { # English-Danish North Sea Agreement
+	id = leg_danish_flavor.7
+	title = "leg_danish_flavor.7.t"
+	desc = "leg_danish_flavor.7.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	option = {  
+		name = "leg_danish_flavor.7.a"	
+		custom_tooltip = treaty_mission_reward.tt
+		reverse_add_opinion = {
+			who = ENG
+			modifier = treaty_of_the_north_sea
+		}
+		add_opinion = {
+			who = ENG
+			modifier = treaty_of_the_north_sea
+		}		
+		DAN = {
+			add_treasury = 250
+		}
+		ENG = {
+			add_country_modifier = {
+				name = "royal_purse_allocated"
+				duration = 7665
+			}
+			add_country_modifier = {
+				name = "north_sea_trade_monopoly"
+				duration = 12775
+			}			
+		}
+		369 = {
+			cede_province = ENG
+			add_core = ENG
+			remove_core = NOR
+			add_local_autonomy = -100
+			add_base_production = 2
+			add_base_tax = 2	
+			change_culture = english
+		}	
+		1978 = {
+			cede_province = ENG
+			add_core = ENG
+			remove_core = NOR
+			add_local_autonomy = -100
+			add_base_production = 2
+			add_base_tax = 2
+			change_culture = english
+		}
+		1979 = {
+			cede_province = ENG
+			add_core = ENG
+			remove_core = NOR			
+			add_local_autonomy = -100
+			add_base_production = 2
+			add_base_tax = 2
+			change_culture = english
+		}		
+		45 = { # Lubeck to Denmark
+			add_trade_modifier = {
+				who = DAN
+				duration = 45625
+				power = 50
+				key = danish_english_trade_agreement
+			}
+		}
+		45 = { # Lubeck lost to England
+			add_trade_modifier = {
+				who = ENG
+				duration = 45625
+				power = -50
+				key = danish_english_trade_agreement
+			}
+		}
+		38 = { # Baltic Sea to Denmark
+			add_trade_modifier = {
+				who = DAN
+				duration = 45625
+				power = 50
+				key = danish_english_trade_agreement
+			}
+		}
+		38 = { # Baltic Sea lost to England
+			add_trade_modifier = {
+				who = ENG
+				duration = 45625
+				power = -50
+				key = danish_english_trade_agreement
+			}
+		}
+		248 = { # North Sea to English
+			add_trade_modifier = {
+				who = ENG
+				duration = 45625
+				power = 50
+				key = danish_english_trade_agreement
+			}
+		}
+		248 = { # Baltic Sea lost to Denmark
+			add_trade_modifier = {
+				who = DAN
+				duration = 45625
+				power = -50
+				key = danish_english_trade_agreement
+			}
+		}
+		248 = { # Baltic Sea lost to Norway
+			add_trade_modifier = {
+				who = NOR
+				duration = 45625
+				power = -50
+				key = danish_english_trade_agreement
+			}
+		}		
+	}	
+}
+
+country_event = { # English decline Treaty
+	id = leg_danish_flavor.8
+	title = "leg_danish_flavor.8.t"
+	desc = "leg_danish_flavor.8.d"
+	picture = MERCHANTS_ARGUING_DENMARK_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	option = {  
+		name = "leg_danish_flavor.8.a"			
+	}	
+}
+
+
+country_event = { # Event to kill Christopher III after 1448
+	id = leg_danish_flavor.9
+	title = "leg_danish_flavor.9.t"
+	desc = "leg_danish_flavor.9.d"
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	#is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		tag = DAN
+		has_ruler = "Christopher III"
+		is_year = 1450
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {  
+		name = "leg_danish_flavor.9.a"	
+		kill_ruler = yes
+	}	
+}
+
+country_event = { # Event to kill Adolf VIII after 1448
+	id = leg_danish_flavor.10
+	title = "leg_danish_flavor.10.t"
+	desc = "leg_danish_flavor.10.d"
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	#is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		tag = SHL
+		#has_ruler = "Adolf VIII" ### Reworked base event so it always happen
+		is_year = 1449
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {  
+		name = "leg_danish_flavor.10.a"	
+		kill_ruler = yes
+		DAN = {
+			country_event = {
+				id = flavor_dan.4
+			}
+		}	
+	}	
+}
+
+country_event = { # Swedish revolt against Denmark due to succession
+	id = leg_danish_flavor.11
+	title = "leg_danish_flavor.11.t"
+	desc = "leg_danish_flavor.11.d"
+	picture = KING_ASSASSINATION_DENMARK_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { is_year = 1460 } # Hard Cap
+		tag = SWE
+		NOT = {
+			DAN = {
+				has_ruler = "Christopher III"
+			}
+			DAN = {
+				AND = {
+					mission_completed = stablize_union_dan
+					mission_completed = secure_danish_succession
+				}	
+			}	
+		}	
+	}
+	
+	option = {  
+		name = "leg_danish_flavor.11.a"		
+		ai_chance = { factor = 100 }	
+		declare_war_with_cb = {
+			who = DAN
+			casus_belli = cb_independence_war
+		}
+		define_ruler = {
+			name = "Karl VIII Knutsson" 
+			dynasty = "Bonde"
+			age = 36
+			culture = swedish
+			claim = 100
+			adm = 3
+			dip = 3
+			mil = 4
+			fixed = yes
+		}
+		define_consort = {
+			country_of_origin = SWE
+			name = "Katarina" 
+			dynasty = "Gumsehuvud"
+			birth_date = 1418.1.1		
+			culture = swedish
+			claim = 100
+			adm = 2
+			dip = 3
+			mil = 2
+			fixed = yes
+		}		
+		add_stability = 1
+		add_prestige = 25
+		add_manpower = 15
+		add_treasury = 250
+		1 = {
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			cavalry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+		}	
+		26 = {
+			add_claim = SWE
+		}
+		4165 = {
+			add_claim = SWE
+		}	
+		1982 = {
+			add_claim = SWE
+		}	
+		6 = {
+			add_claim = SWE
+		}	
+		add_country_modifier = {
+			name = "swedish_war_of_independence"
+			duration = 3650
+		}	
+		create_general = { tradition = 80 }
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 20
+		}
+		remove_country_modifier = karl_knutsson_regency
+	}	
+	option = {  
+		name = "leg_danish_flavor.11.b"	
+		ai_chance = { factor = 0 }		
+		add_prestige = -10
+	}	
+}
+
+#20-25 
+
+country_event = { # Scandinvian Consitution
+	id = leg_danish_flavor.20
+	title = "leg_danish_flavor.20.t"
+	desc = "leg_danish_flavor.20.d"
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+		
+	# immediate = {
+		# hidden_effect = {
+			# random_owned_province = {
+				# save_global_event_target_as = scandinvian_recess_location
+			# }	
+		# }		
+	# }		
+		
+	option = {  
+		ai_chance = { factor = 10 }
+		name = "leg_danish_flavor.20.a"	
+		add_historical_friend = NOR
+		add_dip_power = -100
+		add_mil_power = -100
+		add_adm_power = -100
+		NOR = {
+			add_historical_friend = DAN
+		}	
+		add_country_modifier = {
+			name = "weak_scand_consitution"
+			duration = 36500
+		}
+		NOR = {
+			add_country_modifier = {
+				name = "weak_scand_consitution"
+				duration = 36500
+			}
+		}
+		SWE = {
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "weak_scand_consitution"
+				duration = 36500
+			}
+			add_country_modifier = {
+				name = "swede_concessions_scand_consitution"
+				duration = 9125
+			}			
+		}		
+	}	
+	option = {  
+		ai_chance = { factor = 40 }
+		name = "leg_danish_flavor.20.b"	
+		add_historical_friend = NOR
+		add_dip_power = 50
+		add_mil_power = 50
+		add_adm_power = 50	
+		NOR = {
+			add_historical_friend = DAN
+			add_dip_power = 50
+			add_mil_power = 50
+			add_adm_power = 50				
+		}	
+		add_country_modifier = {
+			name = "medium_scand_consitution"
+			duration = 36500
+		}
+		NOR = {
+			add_country_modifier = {
+				name = "medium_scand_consitution"
+				duration = 36500
+			}
+		}
+		SWE = {
+			add_liberty_desire = 25
+		}		
+	}
+	option = {  
+		ai_chance = { factor = 60 }
+		name = "leg_danish_flavor.20.c"	
+		trigger = {
+			senior_union_with = SWE
+		}	
+		custom_tooltip = danish_gotaland_claims.tt
+		add_stability = -1
+		add_historical_friend = NOR
+		add_historical_rival = SWE
+		add_dip_power = 100
+		add_mil_power = 100
+		add_adm_power = 100	
+		NOR = {
+			add_historical_friend = DAN
+			add_dip_power = 100
+			add_mil_power = 100
+			add_adm_power = 100				
+		}	
+		add_country_modifier = {
+			name = "strong_scand_consitution"
+			duration = 36500
+		}
+		NOR = {
+			add_country_modifier = {
+				name = "strong_scand_consitution"
+				duration = 36500
+			}
+		}
+		SWE = {
+			add_historical_rival = DAN
+		}	
+		4166 = {
+			add_core = ROOT
+			add_permanent_claim = ROOT
+		}	
+		3 = {
+			add_core = ROOT
+			add_permanent_claim = ROOT
+		}
+		4163 = {
+			add_core = ROOT
+			add_permanent_claim = ROOT
+		}
+		7 = {
+			add_core = ROOT
+			add_permanent_claim = ROOT
+		}
+		4164 = {
+			add_core = ROOT
+			add_permanent_claim = ROOT
+		}	
+		2 = {
+			add_core = ROOT
+			add_permanent_claim = ROOT
+		}		
+	}	
+}
+
+country_event = { # Finnish Duchy Event 
+	id = leg_danish_flavor.21
+	title = "leg_danish_flavor.21.t"
+	desc = "leg_danish_flavor.21.d"
+	picture = CONQUEST_eventPicture
+	
+	#major = yes
+	is_triggered_only = yes
+	
+	option = {  
+		name = "leg_danish_flavor.21.a"	
+		custom_tooltip = provinces_conceded_to_finland.tt
+		ai_chance = { factor = 25 }
+		hidden_effect = {
+			5505 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			31 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			5502 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			30 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			28 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			29 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			4123 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			5504 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			27 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			19 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			4152 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			4113 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			FIN = {
+				set_government_rank = 1
+				add_treasury = 750
+				add_manpower = 15
+				add_sailors = 4000
+				add_legitimacy = 100
+				add_prestige = -200
+				add_prestige = 135
+				add_mil_power = 250
+				add_adm_power = 250
+				add_dip_power = 250
+				add_stability = 1
+				add_liberty_desire = -25
+			}	
+		}	
+		create_subject = {
+			subject_type = vassal
+			subject = FIN
+		}
+		add_prestige = 25
+		SWE = {
+			add_liberty_desire = 33
+		}	
+	}
+	option = {  
+		name = "leg_danish_flavor.21.b"	
+		custom_tooltip = provinces_conceded_to_finland_kingdom.tt
+		ai_chance = { factor = 45 }
+		hidden_effect = {
+			5505 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			31 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			5502 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			30 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			28 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			29 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			4123 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			5504 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			27 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			19 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			4152 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			4113 = {
+				cede_province = FIN
+				add_local_autonomy = -100
+			}
+			FIN = {
+				set_government_rank = 2
+				add_treasury = 750
+				add_manpower = 15
+				add_sailors = 4000
+				add_legitimacy = 100
+				add_prestige = -200
+				add_prestige = 150
+				add_mil_power = 250
+				add_adm_power = 250
+				add_dip_power = 250
+				add_stability = 2
+				add_liberty_desire = -50
+			}	
+		}	
+		create_subject = {
+			subject_type = kalmar_personal_union
+			subject = FIN
+		}
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 20
+		}
+		SWE = {
+			add_liberty_desire = 33
+		}		
+	}	
+	option = {  
+		name = "leg_danish_flavor.21.c"	
+		custom_tooltip = no_finnish_state.tt
+		ai_chance = { factor = 30 }
+		SWE = {
+			add_liberty_desire = -20
+		}		
+	}		
+}
+
+
+country_event = { # Return to Estonia
+	id = leg_danish_flavor.22
+	title = "leg_danish_flavor.22.t"
+	desc = "leg_danish_flavor.22.d"
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	
+	option = {   
+		name = "leg_danish_flavor.22.a"	
+		ai_chance = { factor = 35 }
+		36 = {
+			add_core = DAN
+			change_culture = danish
+			add_center_of_trade_level = 1
+			add_base_manpower = 2
+			add_base_tax = 2
+			add_base_production = 2
+			add_local_autonomy = -50
+		}	
+		5514 = {
+			add_core = DAN
+			change_culture = danish
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_local_autonomy = -50
+		}	
+		5515 = {
+			add_core = DAN
+			change_culture = danish
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_local_autonomy = -50
+		}
+		35 = {
+			add_core = DAN
+			change_culture = danish
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_local_autonomy = -50
+		}		
+	}	
+	option = {  
+		name = "leg_danish_flavor.22.b"	
+		ai_chance = { factor = 65 }
+		add_dip_power = 50
+		add_country_modifier = {
+			name = "granted_estonia_autonomy"
+			duration = -1
+		}	
+		add_accepted_culture = estonian		
+		36 = {
+			add_center_of_trade_level = 1
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_local_autonomy = -75
+		}	
+		5514 = {
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_local_autonomy = -75
+		}	
+		5515 = {
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_local_autonomy = -75
+		}	
+		1842 = {
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_local_autonomy = -75
+		}	
+		1834 = {
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_local_autonomy = -75
+		}	
+		35 = {
+			add_base_manpower = 1
+			add_base_tax = 1
+			add_local_autonomy = -75
+		}		
+	}		
+}
+
+country_event = { # Denmark Informed of ban Entry
+	id = leg_danish_flavor.31
+	title = "leg_danish_flavor.31.t"
+	desc = "leg_danish_flavor.31.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	option = {  
+		name = "leg_danish_flavor.31.a"			
+	}	
+}
+
+country_event = { # Denmark Informed of allowed Entry
+	id = leg_danish_flavor.30
+	title = "leg_danish_flavor.30.t"
+	desc = "leg_danish_flavor.30.d"
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	#major = yes
+	is_triggered_only = yes
+	
+	option = {  
+		name = "leg_danish_flavor.30.a"	
+		custom_tooltip = entry_allowed_at_cost.tt
+		12 = {
+			add_base_manpower = -1
+			add_base_production = -1
+			add_base_tax = -1
+		}
+		1775 = {
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+			change_culture = danish
+		}
+		set_capital = 1775
+	}	
+}

@@ -92,3 +92,75 @@ boost_officer_corps_decree = {
 		}
 	}
 }
+
+# improve_defence_effort_decree_new = {
+	# cost = 10
+	# duration = 3650
+	# modifier = {
+		# defensiveness = 0.10
+		# rival_border_fort_maintenance = -0.5
+	# }
+	# ai_will_do = {
+		# factor = 50
+		# modifier = {
+			# factor = 2
+			# is_in_important_war = yes
+		# }
+	# }
+# }
+
+# boost_officer_corps_decree_new = {
+	# cost = 10
+	# duration = 3650
+	# modifier = {
+		# drill_gain_modifier = 0.25
+		# drill_decay_modifier = -0.25
+	# }
+	# ai_will_do = {
+		# factor = 100
+		# modifier = {
+			# factor = 0.1
+			# is_at_war = no
+		# }
+		# modifier = {
+			# factor = 10
+			# is_in_important_war = yes
+		# }
+	# }
+# }
+
+# improve_defence_effort_decree_new_new = {
+	# cost = 10
+	# duration = 3650
+	# modifier = {
+		# defensiveness = 0.10
+		# rival_border_fort_maintenance = -0.5
+	# }
+	# ai_will_do = {
+		# factor = 50
+		# modifier = {
+			# factor = 2
+			# is_in_important_war = yes
+		# }
+	# }
+# }
+
+# boost_officer_corps_decree_new_new = {
+	# cost = 10
+	# duration = 3650
+	# modifier = {
+		# drill_gain_modifier = 0.25
+		# drill_decay_modifier = -0.25
+	# }
+	# ai_will_do = {
+		# factor = 100
+		# modifier = {
+			# factor = 0.1
+			# is_at_war = no
+		# }
+		# modifier = {
+			# factor = 10
+			# is_in_important_war = yes
+		# }
+	# }
+# }

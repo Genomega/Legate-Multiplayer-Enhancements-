@@ -41,3 +41,104 @@ reclaim_timurid_empire = {
 	#war_name = PRIMITIVE_WAR_NAME	
 	war_name = TIMURID_WAR_FOR_EMPIRE	
 }
+
+blockade_ports_maritime = {
+	type = blockade_ports
+	
+	peace_options = {
+		po_gold
+		po_concede_defeat
+		po_trade_power
+		po_steer_trade
+		po_humiliate
+	}
+	
+	transfer_trade_cost_factor = 0.5
+	war_name = TRADE_WAR_MARITIME
+	country_desc = ALL_COUNTRIES_WITH_PORTS	
+}
+
+take_provinces_colonialism = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 0.75	
+		
+		allowed_provinces = {
+			always = yes
+		}
+
+		peace_options = {
+			po_demand_provinces
+			po_become_vassal
+			po_gold
+		}
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 0.75	
+		
+		allowed_provinces = {
+			always = yes
+		}
+
+		peace_options = {
+			po_demand_provinces
+			po_become_vassal
+			po_gold
+		}
+	}	
+		
+	country_desc = ALL_COUNTRIES_NATIVES
+	prov_desc = ALL_PROVS	
+	war_name = CONQUEST_WAR_COLONIALISM
+}
+
+superiority_chinese_unification_legate = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1.5
+		peace_cost_factor = 0.75
+		
+		allowed_provinces = {
+			superregion = china_superregion
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_CGROUP_COUNTRIES
+		prov_desc = ALL_CHINESE_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.75
+		prestige_factor = 1.5
+		peace_cost_factor = 0.75
+		
+		allowed_provinces = {
+			OR = {
+				region = south_china_region
+				region = xinan_region
+				region = north_china_region
+				culture_group = FROM
+			}
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_CGROUP_COUNTRIES
+		prov_desc = ALL_CHINESE_PROVS
+	}
+	
+	war_name = CHINESE_UNIFICATION_WAR_NAME	
+}

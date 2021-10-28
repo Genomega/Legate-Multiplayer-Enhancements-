@@ -80,29 +80,46 @@ feudalism = {
 			}
 			AND = {
 				region = horn_of_africa_region
-				owner = { NOT = { has_reform = tribal_federation } }
+				#owner = { NOT = { has_reform = tribal_federation } }
 			}
 			AND = {
 				culture = al_misr_arabic
-				NOT = { area = al_wahat_area }
-				NOT = { area = cyrenaica_area }
+				#NOT = { area = al_wahat_area }
+				#NOT = { area = cyrenaica_area }
 			}
 			AND = {
 				culture_group = hindusthani
-				NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
+				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
 			}
+			AND = {
+				technology_group = sub_saharan
+				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
+			}
+			AND = {
+				technology_group = east_african
+				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
+			}
+			AND = {
+				technology_group = central_african
+				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
+			}			
 			owner = { technology_group = high_american }
 			owner = {
 				NOT = {
-					government = tribal
+					#government = tribal
+					has_reform = stateless_society
+					has_reform = steppe_horde
+					has_reform = siberian_tribe
+					primary_culture = bai
+					primary_culture = yi
 					government = native
-					primary_culture = bedouin_arabic
+					#primary_culture = bedouin_arabic
 					primary_culture = uyghur
 					technology_group = andean
 					technology_group = mesoamerican
 					technology_group = north_american
 					technology_group = south_american
-					technology_group = sub_saharan
+					#technology_group = sub_saharan
 				}
 			}
 			AND = {

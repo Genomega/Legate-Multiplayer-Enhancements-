@@ -234,8 +234,12 @@ colonial_governor = {
 	monarch_power = DIP
 	
 	# Bonus
-	global_tariffs = 0.25
-	global_colonial_growth = 15
+	
+	## Made into a Triggered Modifier to fix Ui issues
+	#global_tariffs = 0.25
+	#global_colonial_growth = 15 ##
+	estate_colonial_governor_loyalty_modifier = 0.20 #Streamlined to both 20 Settler and Tariffs
+	
 	
 	skill_scaled_modifier = { meritocracy = 0.15 }
 

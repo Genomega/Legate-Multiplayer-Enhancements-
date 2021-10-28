@@ -11,7 +11,7 @@ base_production = 5
 base_manpower = 2
 discovered_by = south_american
 discovered_by = andean
-discovered_by = MCA
+ 
 
 
 1539.1.1 = {

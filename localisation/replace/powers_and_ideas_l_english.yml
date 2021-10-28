@@ -1,3 +1,21 @@
 ﻿l_english:
  local_nobility:0 "Local Nobility"
  local_nobility_desc:0 "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges, they will of course remember our largess and be more resistant to the inducements of foreign powers.\n§TReduces ‘Command of the Army’ Estate Privilege to +20% Nobility Influence. No longer reduces maximum Absolutism and removes Noble influence gained from recruit generals§!" 
+ tkd_kurokawa_gold_mine:0 "Kurokawa Gold Mine"
+ tkd_kurokawa_gold_mine_desc:0 "The discovery of gold in the Kurokawa mountains will allow us to maintain good relations with our neighbors and enemies alike if we should so choose.\n§YKai§! will now produce §YGold§!."
+ overseas_merchants_maritime:0 "Overseas Merchants"
+ overseas_merchants_maritime_desc:0 "To grow trade we need to extend the rights of citizenship to people who live abroad, support our trade and are of the right social class."
+ bless_monarch:0 "Papal Sanctioned Warfare"
+ DEVELOPMENT_COST:0 "Global Development Cost"
+
+ overseas_exploration:0 "Overseas Exploration"
+ overseas_exploration_desc:0 "Setting up colonies in distant lands is pretty much a one-way trip. If strange new diseases don't get you, the amount of time it takes to sail back means you won't be coming home. If we remind people of the potential riches, we can encourage them to seek lands further afield.\nMay use the §Y‘Colonialism’§! Casus Belli against neighboring nations that follow §YInti, Mayan§! or §YNahuatl§!."
+ 
+ estate_cossacks_prime_herding_rights_effect_tooltip:0 "§G+25%§! manpower from all Steppe provinces\n§R-25%§! tax income from all Steppe provinces"
+ estate_cossacks_prime_herding_rights_mod:0 "Cossack Herding Rights"
+ 
+  global_empire:0 "Global Empire"
+ global_empire_desc:0 "Our commitment to our colonial empire has changed the attitude of people to jobs in the colonial administration. No longer a place for freebooters who seek to maximize their fortune, instead it is seen as a career for the brightest and the best. This is reflected in our taxes.\nUnlocks the ability to select the §YGrand Armada§! §YNaval Doctrine§!. (§GPortugal§!) cannot take this Doctrine."
+ 
+ competetive_merchants:0 "Competitive Merchants"
+ competetive_merchants_desc:0 "To bring trade home we must be able to beat the competition from other countries. We need to ensure that our legal system gives them every possible edge.\nUnlocks the ability to select the §YGrand Armada§! §YNaval Doctrine§!. (§GPortugal§!) cannot take this Doctrine."

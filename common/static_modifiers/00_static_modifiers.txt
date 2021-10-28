@@ -237,11 +237,13 @@ no_adjacent_controlled = {
 
 provincial_tax_income = {
 	regiment_recruit_speed = -0.01
+	local_sailors = 50
 }
 
 provincial_production_size = {
 	trade_goods_size = 0.2
 	ship_recruit_speed = -0.01
+	local_sailors = 50
 }
 
 knowledge_sharing = {
@@ -263,6 +265,7 @@ horde_development = {
 
 province_razed = {
 	picture = "province_razed"
+	local_monthly_devastation = 0.10
 }
 
 development = {
@@ -271,10 +274,12 @@ development = {
 	local_missionary_strength = -0.001
 	land_forcelimit	= 0.1			# special case, affected by autonomy
 	naval_forcelimit = 0.1			# special case, affected by autonomy & set to 0 by code if not port
-	local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
+	#local_sailors = 60			# special case, affected by autonomy & set to 0 by code if not port
+	local_sailors = 20			# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
 	local_amount_of_banners = 0.066
 	local_great_project_upgrade_cost = -0.003
+	local_monthly_devastation = -0.004
 }
 
 development_scaled = {
@@ -401,7 +406,7 @@ occupied = {
 	local_sailors_modifier = -0.5
 	local_institution_spread = -0.1
 
-	local_monthly_devastation = 0.2
+	local_monthly_devastation = 0.15
 }
 
 under_siege = {
@@ -409,7 +414,7 @@ under_siege = {
 	province_trade_power_modifier = -0.25
 	local_institution_spread = -0.1
 
-	local_monthly_devastation = 0.1
+	local_monthly_devastation = 0.15
 }
 
 
@@ -428,9 +433,11 @@ prosperity = {
 	local_development_cost = -0.1
 	trade_goods_size_modifier = 0.25
 	local_autonomy = -0.05
+	local_unrest = -3
 }
 
 slaves_raided = {
+	local_monthly_devastation = -0.10
 	picture = "raided_for_slaves"
 }
 
@@ -512,7 +519,7 @@ resource_depleted = {
 in_trade_company = {
 	province_trade_power_modifier = 1
 	naval_forcelimit = 0.5
-	local_missionary_strength = -2
+	local_missionary_strength = -0.05
 	local_institution_spread = 0.10
 	local_governing_cost = 0.25
 }
@@ -535,8 +542,8 @@ base_values = {
 	merchants = 2							#Start with 2 merchants
 	diplomats = 2							#Start with 2 diplomats..
 	missionaries = 1						#1 missionary
-	army_tradition_decay = 0.05				#lose 5% yearly
-	navy_tradition_decay = 0.05				#lose 5% yearly
+	army_tradition_decay = 0.070			#lose 7% yearly
+	navy_tradition_decay = 0.070				#lose 7% yearly
 	prestige_decay = 0.05					#lose 5% prestige each year
 	tolerance_own = 3
 	diplomatic_upkeep = 4
@@ -560,15 +567,24 @@ base_values = {
 	cav_to_inf_ratio = 0.5
 	merc_maintenance_modifier = 0.5
 	monthly_heir_claim_increase = 0.42
+	missionary_maintenance_cost = -0.20
+	loot_amount = 0.25
+	available_province_loot = 0.25
+	legitimacy = -1
+	army_tradition = 0.5
+	army_tradition_from_battle = 0.50
+	sailors_recovery_speed = 0.1
+	sailors = 2000
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
 ai_nation = {
 	diplomats = 1 							# ai has to reserve a diplomat for short term action so it gets an extra to put it on equal footing with player
 	free_leader_pool = 2				# ai needs to have enough pool for 1 general & 1 admiral
-	inflation_reduction = 0.03
-	yearly_corruption = -0.05
-	global_tax_income = 8
+	inflation_reduction = 0.04
+	yearly_corruption = -0.10
+	global_tax_income = 6
+	interest = -1.5
 	land_maintenance_modifier = -0.01
 	naval_maintenance_modifier = -0.1
 	merc_maintenance_modifier = -0.01
@@ -587,6 +603,19 @@ ai_nation = {
 	dhimmi_loyalty_modifier = 0.1
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
+	governing_capacity = 150
+	ae_impact = -0.10
+	fabricate_claims_cost = -0.25
+	global_manpower = 2.5
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	max_absolutism = 25
+	yearly_absolutism = 5
+	#administrative_efficiency = 0.05
+	core_creation = -0.1
+	development_cost = 0.80
+	horde_unity = 3
 }
 
 
@@ -615,6 +644,7 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
+	legitimacy = 0.20
 }
 
 privateering = {
@@ -628,6 +658,7 @@ negative_stability = {
 	migration_cost = 0.1
 	devotion = 1
 	caravan_power = 0.05
+	legitimacy = 0.50
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -783,7 +814,7 @@ mercantilism = {
 
 army_tradition = {
 	recover_army_morale_speed = 0.1
-	land_morale = 0.25
+	land_morale = 0.20
 	manpower_recovery_speed = 0.1
 	siege_ability = 0.05
 	temples_influence = 0.1
@@ -793,11 +824,12 @@ army_tradition = {
 	nobles_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
+	sailors_recovery_speed = 0.1
 }
 
 navy_tradition = {
 	recover_navy_morale_speed = 0.1
-	naval_morale = 0.25
+	naval_morale = 0.20
 	trade_steering = 1.0
 	privateer_efficiency = 0.25
 	enuchs_influence = 0.1
@@ -912,6 +944,7 @@ legitimacy = {
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
+	monthly_reform_progress = 0.50
 }
 
 #Multiplied by current Horde Unity - 50
@@ -919,6 +952,7 @@ horde_unity = {
 	global_unrest = -4
 	discipline = 0.10
 	nomadic_tribes_loyalty_modifier = 0.05
+	monthly_reform_progress = 0.40	
 }
 
 
@@ -930,6 +964,7 @@ devotion = {
 	global_tax_modifier = 0.50
 	church_loyalty_modifier = 0.05
 	brahmins_hindu_loyalty_modifier = 0.05
+	monthly_reform_progress = 0.80
 }
 
 # Multiplied by current meritocracy - 50
@@ -940,6 +975,7 @@ meritocracy = {
 	culture_conversion_cost = -0.40
 	stability_cost_modifier = -0.20
 	max_absolutism = 20
+	monthly_reform_progress = 1	
 }
 
 # Multiplied by 50 - meritocracy
@@ -1005,18 +1041,21 @@ luck = {
 	stability_cost_modifier = -0.10
 	global_institution_spread = 0.1
 	monthly_splendor = 1
+	monthly_reform_progress = 0.2
+	max_absolutism = 30
+	yearly_absolutism = 5
 
 	#economy
 	mercenary_cost = -0.2
 	embracement_cost = -0.2
 	advisor_cost = -0.2
-	interest = -1
+	interest = -0.5
 	missionary_maintenance_cost = -0.1
 
 	#military
 	manpower_recovery_speed = 0.25
 	defensiveness = 0.1
-	siege_ability = 0.05
+	siege_ability = 0.1
 
 	#diplomacy
 	spy_offence = 0.1
@@ -1026,7 +1065,21 @@ luck = {
 	global_unrest = -1
 	republican_tradition = 0.5
 	legitimacy = 1
-	ae_impact = -0.25
+	ae_impact = -0.10
+	governing_capacity = 250
+	
+	# Estates
+	church_loyalty_modifier = 0.10
+	brahmins_hindu_loyalty_modifier = 0.10
+	nobles_loyalty_modifier = 0.10
+	burghers_loyalty_modifier = 0.10
+	cossacks_loyalty_modifier = 0.10
+	dhimmi_loyalty_modifier = 0.10
+	jains_loyalty_modifier = 0.10
+	brahmins_muslim_loyalty_modifier = 0.10
+	vaisyas_loyalty_modifier = 0.10
+	nomadic_tribes_loyalty_modifier = 0.10
+	rajput_exclusive_loyalty_modifier = 0.10
 
 }
 
@@ -1078,7 +1131,8 @@ no_debate_in_parliament = {
 republican_tradition = {
 	global_unrest = -2
 	rr_jacobins_influence = 0.1
-	reform_progress_growth = 1.0
+	#reform_progress_growth = 1.0
+	monthly_reform_progress = 0.60
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
 }
@@ -1217,7 +1271,7 @@ high_army_professionalism = {
 }
 
 streltsy_modifier = {
-	stability_cost_modifier = 1.0
+	stability_cost_modifier = 0.5
 }
 
 power_projection = {
@@ -1295,6 +1349,20 @@ daimyo_subject = {
 
 union_subject = {
 }
+
+kalmar_union_subject = {
+	global_tax_modifier = 0.10
+	global_unrest = -1
+}
+
+kalmar_union_overlord = {
+	land_forcelimit = 2
+	naval_forcelimit = 2
+}
+
+chinese_commandery_vassal_overlord  = {
+	global_tax_income = 5
+}	
 
 all_nations = {
 	global_tax_income = 12
@@ -1730,6 +1798,7 @@ innovativeness = {
 	all_power_cost	= -0.1
 	army_tradition_decay = -0.01
 	navy_tradition_decay = -0.01
+	state_governing_cost = -0.2
 }
 
 rajput_regiment = {
@@ -1748,7 +1817,7 @@ serfs_recieved_by_cossacks = {
 }
 
 cossacks_modifier = {
-	stability_cost_modifier = 1.0
+	stability_cost_modifier = 0.5
 }
 
 ########################################
@@ -1781,10 +1850,24 @@ at_peace_revolutionary = { # Applied if at peace while reactionaries are borderi
 }
 
 expanded_infrastructure = {
-	allowed_num_of_buildings = 1
+	#allowed_num_of_buildings = 1
+	# allowed_num_of_manufactories = 1
+	# local_governing_cost_increase = 50
+	# local_governing_cost = 1.0
 	allowed_num_of_manufactories = 1
-	local_governing_cost_increase = 50
-	local_governing_cost = 1.0
+	local_governing_cost_increase = 25
+	local_governing_cost = 1
+	local_build_cost = -0.15
+	local_build_time = -0.15
+	local_monthly_devastation = -0.1
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_institution_spread = 0.25
+	local_manpower_modifier = 0.25
+	local_sailors_modifier = 0.25
+	trade_goods_size = 1
+	land_forcelimit = 1
+	province_trade_power_value = 3
 }
 
 centralize_state = {

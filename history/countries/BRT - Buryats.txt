@@ -1,0 +1,20 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 2
+technology_group = nomad_group
+primary_culture = buryat
+religion = tengri_pagan_reformed
+add_accepted_culture = khalkha
+capital = 1056
+
+
+1444.11.11 = {
+	monarch = {
+		name = "Zaufishan"
+		dynasty = "Borjigin"
+		adm = 4
+		dip = 3
+		mil = 3
+		female = yes
+	}
+}

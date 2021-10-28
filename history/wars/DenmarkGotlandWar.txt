@@ -5,7 +5,7 @@ war_goal = {
 	tag = DAN
 }
 
-1443.1.1 = {
+1444.11.11 = {
 	add_attacker = GOT
 	add_defender = DAN
 	add_defender = SWE

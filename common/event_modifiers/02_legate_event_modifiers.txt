@@ -324,7 +324,7 @@ timurid_lahore_trade = {
 	
 timurid_kabul_world_city = {
 	province_trade_power_modifier = 0.35
-	development_cost = -0.20
+	local_development_cost = -0.20
 }	
 
 timurid_ruined_delhi = {
@@ -392,6 +392,7 @@ librium_veto_legate = {
 	war_exhaustion = -0.05
 }	
 
+## England Tweaks
 integration_of_the_scottish_elite = {
 	num_accepted_cultures = 2
 }	
@@ -432,6 +433,14 @@ female_general_check_eng = {
 	may_recruit_female_generals = yes
 }
 
+margaret_of_anjou_regency = {
+	country_admin_power = 2
+	country_diplomatic_power = 2
+	country_military_power = 2
+}
+
+# Zoroastrian Changes
+
 new_zoroastrian_flame = {
 	tolerance_own = 0.5
 }	
@@ -441,7 +450,208 @@ conversion_zeal_zoroastrian = {
 	global_missionary_strength = 0.1
 }	
 
+
+# Bankruptcy Changes
 bankrupt_penalty = {
 	min_autonomy = 7.5
 	interest = 1
+}	
+
+# Denmark Update Modifiers
+
+kent_coastal_fort = {
+	local_defensiveness = 0.20
+}	
+
+eric_gryf_on_denmark = {
+	global_unrest = 2
+}
+
+royal_line_secured_danes = {
+	monthly_heir_claim_increase = 0.1
+	block_introduce_heir = yes
+}	
+
+karl_knutsson_regency = {
+	country_military_power = 1
+	country_diplomatic_power = 1
+	country_admin_power = 1
+	global_tax_income = 24
+}
+
+royal_purse_allocated = {
+	global_tax_income = -12
+}	
+
+north_sea_trade_monopoly = {
+	global_tax_income = 48
+}	
+
+weak_scand_consitution = {
+	stability_cost_modifier = -0.05
+	global_unrest = -0.5
+}	
+
+medium_scand_consitution = {
+	stability_cost_modifier = -0.10
+	global_unrest = -1
+	adm_advisor_cost = -0.10
+}
+
+strong_scand_consitution = {
+	stability_cost_modifier = -0.15
+	global_unrest = -1.5
+	adm_advisor_cost = -0.20
+}
+
+swede_concessions_scand_consitution = {
+	global_tax_modifier = 0.10
+	advisor_cost = -0.20
+	liberty_desire = -10
+}
+
+a_united_scandinvia_mission_rwd = {
+	governing_capacity = 100
+	free_dip_policy = 1
+}
+
+defeated_the_prussians_dans = {
+	drill_decay_modifier = -0.50
+	drill_gain_modifier = 0.50
+	fire_damage_received = -0.10
+}	
+
+verden_bremen_trade = {
+	trade_efficiency = 0.15
+	placed_merchant_power = 15
+}	
+
+destroyed_the_hansa = {
+	merchants = 1
+	global_trade_power = 0.10
+	placed_merchant_power = 5
+}	
+
+grevenous_against_the_hansa = {
+	ae_impact = -0.15
+	blockade_efficiency = 0.25
+}	
+
+hansa_collapse_dan = {
+	global_trade_power = -0.50
+	ship_power_propagation = -0.50
+}	
+
+norway_denmark_united = {
+	legitimacy = 1
+	prestige_decay = -0.01
+}
+
+legacy_of_the_riksradet = {
+	prestige = 0.50
+	monthly_heir_claim_increase = 0.15
+}	
+
+conquered_russian_winter_dan = {
+	land_attrition = -0.25
+	prestige_from_land = 1
+	monthly_splendor = 3
+}	
+
+novgorod_viciously_sacked = {
+	local_monthly_devastation = 0.10
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	province_trade_power_modifier = -0.25
+}
+
+baltic_sea_trade_dominance = {
+	trade_efficiency = 0.15
+}	
+
+granted_estonia_autonomy = {
+	num_accepted_cultures = 1
+}
+
+integration_of_teutonic_elite = {
+	discipline = 0.025
+	cavalry_power = 0.15
+	mil_advisor_cost = -0.1
+}	
+
+copenhagen_expansion_shining = {
+	local_tax_modifier = 0.20
+	local_production_efficiency = 0.20
+	allowed_num_of_buildings = 1
+}
+
+copenhagen_expansion = {
+	local_development_cost = -0.10
+	local_build_cost = -0.20
+}	
+
+jyland_investment = {
+	trade_goods_size = 0.5
+	local_development_cost = -0.05
+}	
+
+oslo_expansion_shining = {
+	local_defensiveness = 0.20
+	allowed_num_of_buildings = 1
+	local_development_cost = -0.10
+}
+
+oslo_area_expansion = {
+	local_development_cost = -0.20
+	local_tax_modifier = 0.25
+}
+
+lutheran_teachings = {
+	church_power_modifier = 0.25
+}	
+
+calvanist_teachings = {
+	monthly_fervor_increase = 1
+}	
+
+loyalty_to_the_papacy = {
+	monthly_fervor_increase = 1
+}
+
+loyalty_to_the_papacy = {
+	papal_influence = 2.5
+}
+
+reformist_fervour_dan = {
+	prestige_per_development_from_conversion = 0.2
+	missionaries = 1
+}	
+
+dan_imperial_master = {
+	imperial_authority_value = 0.1
+}
+
+dan_imperial_acendent = {
+	diplomatic_reputation = 2
+	imperial_authority = 0.15
+}	
+
+danelaw_restored_dan = {
+	culture_conversion_cost = -0.25
+	governing_capacity = 75
+}
+
+north_sea_empire_dan = {
+	governing_capacity = 225
+	heavy_ship_power = 0.125
+	allowed_marine_fraction = 0.25
+}	
+
+christopher_iii_debuff = {
+	heir_chance = -10000
+	block_introduce_heir = yes
+}	
+
+vestlandet_fishing_port = {
+	trade_goods_size = 1.5
 }	

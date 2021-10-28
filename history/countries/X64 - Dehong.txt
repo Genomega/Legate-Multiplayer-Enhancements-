@@ -1,0 +1,17 @@
+government = tribal
+add_government_reform = stateless_society
+technology_group = chinese
+religion = buddhism
+primary_culture = bai
+capital = 2166	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Baihu"
+		dynasty = "Yan"
+		birth_date = 1424.1.1
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}

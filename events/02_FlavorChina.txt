@@ -44,7 +44,10 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { 
+	option = {
+		ai_chance = { 
+			factor = 10 
+		}		
 		trigger = {
 			NOT = { has_global_flag = han_chinese_name_picked }
 		}	
@@ -53,6 +56,9 @@ country_event = {
 		set_global_flag = han_chinese_name_picked
 	}
 	option = { 
+		ai_chance = { 
+			factor = 10 
+		}		
 		trigger = {
 			NOT = { has_global_flag = shu_chinese_name_picked }
 		}		
@@ -61,6 +67,9 @@ country_event = {
 		set_global_flag = shu_chinese_name_picked
 	}
 	option = {
+		ai_chance = { 
+			factor = 25 
+		}		
 		trigger = {
 			NOT = { has_global_flag = chu_chinese_name_picked }
 		}		
@@ -69,6 +78,9 @@ country_event = {
 		set_global_flag = chu_chinese_name_picked
 	}	
 	option = { 
+		ai_chance = { 
+			factor = 25 
+		}	
 		trigger = {
 			NOT = { has_global_flag = zhou_chinese_name_picked }
 		}		
@@ -77,6 +89,9 @@ country_event = {
 		set_global_flag = zhou_chinese_name_picked		
 	}	
 	option = { 
+		ai_chance = { 
+			factor = 10 
+		}	
 		trigger = {
 			NOT = { has_global_flag = jin_chinese_name_picked }
 		}		
@@ -84,7 +99,10 @@ country_event = {
 		override_country_name = jin_chinese	
 		set_global_flag = jin_chinese_name_picked	
 	}	
-	option = { 		
+	option = { 
+		ai_chance = { 
+			factor = 33 
+		}	
 		name = "chinese_flavor.2.f"		
 		country_event = { id = chinese_flavor.3 }
 	}		
@@ -99,6 +117,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
+		ai_chance = { 
+			factor = 25 
+		}	
 		trigger = {
 			NOT = { has_global_flag = wu_chinese_name_picked }
 		}	
@@ -107,6 +128,9 @@ country_event = {
 		set_global_flag = wu_chinese_name_picked
 	}
 	option = {
+		ai_chance = { 
+			factor = 25 
+		}	
 		trigger = {
 			NOT = { has_global_flag = wei_chinese_name_picked }
 		}	
@@ -115,6 +139,9 @@ country_event = {
 		set_global_flag = wei_chinese_name_picked
 	}
 	option = {
+		ai_chance = { 
+			factor = 40 
+		}	
 		trigger = {
 			NOT = { has_global_flag = zhang_chinese_name_picked }
 		}	
@@ -123,6 +150,9 @@ country_event = {
 		set_global_flag = zhang_chinese_name_picked	
 	}	
 	option = { 
+		ai_chance = { 
+			factor = 10 
+		}	
 		trigger = {
 			NOT = { has_global_flag = yuan_chinese_name_picked }
 		}	
@@ -131,6 +161,9 @@ country_event = {
 		set_global_flag = yuan_chinese_name_picked	
 	}	
 	option = { 
+		ai_chance = { 
+			factor = 60 
+		}	
 		trigger = {
 			NOT = { has_global_flag = tang_chinese_name_picked }
 		}	
@@ -139,6 +172,9 @@ country_event = {
 		set_global_flag = tang_chinese_name_picked	
 	}	
 	option = { 
+		ai_chance = { 
+			factor = 33 
+		}	
 		name = "chinese_flavor.3.f"		
 		country_event = { id = chinese_flavor.4 }
 	}		
@@ -153,6 +189,9 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = { 
+		ai_chance = { 
+			factor = 25 
+		}	
 		trigger = {
 			NOT = { has_global_flag = song_chinese_name_picked }
 		}	
@@ -161,6 +200,9 @@ country_event = {
 		set_global_flag = song_chinese_name_picked
 	}
 	option = { 
+		ai_chance = { 
+			factor = 25 
+		}	
 		trigger = {
 			NOT = { has_global_flag = liu_chinese_name_picked }
 		}		
@@ -168,7 +210,10 @@ country_event = {
 		override_country_name = liu_chinese	
 		set_global_flag = liu_chinese_name_picked
 	}
-	option = { 
+	option = {
+		ai_chance = { 
+			factor = 25 
+		}	
 		trigger = {
 			NOT = { has_global_flag = sui_chinese_name_picked }
 		}		
@@ -177,6 +222,9 @@ country_event = {
 		set_global_flag = sui_chinese_name_picked	
 	}	
 	option = { 
+		ai_chance = { 
+			factor = 25 
+		}	
 		trigger = {
 			NOT = { has_global_flag = liao_chinese_name_picked }
 		}		
@@ -185,6 +233,9 @@ country_event = {
 		set_global_flag = liao_chinese_name_picked	
 	}	
 	option = {
+		ai_chance = { 
+			factor = 10 
+		}	
 		trigger = {
 			NOT = { has_global_flag = qing_chinese_name_picked }
 		}		

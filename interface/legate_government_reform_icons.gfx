@@ -44,6 +44,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "government_reform_galley_supremancy_gov"
+		texturefile = "gfx//interface//government_reform_icons//galley_supremancy_gov.dds"
+	}
+	
+	spriteType = {
+		name = "government_reform_cossack_council_reform_gov"
+		texturefile = "gfx//interface//government_reform_icons//cossack_council_reform_gov.dds"
+	}	
+
+	spriteType = {
 		name = "government_reform_purple_turbans"
 		texturefile = "gfx//interface//government_reform_icons//purple_turbans.dds"
 	}
@@ -123,10 +133,24 @@ spriteTypes = {
 
 	spriteType = { # Meritcratic
 		name = "GFX_idea_meritocratic_ideas"
-		texturefile = "gfx//interface//ideas//idea_meritocratic_ideas.tga"
+		texturefile = "gfx//interface//ideas//idea_meritocratic_ideas.dds"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}	
+	
+	spriteType = { # Imperial Diplomacy
+		name = "GFX_idea_imperial_diplomacy_ideas"
+		texturefile = "gfx//interface//ideas//idea_imperial_diplomacy_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}	
+
+	spriteType = { # British Naval
+		name = "GFX_idea_british_naval_ideas"
+		texturefile = "gfx//interface//ideas//idea_british_naval_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}		
 	
 	
 	spriteType = {
@@ -199,5 +223,103 @@ spriteTypes = {
 		name = "GFX_great_project_the_great_wall_of_china_east"	
 		texturefile = "gfx//interface//great_projects//great_project_the_great_wall_of_china.dds"
 	}	
+	
+## Subject Icons	
+	spriteType = {
+		name = "GFX_icon_brother_kingdom"
+		texturefile = "gfx/interface/icon_brother_kingdom.dds"
+	}
+	spriteType = {
+		name = "GFX_diplomacy_leadbrother_kingdom"
+		texturefile = "gfx//interface//icon_diplomacy_leadbrother_kingdom.dds"
+	}
+	spriteType = {
+		name = "GFX_diplomacy_ambrother_kingdom"
+		texturefile = "gfx//interface//icon_diplomacy_ambrother_kingdom.dds"
+	}	
 }
 
+spriteTypes = {
+## Age Icons
+	spriteType = {
+		name = "GFX_obj_kalmar_personal_unions"
+		texturefile = "gfx/interface/ages/obj_kalmar_personal_unions.dds"
+	}
+	spriteType = {
+		name = "GFX_leg_danish_flavor.4.a"
+		texturefile = "gfx/interface/imperial_incident_generosity.dds"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_leg_danish_flavor.4.b"
+		texturefile = "gfx/interface/imperial_incident_shield.dds"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "privilege_danish_loyal_subjects"
+		texturefile = "gfx/interface/privileges/privilege_danish_loyal_subjects.dds"
+	}
+	spriteType = {
+		name = "DIET_DENMARK_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_EUROPEAN/DIET_DENMARK_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BUCCANEERS_DENMARK_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_EUROPEAN/BUCCANEERS_DENMARK_eventPicture.dds"
+		alwaystransparent = yes
+	}	
+	spriteType = {
+		name = "KING_ASSASSINATION_DENMARK_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_EUROPEAN/KING_ASSASSINATION_DENMARK_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "MERCHANTS_ARGUING_DENMARK_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_EUROPEAN/MERCHANTS_ARGUING_DENMARK_eventPicture.dds"
+		alwaystransparent = yes
+	}		
+}	
+
+
+spriteTypes = {
+## Age Icons
+	spriteType = {
+		name = "GFX_ab_mali_resurgence"
+		texturefile = "gfx/interface/ages/ab_mali_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_malaccan_trade"
+		texturefile = "gfx/interface/ages/ab_malaccan_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_ethiopia_proselytization"
+		texturefile = "gfx/interface/ages/ab_ethiopia_convert.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_korean_bureaucracy"
+		texturefile = "gfx/interface/ages/ab_korean_bur.dds"
+	}	
+	spriteType = {
+		name = "GFX_ab_italian_unification"
+		texturefile = "gfx/interface/ages/ab_italy_unification.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_hindustan_tolerance"
+		texturefile = "gfx/interface/ages/ab_hindustan_tolerance.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_malayan_spice_economy"
+		texturefile = "gfx/interface/ages/ab_malayan_spice_economy.dds"
+	}	
+	spriteType = {
+		name = "GFX_ab_siamese_infantry_prowess"
+		texturefile = "gfx/interface/ages/ab_siamese_infantry_power.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_incan_enlightenment"
+		texturefile = "gfx/interface/ages/ab_incan_ren.dds"
+	}	
+}	

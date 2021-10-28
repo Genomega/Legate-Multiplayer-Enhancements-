@@ -1,0 +1,30 @@
+established_a_marine_corp = {
+	allowed_marine_fraction = 0.25
+	global_sailors_modifier = 0.10
+}	
+
+papal_sanction_justified_crusade = {
+	land_morale = 0.10
+}	
+
+burgundian_inheritance_libety_fixed = {
+	liberty_desire = -2000
+}	
+	
+swedish_war_of_independence = {
+	land_morale = 0.10
+	hostile_attrition = 1
+	defensiveness = 0.25
+	land_forcelimit = 14
+	global_manpower = 12.5
+	reinforce_cost_modifier = -1
+	manpower_recovery_speed = 0.33
+	army_tradition_from_battle = 1
+	liberty_desire = 25
+	infantry_cost = -0.33
+	cavalry_cost = -0.33
+	fort_maintenance_modifier = -0.50
+}	
+
+culture_change_delay = {
+}

@@ -1,0 +1,23 @@
+#4193 - Oshima
+
+culture = togoku
+religion = shinto
+capital = "Katsuyama"
+trade_goods = fish
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+owner = ANU
+controller = ANU
+add_core = ANU
+is_city = yes
+
+
+discovered_by = chinese
+
+1514.1.1 = { capital = "Matsumae" }
+1590.8.10 = { remove_core = AKT add_core = ODA owner = ODA controller = ODA }
+1603.3.24 = { remove_core = ODA add_core = TKG owner = TKG controller = TKG }
+1640.1.1 = { discovered_by = RUS } # Ivan Moskvitin
+1787.1.1 = { discovered_by = FRA }

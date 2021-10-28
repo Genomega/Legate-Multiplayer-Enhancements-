@@ -38,3 +38,14 @@ defyed_me = {
 	opinion = -125
 	yearly_decay = 2
 }	
+
+# Denmark
+elected_ruelr_of_culture = {
+	opinion = 50
+	yearly_decay = 2
+}
+
+treaty_of_the_north_sea = {
+	opinion = 80
+	yearly_decay = 1
+}	

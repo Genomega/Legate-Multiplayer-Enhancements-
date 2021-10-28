@@ -81,16 +81,11 @@ xinan_slot_1 = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = kachin_area	
 				area = yun_gui_borderland_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			kachin_area = {
-				type = all
-				owned_by = ROOT
-			}
 			yun_gui_borderland_area = {
 				type = all
 				owned_by = ROOT
@@ -123,10 +118,15 @@ xinan_slot_1 = {
 				area = lower_burma_area
 				area = arakan_area
 				area = chindwin_area
+				area = kachin_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
+			kachin_area = {
+				type = all
+				owned_by = ROOT
+			}		
 			upper_burma_area = {
 				type = all
 				owned_by = ROOT
@@ -402,24 +402,18 @@ xinan_slot_3 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2167
-				province_id = 5100
 				province_id = 661
 				province_id = 2165
 				province_id = 2748
 				province_id = 662		
-				province_id = 675	
-				province_id = 5101	
+				province_id = 675		
 				province_id = 663	
-				province_id = 674	
-				province_id = 664	
+				province_id = 674		
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			2167 = {
-				owned_by = ROOT
-			}
-			5100 = {
 				owned_by = ROOT
 			}
 			661 = {
@@ -437,18 +431,12 @@ xinan_slot_3 = {
 			675 = {
 				owned_by = ROOT
 			}
-			5101 = {
-				owned_by = ROOT
-			}
 			663 = {
 				owned_by = ROOT
 			}
 			674 = {
 				owned_by = ROOT
-			}
-			664 = {
-				owned_by = ROOT
-			}			
+			}		
 		}
 
 		effect = { 

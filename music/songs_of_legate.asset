@@ -7,10 +7,6 @@ music = {
 	file = "downfall_of_the_ming.ogg"
 }
 music = {
-	name = "para_bellum.ogg"
-	file = "para_bellum.ogg"
-}
-music = {
 	name = "to_the_east.ogg"
 	file = "to_the_east.ogg"
 }
@@ -27,4 +23,29 @@ music = {
 music = {
 	name = "fall_of_byzantium.ogg"
 	file = "fall_of_byzantium.ogg"
+}
+
+
+music = {
+	name = "the_danelaw.ogg"
+	file = "the_danelaw.ogg"
+}
+
+music = {
+	name = "battle_of_brunkeberg.ogg"
+	file = "battle_of_brunkeberg.ogg"
+}
+
+music = {
+	name = "return_to_estonia.ogg"
+	file = "return_to_estonia.ogg"
+}
+music = {
+	name = "gulf_of_riga.ogg"
+	file = "gulf_of_riga.ogg"
+}
+
+music = {
+	name = "scandinavia.ogg"
+	file = "scandinavia.ogg"
 }

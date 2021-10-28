@@ -29,7 +29,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 18
+		months = 3
 	}
 	
 	immediate = {
@@ -46,7 +46,7 @@ country_event = {
 			fixed = yes
 			adm = 4
 			dip = 4
-			mil = 4
+			mil = 3
 			female = yes
 			birth_date = 1430.9.25
 			claim = 50
@@ -94,9 +94,9 @@ country_event = {
 			has_dlc = "Rights of Man"
 			has_government_attribute = queen
 		}
-		add_adm_power = 100
-		add_dip_power = 100
-		add_mil_power = 100
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
 		add_meritocracy_effect = yes
 		define_consort = {
 			name = "Margaret"
@@ -105,10 +105,14 @@ country_event = {
 			fixed = yes
 			adm = 4
 			dip = 4
-			mil = 4
+			mil = 3
 			female = yes
 			birth_date = 1430.9.25
 		}
+		add_ruler_modifier = {
+			name = margaret_of_anjou_regency
+			duration = -1
+		}	
 		hidden_effect = {
 			add_queen_personality_ancestor = { key = righteous }
 		}
@@ -228,4 +232,72 @@ country_event = { # Provencal Retinue
 			culture = occitain
 		}		
 	}
+}
+
+country_event = { # Birth of Edward of Westminster
+	id = anjou_england.3
+	title = anjou_england.3.t
+	desc = anjou_england.3.d
+	picture = NEW_HEIR_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_heir = no
+		NOT = {
+			is_year = 1500
+		}
+		OR = {
+			tag = ENG
+			tag = GBR
+		}		
+		has_country_flag = support_blue_rose
+		has_disaster = war_of_the_roses
+		dynasty = d'Anjou
+		government = monarchy
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}	
+	
+	option = {
+		name = anjou_england.3.a
+		ai_chance = { factor = 25 }
+		add_legitimacy = 10
+		define_heir = {
+			name = "Edward"
+			dynasty = "Lancaster"
+			culture = english
+			age = 0
+			adm = 3
+			dip = 3
+			mil = 5
+			claim = 95
+			male = yes
+			fixed = yes
+			no_consort_with_heir = yes
+		}
+	}
+	option = {
+		name = anjou_england.3.b
+		ai_chance = { factor = 75 }
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 10
+		}		
+		define_heir = {
+			name = "Edward"
+			dynasty = "d'Anjou"
+			culture = english
+			age = 0
+			adm = 3
+			dip = 3
+			mil = 5
+			claim = 50
+			male = yes
+			fixed = yes
+			no_consort_with_heir = yes
+		}		
+	}	
 }

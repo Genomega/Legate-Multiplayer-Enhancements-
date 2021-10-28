@@ -49,7 +49,7 @@ estate_nobles_command_of_the_military_aristocratic = {
 	penalties = {
 	}
 	benefits = {
-		army_tradition = 0.9
+		army_tradition = 1
 	}
 	ai_will_do = {
 		factor = 1000
@@ -72,8 +72,89 @@ estate_nobles_command_of_the_admiralty_plutocratic = {
 	penalties = {
 	}
 	benefits = {
-		navy_tradition = 0.9
-		naval_tradition_from_trade = 0.20
+		navy_tradition = 1
+		naval_tradition_from_trade = 0.25
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}
+
+estate_nobles_danish_union = {
+	icon = privilege_danish_loyal_subjects
+	land_share = 0
+	max_absolutism = -20
+	influence = 0.15
+	loyalty = 0.10
+	is_valid = {
+		tag = DAN
+		NOT = { mission_completed = stablize_union_dan }
+	}
+	can_select = {
+		tag = DAN
+		NOT = { mission_completed = stablize_union_dan }
+	}
+	can_revoke = {
+		is_year = 1550
+	}		
+	on_revoked = {
+	}
+	on_granted = {
+		#custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed
+	}
+	mechanics = {
+		can_give_agendas_without_interaction
+		exempt_from_seize_land
+	}	
+	penalties = {
+	}
+	benefits = {
+		reduced_liberty_desire = -10
+		global_manpower = 2
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}
+
+estate_nobles_danish_union_restored = { # Danish Loyal Subjects
+	icon = privilege_danish_loyal_subjects
+	land_share = 0
+	max_absolutism = -20
+	influence = 0.10
+	loyalty = 0.1
+	is_valid = {
+		tag = DAN
+		mission_completed = stablize_union_dan
+		OR = {
+			senior_union_with = SWE
+			senior_union_with = NOR
+		}	
+	}
+	can_select = {
+		tag = DAN
+		mission_completed = stablize_union_dan
+		senior_union_with = SWE
+		senior_union_with = NOR
+	}
+	can_revoke = {
+		is_year = 1550
+	}		
+	on_revoked = {
+		add_stability = -1
+		add_legitimacy = -50
+	}	
+	mechanics = {
+		can_give_agendas_without_interaction
+	}	
+	on_granted = {
+		#custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed
+	}
+	penalties = {
+	}
+	benefits = {
+		reduced_liberty_desire = 20
+		global_manpower = 3
 	}
 	ai_will_do = {
 		factor = 1000

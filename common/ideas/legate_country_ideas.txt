@@ -5,7 +5,7 @@ SCA_ideas = {
 	}
 	
 	bonus = {
-		naval_forcelimit_modifier = 0.33
+		naval_forcelimit_modifier = 0.25
 	}
 	
 	trigger = {
@@ -15,23 +15,23 @@ SCA_ideas = {
 
 
 	sca_klaedekammer = {
-		governing_capacity = 200
+		governing_capacity = 100
 	}
 	sca_nordic_rulers_legacy = {
-		land_morale = 0.20
+		land_morale = 0.15
 	}	
 	sca_expanded_dockyards = {
-		center_of_trade_upgrade_cost = -0.25
-		range = 0.33
+		center_of_trade_upgrade_cost = -0.20
+		range = 0.25
 	}
 	sca_old_naval_traditions = {
 		production_efficiency = 0.15
 	}	
 	sca_vornedskab = {
-		unjustified_demands = -0.20
+		unjustified_demands = -0.15
 	}
 	sca_den_danske_lov = {
-		artillery_bonus_vs_fort = 1
+		siege_ability = 0.15
 	}
 	sca_rentekammer = {
 		max_absolutism = 25
@@ -45,6 +45,7 @@ JIN_ideas = {
 		may_recruit_female_generals = yes
 		amount_of_banners = 0.25
 		leader_land_shock = 1
+		female_advisor_chance = 0.50
 	}
 
 	bonus = {
@@ -65,7 +66,6 @@ JIN_ideas = {
 	JIN_ideas_3 = {
 		shock_damage = 0.1
 		infantry_shock = 0.10
-		female_advisor_chance = 0.50
 	}
 	JIN_ideas_4 = {
 		spy_offence = 0.25
@@ -179,6 +179,9 @@ banditry_ideas = {
 			tag = X14
 			tag = X27
 			tag = X12
+			tag = X48
+			tag = X44
+			tag = X40
 		}	
 	}			
 	free = yes		#will be added at load.
@@ -257,7 +260,14 @@ purple_turban_ideas = {
 	}
 	
 	trigger = {
-		tag = X23
+		OR = {
+			tag = X23
+			tag = X18
+			tag = X20
+			tag = X17
+			tag = X41
+			tag = X45
+		}	
 	}
 	free = yes		#will be added at load.
 
@@ -533,6 +543,7 @@ zhongyuan_ideas = { #Zhongyuan
 			primary_culture = chihan
 			primary_culture = shandong_culture
 			primary_culture = zhongyuan
+			tag = X43
 		}			
 	}
 	free = yes		#will be added at load.
@@ -600,5 +611,43 @@ nanman_tribes_ideas = { #Zhongyuan
 	nanman_tribes_ideas_7 = {
 		fort_maintenance_modifier = -0.1
 	}
+}
+
+honma_ideas = {
+    start = {
+        galley_power = 0.1
+        idea_cost = -0.10
+    }
+    
+    bonus = {
+        discipline = 0.05
+    }    
+
+    trigger = {
+        tag = X47
+    }
+    free = yes
+   
+    ngo_sixth = {
+        global_trade_goods_size_modifier = 0.1
+    }   
+    ngo_first = {
+       shock_damage = 0.15
+    }
+    ngo_second = {
+       governing_capacity_modifier = 0.1
+    }
+    ngo_third = {
+		leader_cost = -0.1
+    }
+    ngo_fourth = {
+        diplomatic_reputation = 1
+    }
+    ngo_fifth = {
+        merchants = 1
+    }
+    ngo_seventh = {
+        global_tax_modifier = 0.15
+    }
 }
 

@@ -329,9 +329,9 @@ guiTypes = {
 		{
 			name ="abilities"
 			#c position = { x = 4 y = 244 }
-			position = { x = 22 y = 263 }
+			position = { x = -77 y = 263 } #22
 			backGround=""
-			size = { x=600 y =600}
+			size = { x=763 y =763} #600
 			Orientation = "UPPER_LEFT"
 			spacing = 0
 			scrollbartype = "standardlistbox_slider"
@@ -451,7 +451,7 @@ guiTypes = {
 		name = "age_ability_entry"
 		backGround=""
 		position = { x=0 y=0 }
-		size = { x=50 y= 50 }
+		size = { x=50 y=50 } ## x=50 y= 50
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -460,10 +460,10 @@ guiTypes = {
 
 
 
-		iconType =
+		iconType =  
 		{
-			name ="icon"
-			spriteType = "GFX_idea_empty"
+			name ="icon" 
+			spriteType = "GFX_idea_empty" ##7
 			position = { x= 16 y = -7 }
 			Orientation = "UPPER_LEFT"
 		}

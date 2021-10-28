@@ -1,0 +1,263 @@
+country_decisions = {
+
+	reinstate_eric_vii_rule = {
+		major = yes
+		potential = {
+			tag = DAN
+			exists = GOT
+			NOT = { is_year = 1448 }
+			NOT = { has_country_flag = reinstated_eric_gryf_to_denmark }
+			has_ruler = "Christopher III"
+		}
+		allow = {
+			is_at_war = yes
+			exists = GOT
+			adm_power = 33
+			dip_power = 33
+			mil_power = 33
+		}
+		effect = {
+			#add_government_reform = chinese_warlord_nation # Will come back to this
+			set_country_flag = reinstated_eric_gryf_to_denmark
+			add_stability = -1
+			complete_mission = secure_danish_succession
+			hidden_effect = { 
+				GOT = {
+					exile_ruler_as = eric_vii_gotland
+				}	
+			}	
+			set_ruler = eric_vii_gotland
+			NOR = {
+				add_liberty_desire = -30
+			}
+			SWE = {
+				add_liberty_desire = 10
+			}	
+			custom_tooltip = eric_vii_ruler_placeholder.tt
+			# define_ruler = {
+				# name = "Eric VII"
+				# dynasty = "Gryf"
+				# adm = 3
+				# dip = 1
+				# mil = 4
+				# birth_date = 1382.1.1
+				# claim = 50
+				# fixed = yes
+			# }
+			define_heir = {
+				dynasty = "Gryf"
+				culture = pommeranian
+				adm = 2
+				dip = 2
+				mil = 2
+				birth_date = 1421.6.25
+				claim = 75
+				block_disinherit = yes
+			}	
+			add_ruler_modifier = {
+				name = "eric_gryf_on_denmark"
+				duration = -1
+			}
+			add_adm_power = -33
+			add_dip_power = -33
+			add_mil_power = -33
+			inherit = GOT
+			hidden_effect = {
+				add_legitimacy = -100
+				add_legitimacy = 50
+				define_ruler_to_general = {
+					fire = 2
+					shock = 3
+					manuever = 4
+					siege = 2
+				}
+			}	
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+	settle_the_succession_question_dan = {
+		major = yes
+		potential = {
+			tag = DAN
+			has_ruler = "Christopher III"
+			NOT = { has_country_flag = choosed_danish_heir }
+		}
+		allow = {
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = choosed_danish_heir
+			country_event = {
+				id = leg_danish_flavor.2
+			}			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	coerce_hamburg_dan = {
+		major = yes
+		potential = {
+			OR = {
+				tag = DAN
+				tag = SCA
+			}	
+			exists = HAM
+			has_country_flag = may_coerce_hansa_cities_in_vassals	
+			NOT = { has_country_flag = coerced_hamburg }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = destroyed_lubeck_reward_special_decision.tt
+				has_country_flag = may_coerce_hansa_cities_in_vassals
+			}		
+			is_at_war = no
+			dip_power = 100
+			HAM = {
+				is_free_or_tributary_trigger = yes
+				is_at_war = no
+				has_opinion = {
+					who = root
+					value = 150
+				}	
+			}	
+		}
+		effect = {
+			add_dip_power = -100
+			set_country_flag = coerced_hamburg
+			create_subject = {
+				subject_type = vassal
+				subject = HAM
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
+	coerce_bremen_dan = {
+		major = yes
+		potential = {
+			OR = {
+				tag = DAN
+				tag = SCA
+			}	
+			exists = BRE
+			has_country_flag = may_coerce_hansa_cities_in_vassals	
+			NOT = { has_country_flag = coerced_bremen }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = destroyed_lubeck_reward_special_decision.tt
+				has_country_flag = may_coerce_hansa_cities_in_vassals
+			}		
+			is_at_war = no
+			dip_power = 100
+			BRE = {
+				is_free_or_tributary_trigger = yes
+				is_at_war = no
+				has_opinion = {
+					who = root
+					value = 150
+				}	
+			}	
+		}
+		effect = {
+			add_dip_power = -100
+			set_country_flag = coerced_bremen
+			create_subject = {
+				subject_type = vassal
+				subject = BRE
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	coerce_riga_dan = {
+		major = yes
+		potential = {
+			OR = {
+				tag = DAN
+				tag = SCA
+			}	
+			exists = RIG
+			has_country_flag = may_coerce_hansa_cities_in_vassals	
+			NOT = { has_country_flag = coerced_riga }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = destroyed_lubeck_reward_special_decision.tt
+				has_country_flag = may_coerce_hansa_cities_in_vassals
+			}		
+			is_at_war = no
+			dip_power = 100
+			RIG = {
+				is_free_or_tributary_trigger = yes
+				is_at_war = no
+				has_opinion = {
+					who = root
+					value = 150
+				}	
+			}	
+		}
+		effect = {
+			add_dip_power = -100
+			set_country_flag = coerced_riga
+			create_subject = {
+				subject_type = vassal
+				subject = RIG
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
+	unite_the_two_kingdoms_norway_denmark = {
+		major = yes
+		provinces_to_highlight = {
+			OR = {
+				is_core = NOR
+			}
+		}		
+		potential = {
+			NOT = { has_global_flag = denmark_norway_united_decision }
+			AND = {
+				tag = DAN
+				current_age = age_of_discovery
+				senior_union_with = NOR
+			}	
+		}
+		allow = {
+			is_year = 1485
+			dip_power = 150
+			adm_power = 150
+			is_at_war = no
+			senior_union_with = NOR
+			NOR = {
+				NOT = { liberty_desire = 5 }
+				has_opinion = {
+					who = root
+					value = 190
+				}	
+			}	
+		}
+		effect = {
+			set_global_flag = denmark_norway_united_decision
+			inherit = NOR
+			add_dip_power = -150
+			add_adm_power = -150
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
+}	

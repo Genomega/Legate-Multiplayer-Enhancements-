@@ -1118,7 +1118,7 @@ colonial_government = {
 }
 
 crown_colony_government = {
-	icon = "peasants"
+	icon = "crown_colony_government"
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
@@ -1136,6 +1136,7 @@ crown_colony_government = {
 		global_missionary_strength = 0.02
 		culture_conversion_cost = -0.20
 		num_accepted_cultures = -5
+		years_of_nationalism = -10
 		embracement_cost = -0.2
 		governing_capacity = 150
 	}
@@ -1149,7 +1150,7 @@ crown_colony_government = {
 }
 
 private_enterprise_colony_government = {
-	icon = "peasants"
+	icon = "private_enterprise_colony_government"
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
@@ -1181,7 +1182,7 @@ private_enterprise_colony_government = {
 }
 
 self_governing_colony_government = {
-	icon = "peasants"
+	icon = "self_governing_colony_government"
 	valid_for_nation_designer = no
 	lock_level_when_selected = yes
 	allow_normal_conversion = no
@@ -1363,12 +1364,17 @@ nepotism_reform = {
 	modifiers = {
 		candidate_random_bonus = 1
 	}
+	royal_marriage = yes	
 
 	custom_attributes = {
 		enables_nepotism = yes
 	}
 	ai = {
-		factor = 1
+		factor = 5
+		modifier = {
+			factor = 1000
+			tag = ULM
+		}		
 	}
 }
 

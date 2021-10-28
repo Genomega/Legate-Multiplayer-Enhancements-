@@ -1,0 +1,41 @@
+# 2164 - Chongzuo
+
+owner = X42
+controller = X42
+add_core = X42
+culture = zhuang
+religion = confucianism
+capital = "Chongzuo"
+trade_goods = tea
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 3
+is_city = yes
+fort_15th = yes
+workshop = yes
+
+
+
+discovered_by = chinese
+discovered_by = nomad_group
+discovered_by = indian
+
+1595.1.1 = { discovered_by = SPA }
+
+1651.12.1 = {
+	owner = QNG
+	controller = QNG
+}
+1652.4.1 = { controller = MNG }
+1656.2.1 = { controller = QNG }
+1662.4.1 = {
+	owner = CZH
+	controller = CZH
+	add_core = CZH
+} # Three Feudatories
+1681.10.1 = {
+	owner = QNG
+	controller = QNG
+	add_core = QNG
+}

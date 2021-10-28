@@ -204,7 +204,7 @@ council_of_the_indies_reform = {
 	}
 	modifiers = {
 		global_tariffs = 0.2
-		treasure_fleet_income = 0.2
+		treasure_fleet_income = 0.1
 	}
 	ai = {
 		factor = 2
@@ -212,10 +212,9 @@ council_of_the_indies_reform = {
 }
 
 penal_colonies_reform = {
-	icon = "merchant_ship"
+	icon = "paper_with_seal"
 	allow_normal_conversion = yes
 	potential = {
-		num_of_colonists = 1
 		has_dlc = "Golden Century"
 		capital_scope = {
 			NOT = {
@@ -233,7 +232,7 @@ penal_colonies_reform = {
 		num_of_continents = 2
 	}
 	modifiers = {
-		expel_minorities_cost = -0.3
+		expel_minorities_cost = -1
 	}
 	ai = {
 		factor = 0.1

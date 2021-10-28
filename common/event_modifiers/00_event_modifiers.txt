@@ -1480,7 +1480,7 @@ conversion_zeal = {
 }
 
 religious_zeal_at_conv = {
-	local_missionary_strength = -1
+	local_missionary_strength = -0.05
 }
 
 papal_sanction_for_church_taxes = {
@@ -1738,7 +1738,7 @@ spread_of_enlightenment_ideals = {
 
 #Special places
 stora_kopparberget_modifier = { #Great Copper Mountain
-	trade_goods_size = 5.0
+	trade_goods_size = 3.5 #5.0
 }
 
 spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for a large portion of the worlds spices
@@ -1746,7 +1746,8 @@ spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for 
 }
 
 skanemarket = { #Skånemarknaden - Biggest Herring Market in Europe
-	trade_goods_size = 1.5
+	trade_goods_size = 2
+	province_trade_power_value = 10
 }
 
 granary_of_the_mediterranean = {
@@ -3161,9 +3162,10 @@ the_triumphal_procession = {
 }
 
 burgundian_succession_crisis = {
-	heir_chance = -0.95
-	monthly_heir_claim_increase = -1
+	heir_chance = -1.5
+	monthly_heir_claim_increase = -1.5
 	block_introduce_heir = yes
+	monarch_lifespan = -0.5
 }
 
 mary_is_on_the_throne = {
@@ -3646,7 +3648,7 @@ hsa_spread_shipbuilding_technology = {
 }
 hsa_trade_reform = {
 	global_trade_power = 0.1
-	trade_efficiency = 0.2	
+	trade_efficiency = 0.15
 }
 hsa_economic_reform = {
 	build_cost = -0.1
@@ -4669,7 +4671,8 @@ dan_crown_lands_lost = {
 }
 
 dan_bavarian_holdings = {
-	global_tax_income = 8
+	global_tax_income = 12
+	legitimacy = -2
 }
 
 dansborg_factory = {
@@ -6391,7 +6394,7 @@ royal_fires_modifier = {
 	prestige = 0.5
 	legitimacy = 0.5
 	devotion = 0.5
-	manpower_in_true_faith_provinces 	= 0.2
+	manpower_in_true_faith_provinces = 0.2
 	religion = yes
 }
 
@@ -11286,12 +11289,12 @@ colony_inspired_by_revolution = {
 }
 
 estate_cossacks_prime_herding_rights_mod = {
-	local_tax_modifier = -0.5
-	local_manpower_modifier = 1
+	local_tax_modifier = -0.25
+	local_manpower_modifier = 0.25
 }
 
 estate_cossacks_exploration_expedition_mod = {
-	local_development_cost = -0.15
+	local_development_cost = -0.10
 }
 
 shortage_of_officers = {
@@ -11455,7 +11458,7 @@ ancestral_temple = {
 
 blue_dragon = {
 	raze_power_gain = 0.15
-	loot_amount = 0.25
+	loot_amount = 0.15
 }
 
 white_tiger = {
@@ -11485,7 +11488,7 @@ its_not_gold = {
 }
 
 the_rule_of_god = {
-	land_morale = 0.15
+	land_morale = 0.10
 	discipline = 0.05
 }
 

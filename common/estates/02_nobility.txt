@@ -408,6 +408,8 @@ estate_nobles =
 		estate_nobles_command_of_the_military		
 		estate_nobles_timurid_ilkhanate_cossacks
 		estate_nobles_command_of_the_military_aristocratic
+		estate_nobles_danish_union
+		estate_nobles_danish_union_restored		
 	}
 
 	agendas = {

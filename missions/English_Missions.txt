@@ -20,12 +20,26 @@ eng_british_conquest = {
 		completed_by = 1450.1.1
 		
 		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
+			army_size_percentage = 0.9
+			manpower_percentage = 0.5
 			num_of_generals = 1
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					exists = SCO
+					valid_for_personal_unions_trigger = yes
+					SCO = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = SCO
+				}
+			}			
 			munster_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -59,20 +73,20 @@ eng_british_conquest = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			
 			250 = { 
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			4363 = { 
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			252 = { 
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			4110 = { 
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			4364 = {
 				add_permanent_claim = ROOT
@@ -225,6 +239,16 @@ eng_british_conquest_scotland = {
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					senior_union_with = SCO		
+				}
+				reverse_remove_opinion = {
+					who = SCO
+					modifier = they_force_unioned_us
+					
+				}
+			}		
 			add_accepted_culture = scottish
 			add_accepted_culture = highland_scottish
 			add_country_modifier = {

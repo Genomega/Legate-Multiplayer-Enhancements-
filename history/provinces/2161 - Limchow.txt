@@ -1,8 +1,8 @@
 # 2161 - Limchow
 
-owner = X15
-controller = X15
-add_core = X15
+owner = X42
+controller = X42
+add_core = X42
 culture = cantonese
 religion = confucianism
 capital = "Limchow"

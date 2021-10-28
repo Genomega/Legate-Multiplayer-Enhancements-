@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = chinese_bandit_reform
+technology_group = chinese
+religion = confucianism
+primary_culture = hakka
+add_accepted_culture = gan
+capital = 670	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Chou"
+		dynasty = "Ge"
+		birth_date = 1403.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

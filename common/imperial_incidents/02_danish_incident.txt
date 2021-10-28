@@ -1,0 +1,28 @@
+incident_danish_entrance = {
+	event = leg_danish_flavor.4
+	default_option = 0
+	
+	can_stop = {
+		always = no
+	}
+	
+	0 = { # Allow Entrance
+		factor = 2
+		modifier = {
+			factor = 5
+			capital_scope = {
+				region = south_german_region
+			}
+		}
+	}
+	
+	1 = { # Ban it
+		factor = 2
+		modifier = {
+			factor = 100
+			capital_scope = {
+				region = north_german_region
+			}
+		}		
+	}
+}

@@ -641,7 +641,7 @@ improved_relation = {
 	opinion = 0
 	months = 0
 	yearly_decay = 3
-	max = 175
+	max = 150
 	max_vassal = 200
 	max_in_other_direction = 50
 }

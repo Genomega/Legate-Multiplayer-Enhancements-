@@ -21,7 +21,7 @@ X15 = "countries/Lei.txt" #Lei
 X16 = "countries/Ting.txt" #Ting
 
 
-#The Turban Republics
+#The Purple Turbans
 
 X17 = "countries/Ningguo.txt" #Ningguo
 X18 = "countries/Ningbo.txt" #Ningbo
@@ -68,3 +68,20 @@ X54 = "countries/Jin-wei.txt" #Shu
 
 #Republic of China
 X60 = "countries/China.txt" #Shu
+
+# China V2 New Nations
+X40 = "countries/Ankang.txt"
+X41 = "countries/Fuzhou_turbans.txt"
+X42 = "countries/Chongzuo.txt"
+X43 = "countries/Hangyang.txt"
+X44 = "countries/Yuezhou.txt"
+X45 = "countries/Chen.txt"
+X46 = "countries/Chuenchow.txt"
+X48 = "countries/Ganzhou.txt"
+X61 = "countries/Panzhihua.txt"
+X62 = "countries/Chuxiong.txt"
+X63 = "countries/Honghe.txt"
+X64 = "countries/Dehong.txt"
+
+# NEW Japan Tags
+X47 = "countries/Honma.txt"

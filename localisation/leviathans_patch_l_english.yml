@@ -3,6 +3,12 @@
   ## Music
   the_blue_rose.ogg: "The Blue Rose"
   fall_of_byzantium.ogg: "Fall of Byzantium"
+  the_danelaw.ogg: "The Danelaw"
+  battle_of_brunkeberg.ogg: "Battle of Brunkeberg"
+  return_to_estonia.ogg: "Return to Estonia"
+  gulf_of_riga.ogg: "Gulf of Riga"
+  scandinavia.ogg: "Scandinavia"
+  eu3_conquistor_theme.ogg: "The Conquistador (Europa Universalis III)"
   
   ## Legate Merc Companies
   nogai_coalition_force: "Nogai Coalition Force"
@@ -54,6 +60,14 @@
  wei_suo_act_mer: "Wei-Suo Act"
  wei_suo_act_mer_desc: ""
  warrior_poets_act_1: "Warrior Poets Act"
+ 
+ ## Subject Types
+ kalmar_personal_union: "§YKalmar§! Personal Union"
+ kalmar_personal_union_title: "Junior §YKalmar§! Partner"
+ kalmar_personal_union_is_our: "$NAME|Y$ is ruled by us in a §YKalmar§! Personal Union."
+ kalmar_personal_union_long_desc: "In a personal union two countries are ruled by the same monarch. The lesser partner must follow his overlord to war and cannot make certain diplomatic actions. When the monarch dies the union might either continue, break or the lesser partner can get inherited and annexed."
+ kalmar_personal_union_title_plural: "Junior §YKalmar§! Partners" 
+ kalmar_personal_union_overlord_title:0 "Senior §YKalmar§! Partner"
  warrior_poets_act_1_desc: ""
  tranquil_defense_act_1: "Tranquil Defense Act"
  tranquil_defense_act_1_desc: ""
@@ -116,6 +130,8 @@
  end_the_estate_bankruptcy_desc: "Large strives have been made to rebuilding the nation's bureaucracy since our Bailout to the Estates. If we can successfully rebuild the Bureaucracy, we can retake the portions of our nation controlled by the Estates." 
  
  ## Event Modifiers
+ chinese_commandery_vassal_overlord: "Chinese Tribute Tax"
+ chinese_commandery_vassal_overlord_desc: ""
  integration_of_the_scottish_elite: "Integration of the Scottish Nobility"
  integration_of_the_scottish_elite_desc: ""
  desc_integration_of_the_scottish_elite: ""
@@ -182,9 +198,105 @@
  legate_religions.1.a: "It is up to us to keep the flame burning."
  legate_religions.2.d: "Hussite traditions are still remembered amongst the people of [Root.GetName]. Now that the thesis of Luther has been widely known, more and more important people are openly declaring themselves to be Protestant rather than Hussite. We must decide whether to retain a distinct Hussite identity or join the wider Protestant Reformation."
  
+ anjou_england.3.t: "Birth of Edward of Westminster"
+ anjou_england.3.d: "Before the outbreak of the War of the Roses, Queen Margaret became pregnant with the child of King Henry VI. She gave birth to a son in 1453, given the name Edward after Henry’s Grandfather, Edward III. Prince Edward would go on to be executed following the Battle of Tewkesbury at the age of 17 by King Edward of the Yorkist faction. Prince Edward's death at Tewkesbury effectively made the House of Lancaster extinct."
+ anjou_england.3.a: "Edward is the last of the Lancasters, as such he will rule as one when the time comes"
+ anjou_england.3.b: "Edward will one day rule, but rather as a Anjou"
+ 
  ## Government Reforms
  
  zoroastrian_indian_shahdom: "Indian Shahdom"
  zoroastrian_indian_shahdom_desc: "During the harsh years of oppression in Persia many Zoroastrians left their ancestral homeland to resettle abroad. One of these branches of Zoroastrian Diaspora settled in India and eventually became known as the Parsi Diaspora. While a Zoroastrian state is likely to face opposition by the Sultanates of India, the strong ties developed between the Parsi and the Dharmic and Buddhist faiths can allow for a strong united state."
  ethiopian_government_reform: "Solomonid Kingdom"
  ethiopian_government_reform_desc: "Descended from the direct line of King Solomon, the Solomonid dynasty in Ethiopia has one of the most legitimate claim to divine right to rule. While the state is vunerable to Islamic pressure, the state will resist fiercely in defending its prized treasure, the Ark of the Convenant."
+ 
+ 
+ # New Mission Trees
+ 
+ baltic_fleet_dan_title:0 "Baltic Fleet"
+ baltic_fleet_dan_desc:0 ""
+ crush_the_hansa_dan_title:0 "Crush the Hansa"
+ crush_the_hansa_dan_desc:0 ""
+ integrate_holstein_duchy_dan_title:0 "Inherit Holstein"
+ integrate_holstein_duchy_dan_desc:0 ""
+ conquer_verden_dan_title:0 "Conquer Verden"
+ conquer_verden_dan_desc:0 ""
+ claim_emperorship_dan_title:0 "Claim the Emperorship"
+ claim_emperorship_dan_desc:0 ""
+ a_reforged_empire_dan_title:0 "A Reforged Empire"
+ a_reforged_empire_dan_desc:0 ""
+
+ secure_danish_succession_title:0 "Question of Succession"
+ secure_danish_succession_desc:0 ""
+ integrate_norway_dan_title:0 "Unite with Norway"
+ integrate_norway_dan_desc:0 ""
+ renovate_oslo_dan_title:0 "Renovate Oslo"
+ renovate_oslo_dan_desc:0 ""
+ foothold_in_pom_dan_title:0 "Seize Pomerania"
+ foothold_in_pom_dan_desc:0 ""
+ crush_prussia_dan_title:0 "Crush Prussia"
+ crush_prussia_dan_desc:0 ""
+
+ stablize_union_dan_title:0 "Stablize the Union"
+ stablize_union_dan_desc:0 ""
+ the_swedish_consitution_dan_title:0 "Scandinavian Consitution"
+ the_swedish_consitution_dan_desc:0 ""
+ finnish_duchy_dan_title:0 "Establish the Finnish Duchy"
+ finnish_duchy_dan_desc:0 ""
+ one_crown_dan_title:0 "One Crown"
+ one_crown_dan_desc:0 ""
+ united_scandavia_dan_title:0 "Unite Scandinavia"
+ united_scandavia_dan_desc:0 ""
+
+ reclaim_gotland_dan_title:0 "Crush Gutnish Insurgence"
+ reclaim_gotland_dan_desc:0 ""
+ grow_copenhagen_dan_title:0 "Grow Copenhagen"
+ grow_copenhagen_dan_desc:0 ""
+ conquer_livionia_dan_title:0 "Restore Danish Estonia"
+ conquer_livionia_dan_desc:0 ""
+ dominate_baltic_trade_dan_title:0 "Dominate Baltic Trade"
+ dominate_baltic_trade_dan_desc:0 ""
+ reclaim_karelia_dan_title:0 "Reclaim Karelia"
+ reclaim_karelia_dan_desc:0 ""
+ sack_novgorod_dan_title:0 "Sack Novgorod"
+ sack_novgorod_dan_desc:0 ""
+ conquer_the_rus_winter_dan_title:0 "Tame the Russian Winter"
+ conquer_the_rus_winter_dan_desc:0 ""
+
+
+ english_treaty_dan_desc:0 ""
+ english_treaty_dan_title:0 "§TTreaty of the North Sea§!"
+ shipbuilding_legacy_dan_title:0 "Shipbuilding Legacy"
+ shipbuilding_legacy_dan_desc:0 "" 
+ invest_in_jyland_dan_title:0 "Invest in Jutland"
+ invest_in_jyland_dan_desc:0 ""
+ counts_feud_dan_title:0 "Win the Count's Feud"
+ counts_feud_dan_desc:0 ""
+ question_of_reformation_dan_title:0 "Debate on Reformation"
+ absorb_teutonic_lands_title: "Absorb Teutonic lands"
+ absorb_teutonic_lands_desc: ""
+ question_of_reformation_dan_desc:0 ""
+ white_sea_trade_title:0 "White Sea Trade"
+ white_sea_trade_desc:0 ""
+ 
+ 
+ tame_the_highlands_dan_title: "§TTame the Highlands§!"
+ tame_the_highlands_dan_desc: ""
+ conquer_scotland_dan_title: "§TConquer Scotland§!"
+ conquer_scotland_dan_desc: ""
+ reclaim_the_isles_dan_title: "§TReclaim the Isles§!"
+ reclaim_the_isles_dan_desc: ""
+ subjagate_ireland_dan_title: "§TSubjugate Ireland§!"
+ subjagate_ireland_dan_desc: ""
+ conquer_jorvik_dan_title: "§TConquer Jorvik§!"
+ conquer_jorvik_dan_desc: ""
+ restore_the_danelaw_dan_title: "§TRestore the Danelaw§!"
+ restore_the_danelaw_dan_desc: ""
+ the_north_sea_empire_dan_title: "§TThe North Sea Empire§!"
+ the_north_sea_empire_dan_desc: ""
+ 
+ 
+ ## Ages 
+ 
+ obj_kalmar_personal_unions:0 "Hold Three Thrones"
+ obj_kalmar_personal_unions_desc:0 "Have at least two other nations in a §YKalmar§! personal union with you, with your ruler as their ruler."

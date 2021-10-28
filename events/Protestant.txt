@@ -24,10 +24,11 @@ country_event = {
 		religion = catholic
 		is_defender_of_faith = no	
 		NOT = { has_reform = papacy_reform }
-		#reform_desire = 1 #Because Players will abuse Pope Man for lowering reform
-		is_year = 1495
+		reform_desire = 1 #Because Players will abuse Pope Man for lowering reform
+		is_year = 1492
 		capital_scope = {
-			continent = europe
+			region = north_german_region
+			NOT = { religion = hussite }
 		}
 		any_owned_province = {
 			can_have_center_of_reformation_trigger = {

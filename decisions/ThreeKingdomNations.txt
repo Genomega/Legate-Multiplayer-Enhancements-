@@ -184,7 +184,10 @@ country_decisions = {
 			}	
 			738 = {
 				is_empty = yes
-			}	
+			}
+			5103 = {
+				is_empty = yes
+			}			
 		}
 		effect = {
 			set_global_flag = taiwan_colonized
@@ -202,7 +205,10 @@ country_decisions = {
 			738 = {
 				add_siberian_construction = 10
 				add_center_of_trade_level = 1
-			}					
+			}	
+			5103 = {
+				add_siberian_construction = 10
+			}			
 		}
 		ai_will_do = {
 			factor = 1

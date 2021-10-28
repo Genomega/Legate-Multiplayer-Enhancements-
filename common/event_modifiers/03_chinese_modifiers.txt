@@ -17,9 +17,10 @@ tibetan_capital_bonus = {
 }	
 
 bandit_queen_zhang_lin = {
-	 liberty_desire = 75
-	 ae_impact = -0.15
-	 prestige_from_land = 0.5
+	liberty_desire = 75
+	ae_impact = -0.15
+	prestige_from_land = 0.5
+	monarch_lifespan = 0.5
 }	 
 
 purple_turban_spirit = { #
@@ -33,6 +34,7 @@ spark_of_the_rebellion = {
 	reinforce_cost_modifier = -0.33
 	reinforce_speed = 0.33
 	ae_impact = -0.33
+	monarch_lifespan = 0.5
 }	
 
 legacy_of_the_purple_turbans = {

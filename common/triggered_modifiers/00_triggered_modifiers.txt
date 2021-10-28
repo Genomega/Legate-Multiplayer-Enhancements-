@@ -596,7 +596,7 @@ weak_control_of_north_china = {
 			num_of_owned_provinces_with = {
 				value = 18 #out of 13 i.e. you can leave out Holstein and stuff
 				region = north_china_region
-				is_core = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}	
 		}
 	}
@@ -615,7 +615,7 @@ weak_control_of_xinan = {
 			num_of_owned_provinces_with = {
 				value = 8 #out of 13 i.e. you can leave out Holstein and stuff
 				region = xinan_region
-				is_core = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}	
 	}
@@ -634,7 +634,7 @@ weak_control_of_south_china = {
 			num_of_owned_provinces_with = {
 				value = 15 #out of 13 i.e. you can leave out Holstein and stuff
 				region = south_china_region
-				is_core = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}	
 		}
 	}
@@ -652,7 +652,7 @@ strong_control_of_north_china = {
 		num_of_owned_provinces_with = {
 			value = 21 #out of 13 i.e. you can leave out Holstein and stuff
 			region = north_china_region
-			is_core = root
+			country_or_non_sovereign_subject_holds = ROOT
 		}	
 	}
 
@@ -669,7 +669,7 @@ strong_control_of_xinan = {
 		num_of_owned_provinces_with = {
 			value = 12 #out of 13 i.e. you can leave out Holstein and stuff
 			region = xinan_region
-			is_core = root
+			country_or_non_sovereign_subject_holds = ROOT
 		}	
 	}
 
@@ -686,7 +686,7 @@ strong_control_of_south_china = {
 		num_of_owned_provinces_with = {
 			value = 20 #out of 13 i.e. you can leave out Holstein and stuff
 			region = south_china_region
-			is_core = root
+			country_or_non_sovereign_subject_holds = ROOT
 		}	
 	}
 

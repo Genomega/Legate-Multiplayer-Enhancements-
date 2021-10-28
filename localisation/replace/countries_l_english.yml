@@ -32,3 +32,28 @@
  local_nobility_desc:0 "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges, they will of course remember our largess and be more resistant to the inducements of foreign powers.\n§TEnables ‘Aristocratic Command of the Army’ Estate Privilege which provides +0.90 Yearly Army Tradition. Can only be granted to the Nobility Estate§!"
  free_merchants:0 "Free Merchants"
  free_merchants_desc:0 "In more reactionary and hidebound societies men of trade are looked down upon as somehow being lesser men than those who own land. Well not for us, we know that wealth is power regardless of where it comes from.\n§TEnables ‘Plutocratic Command of the Admiralty’ Estate Privilege which provides +0.90 Yearly Naval Tradition and +20% Naval Tradition from Protecting Trade. Can only be granted to the Burghers Estate.§!"
+ OVERLORD_CONSCRIPTED_GENERAL:0 "to conscript our General $NAME|Y$ ($FIRE$/$SHOCK$/$MANUEVER$/$SIEGE$) for their armies. He no longer serves us."
+ WE_CONSCRIPTED_GENERAL:0 "to let their General $NAME|Y$ ($FIRE$/$SHOCK$/$MANUEVER$/$SIEGE$) fight for us instead."
+ 
+ CELESTIAL_CELESTIAL:1 "Empire of China"
+ CELESTIAL_EMPEROR:0 "$EMPERORNAME|Y$ is the Emperor of China"
+ CELESTIAL_MANDATE:0 "Mandate Dignity"
+ CELESTIAL_DECISIONS:0 "Bureaucracy Reforms"
+ CELESTIAL_TRIBUTARIES:0 "$NUM$ Tributaries and Protectorates"
+ CELESTIAL_DECREES:0 "Imperial Decrees"
+ CELESTIAL_CLOSE:0 "Close"
+ CELESTIAL_EMPIRE:0 "Empire of China"
+ 
+ 
+ # Celestial China Faction
+ temples_FACTION_DESC:1 "The Commanderies are the system of the generals and commanders of the Imperial armies. Eager to prove their valor and loyalty they seek to promote war over diplomacy to be able to advance in rank."
+ enuchs_FACTION_DESC:1 "The office organizing the provincial bureaucrats in charge of trade and seafaring. Seeking to promote profitable trade they are often opposed to the militaristic ambitions of the Commanderies."
+ bureaucrats_FACTION_DESC:1 "The corps of administrators promoted through the Imperial Examination system. Brilliant Confucian scholars, these men are the diplomats and bureacrats of the Empire. They promote policies to build a stable and strong Empire."
+ 
+ temples_influence:1 "Commanderies Faction Influence"
+ enuchs_influence:1 "Trade Faction Influence"
+ bureaucrats_influence:1 "Secretariat Faction Influence"
+ 
+ temples:2 "Commanderies of the Five Armies"
+ enuchs:2 "Offices of Maritime Trade"
+ bureaucrats:2 "Grand Secretariat"

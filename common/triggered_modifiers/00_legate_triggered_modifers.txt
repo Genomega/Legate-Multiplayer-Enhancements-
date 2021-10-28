@@ -1,31 +1,37 @@
 ##### Ideas Triggered Bonuses #####
 
-venerable_monarch_majesty = {
-	potential = {
-		has_idea = noble_pride
-	}
-
-	trigger = {
-		has_idea = noble_pride
-		ruler_age = 60
-	}
-
-	country_admin_power = 1
-	country_diplomatic_power = 1
-	country_military_power = 1
-}
-
-# chinese_manpower_nerf = {
+# venerable_monarch_majesty = {
 	# potential = {
-		# culture_group = east_asian
+		# has_idea = noble_pride
 	# }
 
 	# trigger = {
-		# has_idea  = mass_army
+		# has_idea = noble_pride
+		# ruler_age = 60
 	# }
 
-	# global_manpower_modifier = -0.20
+	# country_admin_power = 1
+	# country_diplomatic_power = 1
+	# country_military_power = 1
 # }
+
+employed_colonial_governor = {
+	potential = {
+		employed_advisor = {
+			type = colonial_governor
+		}	
+	}
+
+	trigger = {
+		employed_advisor = {
+			type = colonial_governor
+		}	
+	}
+
+	global_colonial_growth = 20
+	#global_tariffs = 0.20
+	treasure_fleet_income = 0.20
+}
 
 # chinese_forcelimit_nerf = {
 	# potential = {
@@ -38,3 +44,89 @@ venerable_monarch_majesty = {
 
 	# land_forcelimit_modifier  = -0.10
 # }
+
+super_lucky_nations = {
+	potential = {
+		ai = yes
+		OR = {
+			tag = RYU
+			tag = JIN
+			tag = ULM
+			tag = KNO
+			tag = LNA
+		}	
+	}
+
+	trigger = {
+		ai = yes
+		OR = {
+			tag = RYU
+			tag = JIN
+			tag = ULM
+			tag = KNO
+			tag = LNA
+		}		
+	}
+
+	#core
+	global_missionary_strength = 0.02
+	stability_cost_modifier = -0.15
+	global_institution_spread = 0.2
+	monthly_splendor = 3
+	monthly_reform_progress = 0.35
+	max_absolutism = 45
+	yearly_absolutism = 5
+	global_tax_income = 36
+	idea_cost = -0.15
+	technology_cost = -0.15
+	administrative_efficiency = 0.10
+
+	#economy
+	mercenary_cost = -0.25
+	embracement_cost = -0.33
+	advisor_cost = -0.33
+	innovativeness_gain = 0.25
+	interest = -1
+	missionary_maintenance_cost = -0.25
+
+	#military
+	manpower_recovery_speed = 0.25
+	defensiveness = 0.15
+	siege_ability = 0.10
+	land_morale = 0.05
+	land_forcelimit = 3
+	naval_forcelimit = 10
+	flagship_cost = -0.85
+	global_ship_cost = -0.33
+
+	#diplomacy
+	spy_offence = 0.1
+	improve_relation_modifier = 0.25
+	native_uprising_chance = -1
+	native_assimilation = 1
+	global_colonial_growth = 25
+
+	#government
+	global_unrest = -3
+	republican_tradition = 0.5
+	legitimacy = 1
+	ae_impact = -0.15
+	core_creation = -0.10
+	governing_capacity = 300
+	monarch_admin_power = 1
+	monarch_diplomatic_power = 1
+	monarch_military_power = 1
+	
+	# Estates
+	church_loyalty_modifier = 0.10
+	brahmins_hindu_loyalty_modifier = 0.10
+	nobles_loyalty_modifier = 0.10
+	burghers_loyalty_modifier = 0.10
+	cossacks_loyalty_modifier = 0.10
+	dhimmi_loyalty_modifier = 0.10
+	jains_loyalty_modifier = 0.10
+	brahmins_muslim_loyalty_modifier = 0.10
+	vaisyas_loyalty_modifier = 0.10
+	nomadic_tribes_loyalty_modifier = 0.10
+	rajput_exclusive_loyalty_modifier = 0.10
+}

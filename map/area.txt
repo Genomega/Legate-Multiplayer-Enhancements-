@@ -589,7 +589,7 @@ east_anglia_area = { #3
 ########################################
 
 jutland_area = { #4
-	15 1984 4142 4149
+	15 1984 4142 4149 5512
 }
 
 denmark_area = { #4 +Bornholm
@@ -613,23 +613,23 @@ svealand_area = { #3
 }
 
 ostra_svealand_area = { #4
-	1 4 1930
+	1 4 1930 5500
 }
 
 norrland_area = { #4
-	9 11 18 4114
+	9 11 18 4114 5501
 }
 
 finland_area = { #5
-	27 28 29 31 4123
+	27 28 29 31 4123 5504 5505
 }
 
 bothnia_area = { #3
-	19 4113 4152
+	19 4113 4152 5502
 }
 
 laponia_area = { #3
-	315 1777 4151
+	315 1777 4151 5503 5511
 }
 
 karelia_area = { #4
@@ -641,19 +641,19 @@ north_karelia = { #3
 }
 
 northern_norway = { #3
-	10 20 21
+	10 20 21 5510 5509
 }
 
 eastern_norway = { #4
-	17 22 4143 4144
+	17 22 4143 4144 5506 5507 
 }
 
 western_norway = { #4
-	23 24 2752 4145
+	23 24 2752 4145 5508
 }
 
 subarctic_islands_area = { #4
-	1978 1979 370 371
+	1978 1979 370 371 5513
 }
 
 greenland_area = { #2
@@ -665,11 +665,11 @@ greenland_area = { #2
 ########################################
 
 estonia_ingria_area = { #3
-	36 1834 1842
+	36 1834 1842 5514 5515
 }
 
 livonia_area = { #4
-	37 38 273 4241
+	37 38 273 4241 5516
 }
 
 curonia_area = { #3
@@ -1057,7 +1057,7 @@ macedonia_area = { #5 (Macedonia)
 }
 
 morea_area = { #4 Central Greece & Crete
-	145 146 163 1773 4701
+	145 146 163 1773 4701 3003
 }
 
 northern_greece_area = { #3 #Northern Greece
@@ -1200,7 +1200,7 @@ ankara_area = { #3
 }
 
 aegean_archipelago_area = { #4
-	164 320 2348 3003 4700
+	164 320 2348 4700
 }
 
 kastamonu_area = { #4
@@ -1700,7 +1700,7 @@ micronesia_area = { #4
 }
 
 west_micronesia_area = { #3
-	1235 1995 1996
+	1235 1995 1996 5124
 }
 
 western_australia_area = { #4
@@ -2319,7 +2319,7 @@ shan_hill_area = { #4
 }
 
 karenni_area = { #3 #Southern Shan States
-	587 2401 4398
+	587 2401 4398 660
 }
 
 
@@ -2541,7 +2541,7 @@ pyongan_area = { #3
 }
 
 hamgyeong_area = { #3
-	732 2742 2743
+	732 2742 2743 5082
 }
 
 western_korea_area = { #4 (Hwanghae + Gyeonggi)
@@ -2549,7 +2549,7 @@ western_korea_area = { #4 (Hwanghae + Gyeonggi)
 }
 
 eastern_korea_area = { #5 (Gangwon +  Gyeongsang)
-	734 736 2694 2745 4227
+	734 736 2694 2745 4227 5081
 }
 
 south_korea_area = { #4 (Jeolla, Chungcheong) +Jeju
@@ -2561,11 +2561,11 @@ hokkaido_area = { #5
 }
 
 hokuriku_area = { #3
-	1023 1024 1837
+	1023 1024 1837 5075 5076
 }
 
 kanto_area = { #3 #Western Kanto
-	1028 1843 4189
+	1028 1843 4189 5072
 }
 
 eastern_kanto_area = { #3
@@ -2573,7 +2573,7 @@ eastern_kanto_area = { #3
 }
 
 kyushu_area = { #4 #Southern Kyushu
-	1012 1015 4180 4181
+	1012 1015 4180 4181 5122
 }
 
 northern_kyushu = {
@@ -2581,16 +2581,16 @@ northern_kyushu = {
 }
 
 shikoku_area = { #3
-	1819 1820 4186
+	1819 1820 4186 5080
 }
 
 eastern_chubu_area = { #4
-	1029 1839 4188 4360
+	1029 1839 4188 4360 5073
 }
 
 chubu_area = { #3 (Western Chubu)
 	color = { 219 83 61 }
-	1030 1835 4359
+	1030 1835 4359 5074
 }
 
 kinai_area = { #4
@@ -2599,7 +2599,7 @@ kinai_area = { #4
 }
 
 thohoku_area = { #4
-	1025 1026 4131 4192
+	1025 1026 4131 4192 5078 5077 5079
 }
 
 sanindo_area = { #4
@@ -2735,7 +2735,7 @@ liaoning_area = { #5
 }
 
 ordos_area = { #4 (Western Inner Mongolia)
-	701 709 4223 4676 5106
+	701 709 4223 4676 2191
 }
 
 eastern_mongolia = { #5
@@ -2793,7 +2793,7 @@ shanshan_area = { #4
 }
 
 turpan_kumul_area = { #4
-	2122 4206 4207 707
+	2122 4206 4207
 }
 
 zungaria_area = { #5
@@ -2826,31 +2826,31 @@ ngari_area = { #3
 } #new!!
 
 hebei_area = { #4 (North Hebei)
-	703 1816 2136 4194
+	703 1816 2136 4194 5123 5084
 }
 
 south_hebei_area = { #4
-	695 696 4195 697
+	695 696 4195 2144 2137
 }
 
 shandong_area = { #5
-	690 691 2138 2139 5111
+	690 691 2138 2139 5083 5085 5086 2140
 }
 
 jiangsu_area = { #3
-	2141 2142 4196 5112 5110
+	2141 2142 4196
 }
 
 south_jiangsu_area = { #4
-	685 1821 1822 2145 5116
+	685 1821 1822 2145 5115
 }
 
 anhui_area = { #3 (North Anhui)
-	1838 2143 5115
+	1838 2143 2144 5116
 }
 
 south_anhui_area = { #3
-	686 2146 2147 5113 2151
+	686 2146 2147
 }
 
 zhejiang_area = { #5
@@ -2858,19 +2858,19 @@ zhejiang_area = { #5
 }
 
 jiangxi_area = { #4
-	 670 683 1833 5114
+	 670 683 1833 5113 2151
 }
 
 fujian_area = { #4
-	669 1829 2152 2153 5109
+	669 1829 2152 2153 5118 5117 5119
 }
 
 taiwan_area = { #3
-	738 2154 2155
+	738 2154 2155 5103
 }
 
 guangdong_area = { #5
-	667 668 2156 2157 2158 5102
+	667 668 2156 2157 2158 5106 5105 5104
 }
 
 west_guangdong_area = { #5
@@ -2878,51 +2878,51 @@ west_guangdong_area = { #5
 }
 
 guangxi_area = { #5
-	664 1840 2162 2163 2164 5103
+	664 1840 2162 2163 2164 5132
 }
 
 yun_gui_area = { #5 (Yun-Gui Hinterland)
-	662 663 673 674 5101
+	662 663 673 674
 }
 
 yun_gui_borderland_area = { #5
-	660 661 2165 2166 2167
+	661 2165 2166 2167 5131 5130 5129
 }
 
 sichuan_area = { #3
-	679 680 4212 4213
+	679 680 4212 4213 5099 5090
 }
 
 chuannan_area = { #4
-	675 2168 2748 4199 5100
+	675 2168 2748 4199
 }
 
 chuanbei_area = { #3
-	2169 2170 4211 5108
+	2169 2170 4211 5089
 }
 
 huguang_area = { #5 (Hubei)
-	681 682 2171 2172 4197
+	681 682 2171 2172 4197 5109 5091
 }
 
 hunan_area = { #4
-	671 672 2173 2174 5104
+	671 672 2173 2174 5112 5107 5110
 }
 
 henan_area = { #3 (South Henan)
-	687 2175 2176 2144
+	687 2175 2176
 }
 
 north_henan_area = { #3
-	688 692 1836 2137 2140
+	688 692 1836
 }
 
 shanxi_area = { #5
-	693 694 2177 2178 5105 2179
+	693 694 2177 2178 697
 }
 
 shaanxi_area = { #4
-	689 700 4198 5107
+	689 700 4198 5088 5087 2179
 }
 
 gansu_area = { #5 (East Gansu)
@@ -2930,7 +2930,7 @@ gansu_area = { #5 (East Gansu)
 }
 
 west_gansu_area = { #4 
-	708 2182 2184 2191
+	708 2182 2184 707
 }
 
 ########################################

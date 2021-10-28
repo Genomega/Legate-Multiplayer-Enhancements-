@@ -42,12 +42,12 @@ tim_reconquest_persia = {
 						liberty_desire = 1
 					}
 				}
-				TIM = {
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = insulted
-					}
-				}
+				# TIM = {
+					# has_opinion_modifier = {
+						# who = ROOT
+						# modifier = insulted
+					# }
+				# }
 			}
 			else_if = {
 				limit = {

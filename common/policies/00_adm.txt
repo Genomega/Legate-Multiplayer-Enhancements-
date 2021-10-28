@@ -605,12 +605,18 @@ policy_of_calculate_delay = {
 	monarch_power = ADM
 	potential = {
 		has_idea_group = religious_ideas
-		has_idea_group = diplomatic_ideas
+		OR = {
+			has_idea_group = diplomatic_ideas
+			has_idea_group = imperial_diplomacy_ideas
+		}
 	}
 	
 	allow = {
 		full_idea_group = religious_ideas
-		full_idea_group = diplomatic_ideas
+		OR = {
+			full_idea_group = diplomatic_ideas
+			full_idea_group = imperial_diplomacy_ideas
+		}	
 	}
 	
 	religious_unity = 0.2
@@ -974,13 +980,19 @@ the_transportation_act = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = naval_ideas
 		has_idea_group = economic_ideas
+		OR = {
+			has_idea_group = naval_ideas
+			has_idea_group = british_naval_ideas
+		}
 	}
 	
 	allow = {
-		full_idea_group = naval_ideas
 		full_idea_group = economic_ideas
+		OR = {
+			full_idea_group = naval_ideas
+			full_idea_group = british_naval_ideas
+		}	
 	}	
 	
 	global_trade_goods_size_modifier = 0.1
@@ -1015,13 +1027,19 @@ harbour_administration = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = naval_ideas
 		has_idea_group = administrative_ideas
+		OR = {
+			has_idea_group = naval_ideas
+			has_idea_group = british_naval_ideas
+		}
 	}
 	
 	allow = {
-		full_idea_group = naval_ideas
 		full_idea_group = administrative_ideas
+		OR = {
+			full_idea_group = naval_ideas
+			full_idea_group = british_naval_ideas
+		}	
 	}
 
 	embracement_cost = -0.2
@@ -1056,13 +1074,19 @@ supply_convoys = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = naval_ideas
 		has_idea_group = expansion_ideas
+		OR = {
+			has_idea_group = naval_ideas
+			has_idea_group = british_naval_ideas
+		}
 	}
 	
 	allow = {
-		full_idea_group = naval_ideas
 		full_idea_group = expansion_ideas
+		OR = {
+			full_idea_group = naval_ideas
+			full_idea_group = british_naval_ideas
+		}	
 	}	
 	
 	state_maintenance_modifier = -0.20
@@ -1142,13 +1166,19 @@ the_dissolution_act = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = diplomatic_ideas
 		has_idea_group = economic_ideas
+		OR = {
+			has_idea_group = diplomatic_ideas
+			has_idea_group = imperial_diplomacy_ideas
+		}
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
 		full_idea_group = economic_ideas
+		OR = {
+			full_idea_group = diplomatic_ideas
+			full_idea_group = imperial_diplomacy_ideas
+		}	
 	}
 	
 	global_tax_modifier = 0.15
@@ -1372,12 +1402,18 @@ diplomatic_cooperation_act = {
 
 	potential = {
 		has_idea_group = innovativeness_ideas
-		has_idea_group = diplomatic_ideas
+		OR = {
+			has_idea_group = diplomatic_ideas
+			has_idea_group = imperial_diplomacy_ideas
+		}
 	}
 	
 	allow = {
 		full_idea_group = innovativeness_ideas
-		full_idea_group = diplomatic_ideas
+		OR = {
+			full_idea_group = diplomatic_ideas
+			full_idea_group = imperial_diplomacy_ideas
+		}	
 	}
 
 

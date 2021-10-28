@@ -79,13 +79,13 @@ dependency = {
 	end_date = 1672.12.31
 }
 
-dependency = {
-	subject_type = "chinese_commandery_vassal"
-	first = YAN
-	second = X32
-	start_date = 1444.11.1
-	end_date = 1672.12.31
-}
+# dependency = {
+	# subject_type = "chinese_commandery_vassal"
+	# first = YAN
+	# second = X32
+	# start_date = 1444.11.1
+	# end_date = 1672.12.31
+# }
 
 dependency = {
 	subject_type = "chinese_commandery_vassal"
@@ -265,6 +265,118 @@ dependency = {
 	subject_type = "chinese_commandery_vassal"
 	first = YAN
 	second = X22
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X19
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X46
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X41
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X48
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X42
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X45
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X40
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X43
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X61
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X09
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X64
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X63
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X62
+	start_date = 1444.11.1
+	end_date = 1672.12.31
+}
+
+dependency = {
+	subject_type = "chinese_commandery_vassal"
+	first = YAN
+	second = X44
 	start_date = 1444.11.1
 	end_date = 1672.12.31
 }

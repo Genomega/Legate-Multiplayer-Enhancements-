@@ -14,11 +14,11 @@ is_city = yes
 add_core = SBA
 add_core = ASA
 discovered_by = chinese
-discovered_by = MCH
-discovered_by = KHA
-discovered_by = OIR
-discovered_by = QNG
-discovered_by = ANU
+  
+  
+  
+  
+ 
 
 1471.7.1 = { owner = ASA controller = ASA }
 1471.7.1 = { capital = "Ichijodani" }

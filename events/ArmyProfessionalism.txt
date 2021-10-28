@@ -20,10 +20,10 @@ country_event = {
 		OR = {
 			FROM = {
 				owner = {
-					is_rival = ROOT
+					war_with = ROOT
 				}
 			}
-			NOT = { army_professionalism = 0.50 }
+			NOT = { army_professionalism = 0.75 }
 		}
 		NOT = {
 			has_country_modifier = enemies_sacked_city
@@ -33,7 +33,7 @@ country_event = {
 			had_country_flag = { flag = had_living_of_the_land days = 12775 } #35 Years
 		}
 		FROM = {
-			development = 15
+			development = 18
 			fort_level = 1
 			OR = {
 				NOT = { has_province_flag = was_magdeburgerized }
@@ -87,7 +87,7 @@ country_event = {
 				years_of_income = 0.5
 			}
 		}
-		add_army_professionalism = 0.05
+		add_army_professionalism = 0.015
 		add_years_of_income = -0.25
 		FROM = {
 			province_event = { id = army_professionalism_events.2 }
@@ -119,15 +119,16 @@ country_event = {
 	}
 	option = {
 		name = army_professionalism_events.1.c #Such are the rules of warfare
-		trigger = {
-			NOT = {
-				has_dlc = "Emperor"
-				FROM = {
-					is_capital = yes
-					owned_by = PAP
-				}
-			}
-		}
+		# trigger = {
+			# NOT = {
+				# has_dlc = "Emperor"
+				# FROM = {
+					# is_capital = yes
+					# owned_by = PAP
+				# }
+			# }
+		# }
+		highlight = yes
 		ai_chance = {
 			factor = 25
 			modifier = {
@@ -145,13 +146,19 @@ country_event = {
 		}
 		add_army_professionalism = -0.05
 		add_prestige = -10
-		add_horde_unity = 5
+		add_horde_unity = 10
 		add_loot_from_province_effect = yes
+		add_country_modifier = {
+			name = "hostile_rhetoric"
+			duration = 1825
+		}	
 		FROM = {
 			province_event = { id = army_professionalism_events.3 }
 			tooltip = {
 				add_devastation = 100
 				add_base_production = -2
+				add_base_tax = -2
+				add_base_manpower = -1
 			}
 		}
 		tooltip = {
@@ -247,6 +254,10 @@ province_event = {
 	option = {
 		name = army_professionalism_events.2.a #Barbarians!
 		add_devastation = 50
+		add_province_modifier = {
+			name = "province_razed"
+			duration = 1875
+		}	
 		owner = {
 			add_opinion = {
 				who = FROM
@@ -279,14 +290,20 @@ province_event = {
 
 	option = {
 		name = army_professionalism_events.3.a #Barbarians!
-		trigger = {
-			NOT = { 
-				owner = { tag = PAP }
-				has_dlc = "Emperor"
-			}
-		}
+		# trigger = {
+			# NOT = { 
+				# owner = { tag = PAP }
+				# has_dlc = "Emperor"
+			# }
+		# }
 		add_devastation = 100
 		add_base_production = -2
+		add_base_tax = -2
+		add_base_manpower = -1
+		add_province_modifier = {
+			name = "province_razed"
+			duration = 3650
+		}		
 		owner = {
 			add_country_modifier = {
 				name = "enemies_sacked_city"
@@ -305,8 +322,14 @@ province_event = {
 			has_dlc = "Emperor"
 		}
 		add_devastation = 100
-		add_base_production = -2
+		add_base_production = -3
+		add_base_tax = -2
+		add_base_manpower = -2
 		reduce_curia_treasury_big_effect = yes
+		add_province_modifier = {
+			name = "province_razed"
+			duration = 3650
+		}		
 		owner = {
 			add_country_modifier = {
 				name = "enemies_sacked_city"

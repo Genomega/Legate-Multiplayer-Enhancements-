@@ -1,0 +1,158 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 5076	# Sado
+
+1336.1.1 = {
+	monarch = {
+		name = "Noriaki"
+		dynasty = "Honma"
+		birth_date = 1306.1.1
+#		death_date = 1368.10.31
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+}
+
+1368.10.31 = {
+	monarch = {
+		name = "Yoshinori"
+		dynasty = "Honma"
+		birth_date = 1333.1.1
+#		death_date = 1378.5.14
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1378.5.14 = {
+	monarch = {
+		name = "Noriharu"
+		dynasty = "Honma"
+		birth_date = 1340.1.1
+#		death_date = 1379.3.25
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1379.3.25 = {
+	monarch = {
+		name = "Norikata"
+		dynasty = "Honma"
+		birth_date = 1335.1.1
+#		death_date = 1394.11.17
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1394.11.17 = {
+	monarch = {
+		name = "Noritaka"
+		dynasty = "Honma"
+		birth_date = 1335.1.1
+#		death_date = 1395.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1395.1.1 = {
+	monarch = {
+		name = "Tomomune" # 1334 - 1414 
+		dynasty = "Honma"
+		birth_date = 1334.1.1
+#		death_date = 1414.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1395.1.1 = {
+	heir = {
+		name = "Norisada"
+		monarch_name = "Norisada"
+		dynasty = "Honma"
+		birth_date = 1375.1.1
+		death_date = 1413.1.1
+		claim = 90
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+	
+1405.1.1 = { 
+	monarch = {
+		name = "Norisada"
+		dynasty = "Honma"
+		birth_date = 1375.1.1
+#		death_date = 1413.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+	
+1411.1.1 = { 
+	monarch = {
+		name = "Ujinori"
+		dynasty = "Honma"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+
+1415.1.1 = { 
+	monarch = {
+		name = "Norimoto"
+		dynasty = "Honma"
+		birth_date = 1392.1.1
+#		death_date = 1418.2.9
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+	
+1418.2.9 = { 
+	monarch = {
+		name = "Norizane"
+		dynasty = "Honma"
+		birth_date = 1410.1.1
+#		death_date = 1466.1.1
+		adm = 6
+		dip = 3
+		mil = 3
+	}
+}
+	
+1439.1.1 = { 
+	add_sailors = 1000
+	add_manpower = 5
+	add_treasury = 100 # Gold Mine after all
+	add_prestige = 25
+	add_navy_tradition = 35
+	add_army_tradition = 25
+	create_admiral = { tradition = 70 }
+	monarch = {
+		name = "Kanemoto"
+		dynasty = "Honma"
+		birth_date = 1414.6.25
+#		death_date = 1455.1.15
+		adm = 3
+		dip = 6
+		mil = 5
+	}
+}

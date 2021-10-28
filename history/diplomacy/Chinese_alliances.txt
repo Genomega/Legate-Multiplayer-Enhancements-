@@ -34,12 +34,12 @@ alliance = { # A Few Alliances to Encourage Choice
 	end_date = 1450.12.31
 }
 
-union = {
-	first = X32
-	second = X09
-	start_date = 1444.1.1
-	end_date = 1469.8.27
-}
+# union = {
+	# first = X32
+	# second = X09
+	# start_date = 1444.1.1
+	# end_date = 1469.8.27
+# }
 
 #Bandit Queen Vassal
 vassal = {
@@ -215,13 +215,13 @@ dependency = {
 	end_date = 1644.4.22
 }
 
-dependency = {
-	subject_type = "tributary_state"
-	first = YAN
-	second = RYU
-	start_date = 1444.1.1
-	end_date = 1609.4.5
-}
+# dependency = {
+	# subject_type = "tributary_state"
+	# first = YAN
+	# second = RYU
+	# start_date = 1444.1.1
+	# end_date = 1609.4.5
+# }
 
 dependency = {
 	subject_type = "tributary_state"
@@ -278,13 +278,13 @@ dependency = {
 	start_date = 1444.1.1
 	end_date = 1644.4.22
 }
-dependency = {
-	subject_type = "tributary_state"
-	first = YAN
-	second = MMA
-	start_date = 1444.1.1
-	end_date = 1449.1.1
-}
+# dependency = {
+	# subject_type = "tributary_state"
+	# first = YAN
+	# second = MMA
+	# start_date = 1444.1.1
+	# end_date = 1449.1.1
+# }
 
 dependency = {
 	subject_type = "tributary_state"
@@ -322,6 +322,107 @@ dependency = {
 	subject_type = "tributary_state"
 	first = YAN
 	second = MHX
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+
+
+# New Sino Sphere
+
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = NHX
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = EJZ
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = SOL
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = MYR
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = MAS
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = NVK
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = MGD
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = CEB
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = BTU
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = UTS
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = BTU
+	start_date = 1444.1.1
+	end_date = 1618.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = YAN
+	second = LNA
 	start_date = 1444.1.1
 	end_date = 1618.1.1
 }

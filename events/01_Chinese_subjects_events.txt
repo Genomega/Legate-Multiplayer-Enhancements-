@@ -42,6 +42,32 @@ country_event = {
 	}
 }
 
+## Long Divided, must unite
+
+country_event = {
+	id = chinese_daimyo.10333
+	title = "chinese_daimyo.10333.t"
+	desc = "chinese_daimyo.10333.d"
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		culture_group = east_asian
+		NOT = { primary_culture = vietnamese }
+		is_year = 1510
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { 
+		name = "chinese_daimyo.10333.a"			
+	}
+}
+
 ##Information events to Tributes and Protectorates
 country_event = {
 	id = chinese_daimyo.102
@@ -220,10 +246,10 @@ country_event = { #Scripted Buff for Yan
 	
 	option = { 
 		name = "delhi_empire.99.a"
-		add_manpower = 25
+		add_manpower = 15
 		add_army_tradition = -15
 		add_mil_power = -40
-		add_treasury = 456
+		#add_treasury = 456
 		add_meritocracy = 1
 		add_meritocracy = -40
 		define_heir_to_general = {
@@ -243,6 +269,86 @@ country_event = { #Scripted Buff for Yan
 			build_to_forcelimit = {
 				infantry = 0.35
 			}	
+		}
+		reverse_add_opinion = {
+			who = AYU
+			modifier = great_privilege_opinion
+		}
+		reverse_add_opinion = {
+			who = MLC
+			modifier = great_privilege_opinion
+		}
+		reverse_add_opinion = {
+			who = KHM
+			modifier = great_privilege_opinion
+		}
+		reverse_add_opinion = {
+			who = CHA
+			modifier = great_privilege_opinion
+		}	
+		reverse_add_opinion = {
+			who = DAI
+			modifier = great_privilege_opinion
+		}	
+		reverse_add_opinion = {
+			who = LXA
+			modifier = great_privilege_opinion
+		}	
+		reverse_add_opinion = {
+			who = KOR
+			modifier = great_privilege_opinion
+		}
+		reverse_add_opinion = {
+			who = KRC
+			modifier = great_privilege_opinion
+		}
+		reverse_add_opinion = {
+			who = MJZ
+			modifier = great_privilege_opinion
+		}	
+		reverse_add_opinion = {
+			who = MHX
+			modifier = great_privilege_opinion
+		}
+		reverse_add_opinion = {
+			who = AYU
+			modifier = opinion_military_aid
+		}
+		reverse_add_opinion = {
+			who = MLC
+			modifier = opinion_military_aid
+		}
+		reverse_add_opinion = {
+			who = KHM
+			modifier = opinion_military_aid
+		}
+		reverse_add_opinion = {
+			who = CHA
+			modifier = opinion_military_aid
+		}	
+		reverse_add_opinion = {
+			who = DAI
+			modifier = opinion_military_aid
+		}	
+		reverse_add_opinion = {
+			who = LXA
+			modifier = opinion_military_aid
+		}	
+		reverse_add_opinion = {
+			who = KOR
+			modifier = opinion_military_aid
+		}
+		reverse_add_opinion = {
+			who = KRC
+			modifier = opinion_military_aid
+		}
+		reverse_add_opinion = {
+			who = MJZ
+			modifier = opinion_military_aid
+		}	
+		reverse_add_opinion = {
+			who = MHX
+			modifier = opinion_military_aid
 		}		
 	}
 }

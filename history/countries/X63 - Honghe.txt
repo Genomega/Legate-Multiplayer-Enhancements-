@@ -1,0 +1,18 @@
+government = tribal
+add_government_reform = stateless_society
+technology_group = chinese
+religion = wuism
+primary_culture = bai
+capital = 5131	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Guanqiu"
+		dynasty = "Xu"
+		birth_date = 1418.1.1
+		adm = 4
+		dip = 3
+		mil = 2
+		female = yes
+	}
+}

@@ -1,6 +1,14 @@
 legitimize_government = {
 	is_blessing = yes
 
+	potential = {
+		religion = coptic
+	}
+	trigger = {
+		religion = coptic
+	}
+
+
 	modifier = {
 		legitimacy = 0.5
 		horde_unity = 0.5
@@ -25,6 +33,14 @@ legitimize_government = {
 encourage_warriors_of_the_faith = {
 	is_blessing = yes
 
+	potential = {
+		religion = coptic
+	}
+	trigger = {
+		religion = coptic
+	}
+
+
 	modifier = {
 		manpower_recovery_speed = 0.1
 	}
@@ -41,6 +57,14 @@ encourage_warriors_of_the_faith = {
 
 send_monks_to_establish_monasteries = {
 	is_blessing = yes
+
+	potential = {
+		religion = coptic
+	}
+	trigger = {
+		religion = coptic
+	}
+
 
 	modifier = {
 		global_missionary_strength = 0.02
@@ -71,6 +95,14 @@ send_monks_to_establish_monasteries = {
 promote_territorial_rights = {
 	is_blessing = yes
 
+	potential = {
+		religion = coptic
+	}
+	trigger = {
+		religion = coptic
+	}
+
+
 	modifier = {
 		core_creation = -0.1
 	}
@@ -89,6 +121,14 @@ promote_territorial_rights = {
 
 will_of_the_martyrs = {
 	is_blessing = yes
+
+	potential = {
+		religion = coptic
+	}
+	trigger = {
+		religion = coptic
+	}
+
 
 	modifier = {
 		discipline = 0.035

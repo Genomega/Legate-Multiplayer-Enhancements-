@@ -1,0 +1,427 @@
+guiTypes = {
+
+	windowType = {
+		name = "celestial_window"
+		position = { x=-500 y=-350}	
+		size = { x=800 y=772 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		upsound = celestial_empire
+		downsound = ""
+		
+		
+		iconType =
+		{
+			name ="celestial_bg"
+			spriteType = "GFX_eoc_bg"
+			position = { x= 66 y = 18 }
+		}
+
+		instantTextBoxType = {
+			name = "celestial_label" #
+			position = { x = 170 y = 58 }
+			format = centre
+			textureFile = ""
+			font = "vic_29"
+			borderSize = {x = 4 y = 4}
+			text = "CELESTIAL_CELESTIAL"
+			maxWidth = 584
+			maxHeight = 32
+		}
+		instantTextBoxType = {
+			name = "CE_mandate_text"
+			position = { x = 174 y = 92 }	
+			format = centre
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}	
+			text = "CE_mandate_text"	
+			maxWidth = 584
+			maxHeight = 32
+		}
+		instantTextBoxType = {
+			name = "emperor_label" #
+			position = { x = 352 y = 265 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "CELESTIAL_EMPEROR"
+			maxWidth = 240
+			maxHeight = 32
+			format = centre
+		}
+
+		#### AUTHORITY
+		instantTextBoxType = {
+			name = "influence_label" #
+			position = { x = 363 y = 315 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 0}
+			text = "CELESTIAL_MANDATE"
+			maxWidth = 200
+			maxHeight = 32
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "influence_value" #
+			position = { x = 415 y = 368 }
+			textureFile = ""
+			font = "vic_29"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 100
+			maxHeight = 32	
+			format = centre
+			hint_tag = "hint_imperialauthority"
+		}
+		
+		instantTextBoxType = {
+			name = "influence_growth" #
+			position = { x = 418 y = 405 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "0.00"	
+			maxWidth = 100
+			maxHeight = 32	
+			format = centre
+			hint_tag = "hint_imperialauthority"
+		}
+
+		guiButtonType = 
+		{
+			name ="emperor_shield" #
+			quadTextureSprite = "GFX_shield_eoc"
+			position = { x= 416 y = 114 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18_black"
+			hint_tag = "hint_emperor"
+		}
+			
+		iconType =
+		{
+			name ="benefits_icon" #
+			spriteType = "GFX_emperor_of_china_icon"
+			position = { x= 432 y = 217 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="diplomatic_actions_icon" #
+			spriteType = "GFX_celestial_more_dip_actions_icon"
+			position = { x= 475 y = 217 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name = "meritocracy_icon" #
+			spriteType ="GFX_icon_legitimacy"	
+			position = { x= 160 y = 135 }
+			frame = 5
+		}		
+		
+		instantTextBoxType = {
+			name = "meritocracy_value" #
+			position = { x = 195 y = 139 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 0}
+			text = "100"
+			maxWidth = 64
+			maxHeight = 32
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "decree_label" #
+			position = { x = 140 y = 191 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 0}
+			text = "CELESTIAL_DECREES"
+			maxWidth = 150
+			maxHeight = 32
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "CE_state_meritocracy_text"
+			position = { x = -75 y = 96 }	
+			format = centre
+			font = "vic_22"
+			borderSize = {x = 4 y = 0}	
+			text = "CE_state_meritocracy_text"	
+			maxWidth = 584
+			maxHeight = 32
+		}	
+
+		instantTextBoxType = {
+			name = "CE_policies_text"
+			position = { x = -75 y = 412 }	
+			format = centre
+			font = "vic_22"
+			borderSize = {x = 4 y = 0}	
+			text = "CE_policies_text"	
+			maxWidth = 584
+			maxHeight = 32
+		}		
+
+		instantTextBoxType = {
+			name = "tributary_label" #
+			position = { x = 177 y = 640 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "CELESTIAL_TRIBUTARIES"
+			maxWidth = 584
+			maxHeight = 32
+			format = centre
+		}
+
+		listboxType =  {
+			name ="tributary_shield_box" #
+			position = { x = 315 y = 670 }
+			backGround=""
+			size = { x = 280 y = 300 }
+			Orientation = "UPPER_LEFT"
+			scrollbartype = "standardlistbox_slider"
+			horizontal = 0
+			spacing = 0
+			borderSize = {x = 5 y = 5}
+		}
+		instantTextBoxType = {
+			name = "CE_faction_text"
+			position = { x = 172 y = 454 }	
+			format = centre
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}	
+			text = "CE_faction_text"	
+			maxWidth = 584
+			maxHeight = 32
+		}
+		guiButtonType = {
+			name = "CE_china_faction_temples"
+			quadTextureSprite = "GFX_faction_temples"
+			position = { x= 352 y = 510}		
+			scale = 0.8
+		}
+		instantTextBoxType = {
+			name = "CE_faction_temple_text"
+			position = { x = 101 y = 598 }	
+			format = centre
+			font = "vic_18"
+			borderSize = {x = 2 y = 2 }	
+			text = "CE_faction_temple_text"	
+			maxWidth = 584
+			maxHeight = 32
+		}
+		guiButtonType = {
+			name = "CE_china_faction_eunuch"
+			quadTextureSprite = "GFX_faction_enuchs"
+			position = { x= 432 y = 510}		
+			scale = 0.8
+		}
+		instantTextBoxType = {
+			name = "CE_faction_eunuch_text"
+			position = { x = 181 y = 596 }	
+			format = centre
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "CE_faction_eunuch_text"	
+			maxWidth = 584
+			maxHeight = 32
+		}
+		guiButtonType = {
+			name = "CE_china_faction_bureaucrat"
+			quadTextureSprite = "GFX_faction_bureaucrats"
+			position = { x= 513 y = 510}		
+			scale = 0.8
+		}
+		instantTextBoxType = {
+			name = "CE_faction__bureaucrat_text"
+			position = { x = 267 y = 596 }	
+			format = centre
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "CE_faction__bureaucrat_text"	
+			maxWidth = 584
+			maxHeight = 32
+		}
+		#### REFORM DECISIONS
+		instantTextBoxType = {
+			name = "decisions_label" #
+			position = { x = 645 y = 103 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 0}
+			text = "CELESTIAL_DECISIONS"
+			maxWidth = 144
+			maxHeight = 32
+			format = centre
+		}
+		
+		listboxType =  {
+			name ="decree_listbox_left" #
+			position = { x = -20 y = 220 }
+			backGround=""
+			size = { x = 100 y = 300 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 5 y = 5}
+			#scale = 0.7
+		}
+
+		listboxType =  {
+			name ="decree_listbox_right" #
+			position = { x = -20 y = 442 }
+			backGround=""
+			size = { x = 100 y = 280 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 5 y = 5}
+			#scale = 0.7
+		}
+			
+		listboxType =  {
+			name ="decisions_listbox" #
+			position = { x = 530 y = 140 }
+			backGround=""
+			size = { x = 265 y = 620}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 10 y = 10}
+			#scale = 0.8
+		}
+			
+		guiButtonType = {
+			name = "close_button" #
+			position = { x=395 y =742}
+			quadTextureSprite ="button_type_1"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "CELESTIAL_CLOSE"
+			buttonFont = "vic_18"
+			clicksound = close_window
+			shortcut = "ESCAPE"
+		}
+	}
+
+	guiButtonType =
+	{
+		name ="tributary_shield"
+		quadTextureSprite = "GFX_shield_small"
+		position = { x= 6 y = -16 }
+		tooltip = ""
+		tooltipText =""
+		
+		delayedTooltipText = ""
+		buttonFont = "vic_18_black"
+	}
+
+	positionType = {
+			name = "tributary_shield_offset"
+			position = { x = 26 y = 26 }
+		}
+
+	### Decree Entry
+	windowType = {
+		name = "celestial_decree_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=101 y=42 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "select_button"
+			quadTextureSprite ="GFX_decree_button"
+			position = { x=20 y=0 }
+			Orientation = "UPPER_RIGHT"
+			buttonText = "decree_title"
+			buttonFont = "vic_18_black"
+			clicksound = click
+			scale = 0.95
+		}
+		iconType = {
+			name = "decree_button_seal"
+			spriteType ="GFX_decree_button_seal"
+			alwaystransparent = yes
+			position = { x= 313 y = 2 }
+			scale = 0.8
+		}
+		iconType = {
+			name = "decree_button_check"
+			spriteType ="GFX_decree_button_check"
+			alwaystransparent = yes
+			position = { x= 142 y = 10 }
+			scale = 0.8
+		}		
+		
+	}
+
+	### Decision Entry
+	windowType = {
+		name = "celestial_decision_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=300 y= 28 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType = {
+			name = "select_button"
+			position = { x=100 y =-13}
+			quadTextureSprite ="GFX_reform_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = ""
+			scale = 0.8
+			
+		}		
+		
+		iconType = {
+			name = "enacted_decision"
+			spriteType ="GFX_enacted_reform_icon"	
+			position = { x= 104 y = -7 }
+			scale = 0.8
+		}
+
+		instantTextBoxType= {
+			position = { x= 120 y = -8}
+			name = "title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 164
+			maxHeight = 20
+			text = ""
+			format = left
+			alwaystransparent = yes
+			#scale = 0.8
+		}
+
+
+	}
+}

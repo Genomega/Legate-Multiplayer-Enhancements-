@@ -502,12 +502,14 @@ scandinavian_flag_officers = {
             tag = DAN
             tag = NOR
             tag = SCA
+			tag = SWE
         }
         normal_or_historical_nations = yes
     }
     modifier = {
-        admiral_skill_gain_modifier = 0.03
-        naval_maintenance_flagship_modifier = 0.5
+        naval_maintenance_flagship_modifier = 0.75
+		flagship_durability = 0.75
+		flagship_naval_engagement_modifier = 2
     }
     ai_trade_score = {
         factor = 1
@@ -517,6 +519,7 @@ scandinavian_flag_officers = {
                 tag = DAN
                 tag = NOR
                 tag = SCA
+				tag = SWE
             }
         }
     }
@@ -528,6 +531,7 @@ scandinavian_flag_officers = {
                 tag = DAN
                 tag = NOR
                 tag = SCA
+				tag = SWE
             }
         }
     }
@@ -539,6 +543,7 @@ flag_officers = {
             NOT = {
                 OR = {
                     tag = DAN
+					tag = SWE
                     tag = NOR
                     tag = SCA
 					tag = TIM

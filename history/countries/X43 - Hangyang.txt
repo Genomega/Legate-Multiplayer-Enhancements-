@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = chinese_warlord_nation
+technology_group = chinese
+religion = confucianism
+primary_culture = hubei
+capital = 5109	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Guanqiu"
+		dynasty = "Ku"
+		birth_date = 1423.1.1
+		adm = 3
+		dip = 5
+		mil = 3
+		female = yes
+	}
+	add_treasury = 25
+	add_manpower = 7.5
+	add_army_tradition = 35
+	create_general = { tradition = 75 }
+}

@@ -1,0 +1,26 @@
+government = monarchy
+add_government_reform = chinese_purple_turban
+technology_group = chinese
+religion = confucianism
+primary_culture = gan
+add_accepted_culture = wu
+capital = 5113	#Canton
+
+1444.1.1 = {
+	monarch = {
+		name = "Yueyue"
+		dynasty = "Zhongli"
+		birth_date = 1403.1.1
+		adm = 4
+		dip = 5
+		mil = 5
+		female = yes
+		leader = {	name = "Zhongli Yueyue"	type = general 	fire = 4	shock = 5	manuever = 5 siege = 4	personality = master_of_arms_personality  female = yes }		
+	}
+	add_treasury = 65
+	add_prestige = 25
+	add_mil_power = 25
+	add_adm_power = 25
+	add_dip_power = 25
+	create_general = { tradition = 70 }
+}

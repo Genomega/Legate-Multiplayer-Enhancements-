@@ -12,10 +12,6 @@ add_historical_friend = QIC
 
 
 1444.1.1 = {
-	add_ruler_modifier = {
-		name = zhu_buff_start
-		duration = -1
-	}	
 	# leader = {
 		# name = "Jian Zhu"
 		# type = general

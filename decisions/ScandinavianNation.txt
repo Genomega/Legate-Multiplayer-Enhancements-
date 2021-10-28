@@ -19,7 +19,7 @@ country_decisions = {
 				AND = {
 					ai = yes
 					num_of_cities = 10
-					adm_tech = 10
+					adm_tech = 15
 				}
 			}
 			is_colonial_nation = no
@@ -46,7 +46,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
+			adm_tech = 15
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
@@ -59,7 +59,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SCA
-			add_government_reform = scandavian_government
+			#add_government_reform = scandavian_government ### Reworking later
 			if = {
 				limit = {
 					has_custom_ideas = no

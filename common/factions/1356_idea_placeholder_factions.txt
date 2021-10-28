@@ -1,0 +1,12 @@
+# For Modifier Icon:
+colonial_governor_advisor_bonus = {
+	allow = {
+		always = no
+	}
+
+	monarch_power = ADM
+	always = no
+
+	modifier = {
+	}
+}
