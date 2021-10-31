@@ -1,885 +1,892 @@
-professional_army_reform = {
-	icon = "soldiers"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		merc_maintenance_modifier = 0.25
-		mercenary_discipline = -0.035
-		army_tradition = 0.4
-		free_leader_pool = 1
-		yearly_army_professionalism = 0.001
-	}
-	ai = {
-		factor = 1 #generic
-	}	
-}
+# professional_army_reform = {
+	# icon = "soldiers"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# merc_maintenance_modifier = 0.25
+		# mercenary_discipline = -0.035
+		# army_tradition = 0.4
+		# free_leader_pool = 1
+		# yearly_army_professionalism = 0.001
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }	
+# }
 
-military_draft_reform = {
-	icon = "soldiers_3"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		manpower_in_true_faith_provinces = 0.15
-		global_sailors_modifier = 0.15
-		yearly_army_professionalism = -0.001
-	}
-}
+# military_draft_reform = {
+	# icon = "soldiers_3"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# manpower_in_true_faith_provinces = 0.15
+		# global_sailors_modifier = 0.15
+		# yearly_army_professionalism = -0.001
+	# }
+# }
 
-mercenary_army_reform = {
-	icon = "black_army_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		mercenary_discipline = 0.035
-		merc_maintenance_modifier = -0.33
-		general_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}		
-}
+# mercenary_army_reform = {
+	# icon = "black_army_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# mercenary_discipline = 0.035
+		# merc_maintenance_modifier = -0.33
+		# general_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }		
+# }
 
-reformed_chevauchee_reform = {
-	icon = "rioting_burning_2"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { technology_group = eastern }
-	}	
-	modifiers = {
-		loot_amount = 0.50
-		available_province_loot = 0.50
-		cav_to_inf_ratio = 0.10
-		cavalry_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}		
-}
+# reformed_chevauchee_reform = {
+	# icon = "rioting_burning_2"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { technology_group = eastern }
+	# }	
+	# modifiers = {
+		# loot_amount = 0.50
+		# available_province_loot = 0.50
+		# cav_to_inf_ratio = 0.10
+		# cavalry_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }		
+# }
 
-empowered_cossack_council_reform = {
-	icon = "cossack_council_reform_gov"
-	allow_normal_conversion = yes
-	potential = {
-		technology_group = eastern
-	}	
-	trigger = {
-		any_owned_province = {
-			has_terrain = steppe
-		}	
-		NOT = { has_reform = tsardom }
-		NOT = { has_reform = principality }
-		NOT = { has_reform = veche_republic }
-	}	
-	government_abilities = {
-		cossacks_mechanic
-	}	
-	modifiers = {
-		cossacks_loyalty_modifier = 0.05
-		cossacks_influence_modifier = 0.15
-		special_unit_forcelimit = 0.10
-	}
-	ai = {
-		factor = 2 #generic
-	}		
-}
-
-
-#Naval List
-
-office_of_naval_warfare_reform = {
-	icon = "admiralty_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-		OR = {
-			AND = {
-				NOT = { 
-					culture_group = british
-					culture_group = gaelic
-				}
-			}
-			has_idea_group = british_naval_ideas
-		}	
-	}		
-	modifiers = {
-		naval_morale = 0.1
-		heavy_ship_cost = -0.10
-	}
-	ai = {
-		factor = 0.5 #generic
-	}		
-}
-
-
-drafting_of_merchant_vessels_reform = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }		
-	}	
-	trigger = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }
-		num_of_total_ports = 3
-	}		
-	custom_attributes = {
-		allow_draft_transport_ships = yes
-	}	
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
-
-
-drafting_of_merchant_vessels_reform_unique = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}	
-	trigger = {
-		num_of_total_ports = 3
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}			
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}	
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
-
-galley_supremacy_reform = {
-	icon = "galley_supremancy_gov"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		galley_power = 0.25
-		galley_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
-
-privateer_warfare_reform = {
-	icon = "war_against_the_world"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		privateer_efficiency = 0.33
-		light_ship_cost = -0.20
-		admiral_cost = -0.20
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
-
-
-
-
-
-# Republics
-
-professional_army_reform_rep = {
-	icon = "soldiers"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		merc_maintenance_modifier = 0.25
-		mercenary_discipline = -0.035
-		army_tradition = 0.4
-		free_leader_pool = 1
-		yearly_army_professionalism = 0.001
-	}
-	ai = {
-		factor = 1 #generic
-	}	
-}
-
-military_draft_reform_rep = {
-	icon = "soldiers_3"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		manpower_in_true_faith_provinces = 0.10
-		global_sailors_modifier = 0.15
-		yearly_army_professionalism = -0.001
-	}
-}
-
-mercenary_army_reform_rep = {
-	icon = "black_army_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		mercenary_discipline = 0.035
-		merc_maintenance_modifier = -0.33
-		general_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}		
-}
-
-reformed_chevauchee_reform_rep = {
-	icon = "rioting_burning_2"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { technology_group = eastern }
-	}	
-	modifiers = {
-		loot_amount = 0.50
-		available_province_loot = 0.50
-		cav_to_inf_ratio = 0.10
-		cavalry_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}		
-}
-
-empowered_cossack_council_reform_rep = {
-	icon = "cossack_council_reform_gov"
-	allow_normal_conversion = yes
-	potential = {
-		technology_group = eastern
-	}	
-	trigger = {
-		any_owned_province = {
-			has_terrain = steppe
-		}	
-		NOT = { has_reform = tsardom }
-		NOT = { has_reform = principality }
-		NOT = { has_reform = veche_republic }
-	}	
-	government_abilities = {
-		cossacks_mechanic
-	}	
-	modifiers = {
-		cossacks_loyalty_modifier = 0.05
-		cossacks_influence_modifier = 0.15
-		special_unit_forcelimit = 0.10
-	}
-	ai = {
-		factor = 2 #generic
-	}		
-}
+# empowered_cossack_council_reform = {
+	# icon = "cossack_council_reform_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# technology_group = eastern
+	# }	
+	# trigger = {
+		# any_owned_province = {
+			# has_terrain = steppe
+		# }	
+		# NOT = { has_reform = tsardom }
+		# NOT = { has_reform = principality }
+		# NOT = { has_reform = veche_republic }
+	# }	
+	# government_abilities = {
+		# cossacks_mechanic
+	# }	
+	# modifiers = {
+		# cossacks_loyalty_modifier = 0.05
+		# cossacks_influence_modifier = 0.15
+		# special_unit_forcelimit = 0.20
+	# }
+	# ai = {
+		# factor = 2 #generic
+		# modifier = {
+			# factor = 1000
+			# OR = {
+				# tag = POL
+				# tag = LIT
+			# }
+		# }		
+	# }		
+# }
 
 
 #Naval List
 
-office_of_naval_warfare_reform_rep = {
-	icon = "admiralty_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-		OR = {
-			AND = {
-				NOT = { 
-					culture_group = british
-					culture_group = gaelic
-				}
-			}
-			has_idea_group = british_naval_ideas
-		}	
-	}		
-	modifiers = {
-		naval_morale = 0.1
-		heavy_ship_cost = -0.10
-	}
-	ai = {
-		factor = 0.5 #generic
-	}		
-}
+# office_of_naval_warfare_reform = {
+	# icon = "admiralty_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+		# OR = {
+			# AND = {
+				# NOT = { 
+					# culture_group = british
+					# culture_group = gaelic
+				# }
+			# }
+			# has_idea_group = british_naval_ideas
+		# }	
+	# }		
+	# modifiers = {
+		# naval_morale = 0.1
+		# heavy_ship_cost = -0.10
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }		
+# }
 
 
-drafting_of_merchant_vessels_reform_rep = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }		
-	}	
-	trigger = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }
-		num_of_total_ports = 3
-	}		
-	custom_attributes = {
-		allow_draft_transport_ships = yes
-	}	
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
+# drafting_of_merchant_vessels_reform = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }		
+	# }	
+	# trigger = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }
+		# num_of_total_ports = 3
+	# }		
+	# custom_attributes = {
+		# allow_draft_transport_ships = yes
+	# }	
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
 
 
-drafting_of_merchant_vessels_reform_unique_rep = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}	
-	trigger = {
-		num_of_total_ports = 3
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}			
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
+# drafting_of_merchant_vessels_reform_unique = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }	
+	# trigger = {
+		# num_of_total_ports = 3
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }			
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }	
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
 
-galley_supremacy_reform_rep = {
-	icon = "galley_supremancy_gov"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		galley_power = 0.25
-		galley_cost = -0.33
-		navy_tradition = 1
-	}
-}
+# galley_supremacy_reform = {
+	# icon = "galley_supremancy_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# galley_power = 0.25
+		# galley_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
 
-privateer_warfare_reform_rep = {
-	icon = "war_against_the_world"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		privateer_efficiency = 0.33
-		light_ship_cost = -0.20
-		admiral_cost = -0.20
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
-
-
-# Theocratics
-
-professional_army_reform_theo = {
-	icon = "soldiers"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		merc_maintenance_modifier = 0.25
-		mercenary_discipline = -0.035
-		army_tradition = 0.4
-		free_leader_pool = 1
-		yearly_army_professionalism = 0.001
-	}
-	ai = {
-		factor = 1 #generic
-	}	
-}
-
-military_draft_reform_theo = {
-	icon = "soldiers_3"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		manpower_in_true_faith_provinces = 0.15
-		global_sailors_modifier = 0.15
-		yearly_army_professionalism = -0.001
-	}
-	ai = {
-		factor = 1 #generic
-	}	
-}
-
-mercenary_army_reform_theo = {
-	icon = "black_army_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		mercenary_discipline = 0.035
-		merc_maintenance_modifier = -0.33
-		general_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}	
-}
-
-reformed_chevauchee_reform_theo = {
-	icon = "rioting_burning_2"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { technology_group = eastern }
-	}	
-	modifiers = {
-		loot_amount = 0.50
-		available_province_loot = 0.50
-		cav_to_inf_ratio = 0.10
-		cavalry_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}	
-}
-
-empowered_cossack_council_reform_theo = {
-	icon = "cossack_council_reform_gov"
-	allow_normal_conversion = yes
-	potential = {
-		technology_group = eastern
-	}	
-	trigger = {
-		any_owned_province = {
-			has_terrain = steppe
-		}	
-		NOT = { has_reform = tsardom }
-		NOT = { has_reform = principality }
-		NOT = { has_reform = veche_republic }
-	}	
-	government_abilities = {
-		cossacks_mechanic
-	}	
-	modifiers = {
-		cossacks_loyalty_modifier = 0.05
-		cossacks_influence_modifier = 0.15
-		special_unit_forcelimit = 0.10
-	}
-	ai = {
-		factor = 2 #generic
-	}	
-}
+# privateer_warfare_reform = {
+	# icon = "war_against_the_world"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# privateer_efficiency = 0.33
+		# light_ship_cost = -0.20
+		# admiral_cost = -0.20
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
 
 
-#Naval List
-
-office_of_naval_warfare_reform_theo = {
-	icon = "admiralty_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-		OR = {
-			AND = {
-				NOT = { 
-					culture_group = british
-					culture_group = gaelic
-				}
-			}
-			has_idea_group = british_naval_ideas
-		}	
-	}		
-	modifiers = {
-		naval_morale = 0.1
-		heavy_ship_cost = -0.10
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
 
 
-drafting_of_merchant_vessels_reform_theo = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }		
-	}	
-	trigger = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }
-		num_of_total_ports = 3
-	}		
-	custom_attributes = {
-		allow_draft_transport_ships = yes
-	}	
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}	
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
 
+#Republics
 
-drafting_of_merchant_vessels_reform_unique_theo = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}	
-	trigger = {
-		num_of_total_ports = 3
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}			
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}	
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
+# professional_army_reform_rep = {
+	# icon = "soldiers"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# merc_maintenance_modifier = 0.25
+		# mercenary_discipline = -0.035
+		# army_tradition = 0.4
+		# free_leader_pool = 1
+		# yearly_army_professionalism = 0.001
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }	
+# }
 
-galley_supremacy_reform_theo = {
-	icon = "galley_supremancy_gov"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		galley_power = 0.25
-		galley_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
+# military_draft_reform_rep = {
+	# icon = "soldiers_3"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# manpower_in_true_faith_provinces = 0.10
+		# global_sailors_modifier = 0.15
+		# yearly_army_professionalism = -0.001
+	# }
+# }
 
-privateer_warfare_reform_theo = {
-	icon = "war_against_the_world"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		privateer_efficiency = 0.33
-		light_ship_cost = -0.20
-		admiral_cost = -0.25
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}	
-}
+# mercenary_army_reform_rep = {
+	# icon = "black_army_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# mercenary_discipline = 0.035
+		# merc_maintenance_modifier = -0.33
+		# general_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }		
+# }
 
+# reformed_chevauchee_reform_rep = {
+	# icon = "rioting_burning_2"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { technology_group = eastern }
+	# }	
+	# modifiers = {
+		# loot_amount = 0.50
+		# available_province_loot = 0.50
+		# cav_to_inf_ratio = 0.10
+		# cavalry_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }		
+# }
 
-# Tribals
-
-professional_army_reform_tribal = {
-	icon = "soldiers"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		merc_maintenance_modifier = 0.25
-		mercenary_discipline = -0.035
-		army_tradition = 0.4
-		free_leader_pool = 1
-		yearly_army_professionalism = 0.001
-	}
-	ai = {
-		factor = 1 #generic
-	}	
-}
-
-military_draft_reform_tribal = {
-	icon = "soldiers_3"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		manpower_in_true_faith_provinces = 0.15
-		global_sailors_modifier = 0.15
-		yearly_army_professionalism = -0.001
-	}
-	ai = {
-		factor = 1 #generic
-	}		
-}
-
-mercenary_army_reform_tribal = {
-	icon = "black_army_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	modifiers = {
-		mercenary_discipline = 0.035
-		merc_maintenance_modifier = -0.33
-		general_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}		
-}
-
-reformed_chevauchee_reform_tribal = {
-	icon = "rioting_burning_2"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { technology_group = eastern }
-	}	
-	modifiers = {
-		loot_amount = 0.50
-		available_province_loot = 0.50
-		cav_to_inf_ratio = 0.10
-		cavalry_cost = -0.20
-	}
-	ai = {
-		factor = 1 #generic
-	}		
-}
-
-empowered_cossack_council_reform_tribal = {
-	icon = "cossack_council_reform_gov"
-	allow_normal_conversion = yes
-	potential = {
-		technology_group = eastern
-	}	
-	trigger = {
-		any_owned_province = {
-			has_terrain = steppe
-		}	
-		NOT = { has_reform = tsardom }
-		NOT = { has_reform = principality }
-		NOT = { has_reform = veche_republic }
-	}	
-	government_abilities = {
-		cossacks_mechanic
-	}	
-	modifiers = {
-		cossacks_loyalty_modifier = 0.05
-		cossacks_influence_modifier = 0.15
-		special_unit_forcelimit = 0.10
-	}
-	ai = {
-		factor = 2 #generic
-	}		
-}
+# empowered_cossack_council_reform_rep = {
+	# icon = "cossack_council_reform_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# technology_group = eastern
+	# }	
+	# trigger = {
+		# any_owned_province = {
+			# has_terrain = steppe
+		# }	
+		# NOT = { has_reform = tsardom }
+		# NOT = { has_reform = principality }
+		# NOT = { has_reform = veche_republic }
+	# }	
+	# government_abilities = {
+		# cossacks_mechanic
+	# }	
+	# modifiers = {
+		# cossacks_loyalty_modifier = 0.05
+		# cossacks_influence_modifier = 0.15
+		# special_unit_forcelimit = 0.10
+	# }
+	# ai = {
+		# factor = 2 #generic
+	# }		
+# }
 
 
 #Naval List
 
-office_of_naval_warfare_reform_tribal = {
-	icon = "admiralty_reform"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-		OR = {
-			AND = {
-				NOT = { 
-					culture_group = british
-					culture_group = gaelic
-				}
-			}
-			has_idea_group = british_naval_ideas
-		}	
-	}		
-	modifiers = {
-		naval_morale = 0.1
-		heavy_ship_cost = -0.10
-	}
-	ai = {
-		factor = 0.5 #generic
-	}		
-}
+# office_of_naval_warfare_reform_rep = {
+	# icon = "admiralty_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+		# OR = {
+			# AND = {
+				# NOT = { 
+					# culture_group = british
+					# culture_group = gaelic
+				# }
+			# }
+			# has_idea_group = british_naval_ideas
+		# }	
+	# }		
+	# modifiers = {
+		# naval_morale = 0.1
+		# heavy_ship_cost = -0.10
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }		
+# }
 
 
-drafting_of_merchant_vessels_reform_tribal = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }		
-	}	
-	trigger = {
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = kongsi_federation }
-		NOT = { has_reform = plutocratic_reform }
-		num_of_total_ports = 3
-	}		
-	custom_attributes = {
-		allow_draft_transport_ships = yes
-	}	
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}		
-}
+# drafting_of_merchant_vessels_reform_rep = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }		
+	# }	
+	# trigger = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }
+		# num_of_total_ports = 3
+	# }		
+	# custom_attributes = {
+		# allow_draft_transport_ships = yes
+	# }	
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
 
 
-drafting_of_merchant_vessels_reform_unique_tribal = {
-	icon = "crown_colony_government"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}	
-	trigger = {
-		num_of_total_ports = 3
-		OR = {
-			has_reform = english_monarchy
-			has_reform = kongsi_federation
-			has_reform = plutocratic_reform	
-		}	
-	}			
-	modifiers = {
-		transport_power = 0.33
-		transport_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}		
-}
+# drafting_of_merchant_vessels_reform_unique_rep = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }	
+	# trigger = {
+		# num_of_total_ports = 3
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }			
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
 
-galley_supremacy_reform_tribal = {
-	icon = "galley_supremancy_gov"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		galley_power = 0.25
-		galley_cost = -0.33
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}		
-}
+# galley_supremacy_reform_rep = {
+	# icon = "galley_supremancy_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# galley_power = 0.25
+		# galley_cost = -0.33
+		# navy_tradition = 1
+	# }
+# }
 
-privateer_warfare_reform_tribal = {
-	icon = "war_against_the_world"
-	allow_normal_conversion = yes
-	potential = {
-		always = yes
-	}	
-	trigger = {
-		num_of_total_ports = 6
-	}		
-	modifiers = {
-		privateer_efficiency = 0.33
-		light_ship_cost = -0.20
-		admiral_cost = -0.25
-		navy_tradition = 1
-	}
-	ai = {
-		factor = 0.5 #generic
-	}		
-}
+# privateer_warfare_reform_rep = {
+	# icon = "war_against_the_world"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# privateer_efficiency = 0.33
+		# light_ship_cost = -0.20
+		# admiral_cost = -0.20
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
+
+
+#Theocratics
+
+# professional_army_reform_theo = {
+	# icon = "soldiers"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# merc_maintenance_modifier = 0.25
+		# mercenary_discipline = -0.035
+		# army_tradition = 0.4
+		# free_leader_pool = 1
+		# yearly_army_professionalism = 0.001
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }	
+# }
+
+# military_draft_reform_theo = {
+	# icon = "soldiers_3"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# manpower_in_true_faith_provinces = 0.15
+		# global_sailors_modifier = 0.15
+		# yearly_army_professionalism = -0.001
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }	
+# }
+
+# mercenary_army_reform_theo = {
+	# icon = "black_army_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# mercenary_discipline = 0.035
+		# merc_maintenance_modifier = -0.33
+		# general_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }	
+# }
+
+# reformed_chevauchee_reform_theo = {
+	# icon = "rioting_burning_2"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { technology_group = eastern }
+	# }	
+	# modifiers = {
+		# loot_amount = 0.50
+		# available_province_loot = 0.50
+		# cav_to_inf_ratio = 0.10
+		# cavalry_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }	
+# }
+
+# empowered_cossack_council_reform_theo = {
+	# icon = "cossack_council_reform_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# technology_group = eastern
+	# }	
+	# trigger = {
+		# any_owned_province = {
+			# has_terrain = steppe
+		# }	
+		# NOT = { has_reform = tsardom }
+		# NOT = { has_reform = principality }
+		# NOT = { has_reform = veche_republic }
+	# }	
+	# government_abilities = {
+		# cossacks_mechanic
+	# }	
+	# modifiers = {
+		# cossacks_loyalty_modifier = 0.05
+		# cossacks_influence_modifier = 0.15
+		# special_unit_forcelimit = 0.10
+	# }
+	# ai = {
+		# factor = 2 #generic
+	# }	
+# }
+
+
+#Naval List
+
+# office_of_naval_warfare_reform_theo = {
+	# icon = "admiralty_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+		# OR = {
+			# AND = {
+				# NOT = { 
+					# culture_group = british
+					# culture_group = gaelic
+				# }
+			# }
+			# has_idea_group = british_naval_ideas
+		# }	
+	# }		
+	# modifiers = {
+		# naval_morale = 0.1
+		# heavy_ship_cost = -0.10
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
+
+
+# drafting_of_merchant_vessels_reform_theo = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }		
+	# }	
+	# trigger = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }
+		# num_of_total_ports = 3
+	# }		
+	# custom_attributes = {
+		# allow_draft_transport_ships = yes
+	# }	
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }	
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
+
+
+# drafting_of_merchant_vessels_reform_unique_theo = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }	
+	# trigger = {
+		# num_of_total_ports = 3
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }			
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }	
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
+
+# galley_supremacy_reform_theo = {
+	# icon = "galley_supremancy_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# galley_power = 0.25
+		# galley_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
+
+# privateer_warfare_reform_theo = {
+	# icon = "war_against_the_world"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# privateer_efficiency = 0.33
+		# light_ship_cost = -0.20
+		# admiral_cost = -0.25
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }	
+# }
+
+
+#Tribals
+
+# professional_army_reform_tribal = {
+	# icon = "soldiers"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# merc_maintenance_modifier = 0.25
+		# mercenary_discipline = -0.035
+		# army_tradition = 0.4
+		# free_leader_pool = 1
+		# yearly_army_professionalism = 0.001
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }	
+# }
+
+# military_draft_reform_tribal = {
+	# icon = "soldiers_3"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# manpower_in_true_faith_provinces = 0.15
+		# global_sailors_modifier = 0.15
+		# yearly_army_professionalism = -0.001
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }		
+# }
+
+# mercenary_army_reform_tribal = {
+	# icon = "black_army_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# modifiers = {
+		# mercenary_discipline = 0.035
+		# merc_maintenance_modifier = -0.33
+		# general_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }		
+# }
+
+# reformed_chevauchee_reform_tribal = {
+	# icon = "rioting_burning_2"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { technology_group = eastern }
+	# }	
+	# modifiers = {
+		# loot_amount = 0.50
+		# available_province_loot = 0.50
+		# cav_to_inf_ratio = 0.10
+		# cavalry_cost = -0.20
+	# }
+	# ai = {
+		# factor = 1 #generic
+	# }		
+# }
+
+# empowered_cossack_council_reform_tribal = {
+	# icon = "cossack_council_reform_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# technology_group = eastern
+	# }	
+	# trigger = {
+		# any_owned_province = {
+			# has_terrain = steppe
+		# }	
+		# NOT = { has_reform = tsardom }
+		# NOT = { has_reform = principality }
+		# NOT = { has_reform = veche_republic }
+	# }	
+	# government_abilities = {
+		# cossacks_mechanic
+	# }	
+	# modifiers = {
+		# cossacks_loyalty_modifier = 0.05
+		# cossacks_influence_modifier = 0.15
+		# special_unit_forcelimit = 0.10
+	# }
+	# ai = {
+		# factor = 2 #generic
+	# }		
+# }
+
+
+#Naval List
+
+# office_of_naval_warfare_reform_tribal = {
+	# icon = "admiralty_reform"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+		# OR = {
+			# AND = {
+				# NOT = { 
+					# culture_group = british
+					# culture_group = gaelic
+				# }
+			# }
+			# has_idea_group = british_naval_ideas
+		# }	
+	# }		
+	# modifiers = {
+		# naval_morale = 0.1
+		# heavy_ship_cost = -0.10
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }		
+# }
+
+
+# drafting_of_merchant_vessels_reform_tribal = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }		
+	# }	
+	# trigger = {
+		# NOT = { has_reform = english_monarchy }
+		# NOT = { has_reform = kongsi_federation }
+		# NOT = { has_reform = plutocratic_reform }
+		# num_of_total_ports = 3
+	# }		
+	# custom_attributes = {
+		# allow_draft_transport_ships = yes
+	# }	
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }		
+# }
+
+
+# drafting_of_merchant_vessels_reform_unique_tribal = {
+	# icon = "crown_colony_government"
+	# allow_normal_conversion = yes
+	# potential = {
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }	
+	# trigger = {
+		# num_of_total_ports = 3
+		# OR = {
+			# has_reform = english_monarchy
+			# has_reform = kongsi_federation
+			# has_reform = plutocratic_reform	
+		# }	
+	# }			
+	# modifiers = {
+		# transport_power = 0.33
+		# transport_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }		
+# }
+
+# galley_supremacy_reform_tribal = {
+	# icon = "galley_supremancy_gov"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# galley_power = 0.25
+		# galley_cost = -0.33
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }		
+# }
+
+# privateer_warfare_reform_tribal = {
+	# icon = "war_against_the_world"
+	# allow_normal_conversion = yes
+	# potential = {
+		# always = yes
+	# }	
+	# trigger = {
+		# num_of_total_ports = 6
+	# }		
+	# modifiers = {
+		# privateer_efficiency = 0.33
+		# light_ship_cost = -0.20
+		# admiral_cost = -0.25
+		# navy_tradition = 1
+	# }
+	# ai = {
+		# factor = 0.5 #generic
+	# }		
+# }
 
 
 

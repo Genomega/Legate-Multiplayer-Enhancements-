@@ -24,7 +24,7 @@ mnd_siam_1 = {
 			capital_scope = {
 				development = 30
 			}
-			num_of_times_used_transfer_development = 3
+			#num_of_times_used_transfer_development = 3
 		}
 		effect = {
 			change_government_reform_progress = 50
@@ -96,28 +96,23 @@ mnd_siam_1 = {
 	mnd_siam_city_of_worlds_desire = {
 		icon = mission_mnd_khm_restored_empire
 		required_missions = { mnd_siam_great_monument }
-		provinces_to_highlight = {
-			has_discovered = ROOT
-			OR = {
-				AND = {
-					is_capital = yes
-					owned_by = ROOT
-					NOT = { development = 50 }
-				}
-				any_province = {
-					is_capital_of = root
-					NOT = { higher_development_than = prev }
-				}
-			}
-		}
+		# provinces_to_highlight = { # IT FUCKING LAGS THE GAME
+			# has_discovered = ROOT
+			# OR = {
+				# AND = {
+					# is_capital = yes
+					# owned_by = ROOT
+					# NOT = { development = 50 }
+				# }
+				# any_province = {
+					# is_capital_of = root
+					# NOT = { higher_development_than = prev }
+				# }
+			# }
+		# }
 		trigger = {
 			capital_scope = {
 				development = 50
-				NOT = {
-					any_province = {
-						higher_development_than = PREV
-					}
-				}
 			}
 		}
 		effect = {
@@ -215,12 +210,16 @@ mnd_siam_2 = {
 		}
 		trigger = {
 			OR = {
+				AND = {
+					is_year = 1535
+					total_development = 750
+				}	
 				custom_trigger_tooltip = {
 					tooltip = had_siamese_revolution_tt
 					has_country_flag = had_siamese_revolution
 				}
 				AND = {
-					is_year = 1650
+					is_year = 1550
 					custom_trigger_tooltip = {
 						tooltip = had_siamese_revolution_tt_2
 						NOT = {
@@ -236,7 +235,9 @@ mnd_siam_2 = {
 			}
 		}
 		effect = {
-			add_adm_power = 200
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 	mnd_siam_absolutism = {
@@ -245,13 +246,13 @@ mnd_siam_2 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			total_development = 500
-			if = {
-				limit = {
-					is_revolutionary = no
-				}
-				absolutism = 75
-			}
+			total_development = 900
+			# if = {
+				# limit = {
+					# is_revolutionary = no
+				# }
+				# absolutism = 75
+			# }
 			has_regency = no
 			is_at_war = no
 			OR = {

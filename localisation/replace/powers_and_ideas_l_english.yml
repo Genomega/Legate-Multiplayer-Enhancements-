@@ -1,8 +1,6 @@
 ﻿l_english:
- local_nobility:0 "Local Nobility"
- local_nobility_desc:0 "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges, they will of course remember our largess and be more resistant to the inducements of foreign powers.\n§TReduces ‘Command of the Army’ Estate Privilege to +20% Nobility Influence. No longer reduces maximum Absolutism and removes Noble influence gained from recruit generals§!" 
  tkd_kurokawa_gold_mine:0 "Kurokawa Gold Mine"
- tkd_kurokawa_gold_mine_desc:0 "The discovery of gold in the Kurokawa mountains will allow us to maintain good relations with our neighbors and enemies alike if we should so choose.\n§YKai§! will now produce §YGold§!."
+ tkd_kurokawa_gold_mine_desc:0 "The discovery of gold in the Kurokawa mountains will allow us to maintain good relations with our neighbors and enemies alike if we should so choose."
  overseas_merchants_maritime:0 "Overseas Merchants"
  overseas_merchants_maritime_desc:0 "To grow trade we need to extend the rights of citizenship to people who live abroad, support our trade and are of the right social class."
  bless_monarch:0 "Papal Sanctioned Warfare"

@@ -24,6 +24,24 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_siamese_government_redone"
+		texturefile = "gfx//interface//government_reform_icons//siamese_government_redone.dds"
+	}	
+	
+	spriteType = {
+		name = "government_reform_russian_tsardom_redone"
+		texturefile = "gfx//interface//government_reform_icons//russian_tsardom_redone.dds"
+	}	
+	spriteType = {
+		name = "government_reform_the_sun_king"
+		texturefile = "gfx//interface//government_reform_icons//the_sun_king.dds"
+	}
+	spriteType = {
+		name = "government_reform_i_am_the_king"
+		texturefile = "gfx//interface//government_reform_icons//i_am_the_king.dds"
+	}	
+	
+	spriteType = {
 		name = "government_reform_chinese_bureaucracy"
 		texturefile = "gfx//interface//government_reform_icons//chinese_bureaucracy.dds"
 	}

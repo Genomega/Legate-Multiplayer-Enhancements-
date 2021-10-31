@@ -116,18 +116,18 @@ country_decisions = {
 				has_country_flag = may_coerce_hansa_cities_in_vassals
 			}		
 			is_at_war = no
-			dip_power = 100
+			dip_power = 200
 			HAM = {
 				is_free_or_tributary_trigger = yes
 				is_at_war = no
 				has_opinion = {
 					who = root
-					value = 150
+					value = 185
 				}	
 			}	
 		}
 		effect = {
-			add_dip_power = -100
+			add_dip_power = -200
 			set_country_flag = coerced_hamburg
 			create_subject = {
 				subject_type = vassal
@@ -156,18 +156,18 @@ country_decisions = {
 				has_country_flag = may_coerce_hansa_cities_in_vassals
 			}		
 			is_at_war = no
-			dip_power = 100
+			dip_power = 200
 			BRE = {
 				is_free_or_tributary_trigger = yes
 				is_at_war = no
 				has_opinion = {
 					who = root
-					value = 150
+					value = 185
 				}	
 			}	
 		}
 		effect = {
-			add_dip_power = -100
+			add_dip_power = -200
 			set_country_flag = coerced_bremen
 			create_subject = {
 				subject_type = vassal
@@ -196,18 +196,18 @@ country_decisions = {
 				has_country_flag = may_coerce_hansa_cities_in_vassals
 			}		
 			is_at_war = no
-			dip_power = 100
+			dip_power = 200
 			RIG = {
 				is_free_or_tributary_trigger = yes
 				is_at_war = no
 				has_opinion = {
 					who = root
-					value = 150
+					value = 185
 				}	
 			}	
 		}
 		effect = {
-			add_dip_power = -100
+			add_dip_power = -200
 			set_country_flag = coerced_riga
 			create_subject = {
 				subject_type = vassal
@@ -235,9 +235,9 @@ country_decisions = {
 			}	
 		}
 		allow = {
-			is_year = 1485
-			dip_power = 150
-			adm_power = 150
+			is_year = 1492
+			dip_power = 200
+			adm_power = 200
 			is_at_war = no
 			senior_union_with = NOR
 			NOR = {
@@ -251,8 +251,8 @@ country_decisions = {
 		effect = {
 			set_global_flag = denmark_norway_united_decision
 			inherit = NOR
-			add_dip_power = -150
-			add_adm_power = -150
+			add_dip_power = -200
+			add_adm_power = -200
 			add_prestige = 25
 		}
 		ai_will_do = {

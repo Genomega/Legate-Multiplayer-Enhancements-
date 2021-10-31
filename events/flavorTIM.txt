@@ -3438,6 +3438,87 @@ country_event = { #Startup event for nations to discover stuff
 			}
 			4233 = {
 				discover_country = ROOT
+			}	
+			5128 = {
+				discover_country = ROOT
+			}
+			5126 = {
+				discover_country = ROOT
+			}
+			5097 = {
+				discover_country = ROOT
+			}			
+			5127 = {
+				discover_country = ROOT
+			}
+			583 = {
+				discover_country = ROOT
+			}
+			4403 = {
+				discover_country = ROOT
+			}
+			5094 = {
+				discover_country = ROOT
+			}
+			5111 = {
+				discover_country = ROOT
+			}
+			1897 = {
+				discover_country = ROOT
+			}
+			5108 = {
+				discover_country = ROOT
+			}
+			1655 = {
+				discover_country = ROOT
+			}	
+			1895 = {
+				discover_country = ROOT
+			}
+			1896 = {
+				discover_country = ROOT
+			}
+			5095 = {
+				discover_country = ROOT
+			}
+			5096 = {
+				discover_country = ROOT
+			}	
+			5098 = {
+				discover_country = ROOT
+			}
+			5100 = {
+				discover_country = ROOT
+			}
+			4522 = {
+				discover_country = ROOT
+			}
+			2000 = {
+				discover_country = ROOT
+			}		
+			2194 = {
+				discover_country = ROOT
+			}
+			5093 = {
+				discover_country = ROOT
+			}
+			5092 = {
+				discover_country = ROOT
+			}
+			5101 = {
+				discover_country = ROOT
+			}	
+			4808 = {
+				discover_country = ROOT
+			}
+			2740 = {
+				discover_country = ROOT
+			}
+			4807 = {
+				discover_country = ROOT
+			}	
+			1898 = {
+				discover_country = ROOT
 			}			
 		}		
 	}	

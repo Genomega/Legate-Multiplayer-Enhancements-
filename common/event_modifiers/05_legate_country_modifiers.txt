@@ -4,7 +4,7 @@ established_a_marine_corp = {
 }	
 
 papal_sanction_justified_crusade = {
-	land_morale = 0.10
+	land_morale = 0.05
 }	
 
 burgundian_inheritance_libety_fixed = {

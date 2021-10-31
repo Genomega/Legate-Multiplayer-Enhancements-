@@ -1480,7 +1480,7 @@ conversion_zeal = {
 }
 
 religious_zeal_at_conv = {
-	local_missionary_strength = -0.05
+	local_missionary_strength = -0.075
 }
 
 papal_sanction_for_church_taxes = {

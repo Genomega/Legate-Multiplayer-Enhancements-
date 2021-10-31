@@ -44,6 +44,8 @@ change_estate_land_share = {
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = infertile_personality
+	add_ruler_personality = calm_personality
+	add_ruler_personality = fierce_negotiator_personality
 	add_ruler_modifier = {
 		name = "dan_bavarian_holdings"
 		duration = -1
@@ -55,11 +57,11 @@ change_estate_land_share = {
 	}	
 	add_army_tradition = -100
 	add_army_professionalism = 0.03
-	add_manpower = 5.513
-	add_sailors = 3732
+	add_manpower = 3.513
+	add_sailors = 2732
 	add_treasury = 83	
-	add_legitimacy = -19
-	add_mercantilism = 10
+	add_legitimacy = -24
+	add_mercantilism = 5
 	set_estate_privilege = estate_church_religious_state
 	set_estate_privilege = estate_church_papal_emissary
 	set_estate_privilege = estate_church_clerical_oversight
@@ -94,7 +96,7 @@ change_estate_land_share = {
 		estate = estate_nobles
 		share = 40
 	}	
-	add_army_tradition = 25	
+	add_army_tradition = 15	
 }
 
 1445.9.26 = {

@@ -29,9 +29,9 @@
  CMI_ideas_bonus:0 "Yunnanese Ambition"
  
  local_nobility:0 "Local Nobility"
- local_nobility_desc:0 "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges, they will of course remember our largess and be more resistant to the inducements of foreign powers.\n§TEnables ‘Aristocratic Command of the Army’ Estate Privilege which provides +0.90 Yearly Army Tradition. Can only be granted to the Nobility Estate§!"
+ local_nobility_desc:0 "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges, they will of course remember our largess and be more resistant to the inducements of foreign powers.\n§YEnables ‘Aristocratic Command of the Army’ Estate Privilege which provides +1 Yearly Army Tradition. Can only be granted to the Nobility Estate§!"
  free_merchants:0 "Free Merchants"
- free_merchants_desc:0 "In more reactionary and hidebound societies men of trade are looked down upon as somehow being lesser men than those who own land. Well not for us, we know that wealth is power regardless of where it comes from.\n§TEnables ‘Plutocratic Command of the Admiralty’ Estate Privilege which provides +0.90 Yearly Naval Tradition and +20% Naval Tradition from Protecting Trade. Can only be granted to the Burghers Estate.§!"
+ free_merchants_desc:0 "In more reactionary and hidebound societies men of trade are looked down upon as somehow being lesser men than those who own land. Well not for us, we know that wealth is power regardless of where it comes from.\n§YEnables ‘Plutocratic Command of the Admiralty’ Estate Privilege which provides +1 Yearly Naval Tradition and +25% Naval Tradition from Protecting Trade. Can only be granted to the Burghers Estate.§!"
  OVERLORD_CONSCRIPTED_GENERAL:0 "to conscript our General $NAME|Y$ ($FIRE$/$SHOCK$/$MANUEVER$/$SIEGE$) for their armies. He no longer serves us."
  WE_CONSCRIPTED_GENERAL:0 "to let their General $NAME|Y$ ($FIRE$/$SHOCK$/$MANUEVER$/$SIEGE$) fight for us instead."
  

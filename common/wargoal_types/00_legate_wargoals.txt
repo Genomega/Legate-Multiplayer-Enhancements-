@@ -102,9 +102,9 @@ superiority_chinese_unification_legate = {
 	type = superiority
 	
 	attacker = {
-		badboy_factor = 0.75
-		prestige_factor = 1.5
-		peace_cost_factor = 0.75
+		badboy_factor = 0.80
+		prestige_factor = 1.0
+		peace_cost_factor = 1
 		
 		allowed_provinces = {
 			superregion = china_superregion
@@ -119,9 +119,9 @@ superiority_chinese_unification_legate = {
 	}
 	
 	defender = {
-		badboy_factor = 0.75
-		prestige_factor = 1.5
-		peace_cost_factor = 0.75
+		badboy_factor = 0.80
+		prestige_factor = 1
+		peace_cost_factor = 1
 		
 		allowed_provinces = {
 			OR = {

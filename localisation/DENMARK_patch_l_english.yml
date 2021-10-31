@@ -1,5 +1,7 @@
 ﻿l_english:
  ## Events
+ the_grand_campaign_name: "The Grand Campaign"
+ 
  leg_danish_flavor.1.t: "The Worrying Succession of Christopher III"
  leg_danish_flavor.1.d: "The Rule of the Arch-King, while somewhat cemented in Denmark, is suffering in other parts of the Kalmar Union. Norwegians currently favor the deposed Eric VII Gryf, who continues to wage a Insurgency against use based in Gotland. In Sweden, power is coalescing around the Regent Karl Knutsson. Should the rule of the Arch-King come to an end before this matter is settled, the stability of the Kalmar Union will be in great jeopardy."
  leg_danish_flavor.1.a: "We must act on this quickly"

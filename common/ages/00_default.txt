@@ -762,7 +762,10 @@ age_of_absolutism = {
 		ab_italian_unification = {
 		
 			allow = {
-				tag = ITA
+				OR = {
+					tag = ITA
+					has_reform = kingdom_of_god_reform
+				}	
 			}
 			modifier = {
 				infantry_cost = -0.33

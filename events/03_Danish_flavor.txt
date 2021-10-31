@@ -795,7 +795,7 @@ country_event = { # Swedish revolt against Denmark due to succession
 		}	
 		add_country_modifier = {
 			name = "swedish_war_of_independence"
-			duration = 3650
+			duration = 1825
 		}	
 		create_general = { tradition = 80 }
 		add_power_projection = {

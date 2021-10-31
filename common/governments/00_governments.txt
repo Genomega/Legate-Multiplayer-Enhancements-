@@ -72,6 +72,7 @@ monarchy = {
 				#Legate Additions
 				zhu_ineffective_government
 				danish_kingdom_hre
+				#empowered_cossack_council_reform
 			}
 		}
 		bureaucracy = {
@@ -88,18 +89,18 @@ monarchy = {
 				corvee_reform
 			}
 		}
-		military_specialization = {
-			reforms = {
-				professional_army_reform 
-				military_draft_reform
-				mercenary_army_reform
-				reformed_chevauchee_reform
-				empowered_cossack_council_reform
-				office_of_naval_warfare_reform
-				drafting_of_merchant_vessels_reform
-				drafting_of_merchant_vessels_reform_unique
-				galley_supremacy_reform
-				privateer_warfare_reform
+		# military_specialization = {
+			# reforms = {
+				# professional_army_reform 
+				# military_draft_reform
+				# mercenary_army_reform
+				# reformed_chevauchee_reform
+				# empowered_cossack_council_reform
+				# office_of_naval_warfare_reform
+				# drafting_of_merchant_vessels_reform
+				# drafting_of_merchant_vessels_reform_unique
+				# galley_supremacy_reform
+				# privateer_warfare_reform
 				# fracavalry
 				# lat_cavalry
 				# nazcavalry
@@ -130,8 +131,8 @@ monarchy = {
 				# banner_upgrade_reform
 				# future_of_war_reform
 				# japanbakuhan
-			}
-		}		
+			# }
+		# }		
 		growth_of_administration = {
 			reforms = {
 				clergy_in_administration_reform
@@ -390,18 +391,18 @@ republic = {
 				national_constituent_reform
 			}
 		}
-		military_specialization_republics = {
-			reforms = {
-				professional_army_reform_rep 
-				military_draft_reform_rep
-				mercenary_army_reform_rep
-				reformed_chevauchee_reform_rep
-				empowered_cossack_council_reform_rep
-				office_of_naval_warfare_reform_rep
-				drafting_of_merchant_vessels_reform_rep
-				drafting_of_merchant_vessels_reform_unique_rep
-				galley_supremacy_reform_rep
-				privateer_warfare_reform_rep
+		# military_specialization_republics = {
+			# reforms = {
+				# professional_army_reform_rep 
+				# military_draft_reform_rep
+				# mercenary_army_reform_rep
+				# reformed_chevauchee_reform_rep
+				# empowered_cossack_council_reform_rep
+				# office_of_naval_warfare_reform_rep
+				# drafting_of_merchant_vessels_reform_rep
+				# drafting_of_merchant_vessels_reform_unique_rep
+				# galley_supremacy_reform_rep
+				# privateer_warfare_reform_rep
 				# fracavalry
 				# lat_cavalry
 				# nazcavalry
@@ -432,8 +433,8 @@ republic = {
 				# banner_upgrade_reform
 				# future_of_war_reform
 				# japanbakuhan
-			}
-		}		
+			# }
+		# }		
 		federalism_vs_unitarism_vs_confederacy = {
 			reforms = {
 				provincial_governments_reform
@@ -579,18 +580,18 @@ tribal = {
 				lip_service_reform
 			}
 		}
-		military_specialization_tribal = {
-			reforms = {
-				professional_army_reform_tribal 
-				military_draft_reform_tribal 
-				mercenary_army_reform_tribal 
-				reformed_chevauchee_reform_tribal 
-				empowered_cossack_council_reform_tribal 
-				office_of_naval_warfare_reform_tribal 
-				drafting_of_merchant_vessels_reform_tribal 
-				drafting_of_merchant_vessels_reform_unique_tribal 
-				galley_supremacy_reform_tribal 
-				privateer_warfare_reform_tribal 
+		# military_specialization_tribal = {
+			# reforms = {
+				# professional_army_reform_tribal 
+				# military_draft_reform_tribal 
+				# mercenary_army_reform_tribal 
+				# reformed_chevauchee_reform_tribal 
+				# empowered_cossack_council_reform_tribal 
+				# office_of_naval_warfare_reform_tribal 
+				# drafting_of_merchant_vessels_reform_tribal 
+				# drafting_of_merchant_vessels_reform_unique_tribal 
+				# galley_supremacy_reform_tribal 
+				# privateer_warfare_reform_tribal 
 				# fracavalry
 				# lat_cavalry
 				# nazcavalry
@@ -621,8 +622,8 @@ tribal = {
 				# banner_upgrade_reform
 				# future_of_war_reform
 				# japanbakuhan
-			}
-		}		
+			# }
+		# }		
 		tribal_modernization = {
 			reforms = {
 				centralize_tribal_power_reform
@@ -733,18 +734,18 @@ theocracy = {
 				kingdom_of_god_reform
 			}
 		}
-		military_specialization_theocratic = {
-			reforms = {
-				professional_army_reform_theo 
-				military_draft_reform_theo
-				mercenary_army_reform_theo
-				reformed_chevauchee_reform_theo
-				empowered_cossack_council_reform_theo
-				office_of_naval_warfare_reform_theo
-				drafting_of_merchant_vessels_reform_theo
-				drafting_of_merchant_vessels_reform_unique_theo
-				galley_supremacy_reform_theo
-				privateer_warfare_reform_theo
+		# military_specialization_theocratic = {
+			# reforms = {
+				# professional_army_reform_theo 
+				# military_draft_reform_theo
+				# mercenary_army_reform_theo
+				# reformed_chevauchee_reform_theo
+				# empowered_cossack_council_reform_theo
+				# office_of_naval_warfare_reform_theo
+				# drafting_of_merchant_vessels_reform_theo
+				# drafting_of_merchant_vessels_reform_unique_theo
+				# galley_supremacy_reform_theo
+				# privateer_warfare_reform_theo
 				# fracavalry
 				# lat_cavalry
 				# nazcavalry
@@ -775,8 +776,8 @@ theocracy = {
 				# banner_upgrade_reform
 				# future_of_war_reform
 				# japanbakuhan
-			}
-		}			
+			# }
+		# }			
 		clergy_in_administration = {
 			reforms = {
 				subservient_administrators_reform

@@ -60,7 +60,7 @@ change_estate_land_share = {
 		name = "Juan II"
 		dynasty = "de Trastámara"
 		birth_date = 1405.3.6
-		adm = 1
+		adm = 2
 		dip = 1
 		mil = 2
 	}
@@ -71,10 +71,14 @@ change_estate_land_share = {
 		birth_date = 1396.1.1
 		death_date = 1445.2.18
 		female = yes
-		adm = 2
-		dip = 2
-		mil = 2
+		adm = 3
+		dip = 3
+		mil = 3
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = fertile_personality
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = zealot_personality		
 }
 
 1422.1.1 = { leader = {	name = "Álvaro de Luna"	type = general	fire = 2	shock = 2	manuever = 3	siege = 0	death_date = 1453.6.2 } }

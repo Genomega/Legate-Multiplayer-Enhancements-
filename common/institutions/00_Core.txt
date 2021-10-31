@@ -92,15 +92,15 @@ feudalism = {
 				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
 			}
 			AND = {
-				technology_group = sub_saharan
+				tag = MAL
+				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
+			}		
+			AND = {
+				tag = SON
 				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
 			}
 			AND = {
-				technology_group = east_african
-				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
-			}
-			AND = {
-				technology_group = central_african
+				tag = MAK
 				#NOT = { owner = { has_reform = tribal_kingdom } } #Ladakh
 			}			
 			owner = { technology_group = high_american }
@@ -119,7 +119,13 @@ feudalism = {
 					technology_group = mesoamerican
 					technology_group = north_american
 					technology_group = south_american
-					#technology_group = sub_saharan
+					AND = {
+						technology_group = sub_saharan
+						NOT = { tag = MAL }
+						NOT = { tag = SON }
+					}	
+					technology_group = east_african
+					technology_group = central_african
 				}
 			}
 			AND = {

@@ -1226,7 +1226,7 @@ principality = {
 }
 
 tsardom = {
-	icon = "king"
+	icon = "russian_tsardom_redone"
 	allow_normal_conversion = yes
 	potential = {
 		religion = orthodox
@@ -1258,9 +1258,11 @@ tsardom = {
 
 	modifiers = {
 		#global_manpower_modifier = 0.20
-		reinforce_cost_modifier = -0.25
-		yearly_absolutism = 1
-		global_autonomy = -0.025
+		reinforce_cost_modifier = -0.10
+		#yearly_absolutism = 1
+		war_exhaustion = -0.03
+		max_absolutism = 20
+		#global_autonomy = -0.025
 		governing_capacity = 250
 	}
 
@@ -1750,7 +1752,7 @@ gond_kingdom = {
 }
 
 siamese_absolutism = {
-	icon = "indian_crown"
+	icon = "siamese_government_redone"
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
@@ -1760,8 +1762,9 @@ siamese_absolutism = {
 	}
 	valid_for_nation_designer = no
 	modifiers = {
-		max_absolutism = 10
+		max_absolutism = 20
 		monarch_admin_power = 1
+		governing_capacity = 150
 	}
 	free_concentrate_development = yes
 	custom_attributes = {
@@ -2403,6 +2406,7 @@ royal_decree_reform = {
 	}
 	modifiers = {
 		max_absolutism = 5
+		legitimacy = 0.5
 	}
 	ai = {
 		factor = 1
@@ -2546,7 +2550,7 @@ imperial_decree_reform = {
 #absolute_rule_vs_constitutional
 
 letat_cest_moi_reform = {
-	icon = "queen"
+	icon = "the_sun_king"
 	allow_normal_conversion = yes
 	modifiers = {
 		governing_capacity = 250
@@ -2585,14 +2589,14 @@ consulate_reform = {
 #separation_of_power
 
 political_absolutism_reform = {
-	icon = "judge"
+	icon = "i_am_the_king"
 	allow_normal_conversion = yes
 	potential = {
 		is_revolutionary = no
 	}
 	modifiers = {
 		max_absolutism = 5
-		yearly_absolutism = 0.5
+		yearly_absolutism = 1.5
 	}
 	ai = {
 		factor = 1.5

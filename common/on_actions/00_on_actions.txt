@@ -694,7 +694,7 @@ on_siege_won_country = {
 		flavor_lna.1 # Emerald Buddha
 	}
 	random_events = {
-		7 = army_professionalism_events.1 #City Sacked
+		8 = army_professionalism_events.1 #City Sacked
 		100 = 0
 	}
 }
@@ -713,8 +713,8 @@ on_siege_lost_country = {
 on_siege_won_province = {
 	events = {
 		synthetic_dawn.4
-		chinese_unification.1		#changed by chinese unification
-		chinese_unification.2		
+		#chinese_unification.1		#changed by chinese unification
+		#chinese_unification.2		
 	}
 	if = {
 		limit = {
