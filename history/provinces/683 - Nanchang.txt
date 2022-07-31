@@ -1,8 +1,11 @@
 #683 - Nanchang
 
-owner = HUA
-controller = HUA
-add_core = HUA
+#owner = HUA
+#controller = HUA
+#add_core = HUA
+owner = X41
+controller = X41
+add_core = X41
 culture = gan
 religion = confucianism
 capital = "Nanchang"
@@ -14,6 +17,18 @@ base_manpower = 3
 is_city = yes
 discovered_by = chinese
 discovered_by = nomad_group
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X41
+	controller = X41
+	add_core = X41
+}
 
 1513.1.1 = { unrest = 5 } # Peasant rebellion, Jiangxi
 1514.1.1 = { unrest = 0 }

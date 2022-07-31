@@ -1,7 +1,7 @@
 # 2152 - Jianning
 
-owner = X46
-controller = X46
+#owner = X46
+#controller = X46
 culture = chimin
 religion = confucianism
 capital = "Zhangzhou"
@@ -11,9 +11,23 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = X46
+#add_core = X46
 
+owner = X16
+controller = X16
+add_core = X16
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X16
+	controller = X16
+	add_core = X16
+}
 
 discovered_by = chinese
 discovered_by = nomad_group

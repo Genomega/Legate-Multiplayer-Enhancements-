@@ -757,7 +757,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 700
+		months = 1000
 	}
 	
 	option = {
@@ -1291,8 +1291,19 @@ country_event = {
 	id = women_history_events.19
 	title = women_history_events.19.t
 	desc = women_history_events.19.d
-	picture = wihgfx_FEMALE_RULER_eventPicture
-
+	picture = {
+		trigger = {
+			has_dlc = "Origins"
+		}
+		picture = NZINGHA_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = { has_dlc = "Origins" }
+		}
+		picture = wihgfx_FEMALE_RULER_eventPicture
+	}
+	
 	trigger = {
 		tag = NDO
 		is_year = 1580
@@ -1333,9 +1344,9 @@ country_event = {
 			name = "Nzinga Mbandi"
 			dynasty = "Ngola"
 			culture = kongolese
-			DIP = 3
-			ADM = 2
-			MIL = 3
+			DIP = 5
+			ADM = 5
+			MIL = 5
 		}
 		if = {
 			limit = {

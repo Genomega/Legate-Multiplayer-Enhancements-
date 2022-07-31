@@ -22,12 +22,14 @@ mnd_siam_1 = {
 		}
 		trigger = {
 			capital_scope = {
-				development = 30
+				development = 25
 			}
 			#num_of_times_used_transfer_development = 3
 		}
 		effect = {
-			change_government_reform_progress = 50
+			capital_scope = {
+				add_prosperity = 100
+			}			
 		}
 	}
 	mnd_siam_mandala = {
@@ -36,21 +38,19 @@ mnd_siam_1 = {
 		provinces_to_highlight = {
 			is_capital = yes
 			owned_by = ROOT
-			NOT = { development = 40 }
+			NOT = { development = 35 }
 		}
 		trigger = {
 			capital_scope = {
-				development = 40
+				development = 35
 			}
 			vassal = 3
 		}
 		effect = {
+			change_government_reform_progress = 50
 			add_country_modifier = {
 				name = siam_mandala_modifier
 				duration = 7300
-			}
-			capital_scope = {
-				add_prosperity = 100
 			}
 		}
 	}
@@ -197,7 +197,7 @@ mnd_siam_2 = {
 					loyalty = 65
 				}
 			}
-			stability = 3
+			stability = 2
 		}
 		effect = {
 			set_estate_privilege = estate_church_brahmins_at_court
@@ -253,26 +253,12 @@ mnd_siam_2 = {
 				# }
 				# absolutism = 75
 			# }
+			stability = 3
 			has_regency = no
 			is_at_war = no
-			OR = {
-				tag = SIA
-				NOT = { exists = SIA }
-			}
 			is_subject = no
 		}
 		effect = {
-			if = {
-				limit = {
-					NOT = { tag = SIA }
-					NOT = { exists = SIA }
-				}
-				change_tag = SIA
-				if = {
-					limit = { has_custom_ideas = no }
-					country_event = { id = ideagroups.1 } #Swap Ideas
-				}
-			}
 			set_country_flag = siam_royal_absolutism
 			if = {
 				limit = {
@@ -320,7 +306,7 @@ mnd_siam_3 = {
 		provinces_to_highlight = {
 		}
 		trigger = {
-			is_monarch_leader = yes
+			stability = 1
 			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
@@ -336,40 +322,26 @@ mnd_siam_3 = {
 			}
 		}
 		effect = {
-			if = {
+			cambodia_area = {
 				limit = {
-					exists = KHM
-					KHM = {
-						is_free_or_tributary_trigger = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_casus_belli = {
-					target = KHM
-					type = cb_vassalize_mission
-				}
+				add_permanent_claim = ROOT
 			}
-			else = {
-				cambodia_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+			mekong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				mekong_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			angkor_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				angkor_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -387,18 +359,6 @@ mnd_siam_3 = {
 			}
 		}
 		trigger = {
-			if = {
-				limit = {
-					KHM = {
-						is_subject_of = ROOT
-					}
-				}
-				NOT = {
-					KHM = {
-						liberty_desire = 50
-					}
-				}
-			}
 			cambodia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -413,83 +373,66 @@ mnd_siam_3 = {
 			}
 		}
 		effect = {
-			if = {
+			# if = {
+				# limit = {
+					# num_of_subjects = 1
+				# }
+				# every_subject_country = {
+					# add_liberty_desire = -20
+				# }
+			# }
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			2386 = {
 				limit = {
-					num_of_subjects = 1
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				every_subject_country = {
-					add_liberty_desire = -20
+				add_permanent_claim = ROOT
+			}			
+			champasak_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-			}
-			else = {
-				add_prestige = 20
-			}
+				add_permanent_claim = ROOT
+			}			
 		}
 	}
 	mnd_siam_divide_the_lao = {
 		icon = mission_mnd_maj_prepare_eastern_campaigns
-		required_missions = { mnd_siam_subjugate_khmer }
+		required_missions = { mnd_siam_subjugate_khmer mnd_siam_subjugate_chiang_mai }
 		provinces_to_highlight = {
+			OR = {
+				area = vientiane_area
+				area = champasak_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
-			OR = {
-				calc_true_if = {
-					amount = 3
-					all_known_country = {
-						primary_culture = lao
-					}
-				}
-				primary_culture = lao
-				NOT = {
-					any_province = {
-						culture = lao
-					}
-				}
+			vientiane_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			champasak_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					calc_true_if = {
-						amount = 3
-						all_known_country = {
-							primary_culture = lao
-						}
-					}
-				}
-				every_country = {
-					limit = {
-						is_free_or_tributary_trigger = yes
-						primary_culture = lao
-					}
-					reverse_add_casus_belli = {
-						target = ROOT
-						type = cb_vassalize_mission
-					}
-				}
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
 			}
-			else = {
-				vientiane_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+			north_laos_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				champasak_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				north_laos_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -534,46 +477,21 @@ mnd_siam_3 = {
 			}
 		}
 		effect = {
-			if = {
+			add_prestige = 50
+			vietnam_area = {
 				limit = {
-					any_country = {
-						primary_culture = vietnamese
-						capital_scope = {
-							region = indo_china_region
-						}
-						is_free_or_tributary_trigger = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				every_country = {
-					limit = {
-						primary_culture = vietnamese
-						capital_scope = {
-							region = indo_china_region
-						}
-						is_free_or_tributary_trigger = yes
-					}
-					reverse_add_casus_belli = {
-						target = ROOT
-						type = cb_vassalize_mission
-					}
-				}
+				add_permanent_claim = ROOT
 			}
-			else = {
-				vietnam_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+			red_river_delta_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				red_river_delta_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}		
-			}
+				add_permanent_claim = ROOT
+			}		
 		}
 	}
 	mnd_siam_subjugate_vietnam = {
@@ -618,7 +536,7 @@ mnd_siam_3 = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
@@ -631,7 +549,7 @@ mnd_siam_3 = {
 		}
 		trigger = {
 			calc_true_if = {
-				amount = 20
+				amount = 25
 				all_province = {
 					superregion = china_superregion
 					country_or_non_sovereign_subject_holds = ROOT
@@ -644,8 +562,15 @@ mnd_siam_3 = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
+			south_china_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_core = ROOT
+			}			
 		}
 	}
 	mnd_siam_take_the_mandate = {
@@ -744,26 +669,12 @@ mnd_siam_4 = {
 			}
 		}
 		effect = {
-			if = {
+			northern_thai_area = {
 				limit = {
-					exists = LNA
-					LNA = {
-						is_free_or_tributary_trigger = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					target = LNA
-				}
-			}
-			else = {
-				northern_thai_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -775,44 +686,25 @@ mnd_siam_4 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			if = {
-				limit = {
-					LNA = {
-						is_subject_of = ROOT
-					}
-				}
-				NOT = {
-					LNA = {
-						liberty_desire = 50
-					}
-				}
-			}
 			northern_thai_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			if = {
+			vientiane_area = {
 				limit = {
-					exists = PEG
-					PEG = {
-						is_free_or_tributary_trigger = yes
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					target = PEG
+				add_permanent_claim = ROOT
+			}			
+			lower_burma_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-			}
-			else = {
-				lower_burma_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -824,18 +716,6 @@ mnd_siam_4 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			if = {
-				limit = {
-					PEG = {
-						is_subject_of = ROOT
-					}
-				}
-				NOT = {
-					PEG = {
-						liberty_desire = 50
-					}
-				}
-			}
 			if = {
 				limit = {
 					any_owned_province = {
@@ -889,7 +769,7 @@ mnd_siam_4 = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
@@ -915,7 +795,7 @@ mnd_siam_4 = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
@@ -954,13 +834,13 @@ mnd_siam_5 = {
 					MLC = {
 						is_subject_of_type = tributary_state
 						overlord = {
-							tag = MNG
+							tag = YAN
 							ai = yes
 						}
 						ai = yes
 					}
 				}
-				MNG = {
+				YAN = {
 					OR = {
 						has_opinion = {
 							who = ROOT
@@ -974,16 +854,17 @@ mnd_siam_5 = {
 				}
 			}
 			navy_size = MLC
-			num_of_galley = 15
+			num_of_galley = 20
 		}
 		effect = {
+			add_navy_tradition = 25
 			if = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
 					MLC = {
 						is_subject_of_type = tributary_state
 						overlord = {
-							tag = MNG
+							tag = YAN
 							ai = yes
 						}
 						ai = yes
@@ -991,36 +872,17 @@ mnd_siam_5 = {
 				}
 				MLC = {
 					add_opinion = {
-						who = MNG
+						who = YAN
 						modifier = abandoned_mlc
 					}
 				}
 			}
-			if = {
+			malacca_area = {
 				limit = {
-					exists = MLC
-					MLC = {
-						NOT = {
-							OR = {
-								is_subject_of_type = vassal
-								is_subject_of_type = march
-							}
-						}
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_casus_belli = {
-					target = MLC
-					type = cb_vassalize_mission
-				}
-			}
-			else = {
-				malacca_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1033,25 +895,13 @@ mnd_siam_5 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			if = {
-				limit = {
-					MLC = {
-						is_subject_of = ROOT
-					}
-				}
-				NOT = {
-					MLC = {
-						liberty_desire = 50
-					}
-				}
-			}
 			malacca_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_navy_tradition = 20
+			add_mercantilism = 5
 			every_province = {
 				limit = {
 					region = malaya_region
@@ -1060,7 +910,7 @@ mnd_siam_5 = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					province_has_center_of_trade_of_level = 1
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
@@ -1110,7 +960,7 @@ mnd_siam_5 = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					province_has_center_of_trade_of_level = 1
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}			
 		}
 	}

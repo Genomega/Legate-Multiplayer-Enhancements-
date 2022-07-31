@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = ethiopian_government_reform
+add_government_reform = negusa_nagast # ethiopian_government_reform Old and Legate reform
 government_rank = 3
 primary_culture = amhara
 religion = coptic

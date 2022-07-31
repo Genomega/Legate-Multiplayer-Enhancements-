@@ -1,0 +1,822 @@
+namespace = colonial_control
+
+# country_event = { #settings event
+	# id = colonial_control.0
+	# title = colonial_control.0.title
+	# desc = colonial_control.0.desc
+	# picture = BIG_BOOK_eventPicture
+	# is_triggered_only = yes
+
+	# option = {
+		# name = colonial_control.0.a
+
+		# hidden_effect = {
+			# if = {
+				# limit = {
+					# has_global_flag = colonial_control_penalties_n_benefits
+				# }
+				# clr_global_flag = colonial_control_penalties_n_benefits
+			# }else = {
+				# set_global_flag = colonial_control_penalties_n_benefits
+			# }
+			# country_event = {
+				# id = colonial_control.7
+			# }
+		# }
+	# }
+	# option = {
+		# name = colonial_control.0.b
+		# country_event = {
+			# id = colonial_control.5
+		# }
+	# }
+	# option = {
+		# name = colonial_control.0.c
+	# }
+# }
+# country_event = { #restrict settings event
+	# id = colonial_control.5
+	# title = colonial_control.5.title
+	# desc = colonial_control.5.desc
+	# picture = BIG_BOOK_eventPicture
+
+	# is_triggered_only = yes
+	# option = {
+		# name = colonial_control.5.a
+		# hidden_effect = {
+			# clr_global_flag = colonial_control_restrict_subjects
+			# clr_global_flag = colonial_control_restrict_notSubjects
+			# every_country = {
+				# clr_country_flag = colonial_control_overlord_deny
+				# clr_country_flag = colonial_control_overlord_allow
+			# }
+			# set_global_flag = colonial_control_restrict_none
+			# country_event = {
+				# id = colonial_control.0
+			# }
+		# }
+	# }
+	# option = {
+		# name = colonial_control.5.b
+
+		# hidden_effect = {
+			# clr_global_flag = colonial_control_restrict_none
+			# clr_global_flag = colonial_control_restrict_notSubjects
+			# every_country = {
+				# clr_country_flag = colonial_control_overlord_allow
+			# }
+			# set_country_flag = colonial_control_overlord_deny
+			# set_global_flag = colonial_control_restrict_subjects
+			# country_event = {
+				# id = colonial_control.0
+			# }
+		# }
+	# }
+
+	# option = {
+		# name = colonial_control.5.c
+
+		# hidden_effect = {
+			# clr_global_flag = colonial_control_restrict_none
+			# clr_global_flag = colonial_control_restrict_subjects
+			# every_country = {
+				# clr_country_flag = colonial_control_overlord_deny
+			# }
+			# set_country_flag = colonial_control_overlord_allow
+			# set_global_flag = colonial_control_restrict_notSubjects
+
+			# country_event = {
+				# id = colonial_control.0
+			# }
+		# }
+	# }
+	# option = {
+		# name = colonial_control.5.d
+
+		# hidden_effect = {
+			# clr_global_flag = colonial_control_restrict_none
+			# clr_global_flag = colonial_control_restrict_subjects
+			# clr_global_flag = colonial_control_restrict_notSubjects
+			# every_country = {
+				# clr_country_flag = colonial_control_overlord_deny
+				# clr_country_flag = colonial_control_overlord_allow
+			# }
+			# country_event = {
+				# id = colonial_control.0
+			# }
+		# }
+	# }
+# }
+country_event = { #redirect event
+	id = colonial_control.7
+
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		country_event = {
+			id = colonial_control.0
+		}
+	}
+}
+country_event = { #colonial nation has a province outside home colonial region
+	id = colonial_control.1
+	title = colonial_control.1.title
+	desc = colonial_control.1.desc
+	picture = DIPLOMACY_eventPicture
+
+	trigger = {
+		
+		NOT = {has_global_flag = colonial_control_restrict_none}
+		OR = {
+			AND = {
+				has_global_flag = colonial_control_restrict_subjects
+				has_country_flag = colonial_control_overlord_deny
+			}
+			AND = {
+				has_global_flag = colonial_control_restrict_notSubjects
+				NOT = {has_country_flag = colonial_control_overlord_allow}
+			}
+			AND = {
+				NOT = {has_global_flag = colonial_control_restrict_none}
+				NOT = {has_global_flag = colonial_control_restrict_subjects}
+				NOT = {has_global_flag = colonial_control_restrict_notSubjects}
+			}
+		}
+		colony = 1
+		any_subject_country = {
+			is_colonial_nation = yes
+			any_owned_province = {
+				NOT = { colonial_region = CAPITAL }
+				NOT = {has_province_flag = colonial_control_province_whitelisted}
+			}
+		}
+	}
+	option = { #Take provinces
+		name = colonial_control.1.a
+		ai_chance = { factor = 80 }
+		random_subject_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					NOT = { colonial_region = capital }
+					NOT = { has_province_flag = colonial_control_province_whitelisted }
+				}
+			}
+			every_owned_province = {
+				limit = {
+					NOT = { colonial_region = CAPITAL }
+				}
+				
+				cede_province = ROOT
+				add_core = ROOT
+			}
+			if = {
+				limit = {
+					has_global_flag = colonial_control_penalties_n_benefits
+				}
+				add_liberty_desire = 10
+				add_opinion = {
+					who = ROOT
+					modifier = colonial_control_provinces_taken
+					years = 5
+				}
+			}
+		}
+	}
+	option = {#Leave provinces
+		name = colonial_control.1.b
+		ai_chance = { factor = 20 }
+		random_subject_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					NOT = {colonial_region = capital}
+					NOT = {has_province_flag = colonial_control_province_whitelisted}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					NOT = {
+						colonial_region = CAPITAL
+					}
+				}
+				set_province_flag = colonial_control_province_whitelisted
+			}
+			if = {
+				limit = {
+					has_global_flag = colonial_control_penalties_n_benefits
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = colonial_control_provinces_left
+					years = 2
+				}
+			}
+		}
+		custom_tooltip = colonial_control.1.b_tooltip
+	}
+}
+country_event = { #Hidden event, which checks for two subjects in one colonial region
+	id = colonial_control.2
+	title = colonial_control.2.title
+	desc = colonial_control.2.desc
+
+	trigger = {
+		colony = 2
+	}
+	hidden = yes
+	mean_time_to_happen = {
+		days = 365
+	}
+	option = {
+		name = colonial_control.3.a
+
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes
+				ROOT = {
+					NOT = {has_country_flag = colonial_control_conflict_detected}
+				}
+				NOT = {has_country_flag = colonial_control_conflict_unsolved}
+			}
+			random_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_alaska
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_alaska
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_canada
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_canada
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_eastern_america
+						}
+					}
+					NOT = {tag = prev}
+					capital_scope = {
+						colonial_region = colonial_eastern_america
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_louisiana
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_louisiana
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_california
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_california
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_mexico
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_mexico
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_the_carribean
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_the_carribean
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_colombia
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_colombia
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_peru
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_peru
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_la_plata
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_la_plata
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_brazil
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_brazil
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_australia
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_australia
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_new_zealand
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_new_zealand
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}
+			every_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					PREV = {
+						capital_scope = {
+							colonial_region = colonial_central_america
+						}
+					}
+					NOT = {tag = PREV}
+					capital_scope = {
+						colonial_region = colonial_central_america
+					}
+					overlord = {
+						all_subject_country = {NOT = {has_country_flag = colonial_control_conflict_sideA}}
+					}
+				}
+				overlord = {set_country_flag = colonial_control_conflict_detected}
+				set_country_flag = colonial_control_conflict_sideA
+			}			
+
+			if = {
+				limit = {
+					ROOT = {
+						has_country_flag = colonial_control_conflict_detected
+					}
+				}
+				set_country_flag = colonial_control_conflict_sideB
+				ROOT = {  
+					country_event = {
+						id = colonial_control.3
+						days = 2
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #Two colonial nations of the same overlord in one colonial region
+	id = colonial_control.3
+	title = colonial_control.3.title
+	desc = colonial_control.3.desc
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = colonial_control.3.a
+	
+		ai_chance = { 
+			factor =  50
+			modifier = {
+				factor = 0
+				any_subject_country = {
+					has_country_flag = colonial_control_conflict_sideB
+					ai = no
+				}
+			}
+		}
+			every_subject_country = {
+				limit = { has_country_flag = colonial_control_conflict_sideB }
+
+				if = {
+					limit = {
+						liberty_desire = 100 
+						has_global_flag = colonial_control_penalties_n_benefits
+					}
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideA }
+							set_country_flag = colonial_control_conflict_revolt_very_high
+						}
+					}
+					custom_tooltip = colonial_control.3_alt_alt_alt_tooltip
+				}else_if = {
+					limit = {
+						liberty_desire = 75 
+						has_global_flag = colonial_control_penalties_n_benefits
+					}
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideA }
+							set_country_flag = colonial_control_conflict_revolt_high
+						}
+					}
+					custom_tooltip = colonial_control.3_alt_alt_tooltip
+				}else_if = {
+					limit = {
+						liberty_desire = 50
+						has_global_flag = colonial_control_penalties_n_benefits
+					}
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideA }
+							set_country_flag = colonial_control_conflict_revolt_low
+						}
+						
+					}
+					custom_tooltip = colonial_control.3_alt_tooltip
+						
+				}else = {
+							custom_tooltip = colonial_control.3_tooltip
+				}
+				every_owned_province = {
+					set_province_flag = colonial_control_province_transfered
+					hidden_effect = {cede_province = ROOT}
+				}
+				tooltip = {
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideA }
+							every_owned_province = { cede_province = PREV }
+						}
+					}
+				}
+				clr_country_flag = colonial_control_conflict_sideB
+			}
+
+			every_subject_country = {
+				limit = { has_country_flag = colonial_control_conflict_sideA }
+				country_event = {
+					id=colonial_control.4
+					days=5
+				}
+				clr_country_flag = colonial_control_conflict_sideA
+			}
+			clr_country_flag = colonial_control_conflict_detected
+	}
+	option = {
+		name = colonial_control.3.b
+
+		ai_chance = { 
+			factor =  50
+			modifier = {
+				factor = 0
+				any_subject_country = {
+					has_country_flag = colonial_control_conflict_sideA
+					ai = no
+				}
+			}
+		}
+			every_subject_country = {
+				limit = { has_country_flag = colonial_control_conflict_sideA }
+
+				if = {
+					limit = {
+						liberty_desire = 100 
+						has_global_flag = colonial_control_penalties_n_benefits
+					}
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideB }
+							set_country_flag = colonial_control_conflict_revolt_very_high
+						}
+					}
+					custom_tooltip = colonial_control.3_alt_alt_alt_tooltip
+				}else_if ={
+					limit = {
+						liberty_desire = 75 
+						has_global_flag = colonial_control_penalties_n_benefits
+					}
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideB }
+							set_country_flag = colonial_control_conflict_revolt_high
+						}
+					}
+					custom_tooltip = colonial_control.3_alt_alt_tooltip
+				}else_if = {
+					limit = {
+						liberty_desire = 50 
+						has_global_flag = colonial_control_penalties_n_benefits
+					}
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideB }
+							set_country_flag = colonial_control_conflict_revolt_low
+						}
+						
+					}
+					custom_tooltip = colonial_control.3_alt_tooltip
+				}else = {
+					custom_tooltip = colonial_control.3_tooltip
+				}
+				every_owned_province = {
+					set_province_flag = colonial_control_province_transfered
+					hidden_effect = {cede_province = ROOT}
+				}
+				tooltip = {
+					ROOT = {
+						every_subject_country = {
+							limit = { has_country_flag = colonial_control_conflict_sideB }
+							every_owned_province = { cede_province = PREV }
+						}
+					}
+				}
+				clr_country_flag = colonial_control_conflict_sideA
+			}
+
+			every_subject_country = {
+				limit = { has_country_flag = colonial_control_conflict_sideB }
+				country_event = {
+					id=colonial_control.4
+					days=5
+				}
+				clr_country_flag = colonial_control_conflict_sideB
+			}
+			clr_country_flag = colonial_control_conflict_detected
+	}
+	option = {
+		name = colonial_control.3.c
+
+		every_subject_country = {
+			limit = {
+				OR = {
+					has_country_flag = colonial_control_conflict_sideA
+					has_country_flag = colonial_control_conflict_sideB
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = colonial_control_penalties_n_benefits
+				}
+				add_liberty_desire = 10
+				add_opinion = {
+					who = ROOT
+					modifier = colonial_control_dispute_unsolved
+					years = 2
+				}
+			}
+			clr_country_flag = colonial_control_conflict_sideA
+			clr_country_flag = colonial_control_conflict_sideB
+			set_country_flag = colonial_control_conflict_unsolved
+		}
+	}
+}
+country_event = { #Dispute solved
+	id=colonial_control.4
+	title = colonial_control.4.title
+	desc = colonial_control.4.desc
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_control.4.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {has_country_flag = colonial_control_conflict_revolt_very_high}
+			every_owned_province = {
+				limit = { has_province_flag = colonial_control_province_transfered }
+				add_unrest = 10
+			}
+			random = {
+				chance = 75
+				random_owned_province = {
+					limit = { has_province_flag = colonial_control_province_transfered }
+					spawn_rebels = {
+						type = nationalist_rebels
+						size = 3
+						win = yes
+						friend = PREV
+					}
+				}
+				random_owned_province = {
+					limit = { has_province_flag = colonial_control_province_transfered }
+					spawn_rebels = {
+						type = nationalist_rebels 
+						size = 3
+						win = yes
+						friend = PREV
+					}
+				}
+				random_owned_province = {
+					limit = { has_province_flag = colonial_control_province_transfered }
+					spawn_rebels = {
+						type = nationalist_rebels 
+						size = 3
+						win = yes
+						friend = PREV
+					}
+				}
+			}	
+			
+		}else_if = {
+			limit = { has_country_flag = colonial_control_conflict_revolt_high }
+			every_owned_province = {
+				limit = { has_province_flag = colonial_control_province_transfered }
+				add_unrest = 5
+			}
+			random = {
+				chance = 50
+				random_owned_province = {
+					limit = { has_province_flag = colonial_control_province_transfered }
+					spawn_rebels = {
+						type = nationalist_rebels 
+						size = 2
+						win = yes
+						friend = PREV
+					}
+				}
+				random_owned_province = {
+					limit = { has_province_flag = colonial_control_province_transfered }
+					spawn_rebels = {
+						type = nationalist_rebels
+						size = 2
+						win = yes
+						friend = PREV
+					}
+				}
+			}
+		}else_if = {
+			limit = { has_country_flag = colonial_control_conflict_revolt_low }
+			every_owned_province = {
+				limit =  {has_province_flag = colonial_control_province_transfered }
+				add_unrest = 2
+			}
+		}
+		every_owned_province = {
+			limit = {has_province_flag = colonial_control_province_transfered}
+			add_core = ROOT
+			clr_province_flag = colonial_control_province_transfered
+		}
+		if = {
+			limit = {has_global_flag = colonial_control_penalties_n_benefits}
+			add_opinion = {
+				who = FROM
+				modifier = colonial_control_provinces_left
+				years = 3
+			}
+		}
+		clr_country_flag = colonial_control_conflict_revolt_very_high
+		clr_country_flag = colonial_control_conflict_revolt_high
+		clr_country_flag = colonial_control_conflict_revolt_low
+	}
+}

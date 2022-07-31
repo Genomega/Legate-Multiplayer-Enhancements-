@@ -1,7 +1,5 @@
 #642 - Kendari
 
-owner = LUW
-controller = LUW
 culture = sulawesi
 religion = animism
 capital = "Kolaka"
@@ -11,7 +9,6 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 is_city = yes
-add_core = LUW
 
 
 

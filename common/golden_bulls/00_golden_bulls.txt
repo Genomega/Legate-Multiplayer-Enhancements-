@@ -46,8 +46,8 @@ praeclara_carissimi = {
 
 immensa_aeterni_dei = {
     modifier = {
-        embracement_cost = -0.1
-        global_institution_spread = 0.20
+        embracement_cost = -0.25
+        global_institution_spread = 0.10
     }
     mechanics = {
         cardinals_spread_institution
@@ -88,7 +88,7 @@ libertas_ecclesiae = {
 
 dei_gratia_rex = {
     modifier = {
-        yearly_absolutism = +1.5
+        yearly_absolutism = 1.5
         unrest_catholic_provinces = -2
         drill_decay_modifier = -0.33
     }

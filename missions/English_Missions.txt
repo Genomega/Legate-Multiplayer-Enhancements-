@@ -20,9 +20,19 @@ eng_british_conquest = {
 		completed_by = 1450.1.1
 		
 		trigger = {
-			army_size_percentage = 0.9
-			manpower_percentage = 0.5
-			num_of_generals = 1
+			army_size_percentage = 0.8
+			manpower_percentage = 0.4
+			num_of_generals = 2
+			OR = {
+				AND = {
+					is_year = 1450
+					is_at_war = no
+				}	
+				custom_trigger_tooltip = {
+					tooltip = eng_war_france.tooltip
+					has_country_flag = rb_gave_up_maine
+				}
+			}			
 		}
 		
 		effect = {

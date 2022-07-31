@@ -2,7 +2,8 @@
 
 graphical_culture = asiangfx
 
-color = { 179  128  104 }
+#color = { 179  128  104 }
+color = { 241 204 72 } # Recommened Yellow Color for Historical reasons
 revolutionary_colors = { 2 1 2 }
 
 historical_idea_groups = {

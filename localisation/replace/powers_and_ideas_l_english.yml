@@ -1,13 +1,11 @@
 ﻿l_english:
- tkd_kurokawa_gold_mine:0 "Kurokawa Gold Mine"
- tkd_kurokawa_gold_mine_desc:0 "The discovery of gold in the Kurokawa mountains will allow us to maintain good relations with our neighbors and enemies alike if we should so choose."
  overseas_merchants_maritime:0 "Overseas Merchants"
  overseas_merchants_maritime_desc:0 "To grow trade we need to extend the rights of citizenship to people who live abroad, support our trade and are of the right social class."
  bless_monarch:0 "Papal Sanctioned Warfare"
  DEVELOPMENT_COST:0 "Global Development Cost"
 
  overseas_exploration:0 "Overseas Exploration"
- overseas_exploration_desc:0 "Setting up colonies in distant lands is pretty much a one-way trip. If strange new diseases don't get you, the amount of time it takes to sail back means you won't be coming home. If we remind people of the potential riches, we can encourage them to seek lands further afield.\nMay use the §Y‘Colonialism’§! Casus Belli against neighboring nations that follow §YInti, Mayan§! or §YNahuatl§!."
+ overseas_exploration_desc:0 "Setting up colonies in distant lands is pretty much a one-way trip. If strange new diseases don't get you, the amount of time it takes to sail back means you won't be coming home. If we remind people of the potential riches, we can encourage them to seek lands further afield."
  
  estate_cossacks_prime_herding_rights_effect_tooltip:0 "§G+25%§! manpower from all Steppe provinces\n§R-25%§! tax income from all Steppe provinces"
  estate_cossacks_prime_herding_rights_mod:0 "Cossack Herding Rights"
@@ -17,3 +15,42 @@
  
  competetive_merchants:0 "Competitive Merchants"
  competetive_merchants_desc:0 "To bring trade home we must be able to beat the competition from other countries. We need to ensure that our legal system gives them every possible edge.\nUnlocks the ability to select the §YGrand Armada§! §YNaval Doctrine§!. (§GPortugal§!) cannot take this Doctrine."
+ 
+ # Lotharingia changes
+ new_flavour_bur.4.name:0 "Lothair's Memento"
+ new_flavour_bur.4.desc.pope:0 "In a ceremony at which the entire [Root.Culture.GetName] court as well as many foreign dignitaries were present, [Root.Monarch.GetName] was today crowned as King of Lotharingia by the Pope, [PAP.Monarch.GetName]. The festivities carried on long into the night as court bards sang ballads of [Root.Monarch.Dynasty.GetName] rulers new and old, comparing [Root.Monarch.GetName] favorably to the likes of Lothair and even the great Charlemagne. It is clear to all that a new era of glory and prosperity for our nation has been inaugurated. [Root.GetBurHREAscensionText]"
+ new_flavour_bur.4.desc.nopope:0 "In a ceremony at which the entire [Root.Culture.GetName] court as well as many foreign dignitaries were present, [Root.Monarch.GetName] was today crowned as King of Lotharingia by [Root.bur_bishop_name.GetName], the Bishop of Verdun. The festivities carried on long into the night as court bards sang ballads of [Root.Monarch.Dynasty.GetName] rulers new and old, comparing [Root.Monarch.GetName] favorably to the likes of Lothair and even the great Charlemagne. It is clear to all that a new era of glory and prosperity for our nation has been inaugurated. [Root.GetBurHREAscensionText]"
+ 
+ incident_burgundian_succ_strong_ally:0 "Crisis of the Lowlands"
+ incident_burgundian_succ_alone:0 "The Burgundian Succession"
+ 
+ # Further Ideas Changes
+ 
+ trade_ideas: "Mercantile Ideas"
+ trade_ideas_bonus: "Full Mercantile"
+ theocracy_gov_ideas: "Theocratic Ideas"
+ theocracy_gov_ideas_bonus: "Full Theocratic"
+ horde_gov_ideas: "Nomadic Ideas"
+ horde_gov_ideas_bonus: "Full Nomadic Ideas"
+ naval_ideas: "Flotilla Ideas"
+ naval_ideas_bonus: "Full Flotila Ideas"
+ 
+ national_bank_desc:0 "By establishing a central authority for financial matters, we will have better control over our nation's economy.\nUnlocks a §YDecision§! to Establish the National Bank."
+ merchant_marine_desc:0 "Let every merchant ship fly our merchant ensign with pride and know that our navy will always be there to protect them if needs must.\nEnables the §OMaritime Increase Sailors Enlistment§! State Edict, adding §G+250§! §YSailors§! each Province in a state (This works on §YInland§! Provinces)"
+ efficient_spies_desc:0 "Most peasants will sell their own mother for cash but find those who can do something truly useful is more difficult. Through experience we are learning to separate the wheat from the chaff.\nUnlocks a §YDecision§! to Establish an §OEspionage Network§!"
+ agent_training_desc:0 "We have many covert operations planned but lack the men for the tasks. Establishing a training method for our spies will help bolster the available agents for dangerous missions.\nUnlocks a §YDecision§! to 'Remove' an unwanted §YHeir§! who is not an adult. This Decision requires having established the §OEspionage Network§!"
+ privateers:0 "Underhand Trade Tactics"
+ privateers_desc:0 "Waging war on enemy commerce rests on the apex of the first triad of victory. We will encourage crusty sea captains to strike at the enemy's trade.\nMay use the §OBribe Merchants§! Covert Action"
+ audit_checks:0 "Lethal Loyalty"
+ audit_checks_desc:0 "While we look to infiltrate other nations, we must be vigilant of poisonous ideas spreading around our own courts. Assembling an audit team to ensure our ministers are acting in the state's interest will help root out some rotten elements.\nMay recruit select §YAdvisors§! from the §OEspionage Network§!. These Advisors always start §YRank 1§!, §G-33%§! Cheaper, and share the Primary Culture"
+ state_propaganda:0 "State Propaganda"
+ state_propaganda_desc:0 "As with a man, a nation's reputation is everything, and the establishment of an official propaganda service will ensure our good name is not smeared by the lies of our enemies.\nMay expand the Espionage Network to include §OSpecialization§! Divisions."
+ 
+ theocracy_gov_ideas: "Theocratic Ideas"
+ theocracy_gov_ideas_bonus: "Full Theocratic"
+ horde_gov_ideas: "Nomadic Ideas"
+ horde_gov_ideas_bonus: "Full Nomadic Ideas"
+ trade_ideas: "Mercantile Ideas"
+ trade_ideas_bonus: "Full Mercantile"
+ naval_ideas: "Flotilla Ideas"
+ naval_ideas_bonus: "Full Flotila Ideas"

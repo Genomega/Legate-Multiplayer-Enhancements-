@@ -5,13 +5,8 @@ buddha = {
 	sprite = 6 # TODO implement new sprite and change number here
 	allow = { 
 		religion = hinduism
-		OR = {
-			mission_completed = mnd_maj_candi_shrines
-			mission_completed = sun_candi_temples
-			mission_completed = mnd_khm_religion
-		}
 	}
-	tolerance_heathen = 2
+	tolerance_heathen = 1
 	advisor_cost = -0.1
 	ai_will_do = {
 		factor = 1

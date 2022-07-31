@@ -1,8 +1,11 @@
 #Albania
 
-graphical_culture = latingfx #easterngfx
+graphical_culture = easterngfx
 
-color = { 181  0  20 }
+# color = { 181  0  20 }
+color = { 149 45 102 }
+
+revolutionary_colors = { 4 1 4 }
 
 historical_idea_groups = {
 	religious_ideas

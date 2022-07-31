@@ -39,9 +39,11 @@ estate_nobles_command_of_the_military_aristocratic = {
 	max_absolutism = -5
 	influence = 0.15
 	is_valid = {
+		always = no
 	}
 	can_select = {
-		has_idea = local_nobility
+		#has_idea = local_nobility
+		always = no
 	}
 	on_granted = {
 		#custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed
@@ -62,9 +64,11 @@ estate_nobles_command_of_the_admiralty_plutocratic = {
 	max_absolutism = -5
 	influence = 0.15
 	is_valid = {
+		always = no
 	}
 	can_select = {
-		has_idea = free_merchants
+		#has_idea = local_nobility
+		always = no
 	}
 	on_granted = {
 		#custom_tooltip = estate_nobles_command_of_the_military_tt #### Removed

@@ -1,7 +1,7 @@
 #4181 - Higo
 
-owner = KKC
-controller = KKC
+owner = SMZ
+controller = SMZ
 culture = kyushuan
 religion = shinto
 capital = "Kumamoto"
@@ -11,6 +11,7 @@ base_tax = 2
 base_manpower = 3
 base_production = 3
 is_city = yes
+add_core = SMZ
 add_core = KKC
 discovered_by = chinese
   

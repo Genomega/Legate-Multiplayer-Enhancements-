@@ -32,6 +32,10 @@ monarchy = {
 				austrian_archduchy_reform
 				siamese_absolutism
 				confucian_bureaucracy				
+				negusa_nagast
+				solomonic_empire
+				musa_rule
+				mossi_federal_kingdom	
 				#Legate Additions
 				chinese_bandit_reform
 				timurid_regency_council
@@ -52,6 +56,12 @@ monarchy = {
 				ethiopian_government_reform	
 				danish_confirmation_monarchy
 				danish_elected_monarchy				
+				french_monarchy_reform
+				french_feudal_nobility_reform
+				the_crown_of_lothair_reform
+				county_in_the_lowlands_dutch
+				kingdom_in_the_lowlands_dutch
+				duchy_of_burgundy_reform				
 			}
 		}
 		hereditary_vs_nobility = {
@@ -72,7 +82,9 @@ monarchy = {
 				#Legate Additions
 				zhu_ineffective_government
 				danish_kingdom_hre
+				ottoman_devshrine_system_reform
 				#empowered_cossack_council_reform
+				jan_hus_teaching_spreading
 			}
 		}
 		bureaucracy = {
@@ -87,6 +99,10 @@ monarchy = {
 				fraternite_reform
 				examination_system_reform
 				corvee_reform
+				ottoman_provincial_government_system_reform
+				mos_patriarchy_reform
+				pol_ruthenian_elites_reform
+				swahili_colonial_ventures_reform
 			}
 		}
 		# military_specialization = {
@@ -206,6 +222,10 @@ monarchy = {
 		principality_legacy
 		tsardom_legacy
 		holy_state_legacy
+		negusa_nagast_legacy
+		solomonic_empire_legacy
+		musa_rule_legacy
+		mossi_federal_kingdom_legacy
 		#Legate Additions
 		chinese_bandit_legacy
 		timurid_regency_council_legacy
@@ -339,6 +359,7 @@ republic = {
 				trading_city
 				ambrosian_republic
 				veche_republic
+				great_veche_republic_new
 				american_republic
 				federal_republic
 				colonial_government
@@ -508,6 +529,7 @@ republic = {
 		dutch_republic
 		merchants_reform
 		veche_republic
+		great_veche_republic_new
 		federal_republic
 		free_city
 		trading_city
@@ -551,6 +573,16 @@ tribal = {
 		tribal_federation_legacy
 		steppe_horde_legacy
 		siberian_native_council
+		sacred_kingdom_legacy
+		tribal_confederacy_legacy
+		shaka_regime_legacy
+		matrilineal_system_legacy
+		feudal_tribe_legacy
+		great_man_legacy
+		####BEGIN 1356 CHANGES#####
+		tribal_federation_ilkhan
+		ilkhanate_government_tribal
+		#####END 1356 CHANGES#####		
 	}
 
 	reform_levels = {
@@ -566,8 +598,27 @@ tribal = {
 				stateless_society
 				polynesian_kingdom
 				polynesian_tribe
+				sacred_kingdom
+				tribal_confederacy
+				shaka_regime
+				matrilineal_system
+				feudal_tribe
+				great_man
+				####BEGIN 1356 CHANGES#####
+				tribal_federation_ilkhan_reform
+				ilkhanate_government_tribal_reform
+				#tribal_republic_gov #Its legacy uses Tribal Democracy
+				#####END 1356 CHANGES#####				
 			}
 		}
+		tribal_1356_inheritance = {
+			reforms = {
+				subvert_rival_clans_reform_tribes
+				mongolic_succession_reforms_tribes
+				tribal_rule_by_might_reform
+				tribal_hereditary_succession
+			}		
+		}		
 		tribal_cultural_values = {
 			reforms = {
 				martial_society_reform
@@ -580,6 +631,14 @@ tribal = {
 				lip_service_reform
 			}
 		}
+		tribal_winds_of_change = {
+			reforms = {
+				formalize_noble_caste_tribal
+				formalize_clergical_caste_tribal
+				grow_trade_relations_tribal
+				fortify_structure_of_the_tribe_tribal
+			}			
+		}			
 		# military_specialization_tribal = {
 			# reforms = {
 				# professional_army_reform_tribal 
@@ -638,6 +697,9 @@ tribal = {
 				tribe_becomes_republic_reform
 				tribe_becomes_theocracy_reform
 				tribe_becomes_horde_reform
+				delegate_power_to_clan_leaders_tribal
+				tribe_remain_tribal_reform
+				tribe_tribal_unity
 			}
 		}
 	}
@@ -691,6 +753,7 @@ native = {
 				native_becomes_monarchy_reform
 				native_becomes_republic_reform
 				native_becomes_theocracy_reform
+				native_remain_being_native_reform
 			}
 		}
 	}

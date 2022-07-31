@@ -1,8 +1,10 @@
 #Country Name: Please see filename.
 
-graphical_culture = mongolgfx #muslimgfx
+graphical_culture = muslimgfx
 
-color = { 0 120 145 }
+# color = { 0 120 145 } # Used for Kazak now
+color = { 128  160  192 }
+revolutionary_colors = { 10 0 8 }
 
 historical_idea_groups = {
 	religious_ideas

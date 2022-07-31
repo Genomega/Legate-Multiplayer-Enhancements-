@@ -13,10 +13,6 @@ blessing_yasna = {
 	}
 	ai_will_do = {
 		factor = 10
-		modifier = {
-			factor = 0
-			NOT = { religion = zoroastrian }
-		}			
 	}
 }
 
@@ -36,10 +32,6 @@ blessing_haoma = {
 
 	ai_will_do = {
 		factor = 15
-		modifier = {
-			factor = 0
-			NOT = { religion = zoroastrian }
-		}		
 	}
 }
 
@@ -77,10 +69,6 @@ blessing_navjote = {
 				religious_unity = 0.5
 			}
 		}
-		modifier = {
-			factor = 0
-			NOT = { religion = zoroastrian }
-		}		
 	}
 }
 
@@ -108,10 +96,6 @@ blessing_manthras = {
 			factor = 3
 			governing_capacity_percentage = 1.0
 		}
-		modifier = {
-			factor = 0
-			NOT = { religion = zoroastrian }
-		}		
 	}
 }
 
@@ -132,9 +116,5 @@ blessing_dakhma = {
 	}
 	ai_will_do = {
 		factor = 10
-		modifier = {
-			factor = 0
-			NOT = { religion = zoroastrian }
-		}		
 	}
 }

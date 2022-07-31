@@ -48,65 +48,111 @@ country_decisions = {
 		ai_importance = 400
 	}
 	
-	diovorce_consort_anglicans = {
+	embrace_parsi_faith_ai = {
+		major = yes
 		potential = {
-			religion = anglican
-			has_consort = yes
-			government = monarchy
-		}	
-		allow = {
-			is_at_war = no
-			prestige = 25
-			legitimacy = 80
-			NOT = { has_country_modifier = "divorced_consort_ang" }
-			NOT = { has_country_modifier = "married_local_noble_ang" }
-		}
-		effect = {
-			custom_tooltip = divorce_consort_tooltip
-			add_country_modifier = {
-				name = "divorced_consort_ang"
-				duration = 3650
+			ai = yes
+			#current_age = age_of_discovery
+			technology_group = indian
+			NOT = { religion = zoroastrian }
+			NOT = { has_country_flag = adopted_parsi_faith }
+			owns = 4430
+			4430 = {
+				religion = zoroastrian
 			}	
-			add_prestige = -10
-			hidden_effect = {
-				remove_consort = yes
-			}
-		}	
-		ai_will_do = {
-			factor = 0
 		}
-		ai_importance = 400
-	}
-
-	marry_consort_anglicans = {
-		potential = {
-			religion = anglican
-			has_consort = no
-			government = monarchy
-		}	
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4430
+			}
+		}		
 		allow = {
 			is_at_war = no
-			prestige = 25
-			NOT = { has_country_modifier = "married_local_noble_ang" }
-			NOT = { has_country_modifier = "divorced_consort_ang" }
+			is_year = 1465
+			4430 = {
+				religion = zoroastrian
+			}
+			stability = 1
+			prestige = 30
+			legitimacy = 80
 		}
 		effect = {
-			add_country_modifier = {
-				name = "married_local_noble_ang"
-				duration = 3650
-			}
-			add_prestige = -10
-			add_legitimacy = -20
-			define_consort = {
-				country_of_origin = ROOT
-				hide_skills = yes
-			}
-		}	
+			#add_stability = -2
+			#add_prestige = -50
+			#add_legitimacy = -50
+			change_religion = zoroastrian
+			add_government_reform = zoroastrian_indian_shahdom
+			set_country_flag = adopted_parsi_faith
+			set_consort_religion = zoroastrian
+			set_ruler_religion = zoroastrian
+			set_heir_religion = zoroastrian
+			country_event = { id = legate_religions.1 }
+		}
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		ai_importance = 400
 	}	
+	
+	# diovorce_consort_anglicans = {
+		# potential = {
+			# religion = anglican
+			# has_consort = yes
+			# government = monarchy
+		# }	
+		# allow = {
+			# is_at_war = no
+			# prestige = 25
+			# legitimacy = 80
+			# NOT = { has_country_modifier = "divorced_consort_ang" }
+			# NOT = { has_country_modifier = "married_local_noble_ang" }
+		# }
+		# effect = {
+			# custom_tooltip = divorce_consort_tooltip
+			# add_country_modifier = {
+				# name = "divorced_consort_ang"
+				# duration = 3650
+			# }	
+			# add_prestige = -10
+			# hidden_effect = {
+				# remove_consort = yes
+			# }
+		# }	
+		# ai_will_do = {
+			# factor = 0
+		# }
+		# ai_importance = 400
+	# }
+
+	# marry_consort_anglicans = {
+		# potential = {
+			# religion = anglican
+			# has_consort = no
+			# government = monarchy
+		# }	
+		# allow = {
+			# is_at_war = no
+			# prestige = 25
+			# NOT = { has_country_modifier = "married_local_noble_ang" }
+			# NOT = { has_country_modifier = "divorced_consort_ang" }
+		# }
+		# effect = {
+			# add_country_modifier = {
+				# name = "married_local_noble_ang"
+				# duration = 3650
+			# }
+			# add_prestige = -10
+			# add_legitimacy = -20
+			# define_consort = {
+				# country_of_origin = ROOT
+				# hide_skills = yes
+			# }
+		# }	
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }	
 	
 	end_the_estate_bankruptcy = {
 		major = yes

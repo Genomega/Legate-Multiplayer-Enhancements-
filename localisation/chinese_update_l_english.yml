@@ -118,7 +118,7 @@
  cmi_eastern_china: "Conquest of Eastern China"
  great_plains_buffalo: "Great Plains Buffalo"
  kachin_jade_deposits: "Kachin Jade Mine"
- desc_kachin_jade_deposits: "The region of Kachin in Burma is home to one of the world's largest Jade deposits"
+ desc_kachin_jade_deposits: "The region of Kachin in Burma is home to one of the world's largest Jade deposits."
  chinese_flavor.1.b.tt: "§TThis modifier will disappear when Protectorates break away from Ming in 1500§!"
  reward_depends_on_choice_in_event.tt: "§TReward depends on Event choice!§!" 
  if_after_1500_100_mil.tt: "§RIf after 1500, gain 100 Military Power and +1 Stability instead.§!"

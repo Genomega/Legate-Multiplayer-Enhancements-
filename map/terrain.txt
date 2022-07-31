@@ -38,7 +38,7 @@ categories =  {
 		defence = 1
 		movement_cost = 1.25
 		supply_limit = 2		
-		local_development_cost = 0.5
+		local_development_cost = 0.30
 		nation_designer_cost_multiplier = 0.75		
 		
 		terrain_override = {		
@@ -53,7 +53,7 @@ categories =  {
 		sound_type = plains
 
 		movement_cost = 1.10
-		local_development_cost = -0.05
+		local_development_cost = -0.025
 		supply_limit = 10
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1.05
@@ -122,6 +122,8 @@ categories =  {
 
 			67 4765 4769 4712 #Germany
 			5072 5083 5085 5086 5104 5105 5106 5107 5109 5115 5116 5123 # China Rework V2
+			
+			2775 2794 2774 2796 # Origins Update
 		}		
 	}
 	
@@ -134,7 +136,7 @@ categories =  {
 		movement_cost = 1.25
 		defence = 1
 		supply_limit = 4
-		local_development_cost = 0.2
+		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.9
 		
 		terrain_override = { 
@@ -151,6 +153,7 @@ categories =  {
 			1026 4187 #Japan
 			312 #Eastern Europe
 			5505 5502 5503 5501 5511 5510
+			5175 5181 5176 1109
 		}                                      
 	}
 	
@@ -163,7 +166,7 @@ categories =  {
 		movement_cost = 1.40
 		defence = 1
 		local_defensiveness = 0.1
-		local_development_cost = 0.25
+		local_development_cost = 0.20
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
 		
@@ -251,7 +254,7 @@ categories =  {
 			1765
 			
 			141
-			859 918 919 939 940 944 946 947 948 963 987 988 2560 2585 2586 2639
+			859 918 919 939 940 944 946 947 948 963 987 988 2560 2585 2586 2639 4619
 			
 			2750
 
@@ -304,7 +307,7 @@ categories =  {
 		movement_cost = 1.5
 		defence = 2
 		local_defensiveness = 0.25
-		local_development_cost = 0.35
+		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.75
 		supply_limit = 4
 		
@@ -345,7 +348,7 @@ categories =  {
 			2103 1048 2104 2105 729 2186 1850 2107 2108 2111 2112 222 223
 			732 734 2743 4232 #Korea
 			4131 #Japan
-			1109 #New Zeeland
+			#New Zeeland
 			1273 #Mount Kilimanjaro
 			4128 #Carpathians
 			20 22 #Norway
@@ -364,6 +367,7 @@ categories =  {
 			4750 4754
 			
 			5082 5087 5103 # China V2
+			
 		}
 	}
 
@@ -435,6 +439,8 @@ categories =  {
 			1858 4760 #Germany
 			
 			5076 5084 # China V2
+			5182 5183 5185
+			5187 5186 5184
 		}
 	}
 
@@ -446,7 +452,7 @@ categories =  {
 
 		movement_cost = 1.5
 		defence = 1
-		local_development_cost = 0.35
+		local_development_cost = 0.30
 		nation_designer_cost_multiplier = 0.8
 		supply_limit = 5
 		
@@ -475,6 +481,7 @@ categories =  {
 			2731 2732 #Australia
 			4021 4024 4025 4026 #Madagascar
 			4090 4105 4109 #Central Africa
+			5168 5169 5174
 		}
 	}	
 	
@@ -508,6 +515,7 @@ categories =  {
 			362 #Egypt
 			2702 #Philippines
 			4706 # 1.30 Greece and Bulgaria
+			5163 5164
 		}
 	}
 	
@@ -519,7 +527,7 @@ categories =  {
 
 		movement_cost = 1.05
 		supply_limit = 4
-		local_development_cost = 0.50
+		local_development_cost = 0.30
 		nation_designer_cost_multiplier = 0.8
 		
 		terrain_override = {
@@ -546,7 +554,7 @@ categories =  {
 		sound_type = desert
 
 		movement_cost = 1.0
-		local_development_cost = 0.35
+		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.9		
 		supply_limit = 4
 
@@ -569,7 +577,7 @@ categories =  {
 		sound_type = sea
 
 		movement_cost = 1.0
-		local_development_cost = 0.15
+		local_development_cost = 0.10
 		nation_designer_cost_multiplier = 0.85		
 		supply_limit = 6 
 		
@@ -580,7 +588,7 @@ categories =  {
 			487 492 497 498 499 500 501 502
 			982 
 			
-			788 1186 1192 1195 1196 1197 1198 1199 1200 1202 1203 1204 2796  
+			788 1186 1192 1195 1196 1197 1198 1199 1200 1202 1203 1204  
 			
 			938 2547 
 			368 1098 1095 1103 1102 1100 1101 1999 1998 2679 2678 
@@ -592,6 +600,7 @@ categories =  {
 			642 643 644 648 649 650 2713 2714 2716 2717 2718 2725 #Moluccas & Sulawesi
 			1015 4193 #Japan
 			387 4279 #Tihama al yemen
+			5162 5172 5188
 		}
 	}	
 	
@@ -691,7 +700,7 @@ categories =  {
 			4561 4566 4553 # new provinces 1.28
 			4669 4701 4699 4780 # 1.30 Greece and Bulgaria
 			5089 5090 5099 # China V2
-			
+			5179 5180 5178 5177
 		}
 	}
 
@@ -699,6 +708,7 @@ categories =  {
 		color = { 248 199 23  }
 
 		sound_type = plains
+		type = plains
 
 		supply_limit = 6
 		movement_cost = 1.00
@@ -718,7 +728,7 @@ categories =  {
 			
 			1114 1120 1122 1124 1136 1137 1143 1145 1150 1152 1154 1160 1161
 			2238 2240 2241 2248 2249 2252 2254 2253 2256 2267 2281 2285 2292 2293 2295
-			1167 1168 1190 1191 1193 1194 2774 2775 2794
+			1167 1168 1190 1191 1193 1194
 			913 929 1153 2266 2519 2597 2656 2886 2924 1187 1189
 			1088 2736 2726 2729 #Australia
 			1925 #Kenya
@@ -726,6 +736,7 @@ categories =  {
 			2948 4034 4035 4036 4037 4038 4039 4041 4042 4043 4044 4045 4047 4048 4058 4061 4062 4064 4065 4071 4074 4075 4076 4082 4083 4091
 			4092 4093 4094 4095 4096 4097 4099 4104 4105 4106 4107 4108 #Central Africa
 			4618 4619 #Mesoamerica 1.28
+			5166 5167 5170 5165
 			
 		}		
 	}

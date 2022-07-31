@@ -98,3 +98,45 @@ cb_chinese_unification_legate = {
 
 	war_goal = superiority_chinese_unification_legate
 }
+
+
+cb_independence_war_lowlands = { # Unique for Burgundy
+	independence = yes
+	ai_peace_desire = -25
+	
+	prerequisites = {
+		is_subject_other_than_tributary_trigger = yes
+		is_subject_of = FROM
+		NOT = { is_colonial_nation_of = FROM }
+		NOT = { has_country_flag = burgundy_during_imperial_incident }
+		OR = {
+			AND = {
+				NOT = { has_reform = daimyo }
+				NOT = {
+					AND = {
+						tag = SOO
+						OR = {
+							has_reform = pirate_republic_reform
+							has_reform = pirate_king_reform
+							has_reform = war_against_the_world_doctrine_reform
+							has_reform = black_market_consortium_reform
+						}
+					}
+				}
+				NOT = {
+					AND = {
+						has_country_flag = ikko_ikki_peasants_flag
+						OR = {
+							has_reform = leading_clergy_reform
+							has_reform = monastic_order_reform
+							has_reform = peasants_republic
+						}
+					}
+				}
+			}
+			NOT = { from = { has_reform = shogunate } }
+		}
+	}
+
+	war_goal = defend_capital_independence_lowlands
+}

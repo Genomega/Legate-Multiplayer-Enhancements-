@@ -2,6 +2,9 @@
  ## Events
  the_grand_campaign_name: "The Grand Campaign"
  
+ absolute_rule_legate: "Absolute Rule"
+
+ ## Events
  leg_danish_flavor.1.t: "The Worrying Succession of Christopher III"
  leg_danish_flavor.1.d: "The Rule of the Arch-King, while somewhat cemented in Denmark, is suffering in other parts of the Kalmar Union. Norwegians currently favor the deposed Eric VII Gryf, who continues to wage a Insurgency against use based in Gotland. In Sweden, power is coalescing around the Regent Karl Knutsson. Should the rule of the Arch-King come to an end before this matter is settled, the stability of the Kalmar Union will be in great jeopardy."
  leg_danish_flavor.1.a: "We must act on this quickly"
@@ -133,7 +136,7 @@
  coerce_bremen_dan_title: "§TCoerce Bremen into Vassalage§!"
  coerce_bremen_dan_desc: "With the Hanseatic League all but destroyed, we should exert our regained influence to subjugate the remaining Hanseatic cities into submission."  
  unite_the_two_kingdoms_norway_denmark_desc: "Denmark and Norway have always shared a special bond since the Riksradet of 1387. While the Swedish portion of the Kalmar Union has remained relatively unstabled in recent times, Norway has always kept a close relationship with Denmark. If we can secure undying loyalty of Norway, we can unite the Kingdoms under one banner."
- unite_the_two_kingdoms_norway_denmark_title: "§TUnite the Kingdoms of Denmark and Norway§!"
+ unite_the_two_kingdoms_norway_denmark_title: "Unite the Kingdoms of Denmark and Norway"
  
  ## Modifiers
  kent_coastal_fort: "Coastal Fortress of Kent"
@@ -270,5 +273,60 @@
  ab_incan_enlightenment: "Incan Enlightenment"
  ab_italian_unification: "Italian Unification"
  ab_hindustan_tolerance: "Hindustani Tolerant Society"
+
+ # FU Content
+ 
+ #Monument
+ fu_teatro_alla_scalla: "Teatro alla Scalla"
+ fu_vladislav_hall: "Vladislav Hall"
+ fu_hansehalle: "Hanseatic City Hall"
+ fu_la_scala: "La Scala"
+ fu_escola_de_marina: "Escola de Marina"
+ fu_kinkaku_ji: "Kinkaku Ji Temple"
+ fu_brandenburg_gate: "Brandenburg Gate"
+ fu_venetian_arsenal: "Arsenal of Venice"
+ fu_warsaw_palace: "Royal Castle of Warsaw"
+ fu_belgrade_fortress: "Belgrade Fortress" 
+ fu_arc_of_triumph: "Arc de Triomphe"
+ fu_black_stone: "Kaaba" 
+ #Monument Update May 2021#
+ fu_terracotta_army: "Terracotta Army"
+ fu_great_mosque_djenne: "Great Mosque of Djenne"
+ fu_colossus: "Colossus"
+ fu_pharos_alexandria: "Pharos of Alexandria"
+ fu_porcelain_tower: "Porcelain Tower"
+ fu_red_fort: "Red Fort" 
+ fu_globe_theatre: "Globe Theatre"
+ fu_duomo_di_firenze: "Cathedral of Florence"
+ fu_leaning_tower: "Leaning Tower" 
+ fu_theodosian_walls: "Theodosian Walls" 
+ fu_library_alexandria: "The Great Library" 
+ fu_kasbah_of_tunis: "Kasbah of Tunis" 
+ fu_winter_palace: "Winter Palace"
+ fu_blue_mosque: "Blue Mosque"  
+ fu_isfahan_city: "Isfahan City" 
+ fu_white_house: "White House"
+ fu_potala_palace: "Potala Palace" 
+ fu_walls_of_ragusa: "Walls of Dubrovnik" 
+ fu_foreign_quarters: "Foreign Quarters of Canton"
+ fu_lingyin_temple: "Lingyin Temple" 
+ fu_edinburgh_castle: "Edinburgh Castle"
+ fu_axum_obelisk: "Obelisk of Axum"
+ fu_amsterdam_stock_exchange: "Amsterdam Stock Exchange"
+ fu_university_vienna: "University of Vienna" 
+ fu_white_tower: "The White Tower" 
+ fu_ali_qapu: "Ali Qapu Palace"
+ fu_ishtar_gate: "Ishtar Gate"
+ fu_malbork_castle: "Malbork Castle"
+ fu_walls_benin: "Walls of Benin"
+ #
+ fu_brugge_dike: "Brugge Dike"
+ fu_gent_dike: "Gent Dike"
+ fu_antwerp_dike: "Antwerp Dike"
+ fu_zeeland_dike: "Zeeland Dike"
+ fu_den_haag_dike: "Den Haag Dike"
+ fu_amsterdam_dike: "Amsterdam Dike"
+ fu_admiralty_amsterdam: "Admiralty of Amsterdam" 
+ 
 
  

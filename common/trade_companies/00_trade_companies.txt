@@ -292,7 +292,6 @@ trade_company_moluccas = {
 	
 	provinces = {
 		646 2687 2688 2689 2690 2718 2724 1357 1245 647 645 2717 648 649 650 2725 2696 2695 635 633 634 643 2713 2714 642 2715 641 2716 632 627 2691 631 2693 629 2692 628 626 625 630 624 644 2723 4790 4791 4792 4793 4794 4797 4845 4798 4795 4796
-		2722 2721 1237 2720 2719 # eastern papua
 	}
 
 	# Generic
@@ -467,7 +466,6 @@ trade_company_english_channel = {
 	color = { 220 138 57 }
 	
 	provinces = {
-		167 168 1879 4385 #normandy_area
 		87 88 89 1743 #picardy_area
 		241 242 4366 4369 #wales_area
 		245 4367 4368 4785 #yorkshire_area
@@ -500,11 +498,11 @@ trade_company_bordeaux = {
 		169 170 171 172 4384 #brittany_area
 		194 198 4112 #guyenne_area
 		180 4111 4386 4387 #poitou_area
-		173 209 210 #basque_country
 		174 175 176 #pyrenees_area
 		177 178 4389 #loire_area
-		2989
 		4694 4697 4777 # new for 1.30
+		167 168 1879 4385 #normandy_area
+		173 # Labourd
 	}
 	
 	# Specific
@@ -524,6 +522,7 @@ trade_company_sevilla = {
 		206 207 208 1746 215 216 231 232 217 218 219 221 222 223 224 225 226 227 228 229 230 334 335 367 1745 1747 1748 1749 1751 1851 2754 2755 2751 4150 
 		4546 4547 4548 4551 4552 4553 4554 4555 4556 4558
 		4561 4563 368 366 4565 4787 4788 4789
+		209 210 2989 #basque_country
 	}
 	
 	# Specific
@@ -580,6 +579,8 @@ trade_company_valencia = {
 		211 214 2990 4557 #aragon_area
 		333 4559 4560 # Baleares
 		196 200 2753 4391 4695 #languedoc_area
+		201 202 2991 #provence_area
+		4696  # new for 1.30
 	}
 	
 	# Specific
@@ -627,8 +628,6 @@ trade_company_genua = {
 		101 102 2992 #liguria_area
 		103 1875 2981 #piedmont_area
 		127 1247 2986 #corsica_sardinia_area
-		201 202 2991 #provence_area
-		4696  # new for 1.30
 		4727 4735 4736 4737 # also new for 1.30, but this time it's in Italy
 		118 2976 4731 4732 # lazio-umbria
 		121 2983 4734 # campania
@@ -1369,11 +1368,10 @@ trade_company_polynesia = {
 	color = { 220 138 57 }
 	
 	provinces = {
-		1238 1242 1244 1989 1243
-		1990 1992 1240 1997
+		1244
 		1235 1995 1996 1241 1991 5124
-		1993 1994 1988 1986 1236
-		1987 1239 4938 4937 4934 4935 4936
+		1993 1994 1988
+		1987 4934 4935 4936
 	}
 	
 	# Specific

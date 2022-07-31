@@ -1,0 +1,9 @@
+colonial_control_provinces_taken = {
+	opinion = -20
+}
+colonial_control_provinces_left = {
+	opinion = 15
+}
+colonial_control_dispute_unsolved = {
+	opinion = -20
+}

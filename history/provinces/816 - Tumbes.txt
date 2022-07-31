@@ -1,7 +1,7 @@
 #816 - Tumbes
 
-owner = CHM
-controller = CHM
+#owner = #QTO
+#controller = #QTO
 culture = chimuan
 religion = inti
 capital = "Tumbes"
@@ -11,7 +11,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = CHM
+#add_core= #QTO
 
 
 

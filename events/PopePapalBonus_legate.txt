@@ -1,0 +1,53 @@
+namespace = pope_action_legate
+
+country_event = {
+	id = pope_action_legate.1
+	title = "pope_action_legate.1.t"
+	desc = "pope_action_legate.1.desc"
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "pope_action_legate.1.a" # Accept the Conventions
+		add_ruler_modifier = {
+			name = papal_sanction_for_church_taxes
+			duration = -1
+		}	
+	}
+	option = {
+		name = "pope_action_legate.1.b" # Refuse to sign it and defy the Magnates
+		add_ruler_modifier = {
+			name = papal_sanction_justified_crusade
+			duration = -1
+		}		
+	}
+	option = {
+		name = "pope_action_legate.1.c" # Accept the Conventions
+		add_ruler_modifier = {
+			name = papal_indulgence
+			duration = -1
+		}		
+	}
+	option = {
+		name = "pope_action_legate.1.d" # Refuse to sign it and defy the Magnates
+		add_ruler_modifier = {
+			name = usury_forgiven
+			duration = -1
+		}			
+	}
+	option = {
+		name = "pope_action_legate.1.e" # Accept the Conventions
+		add_ruler_modifier = {
+			name = papal_sanction_for_holy_war
+			duration = -1
+		}		
+	}
+	option = {
+		name = "pope_action_legate.1.f" # Refuse to sign it and defy the Magnates
+		add_ruler_modifier = {
+			name = papal_legate
+			duration = -1
+		}				
+	}	
+}

@@ -27,12 +27,12 @@ alliance = { # A Few Alliances to Encourage Choice
 	end_date = 1450.12.31
 }
 
-alliance = { # A Few Alliances to Encourage Choice
-	first = HUA
-	second = X14 #Gulin Bandit Clan
-	start_date = 1444.1.1
-	end_date = 1450.12.31
-}
+#alliance = { # A Few Alliances to Encourage Choice
+#	first = HUA
+#	second = X14 #Gulin Bandit Clan
+#	start_date = 1444.1.1
+#	end_date = 1450.12.31
+#}
 
 # union = {
 	# first = X32
@@ -42,73 +42,66 @@ alliance = { # A Few Alliances to Encourage Choice
 # }
 
 #Bandit Queen Vassal
-vassal = {
-	first = JIN
-	second = X01
-	start_date = 1444.11.1
-	end_date = 1672.12.31
-}
+#vassal = {
+#	first = JIN
+#	second = X01
+#	start_date = 1444.11.1
+#	end_date = 1672.12.31
+#}
 
 #Bandit Queen Vassal
-vassal = {
-	first = JIN
-	second = X02
-	start_date = 1444.11.1
-	end_date = 1645.6.30
-}
+#vassal = {
+#	first = JIN
+#	second = X02
+#	start_date = 1444.11.1
+#	end_date = 1645.6.30
+#}
 
 #Miao Vassal
-vassal = {
-	first = CMI
-	second = X11
-	start_date = 1444.11.1
-	end_date = 1645.6.30
-}
+#vassal = {
+#	first = CMI
+#	second = X11
+#	start_date = 1444.11.1
+#	end_date = 1645.6.30
+#}
 
-# Kashmir Alliance for Timurid Defense
-alliance = {
-	first = KSH
-	second = LDK
-	start_date = 1444.1.1
-	end_date = 1453.12.31
-}
 
 
 # Liou Dawei Purple Turbans
 
-dependency = {
-	subject_type = "turban_military_commission"
-	first = X23
-	second = X17
-	start_date = 1444.11.1
-	end_date = 1645.6.30
-}
+#dependency = {
+#	subject_type = "turban_military_commission"
+#	first = X23
+#	second = X17
+#	start_date = 1444.11.1
+#	end_date = 1645.6.30
+#}
 
-dependency = {
-	subject_type = "turban_military_commission"
-	first = X23
-	second = X20
-	start_date = 1444.11.1
-	end_date = 1645.6.30
-}
+#dependency = {
+#	subject_type = "turban_military_commission"
+#	first = X23
+#	second = X20
+#	start_date = 1444.11.1
+#	end_date = 1645.6.30
+#}
 
-dependency = {
-	subject_type = "turban_military_commission"
-	first = X23
-	second = X18
-	start_date = 1444.11.1
-	end_date = 1645.6.30
-}
+#dependency = {
+#	subject_type = "turban_military_commission"
+#	first = X23
+#	second = X18
+#	start_date = 1444.11.1
+#	end_date = 1645.6.30
+#}
 
 #Vanilla 1444 hold overs
 
 # Chinese alliance
-alliance = {
-	first = CSH
-	second = CXI
-	start_date = 1643.1.1
-	end_date = 1645.12.31
-}
+#alliance = {
+#	first = CSH
+#	second = CXI
+#	start_date = 1643.1.1
+#	end_date = 1645.12.31
+#}
 
 alliance = {
 	first = CZH
@@ -294,13 +287,13 @@ dependency = {
 	end_date = 1511.9.10
 }
 
-dependency = {
-	subject_type = "tributary_state"
-	first = YAN
-	second = PGS
-	start_date = 1444.1.1
-	end_date = 1521.1.1
-}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YAN
+#	second = PGS
+#	start_date = 1444.1.1
+#	end_date = 1521.1.1
+#}
 
 dependency = {
 	subject_type = "tributary_state"
@@ -339,13 +332,13 @@ dependency = {
 	end_date = 1618.1.1
 }
 
-dependency = {
-	subject_type = "tributary_state"
-	first = YAN
-	second = EJZ
-	start_date = 1444.1.1
-	end_date = 1618.1.1
-}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YAN
+#	second = EJZ
+#	start_date = 1444.1.1
+#	end_date = 1618.1.1
+#}
 
 dependency = {
 	subject_type = "tributary_state"
@@ -374,34 +367,26 @@ dependency = {
 dependency = {
 	subject_type = "tributary_state"
 	first = YAN
-	second = NVK
-	start_date = 1444.1.1
-	end_date = 1618.1.1
-}
-
-dependency = {
-	subject_type = "tributary_state"
-	first = YAN
 	second = MGD
 	start_date = 1444.1.1
 	end_date = 1618.1.1
 }
 
-dependency = {
-	subject_type = "tributary_state"
-	first = YAN
-	second = CEB
-	start_date = 1444.1.1
-	end_date = 1618.1.1
-}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YAN
+#	second = CEB
+#	start_date = 1444.1.1
+#	end_date = 1618.1.1
+#}
 
-dependency = {
-	subject_type = "tributary_state"
-	first = YAN
-	second = BTU
-	start_date = 1444.1.1
-	end_date = 1618.1.1
-}
+#dependency = {
+#	subject_type = "tributary_state"
+#	first = YAN
+#	second = BTU
+#	start_date = 1444.1.1
+#	end_date = 1618.1.1
+#}
 
 dependency = {
 	subject_type = "tributary_state"

@@ -1,8 +1,11 @@
 #1824 - Wenzhou
 
-owner = X19
-controller = X19
-add_core = X19
+# owner = X19
+# controller = X19
+# add_core = X19
+owner = X23
+controller = X23
+add_core = X23
 culture = wu
 religion = confucianism
 capital = "Wenzhou"
@@ -15,7 +18,17 @@ is_city = yes
 
 discovered_by = chinese
 discovered_by = nomad_group
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
 
+1444.11.12 = {
+	owner = X23
+	controller = X23
+	add_core = X23
+}
 
 1519.1.1 = { discovered_by = POR } # Tome Pires
 1646.8.28 = {

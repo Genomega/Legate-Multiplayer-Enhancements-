@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = french_feudal_nobility_reform
 primary_culture = cosmopolitan_french
 add_accepted_culture = gascon
 add_accepted_culture = occitain
@@ -144,6 +144,13 @@ change_estate_land_share = {
 
 1444.10.1 = {
 	set_estate_privilege = estate_nobles_french_strong_duchies
+	add_manpower = 10
+	add_army_tradition = 35	
+	add_casus_belli = {
+		type = cb_vassalize_mission
+		months = 300
+		target = BRI
+	}	
 }
 
 1455.1.1 = { add_army_professionalism = 0.1 }

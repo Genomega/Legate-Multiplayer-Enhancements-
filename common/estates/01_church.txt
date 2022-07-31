@@ -32,7 +32,18 @@ estate_church =
 			NOT = { tag = USA }
 			government = theocracy
 		}
-		is_nomad = no
+		#is_nomad = no
+		if = {
+			limit = {
+				OR = {
+					has_reform = steppe_horde
+					has_reform = mountain_khanate_chagatai
+					has_reform = golden_horde_khanate
+					has_reform = great_mongol_state_reform
+				}
+			}
+			has_reform = formalize_clergical_caste_tribal
+		}		
 		is_colonial_nation = no
 		NOT = { has_reform = revolutionary_empire_reform }
 	}
@@ -42,21 +53,37 @@ estate_church =
 		global_tax_modifier = 0.2
 		papal_influence = 1
 		devotion = 0.5
-		church_power_modifier = 0.1
+		church_power_modifier = 0.2
 		monthly_fervor_increase = 1
-		stability_cost_modifier = -0.1
+		#stability_cost_modifier = -0.1
+		build_time = -0.15
+		monthly_piety_accelerator = 0.002
+		yearly_karma_decay = 0.35
+		yearly_patriarch_authority = 0.08
+		yearly_harmony = 0.5
 	}
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2
+		monthly_piety_accelerator = 0.002
+		yearly_karma_decay = 0.2
+		yearly_patriarch_authority = 0.005
+		yearly_harmony = 0.25		
+		church_power_modifier = 0.1
+		monthly_fervor_increase = 0.5
+		monthly_piety_accelerator = 0.001
+		papal_influence = 0.5		
 	}	
 	country_modifier_angry = {
-		global_tax_modifier = -0.1
-		papal_influence = -1
+		global_tax_modifier = -0.2
+		papal_influence = -2
 		devotion = -0.5
 		church_power_modifier = -0.25
 		monthly_fervor_increase = -1
-		stability_cost_modifier = 0.1
+		#stability_cost_modifier = 0.1
 		global_unrest = 2
+		build_time = 0.20
+		yearly_patriarch_authority = -0.005
+		yearly_harmony = -0.5
 	}
 
 	land_ownership_modifier = {
@@ -154,6 +181,19 @@ estate_church =
 	}
 	
 	custom_name = {
+		desc = estate_ogboni
+		trigger = {
+			tag = OYO
+		}
+	}
+	custom_name = {
+		desc = estate_tengbiise
+		trigger = {
+			primary_culture = mossi
+			religion = shamanism
+		}
+	}
+	custom_name = {
 		desc = estate_monasteries
 		trigger = {
 			OR = {
@@ -173,6 +213,78 @@ estate_church =
 		desc = estate_brahmins
 		trigger = {
 			religion = hinduism
+		}
+	}
+	custom_name = {
+		desc = estate_pastors
+		trigger = {
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_popes
+		trigger = {
+			AND = {
+				religion = orthodox
+				OR = {
+					culture_group = east_slavic
+					culture_group = south_slavic
+					culture_group = west_slavic
+				}
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_shamans
+		trigger = {
+			OR = {
+				religion = tengri_pagan_reformed
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_gurus
+		trigger = {
+			religion = sikhism
+		}
+	}
+	custom_name = {
+		desc = estate_medicine_men
+		trigger = {
+			religion = totemism
+		}
+	}
+	custom_name = {
+		desc = estate_godar
+		trigger = {
+			religion = norse_pagan_reformed
+		}
+	}
+	custom_name = {
+		desc = estate_rabbis
+		trigger = {
+			religion = jewish
+		}
+	}
+	custom_name = {
+		desc = estate_mobeds
+			trigger = {
+				religion = zoroastrian
+			}
+	}
+	custom_name = {
+		desc = estate_kannushi
+			trigger = {
+				religion = shinto
+			}
+	}
+	custom_name = {
+		desc = estate_panacas
+		trigger = {
+			religion = inti
 		}
 	}
 	custom_name = {
@@ -268,6 +380,14 @@ estate_church =
 		estate_church_monopoly_of_wine
 		estate_church_monopoly_of_slaves
 		estate_church_statutory_rights
+		estate_church_yakobs_churches
+		estate_church_one_faith_one_culture
+		estate_church_religious_diplomats
+		estate_church_heir_shrine
+		estate_church_embrace_singluar_cult
+		estate_church_flexible_cults
+		estate_church_scholar_connections
+		estate_church_integrated_school
 	}
 
 	agendas = {

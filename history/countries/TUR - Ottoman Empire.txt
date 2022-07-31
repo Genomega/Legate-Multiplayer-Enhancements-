@@ -12,8 +12,7 @@ historical_rival = CND
 historical_rival = KAR
 historical_rival = DUL
 capital = 149 # Edirne
-national_focus = MIL
-add_army_professionalism = 0.1
+national_focus = DIP
 religious_school = hanafi_school
 
 change_estate_land_share = {
@@ -49,14 +48,19 @@ change_estate_land_share = {
 		birth_date = 1432.3.30
 		adm = 6
 		dip = 4
-		mil = 6
+		mil = 5
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = conqueror_personality
-	add_ruler_personality = well_connected_personality
-	add_ruler_personality = martial_educator_personality
+	add_ruler_personality = tolerant_personality
+	add_ruler_personality = lawgiver_personality
 	#add_ruler_personality = lawgiver_personality
 	add_piety = -0.2
+	add_adm_power = -40
+	add_mil_power = -40
+	add_dip_power = -40
+	add_prestige = 10
+	add_treasury = 100
 }
 
 1446.1.1 = {

@@ -34,24 +34,24 @@ alliance = {
 }
 
 #Anti Uesugi Alliance
-alliance = {
-	first = STK
-	second = UTN
-	start_date = 1444.1.1
-	end_date = 1483.1.6
-}
+#alliance = {
+#	first = STK
+#	second = UTN
+#	start_date = 1444.1.1
+#	end_date = 1483.1.6
+#}
 alliance = {
 	first = STK
 	second = CBA
 	start_date = 1444.1.1
 	end_date = 1483.1.6
 }
-alliance = {
-	first = UTN
-	second = CBA
-	start_date = 1444.1.1
-	end_date = 1483.1.6
-}
+#alliance = {
+#	first = UTN
+#	second = CBA
+#	start_date = 1444.1.1
+#	end_date = 1483.1.6
+#}
 
 #Hosokawa-Tokugawa
 alliance = {
@@ -153,12 +153,12 @@ vassal = {
 	end_date = 1573.7.1 #Annexed
 }
 
-vassal = {
-	first = ASK
-	second = CSK
-	start_date = 1444.11.11
-	end_date = 1573.7.3
-}
+#vassal = {
+#	first = ASK
+#	second = CSK
+#	start_date = 1444.11.11
+#	end_date = 1573.7.3
+#}
 
 vassal = {
 	first = ASK
@@ -293,12 +293,12 @@ vassal = {
 	end_date = 1573.7.3
 }
 
-vassal = {
-	first = ASK
-	second = AKT
-	start_date = 1444.11.11
-	end_date = 1573.7.3
-}
+#vassal = {
+#	first = ASK
+#	second = AKT
+#	start_date = 1444.11.11
+#	end_date = 1573.7.3
+#}
 
 vassal = {
 	first = ASK
@@ -307,26 +307,26 @@ vassal = {
 	end_date = 1573.7.3
 }
 
-vassal = {
-	first = ASK
-	second = ISK
-	start_date = 1444.11.11
-	end_date = 1573.7.3
-}
+#vassal = {
+#	first = ASK
+#	second = ISK
+#	start_date = 1444.11.11
+#	end_date = 1573.7.3
+#}
 
-vassal = {
-	first = ASK
-	second = ITO
-	start_date = 1444.11.11
-	end_date = 1573.7.3
-}
+#vassal = {
+#	first = ASK
+#	second = ITO
+#	start_date = 1444.11.11
+#	end_date = 1573.7.3
+#}
 
-vassal = {
-	first = ASK
-	second = KKC
-	start_date = 1444.11.11
-	end_date = 1554.1.1 #Annexed
-}
+#vassal = {
+#	first = ASK
+#	second = KKC
+#	start_date = 1444.11.11
+#	end_date = 1554.1.1 #Annexed
+#}
 
 vassal = {
 	first = ASK
@@ -363,12 +363,12 @@ vassal = {
 	end_date = 1567.10.1 #Annexed
 }
 
-vassal = {
-	first = ASK
-	second = UTN
-	start_date = 1444.11.11
-	end_date = 1573.7.3
-}
+#vassal = {
+#	first = ASK
+#	second = UTN
+#	start_date = 1444.11.11
+#	end_date = 1573.7.3
+#}
 
 vassal = {
 	first = ASK
@@ -387,12 +387,12 @@ vassal = { #So
 	end_date = 1600.10.21
 }
 
-vassal = {
-	first = ODA
-	second = CSK
-	start_date = 1573.7.3
-	end_date = 1600.10.21 #Annexed
-}
+#vassal = {
+#	first = ODA
+#	second = CSK
+#	start_date = 1573.7.3
+#	end_date = 1600.10.21 #Annexed
+#}
 
 vassal = {
 	first = ODA
@@ -534,26 +534,26 @@ vassal = {
 	end_date = 1585.1.1 #Annexed
 }
 
-vassal = {
-	first = ODA
-	second = ISK
-	start_date = 1573.7.3
-	end_date = 1600.10.21
-}
+#vassal = {
+#	first = ODA
+#	second = ISK
+#	start_date = 1573.7.3
+#	end_date = 1600.10.21
+#}
 
-vassal = {
-	first = ODA
-	second = ITO
-	start_date = 1573.7.3
-	end_date = 1600.10.21
-}
+#vassal = {
+#	first = ODA
+#	second = ITO
+#	start_date = 1573.7.3
+#	end_date = 1600.10.21
+#}
 
-vassal = {
-	first = ODA
-	second = KKC
-	start_date = 1573.7.3
-	end_date = 1600.10.21
-}
+#vassal = {
+#	first = ODA
+#	second = KKC
+#	start_date = 1573.7.3
+#	end_date = 1600.10.21
+#}
 
 vassal = {
 	first = ODA

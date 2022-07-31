@@ -1,21 +1,21 @@
-name = "Zhang Lin Annexation of the Western Great Wall" 
-war_goal = {
-	type = take_capital_conquest
-	casus_belli = cb_chinese_unification
-	tag = X05
-	province = 698
-}
+# name = "Zhang Lin Annexation of the Western Great Wall" 
+# war_goal = {
+	# type = take_capital_conquest
+	# casus_belli = cb_chinese_unification
+	# tag = X05
+	# province = 698
+# }
 
-1444.1.1 = {
-	add_attacker = JIN
-	add_attacker = X01
-	add_attacker = X02
-	add_defender = X05
-}
+# 1444.1.1 = {
+	# add_attacker = JIN
+	# add_attacker = X01
+	# add_attacker = X02
+	# add_defender = X05
+# }
 
-1446.11.12 = { 
-	rem_attacker = JIN
-	rem_attacker = X01
-	rem_attacker = X02
-	rem_defender = X05
-}
+# 1446.11.12 = { 
+	# rem_attacker = JIN
+	# rem_attacker = X01
+	# rem_attacker = X02
+	# rem_defender = X05
+# }

@@ -1,8 +1,8 @@
 #853 - Huastec
 
-owner = AZT
-controller = AZT
-add_core = AZT
+#owner= #AZT
+#controller = #AZT
+#add_core = #AZT
 culture = aztek 
 religion = nahuatl
 capital = "Tlapacoyan"

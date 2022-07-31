@@ -5,7 +5,7 @@ united_cantons_reform = {
 		governing_capacity = -50
 		free_policy = 1
 		mercenary_manpower = 0.5
-		max_absolutism = -30
+		max_absolutism = 10
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -52,9 +52,6 @@ parliamentary_reform = {
 			limit = { has_dlc = "Res Publica" }
 			NOT = { has_reform = elective_monarchy }
 		}
-		else = {
-			has_reform = parliamentary_reform
-		}
 		if = {
 			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
 			NOT = { has_reform = celestial_empire }
@@ -66,6 +63,7 @@ parliamentary_reform = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
 		custom_attributes = {
+			disables_nobility = yes
 			blocked_call_diet = yes
 		}
 	}
@@ -109,7 +107,7 @@ permanent_marathas_council_reform = {
 		technology_group = indian
 	}
 	modifiers = {
-		infantry_cost = -0.1
+		leader_land_shock = 1
 		maratha_influence_modifier = 0.1
 		maratha_loyalty_modifier = 0.05
 		nobles_influence_modifier = -0.1
@@ -138,7 +136,7 @@ governmental_purbias_register_reform = {
 		technology_group = indian
 	}
 	modifiers = {
-		army_tradition_decay = -0.003
+		recover_army_morale_speed = 0.05
 		rajput_influence_modifier = 0.1
 		rajput_loyalty_modifier = 0.05
 		nobles_influence_modifier = -0.1
@@ -203,8 +201,8 @@ council_of_the_indies_reform = {
 		}
 	}
 	modifiers = {
-		global_tariffs = 0.2
-		treasure_fleet_income = 0.1
+		global_tariffs = 0.25
+		global_colonial_growth = 10
 	}
 	ai = {
 		factor = 2
@@ -229,11 +227,48 @@ penal_colonies_reform = {
 	}
 	trigger = {
 		num_of_colonists = 1
-		num_of_continents = 2
+		#num_of_continents = 2
 	}
 	modifiers = {
-		expel_minorities_cost = -1
+		expel_minorities_cost = -0.25
 	}
+	custom_attributes = {
+		explusion_of_minorities_yields_benefits = yes
+	}		
+	effect = {
+		#custom_tooltip = explusion_of_minorities_yields_benefits.tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						has_province_modifier = explusion_of_minorities
+					}
+					add_province_modifier = { 
+						name = explusion_of_minorities_reform_bonus
+						duration = 3650
+						hidden = no
+					}
+					add_province_modifier = { 
+						name = explusion_of_minorities_reform_bonus_cooldown
+						duration = 9125
+						hidden = no
+					}					
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = explusion_of_minorities
+					}
+				}
+				remove_province_modifier = explusion_of_minorities_reform_bonus
+			}
+		}
+	}	
 	ai = {
 		factor = 0.1
 	}

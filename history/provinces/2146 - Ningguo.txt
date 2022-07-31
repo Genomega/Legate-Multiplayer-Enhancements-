@@ -1,8 +1,12 @@
 # 2144 - Ningguo
 
-owner = X17
-controller = X17
-add_core = X17
+# owner = X17
+# controller = X17
+# add_core = X17
+
+owner = X23
+controller = X23
+add_core = X23
 culture = wu
 religion = confucianism
 capital = "Ningguo"
@@ -14,6 +18,18 @@ base_manpower = 3
 is_city = yes
 discovered_by = chinese
 discovered_by = nomad_group
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X23
+	controller = X23
+	add_core = X23
+}
 
 1595.1.1 = { discovered_by = SPA }
 

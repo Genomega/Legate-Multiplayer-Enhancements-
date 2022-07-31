@@ -1,7 +1,7 @@
 #352 - Gafsa
 
-owner = GHD
-controller = GHD 
+owner = MZB
+controller = MZB 
 culture = tunisian
 religion = sunni
 capital = "Gafsa"
@@ -9,9 +9,9 @@ trade_goods = salt
 hre = no
 base_tax = 2 
 base_production = 2
-base_manpower = 1
+base_manpower = 3
 is_city = yes
-add_core = GHD
+add_core = MZB
 
 
 

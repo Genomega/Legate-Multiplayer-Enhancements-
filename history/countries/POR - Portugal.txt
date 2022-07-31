@@ -6,7 +6,6 @@ technology_group = western
 historical_friend = SPA
 historical_friend = CAS
 capital = 227 # Lisboa
-add_army_professionalism = 0.05
 national_focus = DIP
 
 
@@ -53,9 +52,9 @@ national_focus = DIP
 		name = "Duarte"
 		dynasty = "de Avis"
 		birth_date = 1391.10.31
-		adm = 1
+		adm = 3
 		dip = 3
-		mil = 0
+		mil = 3
 	}
 }
 
@@ -66,10 +65,10 @@ national_focus = DIP
 		dynasty = "de Avis"
 		birth_date = 1432.1.15
 		death_date = 1481.8.28
-		claim = 95
-		adm = 3
+		claim = 60
+		adm = 4
 		dip = 3
-		mil = 2
+		mil = 1
 	}	
 }
 
@@ -86,8 +85,8 @@ national_focus = DIP
 		birth_date = 1392.1.1
 		regent = yes
 		adm = 4
-		dip = 2
-		mil = 1
+		dip = 3
+		mil = 3
 	}
 }
 
@@ -101,7 +100,7 @@ national_focus = DIP
 		claim = 95
 		adm = 3
 		dip = 3
-		mil = 2
+		mil = 1
 		leader = {	name = "Afonso V"	type = general	fire = 3	shock = 2	manuever = 3	siege = 1 }
 	}
 	clear_scripted_personalities = yes

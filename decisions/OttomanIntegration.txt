@@ -1,216 +1,216 @@
-country_decisions = {
+#country_decisions = {
 
-	reintegrate_karaman = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-		    tag = TUR
-			is_colonial_nation = no
-			NOT = { owns_core_province = 4307 }
-			NOT = { owns_core_province = 2301 }
-			NOT = { owns_core_province = 324 }
-			NOT = { owns_core_province = 323 }
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 4307		
-				province_id = 2301
-				province_id = 324	
-				province_id = 323	
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			is_tribal = no
-		    4307 = {
-				owned_by = ROOT
-			}	
-			2301 = {
-				owned_by = ROOT
-			}	
-			324	= {	
-				owned_by = ROOT
-			}	
-			323	= {	
-				owned_by = ROOT
-			}	
-		}
-		effect = {
-			4307 = {
-				add_core = ROOT
-			}
-			2301 = {
-				add_core = ROOT
-			}
-			324 = {
-				add_core = ROOT
-			}
-			323 = {
-				add_core = ROOT
-			}			
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
+	# reintegrate_karaman = {
+		# major = yes
+		# potential = {
+			# normal_or_historical_nations = yes
+		    # tag = TUR
+			# is_colonial_nation = no
+			# NOT = { owns_core_province = 4307 }
+			# NOT = { owns_core_province = 2301 }
+			# NOT = { owns_core_province = 324 }
+			# NOT = { owns_core_province = 323 }
+		# }
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 4307		
+				# province_id = 2301
+				# province_id = 324	
+				# province_id = 323	
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
+		# }
+		# allow = {
+			# is_free_or_tributary_trigger = yes
+			# is_nomad = no
+			# is_at_war = no
+			# is_tribal = no
+		    # 4307 = {
+				# owned_by = ROOT
+			# }	
+			# 2301 = {
+				# owned_by = ROOT
+			# }	
+			# 324	= {	
+				# owned_by = ROOT
+			# }	
+			# 323	= {	
+				# owned_by = ROOT
+			# }	
+		# }
+		# effect = {
+			# 4307 = {
+				# add_core = ROOT
+			# }
+			# 2301 = {
+				# add_core = ROOT
+			# }
+			# 324 = {
+				# add_core = ROOT
+			# }
+			# 323 = {
+				# add_core = ROOT
+			# }			
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }
 	
-	reintegrate_cukurova = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-		    tag = TUR
-			is_colonial_nation = no
-			NOT = { owns_core_province = 327 }
-			NOT = { owns_core_province = 2302 }
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 327		
-				province_id = 2302	
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			is_tribal = no
-		    327 = {
-				owned_by = ROOT
-			}	
-			2302 = {
-				owned_by = ROOT
-			}	
-		}
-		effect = {
-			327 = {
-				add_core = ROOT
-			}
-			2302 = {
-				add_core = ROOT
-			}			
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
+	# reintegrate_cukurova = {
+		# major = yes
+		# potential = {
+			# normal_or_historical_nations = yes
+		    # tag = TUR
+			# is_colonial_nation = no
+			# NOT = { owns_core_province = 327 }
+			# NOT = { owns_core_province = 2302 }
+		# }
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 327		
+				# province_id = 2302	
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
+		# }
+		# allow = {
+			# is_free_or_tributary_trigger = yes
+			# is_nomad = no
+			# is_at_war = no
+			# is_tribal = no
+		    # 327 = {
+				# owned_by = ROOT
+			# }	
+			# 2302 = {
+				# owned_by = ROOT
+			# }	
+		# }
+		# effect = {
+			# 327 = {
+				# add_core = ROOT
+			# }
+			# 2302 = {
+				# add_core = ROOT
+			# }			
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }
 	
-	reintegrate_candar = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-		    tag = TUR
-			is_colonial_nation = no
-			NOT = { owns_core_province = 325 }
-			NOT = { owns_core_province = 328 }
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 325		
-				province_id = 328	
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			is_tribal = no
-		    325 = {
-				owned_by = ROOT
-			}	
-			328 = {
-				owned_by = ROOT
-			}	
-		}
-		effect = {
-			325 = {
-				add_core = ROOT
-			}
-			328 = {
-				add_core = ROOT
-			}			
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
+	# reintegrate_candar = {
+		# major = yes
+		# potential = {
+			# normal_or_historical_nations = yes
+		    # tag = TUR
+			# is_colonial_nation = no
+			# NOT = { owns_core_province = 325 }
+			# NOT = { owns_core_province = 328 }
+		# }
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 325		
+				# province_id = 328	
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
+		# }
+		# allow = {
+			# is_free_or_tributary_trigger = yes
+			# is_nomad = no
+			# is_at_war = no
+			# is_tribal = no
+		    # 325 = {
+				# owned_by = ROOT
+			# }	
+			# 328 = {
+				# owned_by = ROOT
+			# }	
+		# }
+		# effect = {
+			# 325 = {
+				# add_core = ROOT
+			# }
+			# 328 = {
+				# add_core = ROOT
+			# }			
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }
 	
 
-	reintegrate_dulkadir = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-		    tag = TUR
-			is_colonial_nation = no
-			NOT = { owns_core_province = 332 }
-			NOT = { owns_core_province = 2303 }
-			NOT = { owns_core_province = 4310 }
-			NOT = { owns_core_province = 4298 }
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 332		
-				province_id = 2303
-				province_id = 4310		
-				province_id = 4298					
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			is_tribal = no
-		    332 = {
-				owned_by = ROOT
-			}	
-			2303 = {
-				owned_by = ROOT
-			}
-		    4310 = {
-				owned_by = ROOT
-			}	
-			4298 = {
-				owned_by = ROOT
-			}			
-		}
-		effect = {
-			332 = {
-				add_core = ROOT
-			}
-			2303 = {
-				add_core = ROOT
-			}
-			4310 = {
-				add_core = ROOT
-			}
-			4298 = {
-				add_core = ROOT
-			}				
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}	
+	# reintegrate_dulkadir = {
+		# major = yes
+		# potential = {
+			# normal_or_historical_nations = yes
+		    # tag = TUR
+			# is_colonial_nation = no
+			# NOT = { owns_core_province = 332 }
+			# NOT = { owns_core_province = 2303 }
+			# NOT = { owns_core_province = 4310 }
+			# NOT = { owns_core_province = 4298 }
+		# }
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 332		
+				# province_id = 2303
+				# province_id = 4310		
+				# province_id = 4298					
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
+		# }
+		# allow = {
+			# is_free_or_tributary_trigger = yes
+			# is_nomad = no
+			# is_at_war = no
+			# is_tribal = no
+		    # 332 = {
+				# owned_by = ROOT
+			# }	
+			# 2303 = {
+				# owned_by = ROOT
+			# }
+		    # 4310 = {
+				# owned_by = ROOT
+			# }	
+			# 4298 = {
+				# owned_by = ROOT
+			# }			
+		# }
+		# effect = {
+			# 332 = {
+				# add_core = ROOT
+			# }
+			# 2303 = {
+				# add_core = ROOT
+			# }
+			# 4310 = {
+				# add_core = ROOT
+			# }
+			# 4298 = {
+				# add_core = ROOT
+			# }				
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }	
 	
-}
+#}

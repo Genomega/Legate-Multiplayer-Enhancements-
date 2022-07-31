@@ -56,7 +56,6 @@ change_estate_land_share = {
 		hidden = yes
 	}	
 	add_army_tradition = -100
-	add_army_professionalism = 0.03
 	add_manpower = 3.513
 	add_sailors = 2732
 	add_treasury = 83	

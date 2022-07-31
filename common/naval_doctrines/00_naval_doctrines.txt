@@ -50,7 +50,8 @@ ship_boarding =
 	}
 
 	country_modifier = {
-		capture_ship_chance = 0.33
+		capture_ship_chance = 0.10
+		privateer_efficiency = 0.25
 	}
 	
 	button_gfx = 4
@@ -64,7 +65,9 @@ wooden_wall =
 	}
 
 	country_modifier = {
-		own_coast_naval_combat_bonus = 1.0
+		#own_coast_naval_combat_bonus = 1.0
+		naval_forcelimit_modifier = 0.20
+		leader_naval_manuever = 1
 	}
 
 	button_gfx = 5
@@ -106,7 +109,8 @@ portuguese_marines =
 	country_modifier = {
 		siege_blockade_progress = 1
 		global_naval_barrage_cost = -0.4
-		allowed_marine_fraction = 0.10
+		allowed_marine_fraction = 0.50
+		global_sailors = 7500
 	}
 
 	button_gfx = 7

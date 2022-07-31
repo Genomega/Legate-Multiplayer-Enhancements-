@@ -490,7 +490,10 @@ gbr_rb_canada_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = ENG
+		}	
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -548,7 +551,10 @@ eng_rb_trade_value_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = ENG
+		}	
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -968,7 +974,10 @@ gbr_rb_empire_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = ENG
+		}	
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1136,7 +1145,10 @@ gbr_rb_indian_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = ENG
+		}	
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1327,7 +1339,10 @@ gbr_rb_india_princes = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = ENG
+		}	
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1423,7 +1438,10 @@ gbr_rb_northern_colonial = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = ENG
+		}	
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }

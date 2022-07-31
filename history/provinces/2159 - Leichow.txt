@@ -1,8 +1,13 @@
 # 2159 - Leichow
 
-owner = X15
-controller = X15
-add_core = X15
+
+# owner = X15
+# controller = X15
+# add_core = X15
+
+owner = YUE
+controller = YUE
+add_core = YUE
 culture = chimin
 religion = confucianism
 capital = "Leichow"
@@ -14,6 +19,17 @@ base_manpower = 2
 is_city = yes
 
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = YUE
+	controller = YUE
+	add_core = YUE
+}
 
 discovered_by = chinese
 discovered_by = nomad_group

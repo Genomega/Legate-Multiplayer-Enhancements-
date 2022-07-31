@@ -29,7 +29,7 @@ mnd_maj_1 = {
 						is_subject_of = ROOT
 						NOT = { liberty_desire = 50 }
 					}
-					amount = 5
+					amount = 3
 				}
 			}
 			else = {
@@ -38,13 +38,16 @@ mnd_maj_1 = {
 						is_subject_of = ROOT
 						NOT = { liberty_desire = 50 }
 					}
-					amount = 3
+					amount = 2
 				}
 			}
 		}
 		effect = {
 			custom_tooltip = maj_no_more_subject_liberty_tt
 			set_country_flag = maj_no_more_subject_liberty
+			change_heir_adm = 1
+			change_heir_dip = 1
+			change_heir_mil = 1			
 			add_country_modifier = {
 				name = maj_subject_liberty_modifier
 				duration = 7300
@@ -52,20 +55,52 @@ mnd_maj_1 = {
 		}
 	}
 	
+	mnd_maja_japan = {
+		icon = mission_japanese_samurai
+		position = 2
+		required_missions = { mnd_maj_subjects }
+		provinces_to_highlight = {
+			region = japan_region
+		}
+		trigger = {
+			OR = {
+				any_owned_province = {
+					region = japan_region
+				}
+				any_known_country = {
+					culture_group = japanese_g
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = japanese_mercs_flag
+			define_general = {
+				shock = 5
+				fire = 3
+				manuever = 4
+				siege = 2
+				name = "Katsunaga Oda"
+			}
+		}
+	}	
+	
 	mnd_maj_negara_agung = {
 		icon = mission_mnd_maj_negara_agung
 		required_missions = { mnd_maj_end_disaster }
 		provinces_to_highlight = {
 			is_capital = yes
 			owned_by = ROOT
-			NOT = { development = 50 }
+			NOT = { development = 35 }
 		}
 		position = 3
 		trigger = {
 			capital_scope = {
-				development = 50
+				development = 35
 			}
-			num_of_times_used_transfer_development = 3
 		}
 		effect = {
 			add_country_modifier = {
@@ -79,19 +114,22 @@ mnd_maj_1 = {
 		required_missions = { mnd_maj_negara_agung }
 		provinces_to_highlight = {
 		}
-		trigger = {	
-			total_development = 500
-			if = {
-				limit = {
-					is_revolutionary = no
-				}
-				absolutism = 75
-			}
+		trigger = {
+			total_development = 750
+			# if = {
+				# limit = {
+					# is_revolutionary = no
+				# }
+				# absolutism = 75
+			# }
+			stability = 2
+			has_regency = no
+			is_at_war = no
 			is_subject = no
 			2690 = {
 				has_great_project = {
 					type = any
-					tier = 3
+					tier = 2
 				}
 			}
 		}
@@ -119,42 +157,52 @@ mnd_maj_1 = {
 	mnd_maj_rein_in_malacca = {
 		icon = mission_mnd_khm_restored_empire
 		required_missions = { mnd_maj_enforce_loyalty }
+		# provinces_to_highlight = {
+			# OR = {
+				# AND = {
+					# OR = {
+						# owner = {
+							# tag = MLC
+						# }
+						# area = malacca_area
+						# area = north_malaya_area
+						# area = malaya_area
+						# area = tenasserim_area
+						# area = johor_area
+					# }
+					# NOT = {
+						# country_or_non_sovereign_subject_holds = ROOT
+					# }
+				# }
+				# AND = {
+					# province_id = 1361
+					# NOT = { is_strongest_trade_power = ROOT }
+				# }
+			# }
+		# }
 		provinces_to_highlight = {
 			OR = {
-				AND = {
-					OR = {
-						owner = {
-							tag = MLC
-						}
-						area = malacca_area
-						area = north_malaya_area
-						area = malaya_area
-						area = tenasserim_area
-						area = johor_area
-					}
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
+				area = malacca_area
+				area = north_malaya_area
+				area = malaya_area
+				area = tenasserim_area
+				area = johor_area
 				AND = {
 					province_id = 1361
 					NOT = { is_strongest_trade_power = ROOT }
-				}
+				}				
 			}
-		}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}		
 		position = 5
 		trigger = {
-			MLC = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
 			1361 = {
 				is_strongest_trade_power = ROOT
 			}
 			calc_true_if = {
-				amount = 12
+				amount = 10
 				all_province = {
 					country_or_non_sovereign_subject_holds = ROOT
 					OR = {
@@ -168,7 +216,10 @@ mnd_maj_1 = {
 			}
 		}
 		effect = {
-			add_navy_tradition = 20
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_mercantilism = 10
 		}
 	}
 }
@@ -206,6 +257,9 @@ mnd_maj_2 = {
 		effect = {
 			custom_tooltip = maj_no_more_pretenders_tt
 			set_country_flag = maj_no_more_pretenders
+			change_heir_adm = 1
+			change_heir_dip = 1
+			change_heir_mil = 1			
 			add_country_modifier = {
 				name = maj_legitimacy_modifier
 				duration = 7300
@@ -259,7 +313,7 @@ mnd_maj_2 = {
 		provinces_to_highlight = {
 			owner = {
 				is_subject_of = ROOT
-				liberty_desire = 20
+				liberty_desire = 25
 			}
 		}
 		position = 4
@@ -271,26 +325,58 @@ mnd_maj_2 = {
 				calc_true_if = {
 					all_country = {
 						is_subject_of = ROOT
-						NOT = { liberty_desire = 20 }
+						NOT = { liberty_desire = 25 }
 					}
-					amount = 6
+					amount = 4
 				}
 			}
 			else = {
 				calc_true_if = {
 					all_country = {
 						is_subject_of = ROOT
-						NOT = { liberty_desire = 20 }
+						NOT = { liberty_desire = 25 }
 					}
 					amount = 3
 				}
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = "maj_campaign_1"
-				duration = 9125
-			}	
+			# add_country_modifier = {
+				# name = "maj_campaign_1"
+				# duration = 9125
+			# }	
+			kalimantan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					is_city = yes
+				}
+				add_permanent_claim = ROOT
+			}
+			brunei_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					is_city = yes
+				}
+				add_permanent_claim = ROOT
+			}
+			sabah_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					is_city = yes
+				}
+				add_permanent_claim = ROOT
+			}		
+			kutai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					is_city = yes
+				}
+				add_permanent_claim = ROOT
+			}				
 			if = {
 				limit = {
 					any_subject_country = {
@@ -315,26 +401,17 @@ mnd_maj_2 = {
 		required_missions = { mnd_maj_enforce_loyalty }
 		provinces_to_highlight = {
 			OR = {
-				owner = {
-					tag = BEI
-				}
 				area = brunei_area
 				area = kutai_area
 				area = kalimantan_area
 				area = banjar_area
-				area = sabah_area
+				area = sabah_area			
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		}
+		}			
 		trigger = {
-			BEI = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
 			calc_true_if = {
 				amount = 15
 				all_province = {
@@ -348,38 +425,66 @@ mnd_maj_2 = {
 					}
 				}
 			}
-			brunei_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
-			add_navy_tradition = 20
+			add_army_professionalism = 0.05
+			add_prestige = 50
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
 		}
 	}
 	mnd_maj_gaja_madas_oath = {
 		icon = mission_mnd_maj_gaja_madas_oath
 		required_missions = { mnd_maj_rein_in_brunei mnd_maj_rein_in_malacca }
-		provinces_to_highlight = {
-			OR = {
-				region = malaya_region
-				region = indonesia_region
-			}
-			NOT = { owned_by = ROOT }
-		}
+		# provinces_to_highlight = {
+			# OR = {
+				# region = malaya_region
+				# region = indonesia_region
+			# }
+			# NOT = { owned_by = ROOT }
+		# }
 		trigger = {
-			tag = MSA
+			total_development = 500
+			army_professionalism = 0.25
+			army_tradition = 40
+			prestige = 50
+			monthly_adm = 10
+			monthly_dip = 10
+			monthly_mil = 10		
 		}
 		effect = {
-			add_country_modifier = {
-				name = "maj_campaign_2"
-				duration = 9125
+			# add_country_modifier = {
+				# name = "maj_campaign_2"
+				# duration = 9125
+			# }
+			override_country_name = MAJAPAHIT_EMPIRE
+			set_government_rank = 3
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}	
+			malaya_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
+			moluccas_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}			
 		}
 	}
 	mnd_maj_subjugate_the_mainland = {
 		icon = mission_asian_cannon
-		required_missions = { mnd_maj_gaja_madas_oath }
+		required_missions = { mnd_maj_gaja_madas_oath mnd_maj_cloves }
+		position = 8
 		provinces_to_highlight = {
 			OR = {
 				region = indo_china_region
@@ -445,6 +550,8 @@ mnd_maj_3 = {
 		}
 		effect = {
 			set_country_flag = maj_no_more_bad_religion_events
+			change_heir_adm = 1
+			change_heir_dip = 1		
 			if = {
 				limit = {
 					NOT = { religion = sunni }
@@ -460,6 +567,54 @@ mnd_maj_3 = {
 			}
 		}
 	}
+	mnd_unite_java = {
+		icon = mission_mnd_khm_resurgence
+		required_missions = { mnd_maj_sunda_relations }
+		provinces_to_highlight = {
+			OR = {
+				area = surabaya_area
+				area = east_java_area
+				area = central_java_area
+				area = west_java_area
+				area = banten_area			
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			surabaya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_java_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_java_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_java_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			banten_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}			
+		}
+		effect = {
+			change_heir_mil = 1
+			change_mil = 1
+			add_stability = 1
+			add_legitimacy = 50
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}		
+		}
+	}	
 	mnd_maj_candi_shrines = {
 		icon = mission_mnd_maj_candi_shrines
 		required_missions = { mnd_maj_end_disaster }
@@ -471,10 +626,10 @@ mnd_maj_3 = {
 				limit = {
 					adm_tech = 19
 				}
-				cathedral = 15
+				cathedral = 10
 			}
 			else = {
-				temple = 15
+				temple = 10
 			}
 			if = {
 				limit = {
@@ -482,7 +637,7 @@ mnd_maj_3 = {
 				}
 				estate_loyalty = {
 					estate = estate_church
-					loyalty = 65
+					loyalty = 60
 				}
 			}
 			any_country = {
@@ -499,18 +654,9 @@ mnd_maj_3 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					has_dlc = "Wealth of Nations"
-					religion = hinduism
-				}
-				custom_tooltip = buddha_deity_tt
-			}
-			else = {
-				add_country_modifier = {
-					name = maj_religious_unity
-					duration = -1
-				}
+			add_country_modifier = {
+				name = maj_religious_unity
+				duration = -1
 			}
 		}
 	}
@@ -661,9 +807,6 @@ mnd_maj_3 = {
 		required_missions = { mnd_maj_prepare_eastern_campaigns }
 		provinces_to_highlight = {
 			OR = {
-				owner = {
-					tag = MKS
-				}
 				area = makassar_area
 			}
 			NOT = {
@@ -671,12 +814,6 @@ mnd_maj_3 = {
 			}
 		}
 		trigger = {
-			MKS = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
 			makassar_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -728,22 +865,43 @@ mnd_maj_3 = {
 	}
 	mnd_maj_cloves = {
 		icon = mission_mnd_maj_cloves
-		required_missions = { mnd_maj_subjugate_makassar }
+		required_missions = { mnd_maj_subjugate_makassar mnd_maj_gaja_madas_oath }
 		provinces_to_highlight = {
-			province_id = 1357
+			OR = {
+				area = molluca_area
+				area = spice_islands_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
-			1357 = {
+			1356 = {
 				trade_share = {
 					country = ROOT
-					share = 85
+					share = 70
 				}
 			}
+			molluca_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}		
+			spice_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}				
 			production_leader = {
 				trade_goods = cloves
 			}
 		}
 		effect = {
+			indo_china_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}				
 			add_country_modifier = {
 				name = maj_trade_modifier
 				duration = -1
@@ -789,99 +947,51 @@ mnd_maj_4 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
-				owned_by = SUN
-				AND = {
-					OR = {
-						area = banten_area
-						area = west_java_area
-					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
+				area = west_java_area
+				area = banten_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			OR = {
-				SUN = {
-					alliance_with = ROOT
-					has_opinion = {
-						who = ROOT
-						value = 100
-					}
-				}
-				AND = {
-					banten_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					west_java_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
+			NOT = { exists = SUN }
+			west_java_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			banten_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_prestige = 20
-			if = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_treasury = 250
+			west_java_area = {
+				add_territorial_core = ROOT
+				add_devastation = 75
+			}		
+			banten_area = {
+				add_territorial_core = ROOT
+				add_devastation = 75
+			}						
+			627 = {
 				limit = {
-					alliance_with = SUN
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_historical_friend = SUN
-				SUN = {
-					add_historical_friend = ROOT
-				}
-			}
-			if = {
+				add_territorial_core = ROOT
+			}		
+			631 = {
 				limit = {
-					SUN = {
-						is_subject_of = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				SUN = {
-					change_primary_culture = javanese
-					add_accepted_culture = sundanese
-				}				
-			}
-			if = {
-				limit = {
-					624 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				624 = {
-					change_culture = javanese
-				}
-			}
-			if = {
-				limit = {
-					4791 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				4791 = {
-					change_culture = javanese
-				}
-			}
-			if = {
-				limit = {
-					2688 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				2688 = {
-					change_culture = javanese
-				}
-			}
-			if = {
-				limit = {
-					630 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-				630 = {
-					change_culture = javanese
-				}
-			}
+				add_territorial_core = ROOT
+			}			
 		}
 	}
 	
@@ -992,11 +1102,11 @@ mnd_maj_4 = {
 							num_of_ports = 1
 						}
 					}
-					MNG = {
+					YAN = {
 						is_subject = no
 						num_of_ports = 5
 					}
-					owned_by = MNG
+					owned_by = YAN
 					has_port = yes
 				}
 				AND = {
@@ -1015,7 +1125,7 @@ mnd_maj_4 = {
 					}
 					has_port = yes
 					NOT = {
-						owned_by = MNG
+						owned_by = YAN
 					}
 				}
 			}
@@ -1042,12 +1152,12 @@ mnd_maj_4 = {
 							num_of_ports = 1
 						}
 					}
-					MNG = {
+					YAN = {
 						is_subject = no
 						num_of_ports = 5
 					}
 				}
-				MNG = {
+				YAN = {
 					blockade = 1
 				}
 			}

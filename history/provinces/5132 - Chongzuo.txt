@@ -1,8 +1,12 @@
 # 2164 - Chongzuo
 
-owner = X42
-controller = X42
-add_core = X42
+# owner = X42
+# controller = X42
+# add_core = X42
+
+owner = X13
+controller = X13
+add_core = X13
 culture = zhuang
 religion = confucianism
 capital = "Chongzuo"
@@ -15,6 +19,17 @@ is_city = yes
 fort_15th = yes
 workshop = yes
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X13
+	controller = X13
+	add_core = X13
+}
 
 
 discovered_by = chinese

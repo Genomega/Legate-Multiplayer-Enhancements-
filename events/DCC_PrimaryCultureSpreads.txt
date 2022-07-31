@@ -18,6 +18,7 @@ province_event = {
 				has_reform = self_governing_colony_government
 			}
 		}	
+		not = { has_province_modifier = expelled_minority } 
 		has_owner_culture = no
 		not = { has_construction = culture } # no forceful culture conversion
 		#tolerance_to_this = 0 # the religion of the province has to be tolerated
@@ -148,5 +149,42 @@ province_event = {
 				hidden = yes
 			}	
 		}	
+	}
+}
+
+province_event = {
+	id = dynamic_culture_conversion.100
+	title = "DCC_SpreadPrimaryTitle"
+	desc = "DCC_SpreadPrimary"
+	picture = CULTURE_eventPicture
+	fire_only_once = no
+	hidden = yes
+	
+	trigger = {
+		owner = {
+			has_reform = penal_colonies_reform
+		}	
+		has_province_modifier = explusion_of_minorities 
+		NOT = { has_province_modifier = explusion_of_minorities_reform_bonus_cooldown }
+	}
+	
+	mean_time_to_happen = {
+		days = 1 # Time
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = explusion_of_minorities_reform_bonus
+			duration = 3650
+		}	
+		add_province_modifier = {
+			name = explusion_of_minorities_reform_bonus_cooldown
+			duration = 9125
+			hidden = yes
+		}			
+	}
+	#let the spread happen
+	option = {
+		name = "DCC_ApprovePrimarySpread"
 	}
 }

@@ -4,7 +4,7 @@ established_a_marine_corp = {
 }	
 
 papal_sanction_justified_crusade = {
-	land_morale = 0.05
+	land_morale = 0.075 # Was 0.05
 }	
 
 burgundian_inheritance_libety_fixed = {
@@ -12,19 +12,23 @@ burgundian_inheritance_libety_fixed = {
 }	
 	
 swedish_war_of_independence = {
-	land_morale = 0.10
+	land_morale = 0.05
 	hostile_attrition = 1
-	defensiveness = 0.25
-	land_forcelimit = 14
+	defensiveness = 0.20
+	land_forcelimit = 8
 	global_manpower = 12.5
 	reinforce_cost_modifier = -1
-	manpower_recovery_speed = 0.33
+	manpower_recovery_speed = 0.20
 	army_tradition_from_battle = 1
 	liberty_desire = 25
-	infantry_cost = -0.33
+	infantry_cost = -0.20
 	cavalry_cost = -0.33
 	fort_maintenance_modifier = -0.50
-}	
+}		
 
 culture_change_delay = {
 }
+
+in_papal_select_screen = {
+	liberty_desire = -1
+}	

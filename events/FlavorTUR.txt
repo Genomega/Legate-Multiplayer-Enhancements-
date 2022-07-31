@@ -1796,17 +1796,38 @@ country_event = {
 	
 	fire_only_once = yes
 	major = yes
-	is_triggered_only = yes
 	
-	option = {		# Continue building up the Janissaries
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	
+	trigger ={
+		is_year = 1445
+		tag = TUR
+	}
+	
+	option = {		# Continue building up the Janissaries ## Better 50 years Janissaries
 		name = "flavor_tur.EVTOPTA100"
 		add_country_modifier = {
-			name = tur_janissary
-			duration = -1
+			name = tur_janissary_new
+			duration = 18250
 		}
+		custom_tooltip = only_janissary_units_reminder.tt
 		custom_tooltip = janissary_disaster_notifier
 		set_country_flag = janissary_timer
 	}
+	
+	option = {		# Lets reward them in other ways ## No jainisaries money problems
+		name = "flavor_tur.EVTOPTA100.b"
+		add_country_modifier = {
+			name = tur_rewarded_in_other_wars
+			duration = 18250
+		}
+		custom_tooltip = no_on_death_payment_tur.tt
+		custom_tooltip = janissary_disaster_notifier
+		set_country_flag = janissary_timer
+	}	
 }
 
 # The Janissaries and the Bektashi Order
@@ -1821,7 +1842,7 @@ country_event = {
 	trigger ={
 		NOT = { has_disaster = janissary_decadence }
 		OR = {
-			has_country_modifier = tur_janissary
+			has_country_modifier = tur_janissary_new
 			AND = {
 				num_of_janissaries = 10
 				janissary_percentage = 0.1
@@ -1850,11 +1871,12 @@ country_event = {
 	trigger ={
 		has_reform = ottoman_government
 		NOT = { has_disaster = janissary_decadence }
+		NOT = { has_country_modifier = tur_rewarded_in_other_wars  }
 		if = {
 			limit = {
 				NOT = { has_dlc = "Cradle of Civilization" }
 			}
-			has_country_modifier = tur_janissary
+			has_country_modifier = tur_janissary_new
 			else = {
 				num_of_janissaries = 3
 			}
@@ -1886,7 +1908,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_country_modifier = tur_janissary
+			has_country_modifier = tur_janissary_new
 			num_of_janissaries = 10
 		}
 		NOT = { has_disaster = janissary_decadence }
@@ -1958,7 +1980,7 @@ country_event = {
 			limit = {
 				NOT = { has_dlc = "Cradle of Civilization" }
 			}
-			has_country_modifier = tur_janissary
+			has_country_modifier = tur_janissary_new
 		}
 		NOT = { current_age = age_of_discovery }
 		NOT = { has_country_flag = had_janissary_civilianization }
@@ -2018,7 +2040,7 @@ country_event = {
 	
 	
 	trigger = {
-		has_country_modifier = tur_janissary
+		has_country_modifier = tur_janissary_new
 		NOT = { has_disaster = janissary_decadence }
 		NOT = { has_reform = ottoman_government }
   }
@@ -2029,7 +2051,7 @@ country_event = {
 	}
 	
 	immediate = {
-		remove_country_modifier = tur_janissary
+		remove_country_modifier = tur_janissary_new
 	}
 	
 	option = {		# Ok.
@@ -2050,7 +2072,7 @@ country_event = {
 		NOT = { current_age = age_of_discovery }
 		NOT = { has_disaster = janissary_decadence }
 		OR = {
-			has_country_modifier = tur_janissary
+			has_country_modifier = tur_janissary_new
 			AND = {
 				num_of_janissaries = 10
 				janissary_percentage = 0.1

@@ -7,8 +7,13 @@ theocracy_mechanic = {
 	different_religion_group_acceptance = -50
 	religion = yes
 	heir = yes
+	can_customise_heir = no
 	basic_reform = yes # = invisible/does not take up a slot
 	valid_for_nation_designer = no
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
 
 	modifiers = {
 		brahmins_hindu_influence_modifier = 0.1
@@ -507,6 +512,7 @@ theocratic_democracy_reform = {
 		has_parliament = yes
 		custom_attributes = {
 			blocked_call_diet = yes
+			disables_nobility = yes
 		}
 	}
 	ai = {
@@ -569,6 +575,7 @@ regionally_elected_commanders = {
 		has_parliament = yes
 		custom_attributes = {
 			blocked_call_diet = yes
+			disables_nobility = yes
 		}
 	}
 	ai = {
@@ -624,6 +631,8 @@ monastic_elections_reform = {
 		allow = { has_dlc = "Res Publica" }
 		heir = no
 		election_on_death = yes
+		duration = 4
+		has_term_election = yes
 		states_general_mechanic = {
 			militarists = {
 				manpower_recovery_speed = 0.2
@@ -704,7 +713,7 @@ admiral_king_reform = {
 	}
 	modifiers = {
 		devotion = 0.1
-		naval_morale = 0.10
+		naval_morale = 0.05
 		leader_naval_fire = 1
 	}
 	custom_attributes = {
@@ -782,7 +791,7 @@ organising_our_religion_reform = {
 	}
 	
 	modifiers = {
-		yearly_absolutism = 1
+		max_absolutism = 15
 		devotion = 1
 	}
 	ai = {
@@ -806,7 +815,7 @@ religion_in_one_country_reform = {
 		}
 	}
 	modifiers = {
-		warscore_cost_vs_other_religion = -0.2
+		warscore_cost_vs_other_religion = -0.15
 	}
 	ai = {
 		factor = 3
@@ -893,7 +902,7 @@ proclaim_religious_head_reform = {
 		}
 	}
 	modifiers = {
-		warscore_cost_vs_other_religion = -0.20
+		warscore_cost_vs_other_religion = -0.15
 		diplomatic_reputation = 1
 	}
 	ai = {

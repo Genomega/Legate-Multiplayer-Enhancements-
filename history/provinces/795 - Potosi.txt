@@ -1,8 +1,8 @@
 #795 - Potosi
 
-owner = CRA
-controller = CRA
-add_core = CRA
+#owner = #PCJ
+#controller = #PCJ
+#add_core = #PCJ
 culture = aimara
 
 
@@ -19,6 +19,7 @@ base_production = 4
 base_manpower = 2
 is_city = yes
 extra_cost = 6
+center_of_trade = 2
 
 #add_province_triggered_modifier = cerro_rico_modifier
 

@@ -1,9 +1,9 @@
 #661 - Dali
 
-owner = X09
-controller = X09
-add_core = X09
-add_claim = CMI
+# owner = X09
+# controller = X09
+# add_core = X09
+#add_claim = CMI
 culture = bai
 religion = buddhism
 capital = "Dali"
@@ -13,6 +13,19 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 is_city = yes
+
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = CMI
+	controller = CMI
+	add_core = CMI
+}
 
 
 

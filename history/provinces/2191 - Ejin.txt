@@ -15,6 +15,18 @@ is_city = yes
 discovered_by = chinese
 discovered_by = nomad_group
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = CSH
+	controller = CSH
+	add_core = CSH
+	remove_core = YAN
+}
 
 1552.1.1 = {
 	owner = KHA

@@ -53,6 +53,12 @@ country_event = {
 		is_year = 1505
 		is_religion_enabled = protestant
 		NOT = { has_country_flag = hussite_question_decided }
+		OR = {
+			has_reform = private_enterprise_colony_government
+			has_reform = self_governing_colony_government
+			has_reform = crown_colony_government
+			has_reform = colonial_government
+		}	
 	}
 	
 	immediate = {

@@ -1,8 +1,8 @@
 #1140 - Abomey
 
-owner = DBG #Early kingdom of Allada/Ardra
-controller = DBG
-add_core = DBG
+#owner = DBG #Early kingdom of Allada/Ardra
+#controller = DBG
+#add_core = DBG
 is_city = yes
 culture = fon
 religion = shamanism #Fetishism

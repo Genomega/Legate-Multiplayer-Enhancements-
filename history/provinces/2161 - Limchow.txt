@@ -1,8 +1,12 @@
 # 2161 - Limchow
 
-owner = X42
-controller = X42
-add_core = X42
+# owner = X42
+# controller = X42
+# add_core = X42
+
+owner = X13
+controller = X13
+add_core = X13
 culture = cantonese
 religion = confucianism
 capital = "Limchow"
@@ -15,6 +19,19 @@ is_city = yes
 discovered_by = chinese
 discovered_by = nomad_group
 discovered_by = indian
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X13
+	controller = X13
+	add_core = X13
+}
+
 
 1514.1.1 = { discovered_by = POR }
 1647.4.1 = {

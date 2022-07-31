@@ -1,30 +1,30 @@
 # default options are 0-based
 # In console, can use imperial_incident [key] to immediately begin an incident
 
-incident_burgundian_succ_emp = {
-    event = incidents_bur_inheritance.2
-	default_option = 0
+# incident_burgundian_succ_emp = {
+    # event = incidents_bur_inheritance.2
+	# default_option = 0
 	
-	can_stop = {
-		NOT = {
-			exists = BUR
-		}
-	}
+	# can_stop = {
+		# NOT = {
+			# exists = BUR
+		# }
+	# }
 
-	0 = {
-		factor = 1
-	}
+	# 0 = {
+		# factor = 1
+	# }
 	
-	1 = {
-		factor = 1
-	}
+	# 1 = {
+		# factor = 1
+	# }
 	
-	2 = {
-		factor = 1
-	}
-}
+	# 2 = {
+		# factor = 1
+	# }
+# }
 
-incident_burgundian_succ_strong_ally = {
+incident_burgundian_succ_strong_ally = { # In the case a non-prince inherits
 	event = incidents_bur_inheritance.3
 	default_option = 0
 	
@@ -34,20 +34,66 @@ incident_burgundian_succ_strong_ally = {
 		}
 	}
 	
-	0 = {
+	0 = { # Release the Lowlands
 		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_domineering
+				}	
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_neutral
+				}				
+			}
+		}		
 	}
 	
-	1 = {
-		factor = 1
-	}
+	# 1 = { # 
+		# factor = 1
+	# }
 	
-	2 = {
+	1 = { # It is no longer in our interest ## Change to 2 
 		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_allied
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_threatened
+				}				
+			}
+		}			
 	}
 }
 
-incident_burgundian_succ_alone = {
+incident_burgundian_succ_alone = { # 
 	event = incidents_bur_inheritance.4
 	default_option = 0
 	
@@ -57,38 +103,32 @@ incident_burgundian_succ_alone = {
 		}
 	}
 	
-	0 = {
+	0 = { # Demand the Lowlands
 		factor = 1
-	}
-	
-	1 = {
-		factor = 1
-	}
-	
-	2 = {
-		factor = 1
-	}
-}
-
-incident_burgundy_wants_to_join = {
-	event = incidents_bur_join_empire.2
-	default_option = 1
-	
-	can_stop = {
-		OR = {
-			NOT = {
-				exists = BUR
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = BUR
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = BUR
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = BUR
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = BUR
+					attitude = attitude_domineering
+				}				
 			}
-			BUR = {
-				is_emperor = yes
-			}
-			BUR = {
-				is_subject = yes
-			}
-		}
+		}		
 	}
 	
-	0 = { # burgundy joins
+	1 = { # Invite to the Empire
 		factor = 1
 		modifier = {
 			factor = 100
@@ -106,6 +146,55 @@ incident_burgundy_wants_to_join = {
 					attitude = attitude_allied
 				}
 			}
+		}		
+	}
+	
+	2 = { # The Lowlands are lost to us
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = BUR
+					attitude = attitude_neutral
+				}
+				ai_attitude = {
+					who = BUR
+					attitude = attitude_threatened
+				}
+			}			
+		}
+	}		
+}
+
+incident_hre_prince_pu_burgundy = { # For when a Prince inherits Burgundy
+	event = incidents_bur_inheritance.998
+	default_option = 0
+	
+	can_stop = {
+		NOT = {
+			exists = BUR
+		}
+	}
+	
+	0 = { # burgundy joins
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = event_target:burgundian_overlord_target
+					attitude = attitude_allied
+				}
+			}
 		}
 	}
 	
@@ -113,42 +202,115 @@ incident_burgundy_wants_to_join = {
 		factor = 1
 		modifier = {
 			factor = 100
-			is_neighbor_of = BUR
-			NOT = {
-				alliance_with = BUR
-			}
-		}
-		modifier = {
-			factor = 100
 			OR = {
 				ai_attitude = {
-					who = BUR
+					who = event_target:burgundian_overlord_target
 					attitude = attitude_rivalry
 				}
 				ai_attitude = {
-					who = BUR
+					who = event_target:burgundian_overlord_target
 					attitude = attitude_hostile
 				}
 				ai_attitude = {
-					who = BUR
+					who = event_target:burgundian_overlord_target
 					attitude = attitude_threatened
 				}
 				ai_attitude = {
-					who = BUR
+					who = event_target:burgundian_overlord_target
 					attitude = attitude_outraged
 				}
 				ai_attitude = {
-					who = BUR
+					who = event_target:burgundian_overlord_target
 					attitude = attitude_disloyal
 				}
 				ai_attitude = {
-					who = BUR
+					who = event_target:burgundian_overlord_target
 					attitude = attitude_rebellious
 				}
 			}
 		}
 	}
 }
+
+# incident_burgundy_wants_to_join = { # Now handled via the generic PU event
+	# event = incidents_bur_join_empire.2
+	# default_option = 1
+	
+	# can_stop = {
+		# OR = {
+			# NOT = {
+				# exists = BUR
+			# }
+			# BUR = {
+				# is_emperor = yes
+			# }
+			# BUR = {
+				# is_subject = yes
+			# }
+		# }
+	# }
+	
+	# 0 = { # burgundy joins
+		# factor = 1
+		# modifier = {
+			# factor = 100
+			# OR = {
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_friendly
+				# }
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_loyal
+				# }
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_allied
+				# }
+			# }
+		# }
+	# }
+	
+	# 1 = { # burgundy denied
+		# factor = 1
+		# modifier = {
+			# factor = 100
+			# is_neighbor_of = BUR
+			# NOT = {
+				# alliance_with = BUR
+			# }
+		# }
+		# modifier = {
+			# factor = 100
+			# OR = {
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_rivalry
+				# }
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_hostile
+				# }
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_threatened
+				# }
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_outraged
+				# }
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_disloyal
+				# }
+				# ai_attitude = {
+					# who = BUR
+					# attitude = attitude_rebellious
+				# }
+			# }
+		# }
+	# }
+# }
 
 incident_king_in_prussia = {
     event = king_in_prussia.2
@@ -234,7 +396,7 @@ incident_king_in_prussia = {
 	}
 }
 
-incident_pu_subject_joins_empire = {
+incident_pu_subject_joins_empire = { # Burgundy in the Empire
 	event = incident_generic.2
 	default_option = 0
 	

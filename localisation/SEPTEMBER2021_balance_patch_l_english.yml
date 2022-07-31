@@ -146,6 +146,11 @@
  british_naval_ideas_bonus:0 "Full British Naval" 
  
  
+ # Missions
+ mnd_maja_japan_title:0 "Embassy to Japan"
+ mnd_maja_japan_desc:0 "The rulers of Japan are notoriously difficult to befriend, distrustful as they are of foreign influence. But if we can establish a successful embassy we may be able to attract some of the dreaded Samurai to fight for us."
+ mnd_unite_java_title:0 "Unify Java"
+ mnd_unite_java_desc:0 "While Majapahit has experienced a period of decline in the recent decades it still retains considerable influence over Java. Should we manage to unite Java under one kingdom it would see some of our old glory restored."
  
  # Events
  debugging_events.12.t: "New Frontier Discovered"

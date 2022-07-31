@@ -1,8 +1,8 @@
 #4214 - Kalar
 
-owner = NVK
-controller = NVK
-add_core = NVK
+owner = NHX
+controller = NHX
+add_core = NHX
 culture = evenk
 religion = tengri_pagan_reformed
 capital = "Kalar"

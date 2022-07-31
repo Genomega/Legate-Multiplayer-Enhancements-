@@ -1,8 +1,5 @@
 #4028 - Mahafaly
 
-owner = ANT
-controller = ANT
-add_core = ANT
 culture = madagasque
 religion = shamanism #Fetishism
 capital = "Mahafaly"

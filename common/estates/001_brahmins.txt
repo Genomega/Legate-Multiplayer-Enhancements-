@@ -9,6 +9,7 @@ estate_brahmins = {
 			AND = {
 				technology_group = indian
 				religion_group = muslim
+				NOT = { has_country_flag = gained_dhimmi_estate }
 			}
 			religion = hinduism
 			AND = {
@@ -40,17 +41,39 @@ estate_brahmins = {
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		global_tax_modifier = 0.2
+		papal_influence = 1
 		devotion = 0.5
-		stability_cost_modifier = -0.1
+		church_power_modifier = 0.2
+		monthly_fervor_increase = 1
+		#stability_cost_modifier = -0.1
+		build_time = -0.15
+		monthly_piety_accelerator = 0.002
+		yearly_karma_decay = 0.35
+		yearly_patriarch_authority = 0.08
+		yearly_harmony = 0.5
 	}
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2
+		monthly_piety_accelerator = 0.002
+		yearly_karma_decay = 0.2
+		yearly_patriarch_authority = 0.005
+		yearly_harmony = 0.25		
+		church_power_modifier = 0.1
+		monthly_fervor_increase = 0.5
+		monthly_piety_accelerator = 0.001
+		papal_influence = 0.5		
 	}	
 	country_modifier_angry = {
-		global_tax_modifier = -0.1
+		global_tax_modifier = -0.2
+		papal_influence = -2
 		devotion = -0.5
-		stability_cost_modifier = 0.1
+		church_power_modifier = -0.25
+		monthly_fervor_increase = -1
+		#stability_cost_modifier = 0.1
 		global_unrest = 2
+		build_time = 0.20
+		yearly_patriarch_authority = -0.005
+		yearly_harmony = -0.5
 	}
 	land_ownership_modifier = {
 		brahmins_hindu_loyalty_modifier = 0.2
@@ -154,6 +177,9 @@ estate_brahmins = {
 		estate_brahmins_monopoly_of_incense
 		estate_brahmins_monopoly_of_wool
 		estate_brahmins_statutory_rights
+		estate_brahmins_religious_diplomats
+		estate_brahmins_one_faith_one_culture
+		estate_brahmins_new_world_mission
 	}
 
 	agendas = {

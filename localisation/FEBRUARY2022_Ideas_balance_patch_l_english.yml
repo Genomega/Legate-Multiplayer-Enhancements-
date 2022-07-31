@@ -1,0 +1,560 @@
+﻿l_english:
+ # New Diplomatic Options
+ espionage_bribe_merchants: "Bribe Merchants"
+ espionage_bribe_merchants_title: "Bribe Merchants"
+ espionage_bribe_merchants_tooltip: "Bribe the merchants in a foreign country, crippling their Trade Efficiency and reducing Merchants trade power generation."
+ espionage_bribe_merchants_desc: "Send a spy to bribe merchants in §Y[From.GetName]§! This action will reduce our §Y[From.GetAdjective]§! Spy Network by §R60§! and lower §Y[From.GetAdjective]§! §OTrade Efficiency§! by §R10%§! and §OPlaced Merchant Power§! by §R20§! for §Y5§! years."
+ 
+ espionage_infiltrate_army_title: "Infiltrate Army"
+ espionage_infiltrate_army_tooltip: "Infiltrate Army reveals a foreign country and it’s subjects Fog of War for 2 years to ourselves and our allies. Allies will only benefit from the Fog of War if we are fighting in the same war."
+ espionage_infiltrate_army_desc: "Send a spy to infiltrate the §Y[From.GetAdjective]§! Army and reveal the §Y[From.GetAdjective]§! §OFog of War§! to ourselves and our allies for §Y2§! years. This action will reduce our §Y[From.GetAdjective]§! Spy Network by §R70§!. "
+ 
+ espionage_inflame_seperatist_sentiment_title: "Inflame Seperatist Sentiment"
+ espionage_inflame_seperatist_sentiment_tooltip: "Incite Seperatist Sentiment in a foreign country, greatly increasing Unrest in recently conquered territory. This action will only affect provinces that have some form of Separatism."
+ espionage_inflame_seperatist_sentiment_desc: "Send a spy to incite Seperatist Sentiments in §Y[From.GetName]§!. This action will reduce our §Y[From.GetAdjective]§! Spy Network by §R60§! and increases §Y[From.GetAdjective]§! §OYears of Separatism§! by §R10§! and §OStability Cost Modifier§! by §R20%§! for §Y5§! years."
+ 
+ # New 'Ideas Modifiers'
+ espionage_infiltrate_army_bonus_faction_influence: "§WMay use§! §YInfiltrate Armies§! §Wfor Spy Network cost of§!" 
+ espionage_inflame_seperatism_bonus_faction_influence: "§WMay use§! §YInflame Separatist Sentiment§! §Wfor Spy Network cost of§!" 
+ eminence_base_power_projection_faction_influence: "§WPermanent§! §OPower Projection§!"
+ 
+ # New Trade Nodes
+ gran_columbia: "Colombia"
+ 
+ ## Petty 1.33.3 Balance Changes
+ legate_austrian_march_to_shore_title: "March to the Shore"
+ legate_austrian_march_to_shore_desc: "The Serene Republic of Venice has dominated our interest in Italy for too long! Now is the time that we take a contingent of Imperial forces and March to the shores.Once Venice has lost its land possessions, its trading influence will be greatly diminished."
+ intervention_in_italy_hab: "Military Intervention in Italy"
+ intervention_in_italy_hab_desc: "The Republic of Venice influence has grown for too long. An Imperial Intervention has been commissioned in the hopes of crushing their influence."
+ 
+ # New Policies
+ clamp_down_on_dissent_1: "Clamp Down on Dissent Act"
+ clamp_down_on_dissent_1_desc: "Throughout our subjects there are rumors of dissent. A mighty empire such as ours cannot tolerate this and we shall implement a policy on hunting down these dissenters and imprisoning them."
+ economic_relief_for_poor_act_1: "Agricultural Economic Relief Act"
+ economic_relief_for_poor_act_1_desc: "If the peasants of the nation are starving, then the entire nation itself will starve. Farmers and peasants are the backbone of the state thus we must ensure they are properly subsidized."
+ 
+ # New Modifiers
+ malian_reurrection: "Resurrection of the Mali Empire"
+ kilwa_potential_colony: "Potential Swahili Colony"
+ kilwa_early_game_colonist: "Swahili Colonial Ambition"
+ swahili_colonial_ventures_reform: "Swahili Colonial Ventures"
+ swahili_colonial_ventures_reform_desc: "For centuries, merchants along the Swahili coast have undertaken journeys to foreign lands as far as the Moluccas. Through this, our people have become adept seafarers. With the backing of the state’s Bureaucracy, we may be able to make use of these refined skills and establish overseas territories."
+ tur_janissary_new:0 "Janissaries Buildup"
+ desc_tur_janissary_new:0 "The Janissaries were the elite infantry of the Ottoman Empire, a highly disciplined and well-trained standing force." 
+ espionage_network_founded: "Extensive Espionage Network"
+ recently_killed_heir_espionage: "Recently murdered Heir"
+ recently_recruited_from_network: "Recently Recruited from Espionage Network"
+ espionage_mil_specialization: "Military Specialization Espionage Network"
+ espionage_diplo_specialization: "Foreign Affairs Specialization Espionage Network"
+ espionage_adm_specialization: "Internal Affairs Specialization Espionage Network"
+ in_espionage_network_screen: "In Espionage Network Screen"
+ adm_specialization_cooldown: "Spies on Internal Affairs Specialization mission"
+ dip_specialization_cooldown: "Spies on Foreign Affairs Specialization mission"
+ mil_specialization_cooldown: "Spies on Military Specialization mission"
+ spy_enforce_vassal_payment: "Pressure Vassals Tax Payment"
+ spy_grow_heir_loyalty: "Growing Legitimacy of Heir"
+ spy_eye_for_talent: "Searching the Realm for Talent"
+ spy_hunt_rebel_leaders: "Hunting down Rebel Leaders"
+ spy_strengthen_support_rebels: "Empowering Rebels Abroad"
+ spy_claim_forgery: "Claims Forgery"
+ spy_fence_loan: "Underground Fence Loans Secured"
+ spy_justiy_future_wars: "Justifying ongoing Conflicts"
+ spy_siege_ability: "Raiding Siege Supplies"
+ spy_loyal_general: "More Loyal Commanders"
+ spy_bandits_in_pool: "Employing Bandits and Brigands"
+ spy_scounting_reports: "Nightly Scouting Reports"
+ 
+ espionage_bribed_merchant_ongoing: "Merchants Bribed"
+ espionage_inflamed_seperatist_sentiment: "Seperatist Sentiment Inflamed"
+ patronaged_a_invetor_inno: "Patronaged an Inventor"
+ is_considering_patronage_of_inventors: "Is considering Patronage of Inventors"
+ great_thinker_advisor_cooldown: "Recruited Great Thinker"
+ great_thinker_adm: "Administrative Great Thinker"
+ great_thinker_dip: "Diplomatic Great Thinker"
+ great_thinker_mil: "Military Great Thinker"
+ 
+ hegemon_britain_rules_the_waves: "Britannia Rules the Waves! - British Hegemony"
+ hegemon_british_elite_sailors: "British Elite Marine Corp"
+ regional_naval_hegemon: "Regional Naval Hegemon"
+ 
+ pride_of_the_fleet_flagship: "Has a Pride of the Fleet"
+ pride_of_the_fleet_flagship_desc: "Our nations reveres having a National Flagship"
+ flagship_got_sunked: "Flagship recently sunked"
+ flagship_got_captured: "Flagship recently captured"
+ 
+ tur_rewarded_in_other_wars: "Concessions to the Janissaries"
+ tur_rewarded_in_other_wars_desc: "We have offered concessions to our Janissaries in ways other than gold"
+ 
+ golden_age_of_burgundy_philip: "Golden Age of Burgundy under Philip"
+ golden_age_of_burgundy_philip_desc: ""
+ 
+ imperial_burgundy_restored_legate: "Imperial Burgundy"
+ imperial_burgundy_restored_legate_desc: ""
+ 
+ safeguarding_imperial_borders_new: "Safeguarding Imperial Borders"
+ 
+ 
+ #New Ideas Names
+ expanded_council_admin: "Expand the Advisory Board"
+ expanded_council_admin_desc: "For us to govern the state efficiently, we should expand our council of advisors to incorporate more people throughout our nation. While this may increase political intrigue, it will open us to more options for governance going forward."
+ masters_of_intrigue_espionage: "Masters of Intrigue"
+ masters_of_intrigue_espionage_desc: "Over the years, our spies have perfected the art of Intrigue, and in doing so, have made actions once thought inconceivable now possible. Should we manage to establish a strong network of spies in a foreign country we can incite Seperatist Sentiments, causing instability, and Infiltrate our foes armies, providing us intel on what a foreign nation might be plotting with its armies and navies.\nMay assign §OSpecialization Missions§! through the §Y'Assign Espionage Specializations Missions'§! Decision."
+ wonders_of_the_world_econ: "Wonders of the World"
+ wonders_of_the_world_econ_desc: "Throughout the World exists many Great Monuments waiting to be built. It is time we take the Initiative and begin construction of these Great Projects."
+ 
+ # New Content related to Estates
+ estate_nobles_magna_carta:0 "The Magna Carta"
+ estate_nobles_magna_carta_desc:0 "The Magna Carta is a document guaranteeing English political liberties that was drafted at Runnymede, a meadow by the River Thames, and signed by King John on June 15, 1215, under pressure from his rebellious barons. By declaring the sovereign to be subject to the rule of law and documenting the liberties held by “free men,” it provided the foundation for individual rights in Anglo jurisprudence. "
+ estate_nobles_better_integration_ottoman: "Ottoman Imperial Integration"
+ estate_nobles_better_integration_ottoman_desc: "Centralizing the state and annexing subjects is not an easy task as our administrators and diplomats are busy with the integration process. However, the Ottoman Bureaucracy is one of the most efficiency in Europe and Asia, making such tasks trivial."
+ 
+ # New Tooltips
+ DOES_NOT_HAVE_BRIBED_MERCHANTS: "§Y[From.GetName]§! must §RNOT§! have Merchants already being bribed."
+ DOES_NOT_HAVE_INFLAMED_SEPERATISM: "§Y[From.GetName]§! must §RNOT§! have Seperatist Sentiment already inflamed."
+ FOUNDED_A_ESPIONAGE_NETWORK: "Has Founded an Espionage Network"
+ DID_NOT_KILL_HEIR: "Has §RNOT§! assassinated an Heir in the last 20 years"
+ NOT_RECENTLY_RECRUITED_FROM_SPIES: "Has §RNOT§! recruited from the Espionage Network in the last 15 years"
+ NOT_ALL_SPECIALIZATIONS_ACTIVE_MISSIONS: "Does §RNOT§! have all Specializations on an active mission"
+ DID_ALL_SPECIALIZATIONS: "Has created all Specializations Networks"
+ return_to_court_spy.tt: "We will assign no Specialization missions for now"
+ PATRONAGE_INVENTOR_COOLDOWN: "Has §RNOT§! an Inventor in the last 10 years"
+ GREAT_THINKER_COOLDOWN_TIMER: "Has §RNOT§! recruited a Great Thinker in the last 20 years."
+ how_to_get_union_and_penalities.tt: "Completing this mission through the §ORivalry§! path will cost §R-250§! Administrative, Diplomatic and Military power while completing this mission through the §GAlliance§! path will only cost §R-100§! Administrative, Diplomatic and Military power.\nGetting the §YIberian Union§! naturally will bypass this mission entirely."
+ completed_mission_or_dev.tt: "Completed associated mission §YOR§! is Empire rank. (Nations that have missions relating to this reform will give it for free)"
+ 
+ grand_eminence_idea_full: "Full Eminence Ideas"
+ eminence_pp_info.tt: "This §OPower Projection§! is §OPermanent§! unless we get rid of §YEminence Ideas§!"
+ flavor_fra.6.a.guy.tt: "Should this result in War, we will be able to claim §YGascony§! cores like a Reconquest War."
+ 
+ BRITISH_NAVAL_HEGMON_CHECK: "Has the British Hegemony been claimed?"
+ BALTIC_NAVAL_HEGMON_CHECK: "Has the Baltic Sea Hegemony been claimed?"
+ MED_NAVAL_HEGMON_CHECK: "Has the Mediterranean Sea Hegemony been claimed?"
+ ARABIAN_NAVAL_HEGMON_CHECK: "Has the Arabian Sea Hegemony been claimed?"
+ BENGALI_NAVAL_HEGMON_CHECK: "Has the Eastern Indian Sea Hegemony been claimed?"
+ CHINESE_NAVAL_HEGMON_CHECK: "Has the Chinese Sea Hegemony been claimed"
+ add_relations_indicates_activity.tt: "§GNations present here are Naval Hegemons§!"
+ no_on_death_payment_tur.tt: "While we have the §YConcessions to the Janissaries§! modifier, we will not have to pay upkeep to the Janissaries on the ascension of a new Ruler."
+ only_janissary_units_reminder.tt: "This modifier only affects §YJanissaries§! units!"
+ 
+ france_burgundian_region_cores.tt: "We will gain §Gcores§! on all provinces in the French Region owned by §YBurgundy§! and §YBurgundian§! subjects."
+ lotharingia_hre_elector_or_emperor_province.tt: "Forming §YLotharingia§! will remove all owned provinces from the Holy Roman empire unless we are the §YEmperor§! or an §YElector§!."
+ dutch_hre_elector_or_emperor_province.tt: "Forming §YNetherlands§! will remove all owned provinces from the Holy Roman empire unless we are the §YEmperor§!, an §YElector§!, or have enacted the §YDecentralized Unitary Kingdom§! Government Reform."
+ dutch_republic_government_reform_question.tt: "If we are a §YRepublic§! or have either the §YCounty in the Lowlands§! or §YDecentralized Unitary Kingdom§! Government Reform, we will be given the option to adopt the §YDutch Republic§! Government type. §RTheocracies§! do not get the option to flip to the Dutch Republic!"
+ lowland_privilege_tt_new: "Granting such significant concessions with the §YGreat Privilege§! will prevent the §YEmperor§! from declaring for the §YLowlands§!. §RHowever§!, revoking the §YGreat Privilege§! will §Rseverely§! impact §YBurgundy's§! national stability."
+ burgundy_cores_lowlands_tooltip.tt: "We will gain §Gcores§! on all provinces in the Low Countries Region owned by our §RRebellious§! subjects."
+ burgundy_cores_lowlands_tooltip_subject.tt: "§YBurgundy§! will gain §Gcores§! on all provinces in the Low Countries Region owned by it's §RRebellious§! subjects."
+ lowlands_questions_if_not_in_empire_tt: "If §Y[bur_strongest_ally.GetName]§! is a member of the §YHoly Roman empire§!, a §YImperial Incident§! will start to allow §YBurgundy§! entrance into the empire. If §Y[bur_strongest_ally.GetName]§! is not, an §YImperial Incident§! will start in the empire when possible to determine §RImperial interest§! in the §YLowlands§!."
+ 
+ bur_charles_philip_1.tt: "While §YPhilippe III§! is alive, §YCharles§! will enjoy increased §Gmonthly heir claim§!, and Burgundy, §GLegitimacy§!."
+ bur_charles_philip_2.tt: "The §YBurgundian Succession Crisis§! now happens through a §Rdisaster§! instead of when a ruler dies. The disaster can begin progress once §YPhilippe§! has died or the year is 1460."
+ bur_france_may_get_mad_new_tt: "§YFrance§! will gain §Rcores§! on all provinces in the French Region owned by §YBurgundy§! and §YBurgundian§! subjects."
+ lowland_privilege_incident_new_tt: "An §YImperial Incident§! will start in the empire when possible to determine §RImperial interest§! in §YBurgundy§! and the §YLowlands§!."
+ 
+ if_burgundy_declines_lowlands_independence_tt: "Gain §G200§! §OAdministrative§!, §ODiplomatic§!, and §OMilitary§! Power. \n Should §YBurgundy§! choose to fight this conflict, all §YLow Countries§! subjects of §YBurgundy§! will form an alliance and declare an §RIndependence war§! with §Y[Emperor.GetName]§! support!\n §YBurgundy§! may choose to grant the §OGreat Privilege§! to avoid war. In this case §Y[Emperor.GetName]§! will gain §RHALF§! of §OAdministrative§! §ODiplomatic§!, and §OMilitary§! Power."
+ if_burgundy_declines_lowlands_independence_under_union_tt: "Gain §G200§! §OAdministrative§!, §ODiplomatic§!, and §OMilitary§! Power.\n Should the Senior Partner of §YBurgundy§! choose to fight this conflict, all §YLow Countries§! subjects of §YBurgundy§! will form an alliance and declare an §RIndependence war§! with §Y[Emperor.GetName]§! support!"
+ if_burgundy_agrees_to_this_deal_tt: "If §YBurgundy§! agrees to install a Prince from §Y[Emperor.GetName]'s§! dynasty, they may §Gjoin§! the §YHoly Roman empire§!."
+ lowlands_lost_to_us_forever_tt: "The Empire will consider the lands in the §YBurgundian Low Countries§! to be §Rlost forever§! and will instead focus on safeguarding existing borders.\n All provinces owned by §YBurgundy§! and §Yits subjects§! that are considered part of the §YHoly Roman empire§! will be §Rremoved§!."
+ burgundy_senior_warning_of_war_lowlands.tt: "Choosing this option will cause all §YLow Countries§! subjects of §YBurgundy§! will form an alliance and declare an §RIndependence war§! with §Y[Emperor.GetName]§! support!"
+ 
+ # New Edicts
+ edict_protect_trade_mercantile: "§OMercantile§! Protect Trade"
+ edict_increase_sailor_enlistment: "§OMaritime§! Increase Sailors Enlistment"
+ edict_economic_ecnourage_development: "§OEconomic§! Provincial Development"
+ 
+ # New Nations
+ PLS:0 "Palestine"
+ PLS_ADJ:0 "Palestinian"
+ TSJ:0 "Transjordan"
+ TSJ_ADJ:0 "Transjordanian" 
+ 
+ al_suryah_levantine: "Levantine"
+ 
+ 
+ 
+ # Renaming
+ frisia_kingdom: "Frisia"
+ frisia_kingdom_ADJ: "Frisian"
+ 
+ # provs
+ PROV5157:0 "Southern Caspian Sea"
+ PROV5158:0 "Central Caspian Sea"
+ PROV5159:0 "Garabogazköl"
+ PROV5160:0 "Volga's Delta"
+ PROV5161:0 "Northern Caspian Sea"
+ navigable_caspian_sea_area: "The Caspian Sea"
+ 
+ 
+ # 1356 Port
+ 
+ tribal_1356_inheritance: "Tribal Inheritance"
+ tribal_winds_of_change: "Winds of Change"
+ 
+ subvert_rival_clans_reform_tribes: "Subvert Rival Tribes"
+ subvert_rival_clans_reform_tribes_desc: "To maintain the legitimacy of the central clan, we shall take hostile action internally and externally. While this may be seen as brutal repression by some of the more loyalty clans throughout our tribe, it is but a small price to pay."
+ mongolic_succession_reforms_tribes: "Mongol Succession"
+ mongolic_succession_reforms_tribes_desc: "Following the death of Temüjin, his empire was divided into four distinct bodies, the Golden Horde, the Ilkhanate, the Chagatai Khanate and lastly, the Yuan empire in China. While the golden days of the Mongol empire are long over, we should consider retaining distinct laws of these Khanates. Only those who can trace their lineage to Temüjin shall be allowed to be Khan!"
+ tribal_rule_by_might_reform: "Rule by Might"
+ tribal_rule_by_might_reform_desc: "The tribe has no room for dynastic politics, instead it is time that Khans be determined by might, not simply dynastic lineage. Only the strongest shall be allowed to take the mantle of Khan!" 
+ tribal_hereditary_succession: "Lineage Succession"
+ tribal_hereditary_succession_desc: "By ensuring a singular, Great clan amongst the other clans throughout the tribes can we prosper. While this goes against tradition, should the realm be more stable, the clans will be willing to allow a Regent in charge." 
+ formalize_noble_caste_tribal: "Formalize Nobility Caste"
+ formalize_noble_caste_tribal_desc: "Our contacts with the more centralized powers in our region has started the discussion for the establishment of a Nobility caste in our tribal hierarchy. This new caste would have power equal to that of the warring tribes throughout the realm."  
+ formalize_clergical_caste_tribal: "Preserve Religious Text"
+ formalize_clergical_caste_tribal_desc: "The true faith has been critical to our people for generations. While the people have long revered the spiritual leaders throughout the lands, they have lacked privileges that the various great clans possess. It is time we formalize a religious caste throughout our lands so that the religious traditions of our people may prosper."
+ grow_trade_relations_tribal: "Monopolize Trade Relations"
+ grow_trade_relations_tribal_desc: "Our traders have long traded with the peoples outside the tribes. Perhaps by granting those who demonstrate proficient in tradecraft special privileges, will our people be able to long prosper."    
+ fortify_structure_of_the_tribe_tribal: "Fortify Structure of the Tribe"
+ fortify_structure_of_the_tribe_tribal_desc: "Through the creation of Five Great Clans throughout all tribes shall our lands be stable. While overtime these newly promoted clans may grow strong, it's unlikely they will forget this recognition of power anytime soon."     
+ delegate_power_to_clan_leaders_tribal: "Into the World"
+ delegate_power_to_clan_leaders_tribal_desc: "The Tribal identity of our people is not something we can simply give up, it is a part of what defines our people's traditions for centuries. Monarchies, Theocracies and Republics of the world be damned! May whatever God they worship have mercy on them! We will have none!!"
+ 
+ mechanic_ruler_reigns_until_death_or_appointment_yes: "Rulers are chosen by the Veche and reign until death"
+ mechanic_abolishes_novgordian_succession_yes: "Abolishes §YNovgorodian Princely Succession§!"
+ mechanic_improves_prince_attributes_yes: "Improves §Gbase attributes§! of §YForiegn Princes§! based on selection"
+ mechanic_improves_boyars_attributes_yes: "Improves §Gall base attributes§! of §YLocal Boyars§! in Princely succession"
+ mechanic_enables_regencies_tribes_if_rival_yes: "§YTribal Succession Crises§! will only happen when §YLegitimacy§! or §YHorde Unity§! is below §R20§!"
+ mechanic_regencies_remain_same_tribe_yes: "§YTribal Succession Crises§! caused by §YRegency§! remain the same"
+ mechanic_regencies_enabled_mongol_tribe_yes: "Disables §YTribal Succession Crises§! caused by §YRegency§!"
+ mechanic_tribal_succ_crisis_if_35_yes: "§YTribal Succession Crises§! will only happen when §YLegitimacy§! or §YHorde Unity§! is below §R35§!"
+ mechanic_prevents_regency_tribe_yes: "Disables §YTribal Succession Crises§!"
+ mechanic_tribal_succession_50_tribal_yes: "§YTribal Succession Crises§! will only happen when §YLegitimacy§! or §YHorde Unity§! is below §R50§!"
+ mechanic_enables_consorts_regent_regency_tribal_yes: "Enables §YRegency§! and §YConsort Regency§!"
+ mechanic_enables_nobles_estate_tribal_yes: "Enables §YNobility§! estate"
+ mechanic_enables_church_estate_tribal_yes: "Enables §YClergy§! estate"
+ mechanic_enables_merchants_estates_tribal_yes: "Enables §YBurghers§! estate"
+ mechanic_enables_tribes_estates_tribal_yes: "Enables §YTribes§! estate"
+ mechanic_provides_2_tribal_alligenance_yes: "Provides §G+3§! §YYearly Tribal Allegiance§!"
+ 
+ mechanic_prevents_dutch_revolt_if_dutch_accepted_yes: "Prevents the §YDutch Revolt§! disaster if §YDutch§! culture is an §Gaccepted culture§!."
+ mechanic_prevents_dutch_revolt_yes: "Disables the §YDutch Revolt§! disaster."
+
+ mechanic_explusion_of_minorities_yields_benefits_yes: "Expelling Minorities from provinces will provide the following bonuses to said provinces for §Y10§! years.\n§G+6§! Yearly Tax Income\n§G-5%§! Local Development Cost\n§G-25%§! Local Construction Cost."
+ # New Decisions
+ form_unitary_kingdom_decentrialized_title: "Unitary Kingdom of Frisia"
+ form_unitary_kingdom_decentrialized_desc: "While many centuries have passed since the Frisian Kingdom's collapsed, through careful manuevering [Root.Monarch.GetTitle] $MONARCH$ has managed to consolidate a portion of the Low Countries into his relam. While ruling these lands hasn't been easy, if we were to proclaim a restored Frisian Kingdom while guaranteeing autonomy of our subjects, $MONARCH$ would be able to rule with the legitimacy of a King! While inherently a kingdom with a unitary structure, the relam would remain heavily decentralized."
+ hegemon_tracker_set_title: "§ONaval Hegemon Tracker§!"
+ hegemon_tracker_set_desc: "This decision serves as a tracker of all Naval Hegemons present in the world. Hover over the 'Reward' button to see any Hegemons. Nations who relations decrease with us are Naval Hegemons."
+ espionage_create_espionage_network_title: "Create the §OEspionage Network§!"
+ espionage_create_espionage_network_desc: "Placeholder"
+ espionage_kill_heir_title: "Arrange the §YAssassination§! of our Heir"
+ espionage_kill_heir_desc: "Placeholder"
+ espionage_recruit_from_espionage_network_title: "Recruit Advisors from Espionage Network"
+ espionage_recruit_from_espionage_network_desc: "Placeholder"
+ espionage_found_specialization_mil_title: "Create §OMilitary Specialization§! Network"
+ espionage_found_specialization_mil_desc: "Placeholder"
+ espionage_found_specialization_dip_title: "Create §OForeign Affairs§! Specialization Network"
+ espionage_found_specialization_dip_desc: "Placeholder"
+ espionage_found_specialization_adm_title: "Create §OInternal Affairs§! Specialization Network"
+ espionage_found_specialization_adm_desc: ""
+ espionage_access_the_network_title: "Assign §OEspionage Specialization§! Missions"
+ espionage_access_the_network_desc: "Placeholder"
+ patronage_local_researcher_inno_title: "Patronage a Local Inventor"
+ patronage_local_researcher_inno_desc: ""
+ invite_a_great_thinker_advisor_title: "Invite a §OGreat Thinker§!"
+ invite_a_great_thinker_advisor_desc: "Great Placeholder of Time"
+ establish_the_national_bank_title: "Found the National Bank"
+ establish_the_national_bank_desc: "Placeholder in Placeholder"
+ 
+ hegemon_britain_rules_the_waves_title: "Proclaim British Naval Hegemony"
+ hegemon_britain_rules_the_waves_desc: ""
+ hegemon_mediterranean_title: "Proclaim Mediterranean Naval Hegemony"
+ hegemon_mediterranean_desc: ""
+ hegemon_arabian_sea_title: "Proclaim Arabian Sea Hegemony"
+ hegemon_arabian_sea_desc: ""
+ hegemon_bengali_sea_title: "Proclaim Eastern Indian Ocean Hegemony"
+ hegemon_bengali_sea_desc: ""
+ hegemon_china_sea_title: "Proclaim China Sea Hegemony"
+ hegemon_china_sea_desc: ""
+ hegemon_baltic_sea_title: "Proclaim Baltic Sea Hegemony"
+ hegemon_baltic_sea_desc: ""
+ 
+ pope_choose_papal_lifetime_decision_title: "Choose Lifetime Papal Bonus"
+ pope_choose_papal_lifetime_decision_desc: "As the Apostolic successor to Saint Peter, and keeper to the Keys to Heaven, $MONARCHTITLE$ $MONARCH$ holds great sway over the Christian world. What approach should $MONARCHTITLE$ $MONARCH$ towards engaging with the Catholic nations of Europe, and by extension all nations of the world?"
+
+ pope_action_legate.1.t: "The Bishop of Rome"
+ pope_action_legate.1.desc: "As the Apostolic successor to Saint Peter, and keeper to the Keys of Heaven, $MONARCHTITLE$ $MONARCH$ holds great sway over the Christian world. What approach should $MONARCHTITLE$ $MONARCH$ towards engaging with the Catholic nations of Europe, and by extension all nations of the world?"
+ pope_action_legate.1.a: "Consolidate Clergy Taxes."
+ pope_action_legate.1.b: "Ready the Soldiers of the Papal State for War."
+ pope_action_legate.1.c: "Offer Indulgences."
+ pope_action_legate.1.d: "Forgive acts of Usury."
+ pope_action_legate.1.e: "Proclaim an Age of Holy War"
+ pope_action_legate.1.f: "Expand the Papal Legate Corp."
+ 
+ in_papal_select_screen: "In Papal Bonus Screen"
+ in_papal_select_screen_desc: ""
+ 
+ # Missions
+ ara_neogiate_iberian_union_title: "Negotiate Castilian Union"
+ ara_neogiate_iberian_union_desc: "The Trastámaras of the crowns of Aragon and Castile have long kept close relations. However, we should attempt to broker a political union between our two kingdoms in order to counterbalance the rising powers in Europe and Ottoman Turks in Anatolia."
+ cas_neogiate_iberian_union_title: "Union with Aragon"
+ cas_neogiate_iberian_union_desc: "The Trastámaras of the crowns of Castile and Aragon have long kept close relations. However, we should attempt to broker a political union between our two kingdoms in order to counterbalance the rising powers in Europe and Ottoman Turks in Anatolia."
+ 
+ # New Events
+ new_ideas_events.1.t: "$HEIR$ has been Murdered!"
+ new_ideas_events.1.d: "Your guards awaken you in the middle of the night with grave news, $HEIR$ was found in a pool of blood in $HEIR_ADJ$ chambers. At this time, the guards have had no luck in finding any potential assailants."
+ new_ideas_events.1.a: "$HEIR$ NOOOOOO!!"
+ new_ideas_events.1.b: "What an unfortunate set of circumstances…"
+ 
+ new_ideas_events.2.t: "Recruitment from the Espionage Network"
+ new_ideas_events.2.d: "Your Network Spymaster brings you three promising members of the nation’s spy network. Each of them offer you their undying loyalty and would be honored to serve as an advisor on your court. The Spymaster suggests you only recruit one as the others could be better served as future elite spies."
+ new_ideas_events.2.a: "You in the middle, serve as my Court Spymaster"
+ new_ideas_events.2.b: "You on the left, join my court as a Treasurer"
+ new_ideas_events.2.c: "You on the right, share with me your knowledge on Fortifications"
+ 
+ new_ideas_events.10.t: "The Espionage Network of $COUNTRY$"
+ new_ideas_events.10.d: "The Espionage Network of $COUNTRY$ houses our most elite spies, who are loyal to $MONARCHTITLE$ $Monarch$ alone. While spies can conduct normal espionage actions, only our most elite spies, trained in a select specialization can undertake our most challenging missions. §GIf a Specialization cannot be selected, it is because it currently has an assigned mission.§!"
+ new_ideas_events.10.a: "Assign a Internal Specialization mission"
+ new_ideas_events.10.b: "Assign a Foreign Specialization mission"
+ new_ideas_events.10.c: "Assign a Military Specialization mission"
+ new_ideas_events.10.dd: "Return to Court for now"
+ 
+ new_ideas_events.11.t: "Internal Missions"
+ new_ideas_events.11.desc: "The Internal Affairs Specialization Network deals with managing internal affairs. While a mission is ongoing, we will lose one of our Diplomats."
+ new_ideas_events.11.a: "Enforce Vassal Payments"
+ new_ideas_events.11.b: "Grow Legitimacy for our Heir"
+ new_ideas_events.11.c: "Search the Realm for Talent"
+ new_ideas_events.11.d: "Hunt down and Assassinate Rebel Leaders"
+ 
+ new_ideas_events.12.t: "Foreign Missions"
+ new_ideas_events.12.desc: "The Foreign Affairs Specialization Network deals with managing affairs aboard, both in Government and Powerful Nobles. While a mission is ongoing, we will lose one of our Diplomats."
+ new_ideas_events.12.a: "Empower Rebellious causes abroad"
+ new_ideas_events.12.b: "Improve Claim Forgery"
+ new_ideas_events.12.c: "Secure Fence Loans"
+ new_ideas_events.12.d: "Justify ongoing Conflicts"
+ 
+ new_ideas_events.13.t: "Military Missions"
+ new_ideas_events.13.desc: "The Military Specialization Network deals with improving the security and proactivity of our armies while also securing additional support through unconventional means."
+ new_ideas_events.13.a: "Conduct Nightly Raids on Supplies"
+ new_ideas_events.13.b: "Secure a Loyal Captain"
+ new_ideas_events.13.c: "Employ Bandits and Brigands"
+ new_ideas_events.13.d: "Provide Scouting Reports"
+ 
+ new_ideas_events.20.t: "Offering Patronage"
+ new_ideas_events.20.desc: "An aspiring Inventor has arrived in $PROVINCECAPITAL$ to seek an audience with you. While one of your advisors initially wanted to send him away, another one intervened, saying this man could be the next great thinker of our time. As $MONARCHTITLE$ you control the funds of the state and can decide if this man’s aspirations are worth the investment."
+ new_ideas_events.20.a: "We shall offer him patronage, but only a small amount of the State’s resources."
+ new_ideas_events.20.b: "Provide him with a years’ worth of funds, but nothing more"
+ new_ideas_events.20.c: "This man is truly the next Great Thinker of our times! Fully fund him!"
+ 
+ new_ideas_events.21.t: "The Great Thinkers of $COUNTRY$"
+ new_ideas_events.21.desc: "Throughout $COUNTRY$ there are tales of many great thinkers. It will take a lot of resources for us to narrow down a specific individual, but it will be more than worth it."
+ new_ideas_events.21.a: "Begin the search for a Administrative Great Thinker"
+ new_ideas_events.21.b: "Begin the search for a Diplomatic Great Thinker"
+ new_ideas_events.21.c: "Begin the search for a Military Great Thinker"
+ 
+ new_ideas_events.22.t: "The Administrative Minds of the Time"
+ new_ideas_events.22.desc: "Throughout $COUNTRY$ there are tales of many great thinkers. It will take a lot of resources for us to narrow down a specific individual, but it will be more than worth it."
+ new_ideas_events.22.a: "We need a Grand Artist"
+ new_ideas_events.22.b: "Bring me one of the Greatest Inquisitors in the realm"
+ new_ideas_events.22.c: "A Master of Mint is what we truly need"
+ new_ideas_events.22.dd: "A Great Scientist will reward us greatly"
+ new_ideas_events.22.e: "One of the Great Philosophers of our time"
+ new_ideas_events.22.f: "A Great Theologian will do wonders" 
+ new_ideas_events.22.g: "A Treasurer to manage the State’s Coffers" 
+ 
+ new_ideas_events.23.t: "The Diplomatic Minds of the Time"
+ new_ideas_events.23.desc: "Throughout $COUNTRY$ there are tales of many great thinkers. It will take a lot of resources for us to narrow down a specific individual, but it will be more than worth it."
+ new_ideas_events.23.a: "A man of Exceptional knowledge of the colonies"
+ new_ideas_events.23.b: "One of the Histories’ Greatest Diplomats"
+ new_ideas_events.23.c: "A Reformer of the Navy"
+ new_ideas_events.23.dd: "A Renowned Navigator"
+ new_ideas_events.23.e: "Someone who is one with the Shadows"
+ new_ideas_events.23.f: "A Statesman worthy Patronage" 
+ new_ideas_events.23.g: "One of the wealthiest Merchants throughout $COUNTRY$" 
+ 
+ new_ideas_events.24.t: "The Military Minds of the Time"
+ new_ideas_events.24.desc: "Throughout $COUNTRY$ there are tales of many great thinkers. It will take a lot of resources for us to narrow down a specific individual, but it will be more than worth it."
+ new_ideas_events.24.a: "A Skilled Organizer of the Troops"
+ new_ideas_events.24.b: "A Reformer of the Army"
+ new_ideas_events.24.c: "A Renowned and Respected Commandant"
+ new_ideas_events.24.dd: "An Exceptional Grand Captain"
+ new_ideas_events.24.e: "Someone who can inspire Recruits"
+ new_ideas_events.24.f: "A Fortification Genius" 
+ new_ideas_events.24.g: "An Efficient Quartermaster" 
+ 
+ new_ideas_events.30.t: "The Sun Never Sets"
+ new_ideas_events.30.desc: "The people of $COUNTRY$ have a unique destiny in the future to come. Will the $COUNTRY_ADJ$ people come to rival those of the Roman and Mongol Empire?"
+ new_ideas_events.30.a: "We will make it so!"
+ 
+
+ 
+ flavor_eth.40.c: "Lets instead adopt the teachings of Beta Israel"
+ flavor_tur.EVTOPTA100.b: "We should instead focus on ensuring their loyalty"
+ 
+ new_flavour_bur.100.name: "The Burgundian Line of Succession"
+ new_flavour_bur.100.desc: "While Duke Philippe III has proven to be a more than capable ruler, there is concern about his current heir, Charles. While Philippe has other children than Charles, the Duke has already promised the throne to Charles should he pass, disinheriting any other successors. Come what may, we must tread carefully when navigating the politics in Europe as the coming decades may prove troublesome for the Burgundian line of succession."
+ new_flavour_bur.100.A: "Hopefully in time, Charles will be just like his father."
+ 
+ incidents_bur_inheritance.997.t: "The Burgundian Question"
+ incidents_bur_inheritance.997.d: "It is rare indeed for the Holy Roman Empire to expand, but nothing in Imperial law appears to forbid it. [bur_strongest_ally.GetName] has petitioned the Emperor to consider adding Burgundy, which they rule under a Personal Union, to the Imperial fold."
+ incidents_bur_inheritance.997.a:0 "Convene the Imperial Diet."
+ 
+ 
+ incidents_bur_inheritance.998.t: "The Burgundian Question"
+ incidents_bur_inheritance.998.d: "It is rare indeed for the Holy Roman Empire to expand, but nothing in Imperial law appears to forbid it. [bur_strongest_ally.GetName] has petitioned the Emperor to consider adding Burgundy, which they rule under a Personal Union, to the Imperial fold."
+ incidents_bur_inheritance.998.a:0 "Burgundy shall join the Empire."
+ incidents_bur_inheritance.998.b:0 "Ban their entry."
+ 
+ 
+ incident_hre_prince_pu_burgundy_emperor_alert:0 "It is rare indeed for the Holy Roman Empire to expand, but nothing in Imperial law appears to forbid it. [bur_strongest_ally.GetName] has petitioned the Emperor to consider adding Burgundy, which they rule under a Personal Union, to the Imperial fold."
+ incident_hre_prince_pu_burgundy_member_alert:0 "It is rare indeed for the Holy Roman Empire to expand, but nothing in Imperial law appears to forbid it. [bur_strongest_ally.GetName] has petitioned the Emperor to consider adding Burgundy, which they rule under a Personal Union, to the Imperial fold."
+ incident_hre_prince_pu_burgundy:0 "The Burgundian Question"
+ 
+ incidents_bur_inheritance.995.t: "Burgundy Stands Alone"
+ 
+ incidents_bur_inheritance.1000.t: "A Prince for Protection"
+ incidents_bur_inheritance.1000.d: "The Burgundian Succession Crisis has brought turmoil to the lands of Burgundy, but the [Emperor.GetCulture] Kaiser has offered us a proposal. Should we enthrone a member of the [Emperor.Monarch.Dynasty.GetName]dynasty, we shall be permitted to join the Holy Roman empire and be under its protection. However, undoubtedly this will bring us under the more direct influence of the Kaiser."
+ incidents_bur_inheritance.1000.a: "Uncertain times call for certain measures. Designate the [Emperor.Monarch.Dynasty.GetName] as heir."
+ incidents_bur_inheritance.1000.b: "Outrageous! Burgundy has and will always remain Burgundian!"
+ 
+ incidents_bur_inheritance.101.c: "Burgundy and its Lowlands possessions are not worth the effort."
+ incidents_bur_inheritance.101.bb: "Enthrone Imperial Prince for Protection"
+ 
+ # New Merc Companies
+ merc__local_small_company_eminence:0 "§OEminence§! Free Company"
+ merc__local_free_city_company_eminence:0 "§OEminence§! Free City Company"
+ merc__local_free_company_eminence:0 "§OEminence§! Free Company"
+ merc__local_grand_company_eminence:0 "§OEminence§! Grand Company" 
+ 
+ 
+ ## 
+ inheritance_of_burgundy: "Inheritance of Burgundy"
+ inheritance_of_burgundy_desc: "A foreign noble has inherited Burgundy and now sits as Duke."
+ 4_years_since_crisis_started:0 "Disaster has been active for 4 years."
+ 
+ # New Government Reforms
+ colonial_empire_reform: "Colonial Empire"
+ colonial_empire_reform_desc: "Placeholder"
+ french_feudal_nobility_reform: "French Feudal Nobility"
+ french_feudal_nobility_reform_desc: "In a Feudal kingdom the power of the Monarch is enhanced by a land owning aristocracy sworn to obey them. The aristocrats, or nobles, are often landowners in their own right, with considerable influence and vassals of their own."
+ french_monarchy_reform: "French Monarchy"
+ french_monarchy_reform_desc: "Autocratic monarchies concentrate power in the hands of the ruler. The state is often seen as their personal property. It is not uncommon for rulers to have ministers and supporters, but these are then referred to as members of the royal household."
+ jan_hus_teaching_spreading: "Taborites Resurgence"
+ jan_hus_teaching_spreading_desc: "Following the conclusion of the Hussite wars in 1434 and the signing of the Compact of Prague, most of the remaining Hussites would fade into obscurity. However in recent times, a new Hussite power has emerged and with it a resurgence of the radical Taborites branch of Hussism."
+ mos_patriarchy_reform: "Muscovite Patriarchy"
+ mos_patriarchy_reform_desc: "`The fall of Constantinople marked a turning point for the Orthodox church, where the Patriarch of Moscow would become the new leading figure in Eastern Christianity. We should fully embrace our newly found duty to protect all remaining Orthodox nations."
+ pol_ruthenian_elites_reform: "Integrated Ruthenian Elites"
+ pol_ruthenian_elites_reform_desc: "The Ruthenian Cossacks are a formidable force throughout the Eastern steppe. By granting them special privileges and empowering these Cossacks we will be able to make greater use of their prowess on the battlefield and abroad,"
+ influence_spherial_projection_reform: "Spherical Projection"
+ influence_spherial_projection_reform_desc: ""
+ the_crown_of_lothair_reform: "Kingdom of Lothair"
+ the_crown_of_lothair_reform_desc: "The Frankish King Lothair II once carved out a mighty kingdom from the Low Countries to the Alps. With our ascension and crowning as King of Lotharingia, we can claim his legacy as successors to the Carolingian dynasty."
+ county_in_the_lowlands_dutch: "County in the Lowlands"
+ county_in_the_lowlands_dutch_desc: "The Duchies and Counties of the Lowlands, while long heavily divided, still hold some of the wealthiest cities and lands in Europe. While the states of the Lowlands may share a common identity, unifying them into a unitary state will prove challenging."
+ kingdom_in_the_lowlands_dutch: "Decentralized Unitary Kingdom"
+ kingdom_in_the_lowlands_dutch_desc: "While difficult, we have managed to organize a large portion of the states in the Lowlands into a Unitary Kingdom. However, while this Kingdom is united under one Monarch, the nature of the Lowlands requires it remain heavily decentralized."
+ duchy_of_burgundy_reform: "Duchy of Burgundy"
+ duchy_of_burgundy_reform_desc: "The Duchy of Burgundy under the Burgundian Valois line (de Bourgogne) has been a troublesome thorn in France throughout the 14th and 15th century. While still nominally a vassal of France, Burgundy has gained considerable influence in the Low Countries throughout the decades, inheriting the lands of Flanders, Brabant and Holland through strategic marriages, now this relationship is only in name. During the Hundred Years’ war, the Dukes of Burgundy would switch sides, frequently supporting the English or French depending on when it best suited their interest."
+ 
+ ottoman_devshrine_system_reform: "Devshirme System"
+ ottoman_devshrine_system_reform_desc: "By enrolling young men from newly conquered lands into service we can increase the efficiency of our recruitment process considerably. It is time we refine and expand this system in our government."
+ 
+ ottoman_provincial_government_system_reform: "Provincial Government System"
+ ottoman_provincial_government_system_reform_desc: "By appointing provincial governors we can improved administration of taxes. We should be wary however as ambitious governors may become more frequent to plot intrigue, resulting in more internal feuds."
+ 
+ # Ottoman Ideas update
+  tophane_foundry: "Tophane Foundry"
+ tophane_foundry_desc: "Through expansion of the armory and foundry at Tophane, we can massively increase the manufacture and power of our cannons, which will provide incredible firepower to our troops, superior to that seen anyplace elsewhere in Europe. All our foes will cower before the mighty rumble of Ottoman artillery."
+ sultanate_of_women: "Sultanate of Women"
+ sultanate_of_women_desc: "The women of the Ottoman harem dominate palace politics, being among the strongest supporters of the Ottoman Sultan. Many of these women are greatly capable, and have supported the construction of beautiful public works and philanthropic efforts throughout the Empire."
+ 
+ # Expel Minorities
+ explusion_of_minorities: "Expulsion of Minorities"
+ explusion_of_minorities_desc: "Minorities were recently expelled from this province to a colonial holding. Land belonging to these minority groups has been seized by local the administration and overall productivity of the region has seen a major decrease."
+ 
+ # CBS and Wargoals
+ defend_capital_independence_lowlands:0 "Show Superiority"
+ defend_capital_independence_lowlands_desc:0 "War goal is to show superiority against $COUNTRY$."
+ cb_independence_war_lowlands:0 "Lowlands War of Independence"
+ cb_independence_war_lowlands_desc:0 "We deserve independence." 
+ INDEPENDENCE_WAR_LOWLANDS_NAME:0 "Burgundian Lowlands War of Independence"
+ 
+ # Diasters 
+ crisis_of_the_burgundian_succession: "Burgundian Succession Crisis"
+ 
+ explusion_of_minorities_yields_benefits.tt: "Expelling Minorities from provinces will provide the following bonuses to said provinces for §Y10§! years.\n§G+6§! Yearly Tax Income\n§G-5%§! Local Development Cost\n §G-25%§! Local Construction Cost."
+ explusion_of_minorities_reform_bonus_cooldown: "Explusion Penal Bonus Cooldown"
+ explusion_of_minorities_reform_bonus_cooldown_desc: "This province will not recieve any benefits while this modifier is present"
+ explusion_of_minorities_reform_bonus: "Exile Colonial Companies: Minorities Expelled"
+ explusion_of_minorities_reform_bonus_desc: ""
+ 
+ 
+ # New Colonial Nations
+ COLONIAL_NEWZEALAND_Root_Culture_GetName_NEWZEALAND:0 "[Root.GetAdjective] Australia"
+ COLONIAL_NEWZEALAND_Root_Culture_GetName_NEWZEALAND_ADJ:0 "[Root.GetAdjective] Australian"
+ COLONIAL_CENTRAL_AMERICA_Root_Culture_GetName_CENTRAL_AMERICA:0 "[Root.GetAdjective] Australia"
+ COLONIAL_ENTRAL_AMERICA_Root_Culture_GetName_CENTRAL_AMERICA_ADJ:0 "[Root.GetAdjective] Australian" 
+ 
+ colonial_central_america: "Colonial Central America"
+ colonial_new_zealand: "Colonial Aotearoa"
+ 
+ # 1.33 Ports
+ HUNDRED_YEARS_WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ Hundred Years War"
+ take_capital_hundred_years_war:0 "Take the capital"
+ take_capital_hundred_years_war_desc:0 "War goal is to take the capital."
+ cb_hundred_years_war:0 "Hundred Years War"
+ cb_hundred_years_war_desc:0 "The final war to end the Hundred Years War between the English and the French." 
+ mechanic_enables_horde_idea_group_yes:0 "Allows Nomadic Idea Group."
+ mechanic_enables_horde_idea_group_no:0 "Disallows Nomadic Idea Group."
+ mechanic_enables_divine_idea_group_yes:0 "Allows Theocratic Idea Group."
+ mechanic_enables_divine_idea_group_no:0 "Disallows Theocratic Idea Group."
+ mechanic_allow_convert_yes:0 ""
+ mechanic_allow_convert_no:1 ""
+ mechanic_has_unify_china_cb_yes:0 "Has access to the Unify China casus belli" 
+ 
+ estate_rajput_better_integration:0 "[Root.GetRajputOrFallbackName] Integration Policy"
+ estate_rajput_better_integration_desc:0 "Centralizing the state and annexing subjects is not an easy task as our administrators and diplomats are busy with the integration process. This can be avoided however if we allow the [Root.GetRajputOrFallbackName] to take control over the integration policy of our country." 
+ estate_rajput_subject_rights:0 "Subject Rights"
+ estate_rajput_subject_rights_desc:0 "[Root.GetUsableNameCap] is a decentralized state in which remote provinces are governed by subjects with considerable independence from the [Root.Monarch.GetTitle]. This system has its benefits but makes maintaining the primacy of royal power a significant challenge." 
+ estate_jains_grant_liberties:0 "Grant [Root.GetJainsName] Liberties"
+ estate_jains_grant_liberties_desc:0 "The [Root.GetJainsName] are a minority wihtin our state, but hold a lot of financial power. By granting them some liberties we can secure their loyalty to us."
+ estate_dhimmi_grant_liberties:0 "Grant [Root.GetDhimmiName] Liberties"
+ estate_dhimmi_grant_liberties_desc:0 "The [Root.GetDhimmiName] are a minority faction in our state with the power of the majority of the heathens within our borders. By granting them some liberties we can secure their loyalty to us."
+ estate_maratha_better_integration:0 "[Root.GetMarathaOrFallbackName] Integration Policy"
+ estate_maratha_better_integration_desc:0 "Centralizing the state and annexing subjects is not an easy task as our administrators and diplomats are busy with the integration process. This can be avoided however if we allow the [Root.GetMarathaOrFallbackName] to take control over the integration policy of our country."
+ estate_maratha_subject_rights:0 "Subject Rights"
+ estate_maratha_subject_rights_desc:0 "[Root.GetUsableNameCap] is a decentralized state in which remote provinces are governed by subjects with considerable independence from the [Root.Monarch.GetTitle]. This system has its benefits but makes maintaining the primacy of royal power a significant challenge." 
+ estate_brahmins_one_faith_one_culture:0 "Religious Culture"
+ estate_brahmins_one_faith_one_culture_desc:0 "Unity in a society can only be achieved when the [Root.GetClergyName] not only takes the spiritual matters in hand but also takes a more crucial role in the cultural and social questions of the realm."
+ estate_brahmins_religious_diplomats:0 "Religious Diplomats"
+ estate_brahmins_religious_diplomats_desc:0 "Good diplomacy is hard to achieve. It takes a few simple misunderstandings and the relation between two countries plummets.\nBy sending very religious diplomats to our brethren in faith we can at least prevent this situation from happening."
+ 
+ estate_brahmins_new_world_mission:0 "Brahmin New World Missions" 
+ estate_brahmins_new_world_mission_desc:0 "The New World is teeming with many shamanistic faiths. It is the calling of the Brahmin caste to bring enlightenment and knowledge to these lands."
+ 
+ 
+ # Bookmarks
+ the_grand_campaign_name_2: "Grand Campaign §G(China Divided)§!"
+ 
+ # EoC Tooltips
+  ALLIANCE_EOC:1 "The Emperor of China views themselves as above all others and will never sign alliances."
+  NO_WAR_MNG:0 "Ming is too unstable to expand outward. After 1500, offensive wars will become a possibility."
+ 
+ # provs
+  # Provinces
+ PROV5162:0 "Guanahatabey"
+ PROV5163:0 "Jaguey"
+ PROV5164:0 "Cubanacan"
+ PROV5165:0 "Ciego de Avila"
+ PROV5166:0 "Santa Cruz del Sur"
+ PROV5167:0 "Amancio"
+ PROV5168:0 "Santiago"
+ PROV5169:0 "Baracoa"
+ PROV5170:0 "Cueiba"
+ PROV5171:0 "Siwanea and Cayman Islands"
+ PROV5172:0 "Yaguana"
+ PROV5173:0 "Baoruco"
+ PROV5174:0 "Azua"
+ PROV5175:0 "Aya Whenua"
+ PROV5176:0 "Hokitika"
+ PROV5177:0 "Akaroa"
+ PROV5178:0 "Mawhera"
+ PROV5179:0 "Kaikoura"
+ PROV5180:0 "Whakatu"
+ PROV5181:0 "Otago"
+ PROV5182:0 "Wairarapa"
+ PROV5183:0 "Te Upoko-o-te-ika"
+ PROV5184:0 "Rahiti"
+ PROV5185:0 "Whanganui" 
+ PROV5186:0 "Te Tara-p-te-ika"
+ PROV5187:0 "Tamaki"
+ PROV5188:0 "Tobago"  

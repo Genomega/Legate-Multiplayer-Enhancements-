@@ -1,14 +1,5 @@
 base_flagship_modification = {
     trigger = {
-        OR = {
-            NOT = {
-                OR = {
-                    tag = POR
-                    tag = BRZ
-                }
-            }
-            normal_or_historical_nations = no
-        }
     }
     modifier = {
         flagship_durability = 1

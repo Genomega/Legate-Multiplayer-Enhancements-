@@ -11,7 +11,10 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		has_reform = zhu_ineffective_government
+		AND = {
+			has_reform = zhu_ineffective_government
+			start_date = 1444.11.12
+		}	
 	}
 
 	mean_time_to_happen = {
@@ -54,6 +57,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		start_date = 1444.11.12
 		culture_group = east_asian
 		NOT = { primary_culture = vietnamese }
 		is_year = 1510
@@ -94,6 +98,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		#start_date = 1444.11.12
 		has_reform = zhu_ineffective_government
 		OR = {
 			is_year = 1500

@@ -97,21 +97,6 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SPA
-			if = {
-				limit = {
-					NOT = { 
-						AND = {
-							has_dlc = "Golden Century" 
-							OR = {
-								tag = ARA
-								tag = CAT
-								tag = VAL
-							}
-						}
-					}
-				}
-				swap_non_generic_missions = yes
-			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -257,17 +242,6 @@ country_decisions = {
 				inherit = CAS
 			}
 			change_tag = SPA
-			if = {
-				limit = {
-					NOT = { 
-						AND = {
-							has_dlc = "Golden Century"
-							tag = ARA
-						}
-					}
-				}
-				swap_non_generic_missions = yes
-			}
 			if = {
 				limit = {
 					has_custom_ideas = no

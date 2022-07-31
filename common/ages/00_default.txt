@@ -12,6 +12,7 @@ age_of_discovery = {
 	objectives = {
 		obj_discover_america = {
 			allow = {
+				ai = no
 				capital_scope = {
 					OR = {
 						continent = europe
@@ -31,6 +32,7 @@ age_of_discovery = {
 		}
 		obj_100_development = {
 			allow = {
+				ai = no
 				capital_scope = {
 					NOT = {
 						continent = europe
@@ -58,18 +60,29 @@ age_of_discovery = {
 				}
 				amount = 5
 			}
+			allow = {
+				ai = no
+			}	
 		}
 		obj_30_development_city = {
+			allow = {
+				ai = no
+			}				
 			custom_trigger_tooltip = {
 				tooltip = obj_30_development_city_tooltip
 				any_owned_province = {
-					is_core = ROOT
-					controlled_by = owner
+					exclude_from_progress = {
+						is_core = ROOT
+						controlled_by = owner
+					}
 					development_discounting_tribal = 30
 				}
 			}
 		}
 		obj_renaissance = {
+			allow = {
+				ai = no
+			}			
 	 		has_institution = renaissance
 	 		all_state_province = {
 	 			renaissance = 100
@@ -78,6 +91,7 @@ age_of_discovery = {
 		
 		obj_two_unions = {
 			allow = {
+				ai = no
 				religion_group = christian
 				NOT = { tag = SWE }
 				NOT = { tag = NOR }
@@ -88,6 +102,7 @@ age_of_discovery = {
 		
 		obj_kalmar_personal_unions = {
 			allow = {
+				ai = no
 				OR = {
 					tag = NOR
 					tag = DAN
@@ -99,16 +114,23 @@ age_of_discovery = {
 		
 		obj_many_vassals = {
 			allow = {
+				ai = no
 				NOT = { religion_group = christian }
 			}
 			vassal = 5
 		}		
 	
 		obj_two_continents = {
+			allow = {
+				ai = no
+			}				
 			num_of_continents = 2
 		}
 	
 		obj_humiliate_rival = {
+			allow = {
+				ai = no
+			}			
 			custom_trigger_tooltip = {
 				tooltip = obj_humiliate_rival_tooltip
 				has_country_flag = humiliated_rival
@@ -122,9 +144,8 @@ age_of_discovery = {
 	
 	abilities = {
 		ab_allow_feudal_de_jure_law = {
-			effect = {
-				custom_tooltip = feudal_de_jure_law
-				set_country_flag = feudal_de_jure_law
+			modifier = {
+				global_unrest = -2.5
 			}
 			ai_will_do = {
 				factor = 10
@@ -167,7 +188,11 @@ age_of_discovery = {
 				cav_to_inf_ratio = 0.2
 			}
 			ai_will_do = {
-				factor = 10
+				factor = 5
+				modifier = {
+					factor = 500
+					is_horde = yes
+				}
 			}
 		}
 		ab_rival_border_fort = {
@@ -184,7 +209,7 @@ age_of_discovery = {
 				attack_bonus_in_capital_terrain = yes
 			}
 			ai_will_do = {
-				factor = 10
+				factor = 300
 			}
 		}
 		
@@ -192,8 +217,9 @@ age_of_discovery = {
 			allow = {
 				tag = TUR
 			}
-			modifier = {
-				siege_ability = 0.33
+			modifier = { # Brought back SB but nerf to 0.15 from 33
+				siege_ability = 0.15
+				artillery_bonus_vs_fort = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -206,7 +232,8 @@ age_of_discovery = {
 				tag = POR
 			}
 			modifier = {
-				global_colonial_growth = 40
+				#global_colonial_growth = 40
+				colonists = 1
 			}
 			ai_will_do = {
 				factor = 100
@@ -315,6 +342,9 @@ age_of_reformation = {
 	
 	objectives = {
 		obj_christian_convert = {
+			allow = {
+				ai = no
+			}			
 			OR = {
 				religion = protestant
 				religion = reformed
@@ -324,6 +354,9 @@ age_of_reformation = {
 		}
 		
 		obj_humanism_religious = {
+			allow = {
+				ai = no
+			}			
 			OR = {
 				full_idea_group = humanist_ideas
 				full_idea_group = religious_ideas
@@ -331,6 +364,9 @@ age_of_reformation = {
 		}
 		
 		obj_convert_10_provinces = {
+			allow = {
+				ai = no
+			}			
 			custom_trigger_tooltip = {
 				tooltip = obj_convert_10_provinces_tooltip
 				check_variable = { which = num_converted_religion value = 10 }
@@ -338,10 +374,16 @@ age_of_reformation = {
 		}
 		
 		obj_colonial_empire = {
+			allow = {
+				ai = no
+			}			
 			colony = 5
 		}
 		
 		obj_force_converted = {
+			allow = {
+				ai = no
+			}			
 			custom_trigger_tooltip = {
 				tooltip = obj_force_converted_tooltip
 				has_country_flag = force_converted
@@ -349,6 +391,9 @@ age_of_reformation = {
 		}
 		
 		obj_asian_trade = {
+			allow = {
+				ai = no
+			}			
 			OR = {
 				trading_bonus = {
 					trade_goods = spices
@@ -372,7 +417,10 @@ age_of_reformation = {
 		
 		}
 		
-		obj_unify_culture = {	
+		obj_unify_culture = {
+			allow = {
+				ai = no
+			}			
 			is_subject = no
 			has_unified_culture_group = yes
 		}
@@ -430,7 +478,7 @@ age_of_reformation = {
 		
 		ab_warscore_vs_religion = {
 			modifier = {
-				warscore_cost_vs_other_religion = -0.25
+				warscore_cost_vs_other_religion = -0.10
 			}
 			ai_will_do = {
 				factor = 10
@@ -481,7 +529,8 @@ age_of_reformation = {
 				}
 			}
 			modifier = {
-				diplomatic_reputation = 4
+				diplomatic_reputation = 2
+				diplomatic_annexation_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 100
@@ -493,7 +542,7 @@ age_of_reformation = {
 				tag = SPA
 			}
 			modifier = {
-				shock_damage_received = -0.2
+				shock_damage_received = -0.15
 			}
 			ai_will_do = {
 				factor = 100
@@ -519,7 +568,8 @@ age_of_reformation = {
 				}
 			}
 			modifier = {
-				global_trade_goods_size_modifier = 0.33
+				global_trade_goods_size_modifier = 0.25
+				development_cost = -0.05
 			}
 			ai_will_do = {
 				factor = 100
@@ -528,10 +578,13 @@ age_of_reformation = {
 		ab_malayan_spice_economy = {
 		
 			allow = {
-				tag = MSA
+				OR = {
+					tag = MSA
+					mission_completed = mnd_maj_gaja_madas_oath
+				}	
 			}
 			modifier = {
-				trade_efficiency = 0.25
+				trade_efficiency = 0.20
 			}
 			ai_will_do = {
 				factor = 100
@@ -543,7 +596,7 @@ age_of_reformation = {
 				tag = SIA
 			}
 			modifier = {
-				infantry_power = 0.15
+				infantry_power = 0.10
 				infantry_shock = 0.25
 			}
 			ai_will_do = {
@@ -573,7 +626,8 @@ age_of_absolutism = {
 	start = 1620
 	
 	can_start = {
-		is_institution_enabled = global_trade
+		#is_institution_enabled = global_trade
+		is_year = 1585
 	}
 	
 	papacy = 1.5
@@ -595,31 +649,52 @@ age_of_absolutism = {
 	
 	objectives = {
 		obj_3_trade_companies = {
+			allow = {
+				ai = no
+			}			
 			num_of_trade_companies = 3
 		}
 		
 		obj_universities = {
+			allow = {
+				ai = no
+			}			
 			university = 5
 		}
 	
 		obj_large_forcelimit = {
+			allow = {
+				ai = no
+			}			
 			land_forcelimit = 200
 		}
 		
 		obj_90_absolutism = {
+			allow = {
+				ai = no
+			}			
 			absolutism = 90
 		}
 		
 		obj_emperor_of_china = {
+			allow = {
+				ai = no
+			}			
 			is_emperor_of_china = yes
 			imperial_mandate = 50
 		}
 		
 		obj_cultures_accepted = {
+			allow = {
+				ai = no
+			}			
 			num_accepted_cultures = 5
 		}
 		
 		obj_win_religious_war = {
+			allow = {
+				ai = no
+			}			
 			custom_trigger_tooltip = {
 				tooltip = obj_religious_league_war_on_winning_side_tooltip
 				has_country_flag = religious_league_war_on_winning_side
@@ -717,7 +792,7 @@ age_of_absolutism = {
 				tag = FRA
 			}
 			modifier = {
-				fire_damage = 0.2
+				fire_damage = 0.15
 			}
 			ai_will_do = {
 				factor = 100
@@ -742,7 +817,7 @@ age_of_absolutism = {
 				}
 			}
 			modifier = {
-				fire_damage_received = -0.2
+				fire_damage_received = -0.15
 			}
 			ai_will_do = {
 				factor = 100
@@ -753,7 +828,10 @@ age_of_absolutism = {
 				tag = RUS
 			}
 			modifier = {
-				governing_capacity_modifier = 0.25
+				#governing_capacity_modifier = 0.25 # worthless
+				diplomats = 1
+				merchants = 1
+				min_autonomy_in_territories = -0.2
 			}
 			ai_will_do = {
 				factor = 100
@@ -768,7 +846,9 @@ age_of_absolutism = {
 				}	
 			}
 			modifier = {
-				infantry_cost = -0.33
+				#infantry_cost = -0.33
+				reinforce_cost_modifier = -1
+				reinforce_speed = 1
 			}
 			ai_will_do = {
 				factor = 100

@@ -92,23 +92,23 @@ country_event = {
 		name = women_history_events.27.a
 		trigger = {
 			has_dlc = "Rights of Man"
-			has_government_attribute = queen
+			#has_government_attribute = queen
 		}
 		add_adm_power = 50
 		add_dip_power = 50
 		add_mil_power = 50
 		add_meritocracy_effect = yes
-		define_consort = {
-			name = "Margaret"
-			dynasty = "d'Anjou"
-			culture = cosmopolitan_french
-			fixed = yes
-			adm = 4
-			dip = 4
-			mil = 3
-			female = yes
-			birth_date = 1430.9.25
-		}
+		#define_consort = {
+		#	name = "Margaret"
+		#	dynasty = "d'Anjou"
+		#	culture = cosmopolitan_french
+		#	fixed = yes
+		#	adm = 4
+		#	dip = 4
+		#	mil = 3
+		#	female = yes
+		#	birth_date = 1430.9.25
+		#}
 		add_ruler_modifier = {
 			name = margaret_of_anjou_regency
 			duration = -1

@@ -4,14 +4,18 @@
 increase_force_limit_from_colony = {
 	can_upgrade_trigger = {
 		is_subject_of_type = crown_colony
-		mil_power = 20
+		colonial_parent = {
+			mil_power = 20
+		}
 	}
 	
 	cost = 75
 	
 	effect = {
 		add_liberty_desire = 10
-		mil_power = -20
+		colonial_parent = {
+			mil_power = -20
+		}	
 	}
 
 	modifier_overlord = {
@@ -30,18 +34,21 @@ increase_force_limit_from_colony = {
 enlarge_the_gold_fleet = {
 	can_upgrade_trigger = {
 		is_subject_of_type = crown_colony
-		dip_power = 20
+		colonial_parent = {
+			dip_power = 20
+		}
 	}
 	
 	cost = 75
 	
 	effect = {
-		add_dip_power = -20
+		colonial_parent = {
+			add_dip_power = -20
+		}	
 	}
 
 	modifier_overlord = {
-		treasure_fleet_income = 0.10
-		inflation_reduction = -0.03
+		treasure_fleet_income = 0.05
 	}
 	modifier_subject = {
 		global_tax_income = 12
@@ -53,15 +60,27 @@ increase_religious_control = {
 		OR = {
 			is_subject_of_type = crown_colony
 			is_subject_of_type = self_governing_colony
+		}
+		colonial_parent = {	
+			adm_power = 20
 		}	
-		adm_power = 20
 	}
 	
 	cost = 75
 	
 	effect = {
 		add_liberty_desire = -10
-		add_adm_power = -20
+		colonial_parent = {
+			add_adm_power = -20
+		}			hidden_effect = {
+			set_country_flag = has_increased_religious_control
+		}
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			clr_country_flag = has_increased_religious_control
+		}
 	}
 
 	modifier_subject = {
@@ -77,15 +96,19 @@ increase_integration_in_the_realm = {
 		OR = {
 			is_subject_of_type = crown_colony
 			is_subject_of_type = private_enterprise
+		}
+		colonial_parent = {	
+			adm_power = 50
 		}	
-		adm_power = 50
 	}
 	
 	cost = 50
 	
 	effect = {
 		add_liberty_desire = 10
-		add_adm_power = -50
+		colonial_parent = {
+			add_adm_power = -50
+		}	
 	}
 
 	modifier_overlord = {
@@ -107,14 +130,18 @@ increase_integration_in_the_realm = {
 increase_trade_power_transfer_from_colony = {
 	can_upgrade_trigger = {
 		is_subject_of_type = private_enterprise
-		dip_power = 20
+		colonial_parent = {
+			dip_power = 20
+		}
 	}
 	
 	cost = 75
 	
 	effect = {
 		add_liberty_desire = 10
-		add_dip_power = -20
+		colonial_parent = {
+			add_dip_power = -20
+		}	
 	}
 
 	modifier_overlord = {
@@ -133,14 +160,18 @@ encourage_cash_crops = {
 			is_subject_of_type = private_enterprise
 			is_subject_of_type = self_governing_colony
 		}	
-		adm_power = 25
+		colonial_parent = {
+			adm_power = 25
+		}	
 	}
 	
 	cost = 50
 	
 	effect = {
 		add_liberty_desire = -10
-		add_adm_power = -25
+		colonial_parent = {
+			add_adm_power = -25
+		}	
 		custom_tooltip = encourage_cash_crops_tt
 		set_country_flag = encourage_cash_crops_flag
 	}
@@ -153,14 +184,18 @@ encourage_cash_crops = {
 increase_naval_force_limit_from_colony = {
 	can_upgrade_trigger = {
 		is_subject_of_type = private_enterprise
-		mil_power = 25
+		colonial_parent = {
+			mil_power = 25
+		}	
 	}
 	
 	cost = 75
 	
 	effect = {
 		add_liberty_desire = 10
-		add_mil_power = -25
+		colonial_parent = {
+			add_mil_power = -25
+		}	
 	}
 
 	modifier_overlord = {
@@ -177,14 +212,18 @@ increase_naval_force_limit_from_colony = {
 increase_the_gold_tax = {
 	can_upgrade_trigger = {
 		is_subject_of_type = private_enterprise
-		adm_power = 25
+		colonial_parent = {
+			adm_power = 25
+		}	
 	}
 	
 	cost = 75
 	
 	effect = {
 		add_liberty_desire = 5
-		add_adm_power = -25
+		colonial_parent = {
+			add_adm_power = -25
+		}	
 	}
 
 	modifier_overlord = {
@@ -200,13 +239,17 @@ increase_the_gold_tax = {
 allow_autonomous_trade = {
 	can_upgrade_trigger = {
 		is_subject_of_type = self_governing_colony
-		dip_power = 15
+		colonial_parent = {
+			dip_power = 15
+		}	
 	}
 	
 	cost = 75
 
 	effect = {
-		add_dip_power = -15
+		colonial_parent = {
+			add_dip_power = -15
+		}	
 	}
 	
 	modifier_subject = {
@@ -219,13 +262,17 @@ allow_autonomous_trade = {
 allow_autonomous_taxing = {
 	can_upgrade_trigger = {
 		is_subject_of_type = self_governing_colony
-		adm_power = 25
+		colonial_parent = {
+			adm_power = 25
+		}	
 	}
 	
 	cost = 75
 
 	effect = {
-		add_adm_power = -25
+		colonial_parent = {
+			add_adm_power = -25
+		}	
 	}
 	
 	modifier_subject = {
@@ -238,13 +285,17 @@ allow_autonomous_taxing = {
 allow_autonomous_militias = {
 	can_upgrade_trigger = {
 		is_subject_of_type = self_governing_colony
-		mil_power = 25
+		colonial_parent = {
+			mil_power = 25
+		}	
 	}
 	
 	cost = 75
 	
 	effect = {
-		add_mil_power = -25
+		colonial_parent = {
+			add_mil_power = -25
+		}	
 	}
 
 	modifier_subject = {
@@ -258,13 +309,17 @@ allow_autonomous_militias = {
 allow_autonomous_navy = {
 	can_upgrade_trigger = {
 		is_subject_of_type = self_governing_colony
-		mil_power = 25
+		colonial_parent = {
+			mil_power = 25
+		}	
 	}
 	
 	cost = 75
 	
 	effect = {
-		add_mil_power = -25
+		colonial_parent = {
+			add_mil_power = -25
+		}	
 	}
 
 	modifier_subject = {

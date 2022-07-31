@@ -17,11 +17,13 @@ country_decisions = {
 			NOT = { tag = PAP }
 			NOT = { tag = NED }
 			NOT = { tag = HLR }
+			NOT = { tag = LOT }
+			NOT = { tag = BUR }
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
 				primary_culture = frisian
-				tag = BUR
+				#tag = BUR
 			}
 			OR = {
 				ai = no
@@ -61,116 +63,42 @@ country_decisions = {
 			owns_core_province = 4383 # Den Haag
 		}
 	 	effect = {
-			if = {
-				limit = {
-					any_owned_province = {
-						is_part_of_hre = yes
-					}
-					is_elector = no
-					is_emperor = no
-				}
-				every_owned_province = {
+			custom_tooltip = dutch_hre_elector_or_emperor_province.tt
+			hidden_effect = {
+				if = {
 					limit = {
-						is_part_of_hre = yes
-					}
-					set_in_empire = no
-				}
-			}
-	  		if = {
-	  			limit = {
-	  				tag = BUR
-	  			}
-	  			change_primary_culture = dutch
-				97 = {
-					move_capital_effect = yes
-				}
-			}
-			if = {
-				limit = {
-					tag = BUR
-					exists = FRA
-				}
-	  			france_region = {
-					limit = {
-						owned_by = BUR
-						NOT = { province_id = 89 }
-						NOT = { province_id = 88 }
-						NOT = { province_id = 1743 }
-						NOT = { province_id = 87 }
-					}
-	  				remove_core = BUR
-	  				add_core = FRA
-	  				cede_province = FRA
-	  			}
-	  		}
-			if = {
-				limit = {
-					government = theocracy
-					religion = catholic
-				}
-				change_government = monarchy
-				set_legacy_government = administrative_monarchy
-				PAP = {
-					add_opinion = {
-						who = ROOT
-						modifier = opinion_displeased
-					}
-				}
-			}
-			if = {
-				limit = {
-					government = theocracy
-					NOT = { religion = catholic }
-				}
-				change_government = monarchy
-				set_legacy_government = administrative_monarchy
-			}
-			if = {
-				limit = {
-					tag = BUR
-					exists = FRA
-					BUR = {
-						any_subject_country = {
-							france_region = {
-								owned_by = PREV
-							}
+						any_owned_province = {
+							is_part_of_hre = yes
 						}
+						is_elector = no
+						is_emperor = no
+						NOT = { has_reform = kingdom_in_the_lowlands_dutch }
 					}
-				}
-				every_subject_country = {
-					limit = {
-						france_region = {
-							owned_by = PREV
-							NOT = { province_id = 89 }
-							NOT = { province_id = 88 }
-							NOT = { province_id = 1743 }
-							NOT = { province_id = 87 }
-						}
-					}
-					france_region = {
+					every_owned_province = {
 						limit = {
-							owned_by = PREV
+							is_part_of_hre = yes
 						}
-						remove_core = BUR
-						remove_core = PREV
-						add_core = FRA
-						cede_province = FRA
+						set_in_empire = no
 					}
 				}
-	  		}
-			change_tag = NED
-			if = {
-				limit = { NOT = { government = republic } }
-				change_government_to_republic = yes
-			}
-			if = {
-				limit = {
-					has_reform = parliamentary_reform
+			}	
+			hidden_effect = {
+				if = {
+					limit = { 
+						OR = {
+							has_reform = kingdom_in_the_lowlands_dutch
+							has_reform = county_in_the_lowlands_dutch
+							government = republic
+						}
+					}
+					country_event = { id = flavor_hol.3502 }
 				}
-				remove_government_reform = parliamentary_reform
-			}
-			add_government_reform = dutch_republic	
-			change_government_reform_progress = 200
+			}	
+			custom_tooltip = dutch_republic_government_reform_question.tt
+			hidden_effect = {
+				restore_country_name = yes
+			}	
+			change_tag = NED
 			swap_non_generic_missions = yes
 			low_countries_region = {
 				limit = {
@@ -204,14 +132,68 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				tag = BUR
-			}
-		}
 		ai_importance = 400
 	}
+	
+
+	form_unitary_kingdom_decentrialized = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			government = monarchy
+			has_reform = county_in_the_lowlands_dutch
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				NOT = { has_reform = kingdom_in_the_lowlands_dutch }
+				ai = no
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = NED }
+			NOT = { tag = HLR }
+			NOT = { tag = LOT }
+			NOT = { tag = BUR }
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = frisian
+				#tag = BUR
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 12
+				region = low_countries_region
+			}		
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = NED }
+		}
+	 	effect = {
+			add_government_reform = kingdom_in_the_lowlands_dutch		
+			override_country_name = frisia_kingdom
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+		}
+		ai_importance = 400
+		
+		
+	}	
 	
 }

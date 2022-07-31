@@ -1,8 +1,8 @@
 #627 - Blambangan
 
-owner = BLM
-controller = BLM
-add_core = BLM
+owner = BLI
+controller = BLI
+add_core = BLI
 culture = javanese
 religion = hinduism
 capital = "Blambangan"

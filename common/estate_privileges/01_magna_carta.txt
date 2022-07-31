@@ -1,0 +1,34 @@
+estate_nobles_magna_carta = { # Recommended by Sithben
+	icon = privilege_english_magna_carta
+	max_absolutism = -30 # New Home
+	loyalty = 0.05
+	influence = 0.25
+	is_valid = {
+		OR = {
+			has_estate_privilege = estate_nobles_magna_carta
+			has_reform = english_monarchy
+		}
+		government = monarchy
+	}
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	can_revoke = {
+		#absolutism = 30
+		OR = {
+			NOT = { has_parliament = yes }
+			NOT = { current_age = age_of_discovery }
+		}	
+	}
+	benefits = {
+		global_unrest = -1
+		leader_cost = -0.10
+	}
+	ai_will_do = {
+		factor = 5
+		
+	}
+}

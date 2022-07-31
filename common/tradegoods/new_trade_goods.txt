@@ -24,21 +24,31 @@ jade = {
 		# }	
 		modifier = {
 			factor = 0
-			OR = {
-				continent = europe
-				#continent = asia
-				continent = africa
-				continent = north_america
-				continent = south_america
-				continent = oceania
-			}		
-		}
+			NOT = {
+				OR = {
+					#continent = europe
+					continent = asia
+					#continent = africa
+					#continent = north_america
+					#continent = south_america
+					continent = oceania
+				}
+			}	
+		}		
 		modifier = {
 			factor = 0
 			OR = {
 				has_terrain = ocean
 				has_terrain = inland_ocean
+				
 			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				area = molluca_area
+				area = spice_islands_area	
+			}				
 		}		
 	}
 }

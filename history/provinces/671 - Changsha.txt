@@ -1,8 +1,11 @@
 #671 - Changsha
 
-owner = HUA
-controller = HUA
-add_core = HUA
+# owner = HUA
+# controller = HUA
+# add_core = HUA
+owner = X14
+controller = X14
+add_core = X14
 culture = xiang
 religion = confucianism
 capital = "Changsha"
@@ -14,6 +17,17 @@ base_manpower = 1
 is_city = yes
 
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X14
+	controller = X14
+	add_core = X14
+}
 
 discovered_by = chinese
 discovered_by = nomad_group

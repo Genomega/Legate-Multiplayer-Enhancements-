@@ -347,8 +347,8 @@ country_event = {
 			factor = 0
 		}
 		
-		add_legitimacy = -25
-		NAP = { add_liberty_desire = 50 }
+		add_legitimacy = -50
+		NAP = { add_liberty_desire = 100 }
 	}
 }
 
@@ -366,10 +366,10 @@ country_event = {
 		define_ruler = {
 			name = "Ferrando I"
 			dynasty = "de Trastámara"
-			dip = 4
-			mil = 4
-			adm = 2
-			claim = 50
+			dip = 3
+			mil = 3
+			adm = 4
+			claim = 80
 			fixed = yes
 		}
 		PAP = {
@@ -383,10 +383,10 @@ country_event = {
 		define_ruler = {
 			name = "Ferrando I"
 			dynasty = "de Trastámara"
-			dip = 4
-			mil = 4
-			adm = 2
-			claim = 50
+			dip = 3
+			mil = 3
+			adm = 4
+			claim = 80
 			fixed = yes
 		}
 		break_union = ARA
@@ -519,15 +519,11 @@ country_event = {
 	option = {
 		name = "flavor_ara.EVTOPTA11"
 		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				alliance_with = NAP
-			}
+			factor = 0
 		}
 		add_casus_belli = {
 			type = cb_restore_personal_union
-			months = 600
+			months = 120
 			target = NAP
 		}
 		NAP = {
@@ -540,11 +536,7 @@ country_event = {
 	option = {
 		name = "flavor_ara.EVTOPTB11"
 		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { alliance_with = NAP }
-			}
+			factor = 100
 		}
 		NAP = {
 			add_opinion = {

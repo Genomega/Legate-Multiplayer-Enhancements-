@@ -1,8 +1,12 @@
 #672 - Chenzhou
 
-owner = X25
-controller = X25
-add_core = X25
+# owner = X25
+# controller = X25
+# add_core = X25
+
+owner = X45
+controller = X45
+add_core = X45
 culture = xiang
 religion = confucianism
 capital = "Wulin"
@@ -16,6 +20,19 @@ discovered_by = chinese
 discovered_by = nomad_group
 extra_cost = 8
 center_of_trade = 1
+
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X45
+	controller = X45
+	add_core = X45
+}
 
 1643.1.1 = { controller = CXI } # The Xi dynasty of Zhang Xianzhong
 1647.12.1 = {

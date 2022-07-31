@@ -1,8 +1,8 @@
 #851 - Tarasco
 
-owner = TLA
-controller = TLA
-add_core = TLA
+#owner = #TLA
+#controller = #TLA
+#add_core = #TLA
 culture = tlapanec
 religion = nahuatl
 capital = "Tarasco" 
@@ -11,9 +11,9 @@ hre = no
 base_tax = 3 
 base_production = 3
 base_manpower = 1 
-add_local_autonomy = 50
+center_of_trade = 1
 is_city = yes
-add_core = TAR
+#add_core = #TAR
 
 
 
@@ -25,10 +25,10 @@ discovered_by = mesoamerican
 
 
 1465.1.1 = { 
-	owner = TAR
-	controller = TAR 
+	#owner = #TAR
+	#controller = #TAR 
 } #Estimated
-1490.1.1 = { add_core = TAR } #Tarascan resettlement
+1490.1.1 = { #add_core = #TAR } #Tarascan resettlement
 1522.1.1 = { discovered_by = SPA } # Cristobal de Olid 
 1523.1.1 = {
 	owner = SPA

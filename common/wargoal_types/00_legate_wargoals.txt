@@ -102,9 +102,9 @@ superiority_chinese_unification_legate = {
 	type = superiority
 	
 	attacker = {
-		badboy_factor = 0.80
-		prestige_factor = 1.0
-		peace_cost_factor = 1
+		badboy_factor = 0.75
+		prestige_factor = 1.5
+		peace_cost_factor = 0.75
 		
 		allowed_provinces = {
 			superregion = china_superregion
@@ -119,9 +119,9 @@ superiority_chinese_unification_legate = {
 	}
 	
 	defender = {
-		badboy_factor = 0.80
-		prestige_factor = 1
-		peace_cost_factor = 1
+		badboy_factor = 0.75
+		prestige_factor = 1.5
+		peace_cost_factor = 0.75
 		
 		allowed_provinces = {
 			OR = {
@@ -141,4 +141,37 @@ superiority_chinese_unification_legate = {
 	}
 	
 	war_name = CHINESE_UNIFICATION_WAR_NAME	
+}
+
+defend_capital_independence_lowlands = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 0.50
+		
+		peace_options = {
+			po_concede_defeat
+			po_independence
+			po_demand_provinces
+		}
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 0.50
+		
+		allowed_provinces = {
+			is_core = FROM
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_return_cores
+		}
+	}
+	
+	war_name = INDEPENDENCE_WAR_LOWLANDS_NAME	
 }

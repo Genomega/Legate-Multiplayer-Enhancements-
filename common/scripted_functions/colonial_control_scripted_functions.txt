@@ -1,0 +1,32 @@
+can_colonize_province = {
+	condition = {
+		tooltip = colonial_control_outside_region
+		potential = {
+			FROM = {
+				is_colonial_nation = yes
+			}
+		 }
+		allow = {
+			FROM = {
+				OR = {
+				
+					capital_scope = {
+						colonial_region = ROOT
+					}
+					has_global_flag = colonial_control_restrict_none
+					
+					overlord = {
+						NOT = {has_country_flag = colonial_control_overlord_deny}
+						has_global_flag = colonial_control_restrict_subjects
+					}
+					
+					overlord = {
+						has_country_flag = colonial_control_overlord_allow
+						has_global_flag = colonial_control_restrict_notSubjects
+					}
+				}
+			}
+		}
+		
+	}
+}

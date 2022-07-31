@@ -1,0 +1,15 @@
+bookmark =
+{
+	name = "legate_bookmark_4"
+	desc = "legate_bookmark_4_desc"
+	date = 1444.11.11
+	
+	center = 310
+	default = yes
+
+	
+	country = NOV
+	country = MAM
+
+	easy_country = MAM
+}

@@ -1,8 +1,8 @@
 # 2167 - Lijiang
 
-owner = X10
-controller = X10
-add_core = X10
+# owner = X10
+# controller = X10
+# add_core = X10
 culture = bai
 religion = vajrayana
 capital = "Lijiang"
@@ -12,6 +12,22 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
+
+owner = CMI
+controller = CMI
+add_core = CMI
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = CMI
+	controller = CMI
+	add_core = CMI
+}
 
 
 

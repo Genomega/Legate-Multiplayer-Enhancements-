@@ -1,8 +1,11 @@
 # 2137 - Daming
 
-owner = X30
-controller = X30
-add_core = X30
+# owner = X30
+# controller = X30
+# add_core = X30
+owner = YAN
+controller = YAN
+add_core = YAN
 culture = chihan
 religion = confucianism
 capital = "Daming"

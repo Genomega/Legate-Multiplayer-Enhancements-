@@ -1,0 +1,15 @@
+bookmark =
+{
+	name = "legate_bookmark_6"
+	desc = "legate_bookmark_6_desc"
+	date = 1444.11.11
+	
+	center = 446
+	default = yes
+
+	
+	country = TIM
+	country = QOM
+
+	easy_country = TIM
+}

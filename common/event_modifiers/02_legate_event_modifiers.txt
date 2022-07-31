@@ -655,3 +655,73 @@ christopher_iii_debuff = {
 vestlandet_fishing_port = {
 	trade_goods_size = 1.5
 }	
+
+tur_rewarded_in_other_wars = {
+	prestige_from_land = -0.5
+	legitimacy = -0.5
+	mil_advisor_cost = 0.1
+}	
+
+# Mali
+malian_reurrection = {
+	idea_cost = -0.1
+	technology_cost = -0.1
+}	
+
+# Expel Minorities Changes
+
+explusion_of_minorities = {
+	trade_goods_size_modifier = -0.25
+	local_development_cost = -0.10
+	local_culture_conversion_cost = -0.50
+}	
+
+explusion_of_minorities_reform_bonus = {
+	tax_income = 6
+	local_development_cost = -0.05
+	local_build_cost = -0.25
+}	
+
+explusion_of_minorities_reform_bonus_cooldown = {
+	local_monthly_devastation = -0.01
+}	
+
+kilwa_potential_colony = {
+	local_colonial_growth = 50
+}
+
+kilwa_early_game_colonist = {
+	colonists = 1
+	native_uprising_chance = -0.5
+	native_assimilation = 0.5
+}
+
+intervention_in_italy_hab = {
+	ae_impact = -0.15
+	war_taxes_cost_modifier = -1
+	reinforce_cost_modifier = -0.5
+	reinforce_speed = 0.50
+}	
+
+
+# Russian Republic
+russian_westernization_new = {
+	technology_cost = -0.10
+	idea_cost = -0.10
+	global_unrest = 2
+}
+
+russian_rush_to_siberia = {
+	global_colonial_growth = 40
+	colonist_placement_chance = 0.05
+}	
+
+st_petersburg_renovations = {
+	global_tax_income = 12
+	local_defensiveness = 0.1
+	fort_level = 1
+	prestige = 0.5
+	local_great_project_upgrade_cost = -0.25
+	allowed_num_of_buildings = 1
+	local_prosperity_growth = 1
+}	

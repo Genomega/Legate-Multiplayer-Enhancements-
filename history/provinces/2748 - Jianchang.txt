@@ -1,8 +1,8 @@
 #2406 - Jianchang
 
-owner = X11
-controller = X11
-add_core = X11
+# owner = X11
+# controller = X11
+# add_core = X11
 culture = yi
 religion = wuism
 capital = "Jianchang"
@@ -12,6 +12,22 @@ base_tax = 2
 base_production = 2
 base_manpower = 2
 is_city = yes
+
+owner = CMI
+controller = CMI
+add_core = CMI
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = CMI
+	controller = CMI
+	add_core = CMI
+}
 
 
 

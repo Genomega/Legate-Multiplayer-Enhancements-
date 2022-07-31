@@ -1,0 +1,20 @@
+# country_decisions = {
+	
+	# colonial_control_settings = {
+		# major = yes
+		# potential = {
+			# NOT = {ai=yes}
+		# }
+		# allow = {
+			# always = yes
+		# }
+		# effect = {
+			# country_event = {
+				# id = colonial_control.0
+				
+			# }
+		# }
+	# }
+# }
+
+# We use Default settings

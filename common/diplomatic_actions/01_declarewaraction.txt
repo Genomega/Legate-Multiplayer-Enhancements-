@@ -1,0 +1,124 @@
+# INSTRUCTIONS:
+#
+# condition				A diplomatic action can have any number of condition blocks, each with its own
+#						tooltip, potential and allow section
+#
+# 	tooltip					Sets a custom text string similar to the hardcoded limits
+# 							If no tooltip is scripted, the tooltip for the actual trigger will be shown
+#							Note that the custom tooltip is only shown if the allow trigger is NOT met
+#
+# 	potential				Determines if the trigger is applicable or not
+# 	allow					Determines if the action is valid or not
+#
+# effect				A diplomatic action can only have one effect block
+
+# ROOT					actor
+# FROM					target
+
+declarewar = {
+	#Depreciated - Hard Code Korea to not attack Jurchens
+	#condition = {
+	#	tooltip = NO_WAR_JOSEON
+	#	potential = {
+	#		tag = KOR
+	#		AND = {
+	#			is_subject_of = MNG
+	#			is_subject_of_type = confucian_tributary_state
+	#		}
+	#		OR = {
+	#			NOT = { has_country_flag = joseon_empire }
+	#			MNG = { is_emperor_of_china = yes }
+	#		}
+	#		FROM = {
+	#			OR = {
+	#				tag = MJZ
+	#				tag = MHX
+	#			}
+	#			is_subject_of = MNG
+	#			is_subject_of_type = confucian_tributary_state
+	#		}
+	#	}
+	#	allow = {
+	#		always = no
+	#	}
+	#}
+	# condition = {
+		# tooltip = NO_WAR_SHOGUN
+		# potential = {
+			# ROOT = {
+				# has_reform = shogunate
+			# }
+			# FROM = {
+				# NOT = {
+					# OR = {
+						# has_reform = daimyo
+						# has_reform = indep_daimyo
+						# capital_scope = {
+							# culture_group = japanese_g
+							# region = japan_region
+						# }
+					# }
+				# }
+			# }
+		# }
+		# allow = {
+			# always = no
+		# }
+	# }
+	#This only affects AI now to prevent them from doing stupid things but not restricting the player
+	# condition = {
+		# tooltip = NO_WAR_OIRATS
+		# potential = {
+			# tag = OIR
+			# ai = yes
+			#The Tumu Crisis has not fired and it still can fire.
+			# NOT = {
+				# has_global_flag = tumu_crisis_fired
+				# is_year = 1500
+			# }
+			# FROM = { NOT = {
+				# tag = MNG
+			# } }
+		# }
+		# allow = {
+			# always = no
+		# }
+	# }
+	#AI Ming will not attack other AIs until 1500.
+	condition = {
+		tooltip = NO_WAR_MNG
+		potential = {
+			tag = YAN
+			#ai = yes
+			is_emperor_of_china = yes
+			NOT = { year = 1500 }
+			FROM = {
+				ai = yes
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	### NEGATE STAB HITS ###
+	#effect = {
+	#	if = {
+	#		limit = {
+	#			OR = {
+	#				is_in_war = {
+	#					attacker_leader = ROOT
+	#					defender_leader = FROM
+	#					casus_belli = cb_shogun_annex #Shogun DOWs Expansionist Daimyo
+	#				}
+	#				is_in_war = {
+	#					attacker_leader = ROOT
+	#					defender_leader = FROM
+	#					casus_belli = cb_daimyo_annex #Daimyo DOWs Shogun
+	#				}
+	#			}
+	#		}
+	#		add_stability = 3
+	#		add_war_exhaustion = -3
+    #   }
+    #}
+}

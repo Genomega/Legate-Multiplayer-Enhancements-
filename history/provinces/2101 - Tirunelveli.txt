@@ -1,7 +1,7 @@
 #2101 - Tirunelveli
 
-owner = MAD
-controller = MAD
+owner = VND
+controller = VND
 culture = tamil
 religion = hinduism
 capital = "Tirunelveli"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = MAD
+add_core = VND
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman

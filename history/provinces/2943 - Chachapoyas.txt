@@ -1,7 +1,7 @@
 # - Chachapoyas
 
-owner = CYA
-controller = CYA
+#owner = #QTO
+#controller = #QTO
 culture = chachapoyan
 religion = inti
 capital = "Kuelap"
@@ -11,7 +11,8 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = CYA
+#add_core= #QTO
+center_of_trade = 1
 
 
 

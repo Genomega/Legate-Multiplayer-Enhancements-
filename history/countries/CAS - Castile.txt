@@ -10,7 +10,6 @@ historical_friend = POR
 capital = 219 # Toledo
 national_focus = MIL
 
-add_army_professionalism = 0.03
 
 change_estate_land_share = {
 	estate = estate_nobles

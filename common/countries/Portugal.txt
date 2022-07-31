@@ -1,8 +1,9 @@
 #Country Name: Please see filename.
 
-graphical_culture = latingfx #westerngfx
+graphical_culture = westerngfx
 
-color = { 57  160  101 }
+# color = { 57  160  101 }
+color = { 125  175  255 }
 revolutionary_colors = { 9 8 5 }
 
 historical_score = 4700
@@ -39,14 +40,14 @@ monarch_names = {
 	"Filipe #0" = 60
 	"Afonso #4" = 40
 	"Pedro #1" = 40
-	"António #0" = 20
+	"MONARCH_NAME_ANTONIO" = 20
 	"Duarte #0" = 20
 	"Henrique #0" = 20
 	"José #0" = 20
 	"Manuel #0" = 20
 	"Sebastião #0" = 20
 	"Miguel #0" = 10
-	"Teodósio #0" = 10
+	"MONARCH_NAME_TEODOSIO" = 10
 	"Dinis #1" = 5
 	"Fernando #1" = 5
 	"Alexandre #0" = 5
@@ -56,7 +57,7 @@ monarch_names = {
 	"Luís #0" = 5
 	"Álvaro #0" = 0
 	"André #0" = 0
-	"António #0 Francisco" = 0
+	"MONARCH_NAME_ANTONIO_FRANCISCO" = 0
 	"Bartolomeu #0" = 0
 	"Caetano #0" = 0
 	"Damião #0" = 0

@@ -1,7 +1,7 @@
 #841 - Guatemala
 
-owner = KIC 
-controller = KIC
+#owner = #CHT
+#controller = #CHT
 culture = highland_mayan 
 religion = mesoamerican_religion
 capital = "Tapachula" 
@@ -11,10 +11,13 @@ base_tax = 3
 base_production = 3
 base_manpower = 1 
 is_city = yes
-add_core = KIC
+center_of_trade = 1
+#add_core = #CHT
 
 
-
+native_size = 15
+native_ferocity = 9
+native_hostileness = 10
   
   
   

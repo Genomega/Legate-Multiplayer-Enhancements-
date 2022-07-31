@@ -1,0 +1,96 @@
+# INSTRUCTIONS:
+#
+# condition				A diplomatic action can have any number of condition blocks, each with its own
+#						tooltip, potential and allow section
+#
+# 	tooltip					Sets a custom text string similar to the hardcoded limits
+# 							If no tooltip is scripted, the tooltip for the actual trigger will be shown
+#							Note that the custom tooltip is only shown if the allow trigger is NOT met
+#
+# 	potential				Determines if the trigger is applicable or not
+# 	allow					Determines if the action is valid or not
+#
+# effect				A diplomatic action can only have one effect block
+
+# ROOT					actor
+# FROM					target
+
+allianceaction = {
+	condition = {
+		tooltip = ALLIANCE_EOC
+		potential = {
+			OR = {
+				FROM = {
+					is_emperor_of_china = yes
+					ai = yes
+					NOT = { has_global_flag = centralizing_top_government_flag }
+					#has_country_modifier = unreformed_empire_of_china
+				}
+				ROOT = {
+					is_emperor_of_china = yes
+					ai = yes
+					#has_country_modifier = unreformed_empire_of_china
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	
+	# condition = {
+		# tooltip = ALLIANCE_SHOGUN
+		# potential = {
+			# OR = {
+				# FROM = {
+					# has_reform = shogunate
+				# }
+				# ROOT = {
+					# has_reform = shogunate
+				# }
+			# }
+		# }
+		# allow = {
+			# always = no
+		# }
+	# }
+	# condition = {
+		# tooltip = ALLIANCE_CHINESE_WARRING_STATE
+		# potential = {
+			# OR = {
+				# FROM = {
+					# has_reform = chinese_warring_state
+				# }
+				# ROOT = {
+					# has_reform = chinese_warring_state
+				# }
+			# }
+		# }
+		# allow = {
+			# always = no
+		# }
+	# }
+	
+	# condition = {
+		# tooltip = ALLIANCE_SIBERIAN_NATIVE_COUNCIL
+		# potential = {
+			# OR = {
+				# AND = {
+					# has_reform = siberian_tribe
+					# FROM = {
+						# is_tribal = no
+					# }
+				# }
+				# AND = {
+					# is_tribal = no
+					# FROM = {
+						# has_reform = siberian_tribe
+					# }
+				# }
+			# }
+		# }
+		# allow = {
+			# always = no
+		# }
+	# }
+}

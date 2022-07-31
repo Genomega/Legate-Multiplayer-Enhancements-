@@ -1,8 +1,12 @@
 #1821 - Nanjing
 
-owner = X22
-controller = X22
-add_core = X22
+# owner = X22
+# controller = X22
+# add_core = X22
+owner = X23
+controller = X23
+add_core = X23
+
 culture = jianghuai
 religion = confucianism
 capital = "Nanjing"
@@ -18,7 +22,17 @@ center_of_trade = 3
 discovered_by = chinese
 discovered_by = nomad_group
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
 
+1444.11.12 = {
+	owner = X23
+	controller = X23
+	add_core = X23
+}
 
 
 1595.1.1 = { discovered_by = SPA }

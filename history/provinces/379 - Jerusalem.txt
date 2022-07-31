@@ -2,16 +2,18 @@
 
 owner = MAM
 controller = MAM
-culture = al_suryah_arabic
+culture = al_suryah_levantine
 religion = sunni
 capital = "Al Quds"
 trade_goods = grain
 hre = no
 base_tax = 5 
 base_production = 5
-base_manpower = 3
+base_manpower = 5
 is_city = yes
 add_core = MAM
+add_core = PLS
+center_of_trade = 2
 
 discovered_by = muslim
 discovered_by = ottoman
@@ -22,6 +24,7 @@ discovered_by = indian
 discovered_by = east_african
 
 #add_province_triggered_modifier = jerusalem_held ### Monument Added
+add_province_triggered_modifier = promised_land_modifier
 
 1517.1.1 = {
 	owner = TUR

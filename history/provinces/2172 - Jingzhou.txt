@@ -1,8 +1,11 @@
 # 2172 - Jingzhou
 
-owner = X26
-controller = X26
-add_core = X26
+# owner = X26
+# controller = X26
+# add_core = X26
+owner = X27
+controller = X27
+add_core = X27
 culture = hubei
 religion = confucianism
 capital = "Jingzhou"
@@ -13,7 +16,18 @@ base_production = 2
 base_manpower = 2
 is_city = yes
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
 
+1444.11.12 = {
+	owner = X27
+	controller = X27
+	add_core = X27
+	remove_core = YAN
+}
 
 discovered_by = chinese
 discovered_by = nomad_group

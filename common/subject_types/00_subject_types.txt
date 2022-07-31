@@ -36,6 +36,9 @@ personal_union = {}
 client_vassal = {}
 client_march = {}
 colony = {}
+crown_colony = {}
+private_enterprise = {}
+self_governing_colony = {}
 tributary_state = {}
 
 default = {
@@ -90,6 +93,8 @@ default = {
 	is_march = no
 	forms_trade_companies = yes
 	can_concentrate_development = yes
+	can_have_great_projects_moved_by_overlord = yes
+	extend_trading_range = no
 	max_government_rank = 0								# 0 means no limit
 	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
 	trust_on_start = 35									# Overlord and subject will each get this much extra trust with each other at game start
@@ -194,6 +199,7 @@ vassal = {
 	has_power_projection = no
 	gets_help_with_rebels = yes
 	forms_trade_companies = no
+	enforce_culture = yes
 
 	max_government_rank = 1
 
@@ -246,6 +252,7 @@ march = {
 	military_focus = 1.5
 	base_liberty_desire = -15.0
 	can_be_annexed = no
+	can_be_integrated = yes
 	forcelimit_to_overlord = 0.2
 	is_march = yes
 	forms_trade_companies = no
@@ -253,7 +260,7 @@ march = {
 	# Subject Interactions:
 	scutage = no
 	subsidize_armies = yes
-	fortify_march = yes
+	fortify_march = no
 	
 	send_officers = yes
 
@@ -382,18 +389,19 @@ personal_union = {
 	can_union_break = yes
 	transfer_subjects_when_made = yes
 	can_concentrate_development = no
+	extend_trading_range = yes
 
 	liberty_desire_negative_prestige = 1.0
 	military_focus = 0.66
 	
 	forcelimit_bonus = 1.0
-	forcelimit_to_overlord = 0.10
+	forcelimit_to_overlord = 0.125
 	manpower_bonus = 1.0
-	manpower_to_overlord = 0.10
+	manpower_to_overlord = 0.125
 	naval_forcelimit_bonus = 1.0
-	naval_forcelimit_to_overlord = 0.10 # Kalmar should give more sailors and boats
+	naval_forcelimit_to_overlord = 0.125 # Kalmar should give more sailors and boats
 	sailors_bonus = 0.5
-	sailors_to_overlord = 0.10
+	sailors_to_overlord = 0.125
 	
 
 	relative_power_class = 1
@@ -403,7 +411,7 @@ personal_union = {
 	
 	# Subject Interactions:
 	placate_rulers = no
-	enforce_culture = yes
+	enforce_culture = no
 	siphon_income = yes
 	support_loyalists = yes
 
@@ -426,6 +434,7 @@ client_vassal = {
 
 	# Properties:
 	created_by_overlord = yes
+	extend_trading_range = yes
 
 	base_liberty_desire = -25.0
 	liberty_desire_revolution = 0
@@ -444,6 +453,7 @@ client_march = {
 
 	# Properties:
 	created_by_overlord = yes
+	extend_trading_range = yes
 
 	base_liberty_desire = -40.0
 	liberty_desire_revolution = 0
@@ -476,7 +486,9 @@ colony = {
 	press_sailors = yes
 	transfer_trade_power = yes
 	can_concentrate_development = no
-		
+	extend_trading_range = yes
+	conscript_general = no
+			
 	liberty_desire_development_ratio = 0.15
 
 	max_government_rank = 1
@@ -499,7 +511,7 @@ colony = {
 	# Subject Interactions:
 	customize_subject = yes
 	replace_governor = yes
-	start_colonial_war = yes
+	start_colonial_war = no
 	increase_tariffs = yes
 	decrease_tariffs = yes
 
@@ -535,13 +547,14 @@ crown_colony = {
 
 	# Subject Interactions:
 	embargo_rivals = yes
-	support_loyalists = yes
-	subsidize_armies = yes
-	send_officers = yes
+	support_loyalists = no
+	subsidize_armies = no
+	send_officers = no
 	enforce_religion = yes
 	takeondebt = yes
 	block_settlement_growth = yes
 	allow_settlement_growth = yes
+	conscript_general = no
 	
 	# Modifiers:
 	# modifier_overlord = {
@@ -574,6 +587,7 @@ private_enterprise = {
 	replace_governor = no
 	block_settlement_growth = no
 	allow_settlement_growth = no
+	conscript_general = no
 	
 	# Modifiers:	
 	# modifier_overlord = {
@@ -607,6 +621,7 @@ self_governing_colony = {
 	block_settlement_growth = no
 	allow_settlement_growth = no
 	press_sailors = no
+	conscript_general = no
 	
 	# Modifiers:	
 	# modifier_overlord = {
@@ -623,6 +638,7 @@ tributary_state = {
 	#is_subject_except_tributary_trigger
 	#is_free_or_tributary_trigger
 	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
 
 	# Triggers:
 	is_potential_overlord = {

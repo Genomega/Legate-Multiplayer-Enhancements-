@@ -1,8 +1,8 @@
 #663 - Wenshan
 
-owner = X07
-controller = X07
-add_core = X07
+# owner = X07
+# controller = X07
+# add_core = X07
 culture = bai
 religion = wuism
 capital = "Guangnan"
@@ -13,7 +13,22 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 
+owner = CMI
+controller = CMI
+add_core = CMI
 
+
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = CMI
+	controller = CMI
+	add_core = CMI
+}
 
 discovered_by = chinese
 discovered_by = indian

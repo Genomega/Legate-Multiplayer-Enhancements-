@@ -1,0 +1,127 @@
+country_decisions = {
+
+	lotharingia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_lotharingia_flag }
+			OR = {
+				primary_culture = flemish
+				primary_culture = wallonian
+				primary_culture = burgundian
+				primary_culture = hessian
+				tag = PRO
+			}		
+			NOT = { tag = PAP }
+			NOT = { tag = NED }
+			NOT = { tag = HLR }
+			NOT = { tag = FRA }			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = LOT }
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 1878
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			stability = 1
+			is_at_war = no
+			splendor = 400
+			is_free_or_tributary_trigger = yes
+			is_nomad = no			
+			NOT = { exists = LOT }
+			num_of_cities = 30
+			OR = {
+				owns_core_province = 1878
+				is_great_power = yes
+			}	
+		}
+		effect = {
+			custom_tooltip = lotharingia_hre_elector_or_emperor_province.tt
+			hidden_effect = {
+				restore_country_name = yes
+			}	
+			change_tag = LOT
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government_to_monarchy = yes
+			}			
+			tooltip = { 
+				ROOT = {
+					limit = {
+						has_reform = duchy_of_burgundy_reform
+					}
+					remove_government_reform = duchy_of_burgundy_reform
+				}	
+				add_government_reform = the_crown_of_lothair_reform
+			}	
+			country_event = { id = new_flavour_bur.4 }
+			add_splendor = -400
+			hidden_effect = {
+				if = {
+					limit = {
+						any_owned_province = {
+							is_part_of_hre = yes
+						}
+						is_elector = no
+						is_emperor = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}	
+			}	
+			swap_non_generic_missions = yes
+			# if = { ### Handled in the Mission
+				# limit = {
+					# NOT = { government_rank = 2 }
+				# }
+				# set_government_rank = 2
+			# }
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_lotharingia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

@@ -1,0 +1,141 @@
+## Written by Genomega
+
+crisis_of_the_burgundian_succession = {
+	potential = {
+		NOT = { has_global_flag = burgundian_crisis_resolved }
+		is_free_or_tributary_trigger = yes
+		tag = BUR
+		normal_or_historical_nations = yes
+	}
+
+	
+	
+	can_start = {
+		government = monarchy
+		is_year = 1450
+		NOT = { legitimacy = 100 }
+		NOT = { stability = 3 }
+		OR = {
+			NOT = { has_ruler = "Philippe III" }
+			is_year = 1460
+		}	
+	}
+	
+	
+	can_stop = {
+		OR = {
+			NOT = { current_age = age_of_discovery }
+			NOT = { government = monarchy }
+			is_lesser_in_union = yes
+		}
+	}
+	
+	modifier = {
+		prestige_decay = 0.05
+		stability_cost_to_declare_war = 5		
+	}
+	
+	
+	progress = {
+		modifier = {
+			factor = -0.4
+			stability = 3
+		}
+		modifier = {
+			factor = -0.1
+			stability = 1
+			NOT = { stability = 3 }
+		}		
+		modifier = {
+			factor = -0.25
+			government = monarchy
+			legitimacy = 95
+		}		
+		modifier = {
+			factor = 0.10
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 0.15
+			NOT = { stability = -1 }
+		}	
+		modifier = {
+			factor = 0.50
+			NOT = { stability = -2 }
+		}			
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 5
+			NOT = { war_exhaustion = 10 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 10
+			NOT = { war_exhaustion = 12 }
+		}	
+		modifier = {
+			factor = 2
+			war_exhaustion = 12
+			NOT = { war_exhaustion = 14 }
+		}
+		modifier = {
+			factor = 3
+			war_exhaustion = 14
+		}			
+		modifier = {
+			factor = 0.5
+			has_heir = no
+		}			
+		modifier = {
+			factor = 0.20
+			government = monarchy
+			NOT = { legitimacy = 80 }
+		} 
+		modifier = {
+			factor = 0.10
+			NOT = { ADM = 2 }
+		}		
+		modifier = {
+			factor = 0.10
+			NOT = { DIP = 2 }
+		}		
+		modifier = {
+			factor = 0.10
+			NOT = { MIL = 2 }
+		}	
+		modifier = {
+			factor = 0.25
+			has_regency = yes
+		}			
+		modifier = {
+			factor = 0.25
+			NOT = { heir_claim = 25 }
+		}	
+		modifier = {
+			factor = 0.10
+			NOT = { heir_adm = 2 }
+		}		
+		modifier = {
+			factor = 0.10
+			NOT = { heir_dip = 2 }
+		}		
+		modifier = {
+			factor = 0.10
+			NOT = { heir_mil = 2 }
+		}			
+	}
+	
+	
+	can_end = {
+		custom_trigger_tooltip = {
+			#tooltip = disaster_active_for_10_years_tooltip
+			tooltip = 4_years_since_crisis_started
+			had_country_flag = { flag = had_burgundian_crisis_new_flag days = 1460 }
+		}		
+	}
+
+	
+	on_start = incidents_bur_inheritance.1
+	on_end = incidents_bur_inheritance.6
+}
+

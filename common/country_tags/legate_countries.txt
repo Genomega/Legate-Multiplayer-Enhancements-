@@ -85,3 +85,8 @@ X64 = "countries/Dehong.txt"
 
 # NEW Japan Tags
 X47 = "countries/Honma.txt"
+
+# 1.33.3 Nations
+TSJ = "countries/Transjordan.txt" #BT
+PLS = "countries/Palestine.txt" #BT
+

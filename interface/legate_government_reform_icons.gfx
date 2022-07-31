@@ -5,6 +5,16 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "government_reform_african_colonial_reform"
+		texturefile = "gfx//interface//government_reform_icons//african_colonial_reform.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ante_bellum_news_background"
+		texturefile = "gfx/interface/GFX_ante_bellum_news_background.dds"
+	}	
+	
+	spriteType = {
 		name = "government_reform_zoroastrian_shahdom"
 		texturefile = "gfx//interface//government_reform_icons//zoroastrian_shahdom.dds"
 	}	
@@ -22,6 +32,10 @@ spriteTypes = {
 		name = "government_reform_chinese_bandits"
 		texturefile = "gfx//interface//government_reform_icons//chinese_bandits.dds"
 	}
+	spriteType = {
+		name = "government_reform_musa_rule_mal"
+		texturefile = "gfx//interface//government_reform_icons//musa_rule_mal.dds"
+	}	
 	
 	spriteType = {
 		name = "government_reform_siamese_government_redone"
@@ -36,6 +50,33 @@ spriteTypes = {
 		name = "government_reform_the_sun_king"
 		texturefile = "gfx//interface//government_reform_icons//the_sun_king.dds"
 	}
+	spriteType = {
+		name = "government_reform_caroligian_empire"
+		texturefile = "gfx//interface//government_reform_icons//caroligian_empire.dds"
+	}	
+	
+	spriteType = {
+		name = "government_reform_hussite_resurgence"
+		texturefile = "gfx//interface//government_reform_icons//hussite_resurgence.dds"
+	}
+	spriteType = {
+		name = "government_reform_russian_patriarchy"
+		texturefile = "gfx//interface//government_reform_icons//russian_patriarchy.dds"
+	}	
+	
+	spriteType = {
+		name = "government_reform_county_in_the_lowlands"
+		texturefile = "gfx//interface//government_reform_icons//county_in_the_lowlands.dds"
+	}	
+	spriteType = {
+		name = "government_reform_duchy_of_burgundy"
+		texturefile = "gfx//interface//government_reform_icons//duchy_of_burgundy.dds"
+	}
+	spriteType = {
+		name = "government_reform_dutch_decentralized_kingdom"
+		texturefile = "gfx//interface//government_reform_icons//dutch_decentralized_kingdom.dds"
+	}	
+	
 	spriteType = {
 		name = "government_reform_i_am_the_king"
 		texturefile = "gfx//interface//government_reform_icons//i_am_the_king.dds"
@@ -90,6 +131,41 @@ spriteTypes = {
 		name = "government_reform_sca_government"
 		texturefile = "gfx//interface//government_reform_icons//sca_government.dds"
 	}
+	
+	spriteType = {
+		name = "government_reform_mongol_succession"
+		texturefile = "gfx//interface//government_reform_icons//mongol_succession.dds"
+	}
+	spriteType = {
+		name = "government_reform_ilkhanid_federation"
+		texturefile = "gfx//interface//government_reform_icons//ilkhanid_federation.dds"
+	}	
+	spriteType = {
+		name = "government_reform_tribal_rule_by_might"
+		texturefile = "gfx//interface//government_reform_icons//tribal_rule_by_might.dds"
+	}
+	spriteType = {
+		name = "government_reform_subvert_rival_clans"
+		texturefile = "gfx//interface//government_reform_icons//subvert_rival_clans.dds"
+	}
+	spriteType = {
+		name = "government_reform_nobility_tribal"
+		texturefile = "gfx//interface//government_reform_icons//nobility_tribal.dds"
+	}	
+	
+	# Government Reform incons
+	spriteType = {
+		name = "government_reform_formalize_merchant_caste"
+		texturefile = "gfx//interface//government_reform_icons//formalize_merchant_caste.dds"
+	}
+	spriteType = {
+		name = "government_reform_clergical_estate_tribal"
+		texturefile = "gfx//interface//government_reform_icons//clergical_estate_tribal.dds"
+	}
+	spriteType = {
+		name = "government_reform_delegate_power_to_tribes"
+		texturefile = "gfx//interface//government_reform_icons//delegate_power_to_tribes.dds"
+	}		
 	
 	spriteType = {
 		name = "GFX_flagship_mass_load_cannons_timurids"
@@ -274,6 +350,28 @@ spriteTypes = {
 		loadType = "INGAME"
 	}	
 	spriteType = {
+		name = "GFX_incidents_bur_inheritance.101.c"
+		texturefile = "gfx/interface/imperial_incident_generosity.dds"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_incidents_bur_inheritance.101.bb"
+		texturefile = "gfx/interface/imperial_incident_legitimacy.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_incidents_bur_inheritance.998.a"
+		texturefile = "gfx/interface/imperial_incident_generosity.dds"
+		loadType = "INGAME"
+	}	
+	spriteType = {
+		name = "GFX_incidents_bur_inheritance.998.b"
+		texturefile = "gfx/interface/imperial_incident_shield.dds"
+		loadType = "INGAME"
+	}	
+	
+	spriteType = {
 		name = "privilege_danish_loyal_subjects"
 		texturefile = "gfx/interface/privileges/privilege_danish_loyal_subjects.dds"
 	}
@@ -298,7 +396,17 @@ spriteTypes = {
 		name = "MERCHANTS_ARGUING_DENMARK_eventPicture"
 		texturefile = "gfx/event_pictures/event_pictures_EUROPEAN/MERCHANTS_ARGUING_DENMARK_eventPicture.dds"
 		alwaystransparent = yes
-	}		
+	}	
+	spriteType = {
+		name = "privilege_english_magna_carta"
+		texturefile = "gfx/interface/privileges/privilege_english_magna_carta.dds"
+	}	
+	spriteType = {
+		name = "GFX_disaster_crisis_of_the_burgundian_succession"
+		texturefile = "gfx//interface//disasters//crisis_of_the_burgundian_succession.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}	
 }	
 
 

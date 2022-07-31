@@ -30,16 +30,13 @@ country_decisions = {
 			is_at_war = no			
 			owns_core_province = 730		#Girin
 			owns_core_province = 2108		#Huncun			
-			custom_trigger_tooltip = {
-				tooltip = manchu_manchuria_decision.tooltip
-				num_of_owned_provinces_with = {
-					is_core = ROOT
-					OR = {
-						culture = manchu_new
-						culture = manchu
-					}
-					value = 20
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				OR = {
+					culture = manchu_new
+					culture = manchu
 				}
+				value = 20
 			}
 		}
 		effect = {

@@ -1,0 +1,49 @@
+﻿l_english:
+colonial_control_outside_region:0 "You cannot colonize provinces outside your home colonial region, because you are restricted by colonial control policy. See settings (by decision) to learn more."
+
+colonial_control_settings_title:0 "Open colonial control settings"
+colonial_control_settings_desc:0 ""
+
+colonial_control_provinces_taken:0 "Colony provinces taken"
+colonial_control_provinces_left:0 "Foreign colonies provinces granted"
+colonial_control_dispute_unsolved:0 "Unsolved dispute"
+
+colonial_control.settings_none:0 "§GNone§!"
+colonial_control.settings_subjects:0 "§GYour subjects§!"
+colonial_control.settings_notSubjects:0 "§GNot your subjects§!"
+colonial_control.settings_all:0 "§GAll§!"
+colonial_control.settings_pnb_active:0 "Penalties and benefits (currently §GEnabled§!)"
+colonial_control.settings_pnb_inactive:0 "Penalties and benefits (currently §RDisabled§!)" 
+
+colonial_control.0.title:0 "Colonial control settings"
+colonial_control.0.desc:0 "Hi! Here you can manage mod settings. \nIf you want to treat this mod as utility only, and you don't want to be punished or rewarded for your decisions regardnig colonial nations, disable penalties and benefits."
+colonial_control.0.a:0 "[colonial_control_settings_pnb]"
+colonial_control.0.b:0 "Colonial regions restrictions (currently selected [colonial_control_settings_active])"
+colonial_control.0.c:0 "Close"
+
+colonial_control.5.title:0 "Adjust colonial region restriction"
+colonial_control.5.desc:0 "Restricted colonial nations will not be able to colonize outside their home colonial region.\nPossible options\n §GNone§! - no restrictions to any of the colonial nations\n §GYour subjects§! - restrictions apply only to your colonial nations\n §GNot your subjects§! - restrictions apply to all colonial nations except your subjects\n §GAll§! - restrictions apply to all colonial nations\n\nCurrently selected is [colonial_control_settings_active] option."
+colonial_control.5.a:0 "None"
+colonial_control.5.b:0 "Your subjects"
+colonial_control.5.c:0 "Not your subjects"
+colonial_control.5.d:0 "All"
+
+colonial_control.1.title:0 "Your colonial nation holds province which shouldn't"
+colonial_control.1.desc:0 "They hold at least one province that is out of their colonial home region. You can take this provinces and redistribute them to legitimate owners or you can leave them under control of current owners. If you do so, this action cannot be undone."
+colonial_control.1.a:0 "Take provinces"
+colonial_control.1.b:0 "Leave it as is"
+colonial_control.1.b_tooltip:0 "Current owner will gain full rights to this lands. You won't be able to retrieve this lands other than by force."
+
+colonial_control.3.title:0 "Dispute among colonies"
+colonial_control.3.desc:0 "Two of your colonial nations have their capitals in same colonial region, what gives them equal rights to these lands. They are asking you for help in resolving the dispute. You can choose subject, which will get full rights to disputed lands, what will result in merging the other subject. You can also leave both of subjects with equal rights, as it was so far."
+colonial_control.3.a:0 "Side with A subject"
+colonial_control.3.b:0 "Side with B subject"
+colonial_control.3.c:0 "Don't take no one's side"
+colonial_control.3_tooltip:0 "All disputed provinces will be transfered to appropriate owner."
+colonial_control.3_alt_tooltip:0 "All disputed provinces will be transfered to appropriate owner. Because §Y[This.GetName]§! is §Ydisloyal§!, provinces that it has will gain §R2§! unrest.\n"
+colonial_control.3_alt_alt_tooltip:0 "Because §Y[This.GetName]§! is §Ydisloyal§! and has more than §R75%§! liberty desire, there is §Yhigh§! probability that after merge revolts will raise. Every province will gain §R5§! unrest as well.\n"
+colonial_control.3_alt_alt_alt_tooltip:0 "Because §Y[This.GetName]§! is §Ydisloyal§! and has more than §R100%§! liberty desire, there is §Rvery high§! probability that after merge revolts will raise. Every province will gain §R10§! unrest as well.\n"
+
+colonial_control.4.title:0 "Dispute solved"
+colonial_control.4.desc:0 "Dispute over control of our home colonial region beetween us and other colony has been solved. Our overlord supported us!"
+colonial_control.4.a:0 "Great!"

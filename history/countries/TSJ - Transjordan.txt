@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = al_suryah_levantine
+add_accepted_culture = bedouin_arabic
+religion = sunni
+technology_group = muslim
+capital = 381	# Ajloun
+religious_school = shafii_school

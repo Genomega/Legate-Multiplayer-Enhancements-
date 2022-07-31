@@ -1,7 +1,7 @@
 #4191 - Shimotsuke
 
-owner = UTN
-controller = UTN
+owner = STK
+controller = STK
 culture = togoku
 religion = shinto
 capital = "Utsunomiya"
@@ -11,6 +11,7 @@ base_tax = 2
 base_manpower = 2
 base_production = 2
 is_city = yes
+add_core = STK
 add_core = UTN
 discovered_by = chinese
   

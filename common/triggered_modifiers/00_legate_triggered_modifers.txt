@@ -15,23 +15,23 @@
 	# country_military_power = 1
 # }
 
-employed_colonial_governor = {
-	potential = {
-		employed_advisor = {
-			type = colonial_governor
-		}	
-	}
+# employed_colonial_governor = {
+	# potential = {
+		# employed_advisor = {
+			# type = colonial_governor
+		# }	
+	# }
 
-	trigger = {
-		employed_advisor = {
-			type = colonial_governor
-		}	
-	}
+	# trigger = {
+		# employed_advisor = {
+			# type = colonial_governor
+		# }	
+	# }
 
-	global_colonial_growth = 20
-	#global_tariffs = 0.20
-	treasure_fleet_income = 0.20
-}
+	# global_colonial_growth = 20
+	# global_tariffs = 0.20
+	# treasure_fleet_income = 0.20
+# }
 
 # chinese_forcelimit_nerf = {
 	# potential = {

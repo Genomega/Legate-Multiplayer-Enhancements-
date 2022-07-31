@@ -1,8 +1,12 @@
 # 2162 - Ngchow
 
-owner = X15
-controller = X15
-add_core = X15
+# owner = X15
+# controller = X15
+# add_core = X15
+
+owner = X13
+controller = X13
+add_core = X13
 culture = cantonese
 religion = confucianism
 capital = "Ngchow"
@@ -13,6 +17,17 @@ base_production = 1
 base_manpower = 2
 is_city = yes
 
+1444.11.11 = {
+	owner = YAN
+	controller = YAN
+	add_core = YAN
+}
+
+1444.11.12 = {
+	owner = X13
+	controller = X13
+	add_core = X13
+}
 
 
 discovered_by = chinese

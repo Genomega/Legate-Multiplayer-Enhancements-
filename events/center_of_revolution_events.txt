@@ -22,7 +22,7 @@ province_event = {
 		#current_age = age_of_revolutions
 		#development = 30
 		#enlightenment = 100
-		is_year = 1635	
+		is_year = 1735 # Was 1635 ## Reserved for Future Rebalancing	
 		owner = {
 			is_great_power = yes
 			#has_institution = enlightenment
@@ -486,7 +486,7 @@ country_event = {
 		kill_ruler = yes
 		if = {
 			limit = { has_heir = yes }
-			kill_heir = yes
+			kill_heir = {}
 		}
 		if = {
 			limit = { is_revolution_target = yes }

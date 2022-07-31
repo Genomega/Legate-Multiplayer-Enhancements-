@@ -109,7 +109,7 @@ ting_ideas = {
 		global_colonial_growth = 15
 	}
 	ting_ideas_4 = {
-		treasure_fleet_income = 0.25
+		treasure_fleet_income = 0.20
 	}
 	ting_ideas_2 = {
 		nobles_loyalty_modifier = 0.1

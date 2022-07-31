@@ -11,7 +11,7 @@ kiel_canal = {
 	}
 	
 	#how much to build one
-	build_cost = 10000
+	build_cost = 12500
 	
 	#can we move it?
 	can_be_moved = no
@@ -28,8 +28,7 @@ kiel_canal = {
 			owns_or_vassal_of = 1775
 			owns_or_vassal_of = 4141
 			is_subject = no			
-			adm_tech = 22
-			treasury = 10000
+			#treasury = 12500
 		}
 	}
 	
@@ -160,7 +159,7 @@ kiel_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 50
+			province_trade_power_value = 100
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -169,7 +168,8 @@ kiel_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.05
+			global_trade_power = 0.15
+			global_tax_income = 120
 		}
 
 		#what effects happen when this tier is achieved
@@ -191,7 +191,7 @@ suez_canal = {
 	}
 	
 	#how much to build one
-	build_cost = 20000
+	build_cost = 25000
 
 	#can we move it?
 	can_be_moved = no
@@ -208,8 +208,7 @@ suez_canal = {
 			owns_or_vassal_of = 4316
 			owns_or_vassal_of = 2315
 			is_subject = no
-			adm_tech = 22
-			treasury = 20000
+			#treasury = 25000
 		}
 	}
 
@@ -340,7 +339,7 @@ suez_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 50
+			province_trade_power_value = 100
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -349,7 +348,8 @@ suez_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.05
+			global_trade_power = 0.10
+			global_tax_income = 120
 		}
 
 		#what effects happen when this tier is achieved
@@ -387,8 +387,7 @@ panama_canal = {
 		FROM = {
 			owns_or_vassal_of = 835
 			is_subject = no
-			adm_tech = 22
-			treasury = 30000
+			#treasury = 30000
 		}
 	}
 
@@ -519,7 +518,7 @@ panama_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 50
+			province_trade_power_value = 100
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -528,7 +527,8 @@ panama_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.05
+			global_trade_power = 0.10
+			global_tax_income = 120
 		}
 
 		#what effects happen when this tier is achieved

@@ -26,7 +26,6 @@ emperor_reichsregiment = {
 	}
 	emperor = {
 		diplomatic_reputation = 1
-		diplomats = 1
 	}
 	required_reform = emperor_reichsreform
 	gui_container = mainline

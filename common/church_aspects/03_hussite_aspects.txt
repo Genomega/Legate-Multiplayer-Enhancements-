@@ -15,15 +15,15 @@ punishment_of_sins_aspect = {
 orphan_hetmans_aspect = {
 	cost = 100
 	modifier = {
-		army_tradition_decay = -0.005
+		army_tradition_decay = -0.007
 	}
 }
 
 bread_and_wine_aspect = {
 	cost = 100
 	modifier = {
-		tolerance_own = 2
-		global_trade_goods_size_modifier = 0.05
+		tolerance_own = 1
+		global_trade_goods_size_modifier = 0.1
 	}
 }
 
@@ -37,7 +37,7 @@ sola_scriptura_aspect = {
 adamite_services_aspect = {
 	cost = 100
 	modifier = {
-		culture_conversion_cost = -0.2
+		culture_conversion_cost = -0.25
 	}
 }
 
@@ -62,7 +62,7 @@ regular_defenestrations_aspect = {
 taborite_resurgence_aspect = {
 	cost = 100
 	modifier = {
-		global_manpower_modifier = 0.15
+		manpower_in_true_faith_provinces = 0.20
 	}
 }
 

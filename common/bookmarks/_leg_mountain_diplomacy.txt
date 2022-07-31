@@ -1,0 +1,16 @@
+bookmark =
+{
+	name = "legate_bookmark_5"
+	desc = "legate_bookmark_5_desc"
+	date = 1444.11.11
+	
+	center = 416
+	default = yes
+
+	
+	country = GEO
+	country = AKK
+	country = QAR
+
+	easy_country = AKK
+}

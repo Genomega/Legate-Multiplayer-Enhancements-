@@ -10,3 +10,28 @@ colonial_governor_advisor_bonus = {
 	modifier = {
 	}
 }
+
+# Relating to Ideas
+espionage_infiltrate_army_bonus_faction = {
+	allow = {
+		always = no
+	}
+
+	monarch_power = ADM
+	always = no
+
+	modifier = {
+	}
+}
+
+espionage_inflame_seperatism_bonus_faction = {
+	allow = {
+		always = no
+	}
+
+	monarch_power = ADM
+	always = no
+
+	modifier = {
+	}
+}
