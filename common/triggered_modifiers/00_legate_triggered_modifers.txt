@@ -130,3 +130,419 @@
 	# nomadic_tribes_loyalty_modifier = 0.10
 	# rajput_exclusive_loyalty_modifier = 0.10
 # }
+
+ai_ming_debuff = {
+	potential = {
+		ai = yes
+		tag = YAN
+	}
+
+	trigger = {
+		ai = yes
+		tag = YAN		
+	}
+	#core
+	technology_cost = 0.50
+	build_cost = 1
+	development_cost = 1.5
+	idea_cost = 0.25
+	land_forcelimit_modifier = -0.10
+	country_admin_power = -2
+	country_diplomatic_power = -2
+	country_military_power = -2
+	monarch_admin_power = -2
+	monarch_diplomatic_power = -2
+	monarch_military_power = -2
+	monarch_lifespan = -0.50
+}	
+
+
+super_lucky_nations_asia = { # For Flavor, Overcoming Odds
+	potential = {
+		ai = yes
+		is_subject = no
+		OR = {
+			#tag = RYU
+			#tag = JIN
+			#tag = ULM
+			tag = TAU
+		}	
+	}
+
+	trigger = {
+		ai = yes
+		is_subject = no
+		OR = {
+			#tag = RYU
+			#tag = JIN
+			#tag = ULM
+			tag = TAU
+		}		
+	}
+
+	#core
+	global_missionary_strength = 0.03
+	stability_cost_modifier = -0.15
+	global_institution_spread = 0.2
+	monthly_splendor = 3
+	monthly_reform_progress = 0.35
+	max_absolutism = 45
+	yearly_absolutism = 5
+	global_tax_income = 48
+	idea_cost = -0.20
+	technology_cost = -0.20
+	administrative_efficiency = 0.15
+
+	#economy
+	mercenary_cost = -0.33
+	embracement_cost = -0.33
+	advisor_cost = -0.33
+	innovativeness_gain = 0.25
+	interest = -1
+	missionary_maintenance_cost = -0.25
+	development_cost = -0.10
+
+	#military
+	manpower_recovery_speed = 0.25
+	defensiveness = 0.25
+	siege_ability = 0.20
+	land_morale = 0.1
+	land_forcelimit = 8
+	naval_forcelimit = 10
+	flagship_cost = -0.85
+	global_ship_cost = -0.33
+	global_regiment_recruit_speed = -0.25
+	global_supply_limit_modifier = 0.25
+	global_manpower = 5
+	global_regiment_cost = -0.15
+	yearly_army_professionalism = 0.007
+
+	#diplomacy
+	spy_offence = 0.33
+	improve_relation_modifier = 0.30
+	native_uprising_chance = -1
+	native_assimilation = 1
+	global_colonial_growth = 25
+
+	#government
+	global_unrest = -3
+	republican_tradition = 0.5
+	legitimacy = 1
+	ae_impact = -0.25
+	core_creation = -0.20
+	governing_capacity = 300
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	
+	#Estates
+	all_estate_loyalty_equilibrium = 0.15
+}
+
+super_lucky_nations_japan = { # For Flavor, Overcoming Odds
+	potential = {
+		ai = yes
+		NOT = { has_global_flag = player_in_japan }
+		OR = {
+			#tag = JIN
+			#tag = ULM
+			tag = KNO
+		}	
+	}
+
+	trigger = {
+		ai = yes
+		NOT = { has_global_flag = player_in_japan }
+		OR = {
+			#tag = JIN
+			#tag = ULM
+			tag = KNO
+		}		
+	}
+
+	#core
+	global_missionary_strength = 0.03
+	stability_cost_modifier = -0.15
+	global_institution_spread = 0.2
+	monthly_splendor = 3
+	monthly_reform_progress = 0.35
+	max_absolutism = 45
+	yearly_absolutism = 5
+	global_tax_income = 48
+	idea_cost = -0.20
+	technology_cost = -0.20
+	administrative_efficiency = 0.15
+
+	#economy
+	mercenary_cost = -0.33
+	embracement_cost = -0.33
+	advisor_cost = -0.33
+	innovativeness_gain = 0.25
+	interest = -1
+	missionary_maintenance_cost = -0.25
+	development_cost = -0.10
+
+	#military
+	manpower_recovery_speed = 0.25
+	defensiveness = 0.25
+	siege_ability = 0.20
+	land_morale = 0.1
+	land_forcelimit = 6
+	naval_forcelimit = 10
+	flagship_cost = -0.85
+	global_ship_cost = -0.33
+	global_regiment_recruit_speed = -0.25
+	global_supply_limit_modifier = 0.25
+	global_manpower = 5
+	global_regiment_cost = -0.15
+	yearly_army_professionalism = 0.01
+
+	#diplomacy
+	spy_offence = 0.33
+	improve_relation_modifier = 0.30
+	native_uprising_chance = -1
+	native_assimilation = 1
+	global_colonial_growth = 25
+
+	#government
+	global_unrest = -3
+	republican_tradition = 0.5
+	legitimacy = 1
+	ae_impact = -0.25
+	core_creation = -0.20
+	governing_capacity = 300
+	monarch_admin_power = 1
+	monarch_diplomatic_power = 1
+	monarch_military_power = 1
+	
+	
+	#Estates
+	all_estate_loyalty_equilibrium = 0.15
+}
+
+
+limited_lucky_nations = { # For specific nations, less buffs to prevent being overbuffed
+	potential = {
+		ai = yes
+		#is_subject = no
+		OR = {
+			tag = MLC
+			#tag = MJZ
+			#tag = MCH
+			#tag = QNG
+			#tag = JIN
+			tag = ULM
+			tag = SON
+			tag = AKK
+			tag = SOS
+		}	
+	}
+
+	trigger = {
+		ai = yes
+		#is_subject = no
+		OR = {
+			tag = MLC
+			#tag = MJZ
+			#tag = MCH
+			#tag = QNG
+			#tag = JIN
+			tag = ULM
+			tag = SON
+			tag = AKK
+			tag = SOS
+		}		
+	}
+
+	#core
+	global_missionary_strength = 0.02
+	stability_cost_modifier = -0.10
+	global_institution_spread = 0.1
+	monthly_splendor = 2
+	monthly_reform_progress = 0.35
+	max_absolutism = 50
+	yearly_absolutism = 10
+	global_tax_income = 36
+	idea_cost = -0.05
+	technology_cost = -0.05
+	administrative_efficiency = 0.10
+
+	#economy
+	mercenary_cost = -0.25
+	embracement_cost = -0.25
+	advisor_cost = -0.25
+	innovativeness_gain = 0.25
+	interest = -1
+	missionary_maintenance_cost = -0.25
+	development_cost = -0.10
+
+	#military
+	manpower_recovery_speed = 0.25
+	defensiveness = 0.10
+	siege_ability = 0.20
+	land_morale = 0.1
+	land_forcelimit = 4
+	naval_forcelimit = 4
+	flagship_cost = -0.85
+	global_ship_cost = -0.33
+	global_regiment_recruit_speed = -0.25
+	global_supply_limit_modifier = 0.25
+	global_manpower = 5
+	global_regiment_cost = -0.10
+	amount_of_banners = 1
+	yearly_army_professionalism = 0.005
+
+	#diplomacy
+	spy_offence = 0.33
+	improve_relation_modifier = 0.30
+	native_uprising_chance = -1
+	native_assimilation = 1
+	global_colonial_growth = 25
+
+	#government
+	global_unrest = -2
+	republican_tradition = 0.5
+	legitimacy = 1
+	ae_impact = -0.25
+	core_creation = -0.20
+	governing_capacity = 300
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	
+	#Estates
+	all_estate_loyalty_equilibrium = 0.15
+}
+
+
+
+limited_lucky_nations_manchu = { # This is enabled to allow the possible formation of a Qing or Manchu
+	potential = {
+		ai = yes
+		NOT = { total_development = 800 }
+		#is_subject = no
+		OR = {
+			#tag = MLC
+			tag = MJZ
+			tag = MCH
+			tag = QNG
+			#tag = JIN
+			#tag = ULM
+			#tag = SON
+			#tag = AKK
+			#tag = SOS
+		}	
+	}
+
+	trigger = {
+		ai = yes
+		NOT = { total_development = 800 }
+		#is_subject = no
+		OR = {
+			#tag = MLC
+			tag = MJZ
+			tag = MCH
+			tag = QNG
+			#tag = JIN
+			#tag = ULM
+			#tag = SON
+			#tag = AKK
+			#tag = SOS
+		}		
+	}
+
+	#core
+	global_missionary_strength = 0.02
+	stability_cost_modifier = -0.10
+	global_institution_spread = 0.1
+	monthly_splendor = 3
+	monthly_reform_progress = 0.25
+	max_absolutism = 50
+	yearly_absolutism = 10
+	global_tax_income = 36
+	idea_cost = -0.1
+	technology_cost = -0.1
+	administrative_efficiency = 0.10
+
+	#economy
+	mercenary_cost = -0.15
+	embracement_cost = -0.25
+	advisor_cost = -0.20
+	innovativeness_gain = 0.10
+	interest = -1
+	missionary_maintenance_cost = -0.25
+	development_cost = -0.10
+
+	#military
+	manpower_recovery_speed = 0.25
+	defensiveness = 0.10
+	siege_ability = 0.20
+	land_morale = 0.1
+	land_forcelimit = 10
+	naval_forcelimit = 4
+	flagship_cost = -0.85
+	global_ship_cost = -0.33
+	global_regiment_recruit_speed = -0.25
+	global_supply_limit_modifier = 0.25
+	global_manpower = 10
+	global_regiment_cost = -0.10
+	amount_of_banners = 1
+	yearly_army_professionalism = 0.003
+
+	#diplomacy
+	spy_offence = 0.33
+	improve_relation_modifier = 0.30
+	native_uprising_chance = -1
+	native_assimilation = 1
+	global_colonial_growth = 25
+
+	#government
+	global_unrest = -2
+	republican_tradition = 0.5
+	legitimacy = 1
+	horde_unity = 1
+	ae_impact = -0.20
+	core_creation = -0.20
+	governing_capacity = 300
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	#relation_with_same_culture_group = -200
+	#relation_with_same_culture = -200
+	
+	#Estates
+	all_estate_loyalty_equilibrium = 0.15
+}
+
+
+manchu_hates_each_others = { # This is enabled to allow the possible formation of a Qing or Manchu
+	potential = {
+		ai = yes
+		#NOT = { total_development = 800 }
+		#is_subject = no
+		OR = {
+			primary_culture = manchu
+			primary_culture = manchu_new
+			primary_culture = evenk
+			primary_culture = buryat
+			primary_culture = chahar
+		}			
+	}
+
+	trigger = {
+		ai = yes
+		#NOT = { total_development = 800 }
+		#is_subject = no
+		OR = {
+			primary_culture = manchu
+			primary_culture = evenk
+			primary_culture = buryat
+			primary_culture = chahar
+			primary_culture = manchu_new
+		}			
+	}
+
+	relation_with_same_culture_group = -200
+	relation_with_same_culture = -200
+	
+}

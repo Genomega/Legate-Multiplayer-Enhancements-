@@ -646,6 +646,19 @@ on_battle_won_unit = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			unit_owner = {
+				has_country_modifier = military_hegemon_counter
+			}
+		}
+		unit_owner = {
+			change_variable = {
+				which = mil_hegemon_fight_counter@Root
+				value = 1
+			}
+		}
+	}	
 }
 
 # #Unit Scope OnAction for Battle Lost
@@ -4293,7 +4306,7 @@ on_leader_recruited = {
 
 # country
 on_general_recruited = {
-	add_army_professionalism = 0.01
+	add_army_professionalism = 0.0075
 }
 
 # country
@@ -4323,7 +4336,7 @@ on_mercenary_recruited = {
 			}
 		}
 		FROM = {
-			add_army_professionalism = -0.05
+			add_army_professionalism = -0.04
 		}
 	}	
 }

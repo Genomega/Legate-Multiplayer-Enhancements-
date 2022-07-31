@@ -39,6 +39,8 @@ country_decisions = {
 				change_culture = turkish 
 				change_religion = ROOT
 				rename_capital = Kostantiniyye
+				remove_building = fort_16th
+				add_building = fort_15th
 			}
 			if = {
 				limit = {

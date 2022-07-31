@@ -1,0 +1,58 @@
+## Considered 'Dominus Hegemon'
+
+
+naval_hegemon = {
+	#allow = {
+	#	is_great_power = yes
+	#	num_of_heavy_ship = 250
+	#	NOT = { any_other_great_power = { num_of_heavy_ship = root } }
+	#	NOT = { has_country_modifier = lost_hegemony }
+	#}
+	# total_own_and_non_tributary_subject_development = 200
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = taking_hegemon_status.tt
+			always = yes
+		}
+		is_great_power = yes
+		monthly_adm = 10
+		monthly_dip = 10
+		monthly_mil = 10
+		total_development = 1250
+		grown_by_development = 500
+		custom_trigger_tooltip = {
+			tooltip = dominus_hegemon_tooltip.tt
+			OR = {
+				NOT = { any_other_great_power = { total_development = root } }
+				NOT = { any_other_great_power = { army_size = root } }
+				NOT = { any_other_great_power = { monthly_income = root } }
+			}	
+		}	
+		NOT = { has_country_modifier = lost_hegemony }
+	}
+	
+	base = {
+		mercenary_manpower = 1
+		war_exhaustion = -0.05
+		#governing_capacity = 500
+		#governing_capacity_modifier = 0.20
+		land_forcelimit_modifier = 0.25
+		#enemy_core_creation = 0.25
+		min_autonomy_in_territories = -0.2
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		reduced_liberty_desire = 25
+		administrative_efficiency = 0.1
+		years_of_nationalism = -10
+		all_power_cost = -0.1
+	}
+	
+	max = {
+		country_admin_power = 1
+		country_diplomatic_power = 1
+		country_military_power = 1
+	}
+	
+}

@@ -38,13 +38,14 @@ steppe_horde = {
 
 	modifiers = {
 		global_manpower_modifier = 0.15
-		land_forcelimit_modifier = 0.15
+		#land_forcelimit_modifier = 0.15
 		loot_amount = 1
-		global_institution_spread = -0.15
+		global_institution_spread = -0.20
 		reinforce_cost_modifier = -0.33
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.35
 		movement_speed = 0.10
 		years_of_nationalism = -5
+		heir_chance = 0.5
 	}
 	custom_attributes = {
 		enables_horde_idea_group = yes
@@ -109,6 +110,7 @@ tribal_federation = {
 
 	modifiers = {
 		years_of_nationalism = -5
+		heir_chance = 0.5
 	}
 
 	conditional = {

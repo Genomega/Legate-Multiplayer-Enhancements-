@@ -7,12 +7,13 @@ religion = animism
 capital = "Amami"
 trade_goods = fish
 hre = no
-base_tax = 2 
+base_tax = 4
 base_production = 4
-base_manpower = 3
+base_manpower = 4
 is_city = yes
 add_core = RYU
 discovered_by = chinese
+center_of_trade = 2
 
 1542.1.1 = { discovered_by = POR }
 1624.1.1 = { religion = shinto } # The Amami islands are annexed

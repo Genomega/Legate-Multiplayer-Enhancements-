@@ -2120,10 +2120,12 @@ estate_nobles_nobility_primacy = {
 
 estate_nobles_officer_corp = {
 	icon = privilege_promote_purbias
-	max_absolutism = -5
-	influence = 0.10
+	max_absolutism = -10
+	influence = 0.15
+	loyalty = 0.05
+	land_share = 5
 	can_select = {
-		army_tradition = 30
+		army_tradition = 45
 	}
 	on_granted = {
 		add_army_tradition = -10
@@ -2131,7 +2133,8 @@ estate_nobles_officer_corp = {
 	penalties = {
 	}
 	benefits = {
-		general_cost = -0.15
+		#general_cost = -0.15
+		yearly_army_professionalism = 0.001
 		army_tradition_decay = -0.007
 	}
 	ai_will_do = {
@@ -2150,8 +2153,8 @@ estate_nobles_levies = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.10
-		global_manpower_modifier = 0.33
+		global_tax_modifier = -0.075
+		global_manpower_modifier = 0.25
 	}
 	penalties = {
 	}
@@ -4427,18 +4430,22 @@ estate_rajput_loyalty_privilege = {
 
 estate_rajput_officer_corp = {
 	icon = privilege_recruit_rajput_general
-	max_absolutism = -5
-	influence = 0.05
+	max_absolutism = -10
+	influence = 0.15
+	loyalty = 0.05
+	land_share = 5
 	can_select = {
-		army_tradition = 30
+		army_tradition = 45
 	}
 	on_granted = {
-		add_army_tradition = -15
+		add_army_tradition = -10
 	}
 	penalties = {
 	}
 	benefits = {
-		leader_land_fire = 1
+		#general_cost = -0.15
+		yearly_army_professionalism = 0.001
+		army_tradition_decay = -0.007
 	}
 	ai_will_do = {
 		factor = 10

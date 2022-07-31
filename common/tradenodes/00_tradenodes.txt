@@ -1268,6 +1268,9 @@ constantinople={
 }
 kiev={
 	location=280
+	color={
+		81 123 210
+	}	
 	inland=yes
 	outgoing={
 		name="novgorod"

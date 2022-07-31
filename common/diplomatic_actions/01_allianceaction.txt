@@ -38,6 +38,66 @@ allianceaction = {
 		}
 	}
 	
+	condition = {
+		tooltip = ALLIANCE_DAIM
+		potential = {
+			OR = {
+				FROM = {
+					#is_emperor_of_china = yes
+					has_reform = daimyo
+					#ai = yes
+					#NOT = { has_global_flag = centralizing_top_government_flag }
+					#has_country_modifier = unreformed_empire_of_china
+				}
+				#ROOT = {
+					#is_emperor_of_china = yes
+					#ai = yes
+					#has_reform = daimyo
+					#has_country_modifier = unreformed_empire_of_china
+				#}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}		
+	
+	condition = {
+		tooltip = ALLIANCE_MANCHU
+		potential = {
+			OR = {
+				FROM = {
+					#is_emperor_of_china = yes
+					#tag = OIR
+					OR = {
+						primary_culture = manchu
+						primary_culture = evenk
+						primary_culture = buryat
+						primary_culture = chahar
+					}	
+					ai = yes
+					#NOT = { has_global_flag = centralizing_top_government_flag }
+					#has_country_modifier = unreformed_empire_of_china
+				}
+				ROOT = {
+					#tag = OIR
+					OR = {
+						primary_culture = manchu
+						primary_culture = evenk
+						primary_culture = buryat
+						primary_culture = chahar
+					}	
+					#is_emperor_of_china = yes
+					ai = yes
+					#has_country_modifier = unreformed_empire_of_china
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}	
+	
 	# condition = {
 		# tooltip = ALLIANCE_SHOGUN
 		# potential = {

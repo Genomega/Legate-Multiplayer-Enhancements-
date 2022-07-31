@@ -1,0 +1,93 @@
+napoleonic_hegemon_coalitions = {
+	category = alliance
+	require_acceptance = no
+
+	is_visible = {
+		always = yes
+		#is_subject = no
+		# government = monarchy
+		# ai = no
+		# NOT = { has_reform = elective_monarchy }
+		# FROM = {
+			# is_subject = no
+			# government = monarchy
+			# NOT = { has_reform = elective_monarchy }
+		# }
+	}
+	is_allowed = {
+		#always = yes
+		ai = no
+		custom_trigger_tooltip = {
+			tooltip = IS_NOT_ALLIED_WITH_HEGEMON	
+			FROM = {
+				NOT = { alliance_with = ROOT }
+			}	
+		}	
+		custom_trigger_tooltip = {
+			tooltip = HEGEMONS_CANNOT_COALITION_OTHER_HEGEMONS	
+			ROOT = {
+				NOT = { is_hegemon = yes }
+			}	
+		}			
+		is_in_coalition = no
+		is_at_war = no
+		NOT = { truce_with = FROM }
+		# FROM = {
+			# NOT = { has_country_modifier = espionage_bribed_merchant_ongoing }
+		# }		
+		FROM = {
+			is_hegemon = yes	
+		}	
+	}
+	on_accept = {
+		form_coalition_against = FROM
+	}
+
+	ai_will_do = {
+		factor = 0 # Ai will not do this
+	}
+}
+
+napoleonic_hegemon_war = {
+	category = alliance
+	require_acceptance = no
+
+	is_visible = {
+		always = yes
+		#is_subject = no
+		# government = monarchy
+		# ai = no
+		# NOT = { has_reform = elective_monarchy }
+		# FROM = {
+			# is_subject = no
+			# government = monarchy
+			# NOT = { has_reform = elective_monarchy }
+		# }
+	}
+	is_allowed = {
+		#always = yes
+		ai = no
+		coalition_target = FROM		
+		is_in_coalition = yes
+		is_at_war = no
+		NOT = { truce_with = FROM }
+		# FROM = {
+			# NOT = { has_country_modifier = espionage_bribed_merchant_ongoing }
+		# }		
+		FROM = {
+			is_hegemon = yes	
+		}	
+	}
+	on_accept = {
+		FROM = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_hegemon
+			}
+		}	
+	}
+
+	ai_will_do = {
+		factor = 0 # Ai will not do this
+	}
+}

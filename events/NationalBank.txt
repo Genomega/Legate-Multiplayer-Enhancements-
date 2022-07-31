@@ -52,6 +52,15 @@ country_event = {
 			name = "national_bank_inflation"
 			duration = 18250
 		}
+		random_owned_province = {
+			limit = {
+				is_in_capital_area = yes
+			}
+			add_permanent_province_modifier = {
+				name = "major_banking_sector"
+				duration = 27375
+			}
+		}
 	}
 	option = {
 		name = "EVTOPTB4042"		# 
@@ -63,6 +72,15 @@ country_event = {
 			name = "national_bank_interest"
 			duration = 18250
 		}
+		random_owned_province = {
+			limit = {
+				is_in_capital_area = yes
+			}
+			add_permanent_province_modifier = {
+				name = "major_banking_sector"
+				duration = 27375
+			}
+		}		
 	}
 }
 

@@ -8,11 +8,11 @@ capital = "Toungoo"
 trade_goods = chinaware
 hre = no
 base_tax = 5
-base_production = 5
+base_production = 4
 base_manpower = 4
 is_city = yes
 add_core = TAU
-
+center_of_trade = 2
 
 
 discovered_by = chinese

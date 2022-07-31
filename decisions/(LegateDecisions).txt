@@ -1,4 +1,168 @@
-# country_decisions = {
+#country_decisions = {
+
+	# Previously only Marine Decision. Now home to AI related decisions
+	
+	#Taungu rise to power bonuses
+
+	# taungu_attack_pegu = {
+		# potential = {
+			# tag = TAU
+			# ai = yes
+			# NOT = { has_country_flag = declared_war_peg }
+			# PEG = { exists = yes } 
+		# }	
+		# allow = {
+			# is_year = 1448
+			# is_at_war = no
+			# PEG = { exists = yes } 
+			# PEG = { ai = yes } 
+			# NOT = { truce_with = PEG }
+			# NOT = { overextension_percentage = 0.10 }
+		# }
+		# effect = {
+			# set_country_flag = declared_war_peg
+			# add_historical_rival = AVA
+			# lower_burma_area = {
+				# add_permanent_claim = TAU
+			# }		
+			# AVA = {
+				# add_historical_rival = TAU
+			# }	
+			# PEG = {
+				# add_country_modifier = {
+					# name = "death_note_modifier"
+					# duration = 20
+				# }	
+			# }	
+			# declare_war_with_cb = {
+				# who = PEG
+				# casus_belli = cb_annex
+			# }	
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }
+
+	# taungu_attack_arakan = {
+		# potential = {
+			# tag = TAU
+			# ai = yes
+			# NOT = { has_country_flag = declared_war_arakan }
+			# ARK = { exists = yes } 
+		# }	
+		# allow = {
+			# is_year = 1451
+			# is_at_war = no
+			# ARK = { exists = yes } 
+			# ARK = { ai = yes } 
+			# NOT = { truce_with = ARK }
+			# NOT = { overextension_percentage = 0.10 }
+		# }
+		# effect = {
+			# set_country_flag = declared_war_arakan
+			# ARK = {
+				# add_country_modifier = {
+					# name = "death_note_modifier"
+					# duration = 20
+				# }	
+			# }	
+			# declare_war_with_cb = {
+				# who = ARK
+				# casus_belli = cb_annex
+			# }	
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }
+	
+	# taungu_attack_ava = {
+		# potential = {
+			# tag = TAU
+			# ai = yes
+			# NOT = { has_country_flag = declared_war_ava }
+			# AVA = { exists = yes } 
+		# }	
+		# allow = {
+			# is_year = 1451
+			# is_at_war = no
+			# AVA = { exists = yes } 
+			# AVA = { ai = yes } 
+			# NOT = { truce_with = AVA }
+			# NOT = { overextension_percentage = 0.10 }
+		# }
+		# effect = {
+			# set_country_flag = declared_war_ava
+			# AVA = {
+				# add_country_modifier = {
+					# name = "death_note_modifier"
+					# duration = 20
+				# }	
+			# }	
+			# declare_war_with_cb = {
+				# who = AVA
+				# casus_belli = cb_annex
+			# }	
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }	
+
+	# taungu_attack_hsipaw = {
+		# potential = {
+			# tag = TAU
+			# ai = yes
+			# NOT = { has_country_flag = declared_war_hsipaw }
+			# HSI = { exists = yes } 
+		# }	
+		# allow = {
+			# is_year = 1456
+			# is_at_war = no
+			# total_development = 85
+			# HSI = { exists = yes } 
+			# HSI = { ai = yes } 
+			# NOT = { truce_with = HSI }
+			# NOT = { overextension_percentage = 0.10 }
+		# }
+		# effect = {
+			# set_country_flag = declared_war_hsipaw
+			# HSI = {
+				# add_country_modifier = {
+					# name = "death_note_modifier"
+					# duration = 20
+				# }	
+			# }	
+			# declare_war_with_cb = {
+				# who = HSI
+				# casus_belli = cb_annex
+			# }	
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+		# ai_importance = 400
+	# }	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	# establish_marine_corp = {
 		# potential = {
@@ -44,4 +208,6 @@
 		# }
 		# ai_importance = 400
 	# }
-# }	
+#}	
+
+

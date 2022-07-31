@@ -12,7 +12,7 @@ trade_goods = glass #Ife Glass Beads
 hre = no
 base_tax = 3
 base_production = 3
-
+center_of_trade = 2
 add_province_triggered_modifier = city_of_401_deities
 
 discovered_by = sub_saharan

@@ -2078,7 +2078,6 @@ fu_hansehalle = {
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
 			province_trade_power_value = 5
-			tax_income = 36
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -2090,6 +2089,7 @@ fu_hansehalle = {
 		country_modifiers = {
 			republican_tradition = 0.1
 			placed_merchant_power = 5
+			global_tax_income = 36
 		}
 	}
 
@@ -2107,7 +2107,6 @@ fu_hansehalle = {
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
 			province_trade_power_value = 15
-			tax_income = 48
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -2119,6 +2118,7 @@ fu_hansehalle = {
 		country_modifiers = {
 			republican_tradition = 0.2
 			placed_merchant_power = 10
+			global_tax_income = 48
 		}
 	}
 
@@ -2136,7 +2136,6 @@ fu_hansehalle = {
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
 			province_trade_power_value = 25
-			tax_income = 60
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -2148,6 +2147,7 @@ fu_hansehalle = {
 		country_modifiers = {
 			republican_tradition = 0.3
 			placed_merchant_power = 20
+			global_tax_income = 60
 		}
 	}
 }
@@ -2634,6 +2634,7 @@ fu_theodosian_walls = {
 
 		province_modifiers = {
 			local_defensiveness = 0.50
+			blockade_force_required = 0.5
 		}
 
 		area_modifier = {
@@ -2657,6 +2658,7 @@ fu_theodosian_walls = {
 
 		province_modifiers = {
 			local_defensiveness = 0.75
+			blockade_force_required = 0.75
 		}
 
 		area_modifier = {
@@ -2680,6 +2682,7 @@ fu_theodosian_walls = {
 
 		province_modifiers = {
 			local_defensiveness = 1
+			blockade_force_required = 1
 		}
 
 		area_modifier = {

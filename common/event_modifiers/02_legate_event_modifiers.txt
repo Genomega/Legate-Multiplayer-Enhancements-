@@ -725,3 +725,22 @@ st_petersburg_renovations = {
 	allowed_num_of_buildings = 1
 	local_prosperity_growth = 1
 }	
+
+
+# Ai modifiers
+death_note_modifier = {
+	diplomatic_reputation = -100
+}	
+
+# Idea Triggers Bonuses
+
+press_gangs_modifier = {
+	discipline = 0.1
+	drill_gain_modifier = 1
+	drill_decay_modifier = -0.50
+	is_marine_modifier = yes 
+}
+
+military_hegemon_counter = {
+	land_forcelimit = 0.5
+}	

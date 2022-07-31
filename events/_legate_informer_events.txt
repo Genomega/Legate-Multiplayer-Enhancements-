@@ -1,0 +1,31 @@
+namespace = information_events
+## Events that fire to inform players of certain mechanics
+
+
+country_event = {
+	id = information_events.1
+	title = information_events.1.t
+	desc = information_events.1.d
+	picture = BATTLE_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		#has_country_flag = avoids_colonist_settlement_growth
+		has_reform = daimyo
+		ai = no
+		NOT = { has_country_flag = japan_player_knows }
+	}
+	
+	immediate = {
+		set_country_flag = japan_player_knows
+		set_global_flag = player_in_japan
+	}
+	
+	option = {
+		name = information_events.1.a
+		custom_tooltip = daimyo_info.1.tt
+	}
+}

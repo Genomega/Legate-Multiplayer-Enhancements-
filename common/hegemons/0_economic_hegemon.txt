@@ -1,0 +1,49 @@
+## Considered 'Colonial Hegemon'
+
+
+economic_hegemon = {
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = taking_hegemon_status.tt
+			always = yes
+		}
+		is_great_power = yes
+		total_own_and_non_tributary_subject_development = 2000
+		num_of_merchants = 13	
+		custom_trigger_tooltip = {
+			tooltip = colonial_hegemon.tt
+			OR = {
+				full_idea_group = maritime_ideas
+				full_idea_group = exploration_ideas
+				full_idea_group = expansion_ideas
+				full_idea_group = naval_ideas
+			}	
+		}
+		NOT = { has_country_modifier = lost_hegemony }
+	}
+	
+	base = {
+		mercenary_manpower = 1
+		war_exhaustion = -0.05
+		#governing_capacity = 500
+		#governing_capacity_modifier = 0.20
+		land_forcelimit_modifier = 0.25
+		#enemy_core_creation = 0.25
+		min_autonomy_in_territories = -0.2
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		reduced_liberty_desire = 25
+		administrative_efficiency = 0.1
+		years_of_nationalism = -10
+		all_power_cost = -0.1
+	}
+	
+	max = {
+		country_admin_power = 1
+		country_diplomatic_power = 1
+		country_military_power = 1
+	}
+	
+}

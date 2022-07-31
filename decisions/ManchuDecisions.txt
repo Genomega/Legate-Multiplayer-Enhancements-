@@ -1,3 +1,22 @@
+# if = {
+			# limit = {
+				# OR = {
+					# trade_goods = cloth
+					# trade_goods = silk
+				# }
+			# }
+			# add_province_modifier = {
+				# name = estate_jains_monopoly_of_textiles_mod
+				# duration = -1
+			# }
+		# }
+
+
+
+
+
+
+
 country_decisions = {
 
 	manchu_nation_1 = {
@@ -11,7 +30,12 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = MCH }
-			primary_culture = manchu
+			OR = {
+				primary_culture = manchu
+				primary_culture = evenk
+				primary_culture = buryat
+				primary_culture = chahar
+			}	
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -121,7 +145,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 704		# Liaoxi
-				province_id = 723		# Xilin Gol
+				#province_id = 723		# Xilin Gol
 				province_id = 726		# Liaodong
 				province_id = 1816		# Beijing
 			}
@@ -133,7 +157,7 @@ country_decisions = {
 				has_reform = chinese_kingdom
 			}
 			owns = 704		# Liaoxi
-			owns = 723		# Xilin Gol
+			#owns = 723		# Xilin Gol
 			owns = 726		# Liaodong
 			owns = 1816		# Beijing
 			is_at_war = no

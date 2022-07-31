@@ -498,6 +498,7 @@ country_event = {
 	trigger = {
 		has_idea = quest_for_the_new_world
 		num_of_ports = 4
+		is_year = 1480
 		NOT = {
 			capital_scope = {
 				continent = asia
@@ -515,7 +516,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		months = 24
 	}
 
 	

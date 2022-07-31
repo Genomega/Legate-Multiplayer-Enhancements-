@@ -74,7 +74,7 @@ NDefines.NCountry.TRADE_FAVORS_FOR_MEN_REQUIRED_OPINION = 50
 NDefines.NCountry.TRADE_FAVORS_FOR_SAILORS_FAVOR_COST = 25
 NDefines.NCountry.ROYAL_MARRIAGE_QUEEN_CHANCE = 100
 
-NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.215
+NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.175
 NDefines.NMilitary.MIN_MONTHLY_SAILORS = 65
 
 -- Deals with Special Units
@@ -92,8 +92,8 @@ NDefines.NGovernment.COSSACKS_ABILITY_COSSACKS_WE_CHANGE = -1
 NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.49
 NDefines.NGovernment.SELECT_HEIR_FROM_HAREM_AT_MONARCH_AGE = 25
 -- Post 1.32
-NDefines.NMilitary.SLACKEN_AP_DROP = 0.02
-NDefines.NMilitary.SLACKEN_MANPOWER_INCREASE = 1.0
+NDefines.NMilitary.SLACKEN_AP_DROP = 0.03
+NDefines.NMilitary.SLACKEN_MANPOWER_INCREASE = 0.80
 
 -- Post 1.33
 NDefines.NMilitary.SCORCHED_DEVASTATION_IMPACT = 15
@@ -153,3 +153,105 @@ NDefines.NReligion.EXPELLED_MINORITY_DURATION = 18250
 -- Post 1.34 
 NDefines.NMilitary.CAVALRY_COST = 15.0
 NDefines.NMilitary.ARTILLERY_COST = 32.0
+
+NDefines.NMilitary.HEAVY_SHIP_COST = 40
+NDefines.NMilitary.LIGHT_SHIP_COST = 22
+NDefines.NMilitary.GALLEY_COST = 15
+NDefines.NMilitary.TRANSPORT_COST = 10
+
+NDefines.NEconomy.DEBASE_MAX_STORED_MONTHS = 24
+NDefines.NEconomy.DEBASE_MONTHS_PER_CHARGE = 6
+NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 20
+NDefines.NEconomy.DEBASE_ADDED_CORRUPTION = 1.5
+
+NDefines.NReligion.PIETY_CORRUPTION = -1
+NDefines.NReligion.PIETY_MANPOWER = 1
+NDefines.NReligion.PIETY_COST = 0.25
+NDefines.NReligion.PIETY_ABS_THRESHOLD = 0.50
+NDefines.NReligion.PIETY_ACTION_COOLDOWN = 3
+-- Lowered Action Cooldown to 3 years for now. Increase back to 5 if it breaks things
+
+NDefines.NCountry.PIETY_PERCENTAGE_AT_NEW_RULER = 0.75
+NDefines.NCountry.PIETY_INCREASE_AT_GOOD_WAR = 0.15
+NDefines.NCountry.PIETY_DECREASE_AT_BAD_WAR = -0.15
+
+
+-- War Changes + Diplomacy Changes
+	
+NDefines.NDiplomacy.NUM_POSSIBLE_RIVALS = 3
+NDefines.NDiplomacy.RIVAL_PRESTIGE_BONUS = 0.10
+NDefines.NDiplomacy.RIVAL_SPY_OFFENCE = 0.10
+NDefines.NDiplomacy.RIVAL_PEACE_COST_REDUCTION = -0.25
+	
+NDefines.NDiplomacy.AE_PROVINCE_CAP = 40
+	
+NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 0.9					-- Demand a province (scales by province wealth, also used for annex)
+NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 0.9				-- Demand colonial area province concession.
+NDefines.NDiplomacy.PEACE_COST_BECOME_VASSAL = 0.9					-- Vassalize a country (scales by province wealth)
+NDefines.NDiplomacy.PEACE_COST_RETURN_CORE = 0.9						-- Return a core (scales by province wealth)
+NDefines.NDiplomacy.PEACE_COST_REVOKE_CORE = 0.4						-- Revoke a core (scales by province wealth)
+NDefines.NDiplomacy.PEACE_COST_RELEASE_ANNEXED = 0.9					-- Release annexed nation (scales by province wealth)
+NDefines.NDiplomacy.PEACE_COST_RELEASE_VASSAL = 0.4					-- Release vassal (scales by province wealth)
+NDefines.NDiplomacy.PEACE_COST_REVOKE_ELECTOR = 50					-- Revoke an elector title	
+NDefines.NDiplomacy.PEACE_COST_UNION = 50 							-- _DDEF_PEACE_COST_UNION_ Peace cost for forming a personal union
+NDefines.NDiplomacy.PEACE_COST_CONVERSION = 0.75					-- scaled with countrysize for forced conversion in peace.
+NDefines.NDiplomacy.PEACE_COST_RELEASE = 2						-- _DDEF_PEACE_COST_RELEASE_ Base Peace cost for releasing an annexed country (also increases with nr of provinces)
+NDefines.NDiplomacy.PEACE_COST_CONCEDE = 10 						-- _DDEF_PEACE_COST_CONCEDE_ Base Peace cost for conceding defeat
+NDefines.NDiplomacy.PEACE_COST_GOLD_STEP = 1 						-- _DDEF_PEACE_COST_GOLD_STEP_ Peace Cost for 1 month of income
+NDefines.NDiplomacy.PEACE_COST_ANNUL = 10 							-- _DDEF_PEACE_COST_ANNUL_ Peace cost for annulment of treaties
+NDefines.NDiplomacy.PEACE_COST_CHANGE_GOVERNMENT = 25			-- _Peace cost for changing government form
+NDefines.NDiplomacy.PEACE_COST_TRADE_POWER = 60					-- Peace cost for demanding trade power
+NDefines.NDiplomacy.PEACE_COST_INDEPENDANCE = 30				-- Peace cost for breaking free of union
+NDefines.NDiplomacy.PEACE_COST_ENFORCED_FLEET_BASING_RIGHTS = 15   -- Peace cost for enforced fleet basing righs
+NDefines.NDiplomacy.PEACE_COST_ENFORCED_MILITARY_ACCESS = 10       -- Peace cost for enforced military access
+NDefines.NDiplomacy.PEACE_COST_WAR_REPARATIONS = 10				-- Peace cost for war reparations
+NDefines.NDiplomacy.PEACE_COST_GIVE_UP_CLAIM = 15					-- Peace cost for giving up all claims in a country
+NDefines.NDiplomacy.PEACE_COST_DISMANTLE_REVOLUTION = 100
+NDefines.NDiplomacy.PEACE_COST_CHANGE_HRE_RELIGION = 100
+NDefines.NDiplomacy.PEACE_COST_HUMILIATE_RIVAL = 40
+NDefines.NDiplomacy.PEACE_COST_FORCE_MIGRATION = 100.0
+NDefines.NDiplomacy.PEACE_COST_ENFORCE_REBEL_DEMANDS = 50
+NDefines.NDiplomacy.PEACE_COST_END_RIVALRY = 25
+NDefines.NDiplomacy.PEACE_COST_TAKE_MANDATE = 40
+NDefines.NDiplomacy.MAX_PEACE_COST_TRIBUTARY_STATE = 80
+NDefines.NDiplomacy.MAX_PEACE_COST_CANCEL_SUBJECT = 100
+	
+	
+NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.65 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
+NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.4 					-- (Per core, only applied if returning cores to vassals of winner)
+NDefines.NDiplomacy.PO_FORM_PU_AE = 0.125						-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
+NDefines.NDiplomacy.PO_CONCEDE_COLONIAL_AE = 0.20
+NDefines.NDiplomacy.PO_BECOME_VASSAL_AE = 0.4 					-- _DDEF_PO_BECOME_VASSAL_AE = 10, (Per development)
+NDefines.NDiplomacy.PO_TRANSFER_VASSAL_AE = 0.25
+NDefines.NDiplomacy.PO_ANNEX_PRESTIGE = 0.20 						-- _DDEF_PO_ANNEX_PRESTIGE = 10, (No effect on loser :)
+NDefines.NDiplomacy.PO_DEMAND_PROVINCES_PRESTIGE = 0.20				-- _DDEF_PO_DEMAND_PROVINCES_PRESTIGE = 10, (Per development)
+NDefines.NDiplomacy.PO_REVOKE_CORES_PRESTIGE = 0.1					-- _DDEF_PO_REVOKE_CORES_PRESTIGE = 10, (Per development)
+NDefines.NDiplomacy.PO_RETURN_CORES_PRESTIGE = 0.20					-- (Per development)
+NDefines.NDiplomacy.PO_RELEASE_VASSAL_PRESTIGE = 0.20				-- _DDEF_PO_RELEASE_VASSAL_PRESTIGE = 10,
+NDefines.NDiplomacy.PO_TRANSFER_VASSAL_PRESTIGE = 0.20
+NDefines.NDiplomacy.PO_RELEASE_ANNEXED_PRESTIGE = 0.20 				-- _DDEF_PO_RELEASE_ANNEXED_PRESTIGE = 10, (Per released province)
+NDefines.NDiplomacy.PO_CHANGE_RELIGION_PRESTIGE = 6 				-- _DDEF_PO_CHANGE_RELIGION_PRESTIGE = 10,
+NDefines.NDiplomacy.PO_FORM_PU_PRESTIGE = 0.10 						-- _DDEF_PO_FORM_PU_PRESTIGE = 10,
+NDefines.NDiplomacy.PO_BECOME_VASSAL_PRESTIGE = 0.15 					-- _DDEF_PO_BECOME_VASSAL_PRESTIGE = 10,
+NDefines.NDiplomacy.PO_CONCEDE_DEFEAT_PRESTIGE = 25				-- _DDEF_PO_CONCEDE_DEFEAT_PRESTIGE_
+NDefines.NDiplomacy.PO_DISMANTLE_REVOLUTION_PRESTIGE = 100
+NDefines.NDiplomacy.PO_CHANGE_HRE_RELIGION_PRESTIGE = 100
+NDefines.NDiplomacy.PO_ANNUL_TREATY_PRESTIGE = 0.5					-- _DDEF_PO_ANNUL_TREATY_PRESTIGE = 10,
+NDefines.NDiplomacy.PO_REVOKE_ELECTOR_AE = 20
+NDefines.NDiplomacy.PO_REVOKE_ELECTOR_PRESTIGE = 4
+NDefines.NDiplomacy.PO_TRADE_POWER_PRESTIGE = 1
+NDefines.NDiplomacy.PO_CONCEDE_COLONIAL_PRESTIGE = 2.5
+NDefines.NDiplomacy.PO_GIVE_UP_CLAIM_PRESTIGE = 3
+NDefines.NDiplomacy.PO_HUMILIATE_RIVAL_PRESTIGE = 4
+NDefines.NDiplomacy.PO_FORCE_MIGRATION_PRESTIGE = 1
+NDefines.NDiplomacy.PO_ENFORCE_REBEL_DEMANDS_PRESTIGE = 3
+NDefines.NDiplomacy.PO_TAKE_MANDATE_PRESTIGE = 15
+NDefines.NDiplomacy.PO_TAKE_MANDATE_AE = 0
+	
+NDefines.NDiplomacy.PO_ENFORCE_FLEET_BASING_PRESTIGE = 3
+NDefines.NDiplomacy.PO_ENFORCE_MIL_ACCESS_PRESTIGE = 3
+NDefines.NDiplomacy.PO_WAR_REPARATIONS_PRESTIGE = 3
+NDefines.NDiplomacy.PO_END_RIVALRY_PRESTIGE = 3
+NDefines.NDiplomacy.AE_HRE_INTERNAL = 0.25
+	
+NDefines.NDiplomacy.HEGEMONY_MONTHLY_PROGRESS = 1	

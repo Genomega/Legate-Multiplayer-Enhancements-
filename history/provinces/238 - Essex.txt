@@ -6,13 +6,15 @@ controller = ENG
 culture = english
 religion = catholic
 hre = no
-base_tax = 6
-base_production = 6
+base_tax = 5
+base_production = 5
 trade_goods = cloth
 base_manpower = 2
 capital = "Chelmsford"
 is_city = yes
 add_core = ENG
+center_of_trade = 2
+marketplace = yes
 
 
 

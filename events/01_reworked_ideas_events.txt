@@ -9,7 +9,7 @@ country_event = { # Death of Heir ## Poison
 	id = new_ideas_events.1
 	title = "new_ideas_events.1.t"
 	desc = "new_ideas_events.1.d"
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = KING_ASSASSINATION_DENMARK_eventPicture
 	
 	#fire_only_once = yes
 	#major = yes
@@ -29,7 +29,7 @@ country_event = { # Espionage Network Recruitment
 	id = new_ideas_events.2
 	title = "new_ideas_events.2.t"
 	desc = "new_ideas_events.2.d"
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = CORRUPTION_eventPicture
 	
 	#fire_only_once = yes
 	#major = yes
@@ -68,11 +68,14 @@ country_event = { # Espionage Network Recruitment
 	}	
 }
 
+
+
+
 country_event = { # Visiting the Espionage Network for Missions
 	id = new_ideas_events.10
 	title = "new_ideas_events.10.t"
 	desc = "new_ideas_events.10.d"
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = SPY_eventPicture
 	
 	#fire_only_once = yes
 	#major = yes
@@ -118,7 +121,7 @@ country_event = { # Adm Special
 	id = new_ideas_events.11
 	title = "new_ideas_events.11.t"
 	desc = "new_ideas_events.11.desc"
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = ACCUSATION_eventPicture
 	
 	#fire_only_once = yes
 	#major = yes
@@ -193,7 +196,7 @@ country_event = { # DIP Special
 	id = new_ideas_events.12
 	title = "new_ideas_events.12.t"
 	desc = "new_ideas_events.12.desc"
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = DIPLOMACY_eventPicture
 	
 	#fire_only_once = yes
 	#major = yes
@@ -286,7 +289,7 @@ country_event = { # MIL Special
 	id = new_ideas_events.13
 	title = "new_ideas_events.13.t"
 	desc = "new_ideas_events.13.desc"
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = WOUNDED_SOLDIERS_eventPicture
 	
 	#fire_only_once = yes
 	#major = yes
@@ -358,4 +361,4 @@ country_event = { # MIL Special
 		}	
 	}	
 }
- 
+

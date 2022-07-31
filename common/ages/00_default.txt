@@ -575,6 +575,19 @@ age_of_reformation = {
 				factor = 100
 			}
 		}
+		ab_incan_enlightenment = {
+		
+			allow = {
+				tag = SWI
+			}
+			modifier = {
+				development_cost = -0.10
+				tolerance_heretic = 3
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}		
 		ab_malayan_spice_economy = {
 		
 			allow = {
@@ -598,19 +611,6 @@ age_of_reformation = {
 			modifier = {
 				infantry_power = 0.10
 				infantry_shock = 0.25
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		ab_incan_enlightenment = {
-		
-			allow = {
-				tag = INC
-			}
-			modifier = {
-				technology_cost = -0.15
-				idea_cost = -0.15
 			}
 			ai_will_do = {
 				factor = 100

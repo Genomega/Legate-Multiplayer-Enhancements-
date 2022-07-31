@@ -1,0 +1,10 @@
+dnieper_river_trade = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}	
+major_banking_sector = {
+	tax_income = 2
+	local_production_efficiency = 0.1
+	province_trade_power_value = 2
+	picture = "inflation_reduction"
+}	

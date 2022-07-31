@@ -9,10 +9,10 @@ capital = "Gianyar"
 trade_goods = cloth
 hre = no
 base_tax = 3 
-base_production = 3
+base_production = 2
 base_manpower = 3
 is_city = yes
-
+center_of_trade = 1
 
 
 discovered_by = chinese

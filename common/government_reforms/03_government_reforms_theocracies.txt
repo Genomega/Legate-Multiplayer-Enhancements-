@@ -33,7 +33,7 @@ leading_clergy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.1
 	}
 }
 
@@ -61,9 +61,10 @@ papacy_reform = {
 	}
 
 	modifiers = {
-		prestige_per_development_from_conversion = 0.33
+		prestige_per_development_from_conversion = 0.25
 		tolerance_own = 1
 		church_influence_modifier = 0.2
+		global_tax_modifier = 0.10
 	}
 	valid_for_nation_designer = no
 	icon = "papacy"

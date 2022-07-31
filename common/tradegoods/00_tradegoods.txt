@@ -368,7 +368,7 @@ cloth = {
 		merc_maintenance_modifier = -0.25
 	}
 	province = {
-		local_development_cost = -0.1
+		local_development_cost = -0.05
 	}
 	chance = {
 		factor = 10
@@ -725,7 +725,7 @@ naval_supplies = {
 		naval_forcelimit_modifier = 0.20
 	}
 	province = {
-		naval_forcelimit = 0.5
+		naval_forcelimit = 0.25
 	}
 
 	chance = {
@@ -955,12 +955,8 @@ copper = {
 
 gold = {
 	color = { 1.0 0.84 0.19 }
-	modifier = {
-		#inflation_reduction = 0.15
-		monthly_gold_inflation_modifier = 0.1
-	}
 	province = {
-		trade_goods_size = 0.25
+		trade_goods_size = 0.15
 	}	
 	chance = {
 		factor = 5

@@ -457,12 +457,19 @@ cb_imperial = {
 cb_hegemon = {
 	valid_for_subject = no
 
+	#coalition = yes ## Given the Way this works
+	#white_peace = no
+	
+	# prerequisites = {
+		# is_hegemon = no
+		# from = { is_hegemon = yes }
+		# coalition_target = FROM
+	# }
 	prerequisites = {
-		is_hegemon = no
-		from = { is_hegemon = yes }
+		always = no
 	}
 
-	war_goal = take_capital_imperial
+	war_goal = hegemon_coalition_war
 }
 
 
@@ -966,6 +973,8 @@ cb_super_badboy = {
 		NOT = { FROM = { is_in_coalition_war = yes } }
 		num_of_coalition_members = 3
 		is_revolutionary = no
+		is_hegemon = no
+		from = { is_hegemon = no }		
 	}
 
 	war_goal = superiority_punitive

@@ -1,0 +1,48 @@
+military_hegemon = {
+	allow = {
+		custom_trigger_tooltip = {
+			tooltip = taking_hegemon_status.tt
+			always = yes
+		}
+		is_great_power = yes
+		custom_trigger_tooltip = {
+			tooltip = mil_hegemon_win_battles.tt
+			check_variable = {
+				which = mil_hegemon_fight_counter@Root
+				value = 150
+			}
+		}
+		army_size = 350
+		army_professionalism = 0.80
+		army_tradition = 70
+		NOT = { has_country_modifier = lost_hegemony }
+		#NOT = { any_other_great_power = { army_size = root } }
+		#NOT = { has_country_modifier = lost_hegemony }
+	}
+	
+	
+	base = {
+		mercenary_manpower = 1
+		war_exhaustion = -0.05
+		#governing_capacity = 500
+		#governing_capacity_modifier = 0.20
+		land_forcelimit_modifier = 0.25
+		#enemy_core_creation = 0.25
+		min_autonomy_in_territories = -0.2
+	}
+	
+	# At max 100% tickup.
+	scale = {
+		reduced_liberty_desire = 25
+		administrative_efficiency = 0.1
+		years_of_nationalism = -10
+		all_power_cost = -0.1
+	}
+	
+	max = {
+		country_admin_power = 1
+		country_diplomatic_power = 1
+		country_military_power = 1
+	}
+	
+}

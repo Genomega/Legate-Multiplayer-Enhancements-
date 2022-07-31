@@ -2,7 +2,9 @@
  # New Modifiers Tweaks
  employed_colonial_governor: "Colonial Governor"
  colonial_governor_advisor_bonus_influence: "Settler Growth and Treasure Fleet" 
- estate_colonial_governor_loyalty_modifier: "Treasure Income and Settlers"
+ #estate_colonial_governor_loyalty_modifier: "Treasure Income and Settlers" ### Repurposed for Trade Company Efficiency
+ estate_colonial_governor_loyalty_modifier: "Trade Company Efficiency Bonus"
+ 
  papal_sanction_justified_crusade: "Papal Sanctioned Warfare"
  established_a_marine_corp: "Marine Corps Established"
  desc_established_a_marine_corp: ""

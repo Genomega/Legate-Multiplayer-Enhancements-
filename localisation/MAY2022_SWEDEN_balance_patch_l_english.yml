@@ -8,3 +8,77 @@
  legate_bookmark_6: "Heirs of Timur - Timurids"
  legate_bookmark_6_desc: "Original Release Update Focus. Reworks the Timurids and offers alternating Paths to restore a Persian Ilkhanate or push Eastwards and form the Mughal Empire in India."
  
+ 
+ # Province Modifiers
+ dnieper_river_trade: "Dnieper River Estuary"
+ dnieper_river_trade_desc: "Controlling the important river estuary of the Dnieper River strengthens our hold of the trade in the region."
+ major_banking_sector: "Major Banking Sector"
+ major_banking_sector_desc: "This province is home to a strong banking sector."
+ 
+ # Decisions
+ denouncement_of_sect_practices_laxed_title: "Relax Denouncement on Sect Practices"
+ denouncement_of_sect_practices_laxed_desc: "Relax our approach when it comes to forms of sect practice. While this will appease heretics and heathens throughout the state, the Ulema will not look towards us favorably."
+ laxed_sect_practies: "Relaxed Laws on Sect Practices"
+ laxed_sect_practies_desc: "While heretical, sect practice have been allowed limitedly throughout the nation. While this appeases the heretics and heathens throughout the state, more legalist figures are fiercely opposed." 
+ 
+ # Triggered Modifiers
+ ai_ming_debuff: "Celestial Decadence"
+ super_lucky_nations_asia: "Lucky Nation"
+ super_lucky_nations_japan: "Kono Developer Bias"
+ limited_lucky_nations: "Lucky Nation"
+ limited_lucky_nations_manchu: "Lucky Nation"
+ manchu_hates_each_others: "Only one may be Khan!" 
+ 
+ #Tooltips
+ ALLIANCE_DAIM: "The on-going Sengoku Jidai prevents the creation alliances with other Daimyos! Only until we break free or become a Shogun will we be allowed to form Alliances."
+ mechanic_prevents_daimyo_alliances_yes: "Prevents creation of §OAlliances§! with other §YDaimyos§!."
+ daimyo_info.1.tt: "Existing Alliances your starting nation have will not be affected by this restriction. §YOnly the creation of new Alliances while a Daimyo.§! \n As a Daimyo your nation will enjoy §G-100%§! Reinforce Cost, allowing §Gfree reinforcement§! of Armies." 
+ information_events.1.t: "Daimyo Mechanics"
+ information_events.1.d: "While playing as a Daimyo in Japan, you will be unable to form alliances. Beware, compared to Vanilla, Daimyos Forcelimit is not restricted. Becoming §BShogun§! or §BIndependent§! will allow you to form Alliances again."
+ information_events.1.a: "Japan must be united!"
+ ALLIANCE_MANCHU_OIRAT: "The Affairs of Manchuria do not concern Oirat."
+ ALLIANCE_MANCHU: "Unreformed Manchurian nations cannot form alliances with other nations."
+ 
+ colonial_hegemon.tt: "Meets one of the following conditions: \n Has completed §OExploration Ideas§!. \n Has completed §OExpansion Ideas§!. \n Has completed §OMaritime Ideas§!. \n Has completed §OFlotilla Ideas§!. \n"
+ dominus_hegemon_tooltip.tt: "Meets one of the following conditions: \n Has the most §OOwn Development§! in the world. \n Has the largest §OStanding Army§! in the world. \n Has the highest §OMonthly Total Income§! in the world."
+ taking_hegemon_status.tt: "Taking the Status of §YHegemon§! will place us as one of the most powerful Nations in the World. When claiming the Status of Hegemon, the following §Oactions§! will be enabled: \n - Non-Ai Players gain access to the §YForm Hegemon Coalition§! Diplomatic Action, allowing the formation of a §YCoalition§! against a Hegemon and unlocking the §RContain Hegemon§! Casus Belli. \n - Hegemons will §RNOT§! be able to form Alliances with other Hegemons. \n - Hegemons will gain a static §G+50§! Power Projection for the rest of the game §ROR§! until they lose Hegemon Status. \n - Hegemon Status will always be lost when losing §RANY§! War."
+ mil_hegemon_win_battles.tt: "Has won at least §Y150§! battles (currently §Y[Root.mil_hegemon_fight_counter@Root.GetValue]§!/§Y150§!)."
+ 
+ IS_NOT_ALLIED_WITH_HEGEMON: "Must §RNOT§! have an Alliance with §Y[From.GetName]§!!"
+ HEGEMONS_CANNOT_COALITION_OTHER_HEGEMONS: "A Hegemon cannot form Hegemon Coalitions against other Hegemons!"
+ 
+ # New Modifiers
+ press_gangs_modifier: "Flotilla Ideas: Superior Seamanships"
+ press_gangs_modifier_desc: ""
+ military_hegemon_counter: "Military Hegemon: To Surpass Alexander and Caesar"
+ military_hegemon_counter_desc: ""
+
+ 
+ # Events
+ IGE_Events.31.t: "Flotilla Ideas: Superior Seamanships"
+ IGE_Events.31.d: "We now have access to improved Marines!"
+ IGE_Events.31.a: "Excellent"
+ 
+ IGE_Events.32.t: "Flotilla Ideas: Superior Seamanships"
+ IGE_Events.32.d: "We have lost access to improved Marines!"
+ IGE_Events.32.a: "Terrible!"
+ 
+ IGE_Events.33.t: "Military Hegemon: Are you Worthy?"
+ IGE_Events.33.d: "The Game will now track the amount of battles our nation wins. Don't overdo it!"
+ IGE_Events.33.a: "Interesting"
+ 
+ # War Names
+ HEGEMON_COALITION_WAR: "War of the $ORDER$Coalition"
+ hegemon_coalition_war_desc:0 "War goal is to show them superiority by winning battles."
+ 
+ # Diplomatic Actions
+ 
+ napoleonic_hegemon_coalitions: "Form Hegemon Coalition"
+ napoleonic_hegemon_coalitions_title: "Form Hegemon Coalition"
+ napoleonic_hegemon_coalitions_tooltip: "Form or join a Hegemon Coalition against §Y[From.GetName]§!. This will unlock the §YContain Hegemon§! Casus Belli against them!"
+ napoleonic_hegemon_coalitions_desc: "§G[Root.GetName]§! will join the coalition against §Y[From.GetName]§!, allowing the use of the §OContain Hegemon§! Casus Belli. All nations in the coalition against §Y[From.GetName]§! will join if war is declared §ROR§! is declared on. \nFighting while using the Contain Hegemony Casus Belli will make Provinces and Aggressive Expansion §G50%§! cheaper. \n \n§YThis Casus Belli also functions as a Show Superiority Wargoal, with Battles contributing a large chunk to Warscore.§!"
+ 
+ napoleonic_hegemon_war: "Declare Coalition War"
+ napoleonic_hegemon_war_title: "Declare Coalition War"
+ napoleonic_hegemon_war_tooltip: "Declares the Coalition War against §Y[From.GetName]§! with the §YContain Hegemon§! Casus Belli!"
+ napoleonic_hegemon_war_desc: "Declare war on §Y[From.GetName]§! with the §YContain Hegemon§! Casus Belli. §RAll members of the Coalition will be dragged into this war§!. \nFighting while using the Contain Hegemony Casus Belli will make Provinces and Aggressive Expansion §G50%§! cheaper. \n \n§YThis Casus Belli also functions as a Show Superiority Wargoal, with Battles contributing a large chunk to Warscore.§!"

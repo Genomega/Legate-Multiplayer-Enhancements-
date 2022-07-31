@@ -406,12 +406,12 @@ vassal_abandoned = {
 }
 
 they_force_vassalized_us = {
-	opinion = -50
+	opinion = -40
 	yearly_decay = 1
 }
 
 they_force_unioned_us = {
-	opinion = -50
+	opinion = -40
 	yearly_decay = 1
 }
 

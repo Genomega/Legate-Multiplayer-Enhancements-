@@ -189,7 +189,7 @@ SWE_ideas = {
 		discipline = 0.05
 	}
 	hakkapelitta = {
-		cavalry_cost = -0.15
+		cavalry_cost = -0.10
 		cav_to_inf_ratio = 0.10
 	}
 	indelningsverket = {
@@ -470,7 +470,7 @@ DAN_ideas = {
 FRA_ideas = {
 	start = {
 		diplomatic_reputation = 1
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.20
 	}
 	
 	bonus = {
@@ -492,9 +492,11 @@ FRA_ideas = {
 		global_colonial_growth = 10
 		colonists = 1
 	}	
-	estates_general = {
-		global_tax_modifier = 0.1
-	}
+	liberty_egalite_fraternity = {
+		tolerance_heathen = 2
+		tolerance_heretic = 2
+		
+	}	
 	vauban_fortifications = {
 		fort_maintenance_modifier = -0.2
 		defensiveness = 0.10
@@ -502,11 +504,9 @@ FRA_ideas = {
 	the_philosophes = {
 		technology_cost = -0.1
 	}
-	liberty_egalite_fraternity = {
-		tolerance_heathen = 2
-		tolerance_heretic = 2
-		
-	}
+	estates_general = {
+		global_tax_modifier = 0.1
+	}	
 }
 
 
@@ -1131,7 +1131,8 @@ POR_ideas = {
 
 POL_ideas = {
 	start = {
-		cavalry_cost = -0.15
+		#cavalry_cost = -0.15
+		cav_to_inf_ratio = 0.10
 		num_accepted_cultures = 1
 	}
 	
@@ -1159,7 +1160,6 @@ POL_ideas = {
 	}
 	winged_hussars = {
 		cavalry_power = 0.25
-		cav_to_inf_ratio = 0.10
 	}
 	wojsko_komputoe = {
 		land_maintenance_modifier = -0.05
@@ -3243,18 +3243,18 @@ SWI_ideas = {
 		mercenary_discipline = 0.05
 		mercenary_manpower = 0.5
 	}
+	oasis_of_peace_and_prosperity = {
+		development_cost = -0.1
+	}	
 	swiss_tolerance = {
 		tolerance_heretic = 2
-	}
+	}	
 	the_swiss_confederation = {
 		stability_cost_modifier = -0.1
 	}
 	alpine_defensiveness = {
 		fort_maintenance_modifier = -0.2
 		defensiveness = 0.25
-	}
-	oasis_of_peace_and_prosperity = {
-		development_cost = -0.1
 	}
 	haven_for_refugees = {
 		prestige = 1
@@ -4071,7 +4071,7 @@ GEO_ideas = {
 	}
 	geo_legacy_of_saint_nino = {
 		tolerance_own = 2
-		yearly_patriarch_authority = 0.001
+		yearly_patriarch_authority = 0.005
 	}
 	restoration_of_fortresses_and_churches = {
 		build_cost = -0.15
@@ -5755,12 +5755,12 @@ BUL_ideas = {
 
 KIE_ideas = {
 	start = {
-		global_unrest = -1	
-		global_heretic_missionary_strength = 0.01
+		global_unrest = -2	
+		shock_damage_received = -0.15
 	}
 	
 	bonus = {
-		land_morale = 0.1
+		land_morale = 0.15
 	}
 	
 	trigger = {
@@ -5772,23 +5772,24 @@ KIE_ideas = {
 		prestige = 1
 	}
 	heritage_of_rus = {
-		diplomatic_reputation = 1		
+		diplomatic_reputation = 2		
 	}
 	fending_off_the_invaders = {
-		defensiveness = 0.15		
+		defensiveness = 0.33		
 	}
 	chernozem_land = {
-		production_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	center_of_orthodox_church = {
-		global_missionary_strength = 0.01
-		tolerance_own = 1		
+		global_missionary_strength = 0.02
+		tolerance_own = 2	
+		yearly_patriarch_authority = 0.005		
 	}
 	support_local_traders = {
 		merchants = 1
 	}
 	centralized_rule = {
-		global_tax_modifier = 0.1
+		governing_capacity_modifier = 0.20
 	}
 }
 

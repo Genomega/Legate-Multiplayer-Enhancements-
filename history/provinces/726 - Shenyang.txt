@@ -9,10 +9,11 @@ capital = "Shenyang"
 trade_goods = gems #Youyan Jade
 hre = no
 base_tax = 5 
-base_production = 5
+base_production = 4
 base_manpower = 2
 is_city = yes
 fort_15th = yes #the Nine Garrisons
+center_of_trade = 2
 
 1444.11.11 = {
 	owner = YAN

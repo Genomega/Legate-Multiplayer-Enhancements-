@@ -11,8 +11,8 @@ aristocracy_ideas = {
 	category = MIL
 
 	bonus = {
-		war_taxes_cost_modifier = -0.5
 		possible_condottieri = 0.25
+		nobles_loyalty_modifier = 0.1
 	}
 
 	trigger = {
@@ -69,27 +69,29 @@ aristocracy_ideas = {
 		NOT = { has_reform = native_hereditary_reform }
 	}
 	
-	noble_resilience = {
-		mercenary_cost = -0.20
-		mercenary_discipline = 0.05
-	}	
 	noble_officers = {
 		leader_siege = 1
 	}		
-	serfdom = {
+	noble_resilience = {
+		mercenary_cost = -0.20
+		mercenary_discipline = 0.05
+	}		
+	military_traditions = {
 		land_morale = 0.10
 	}	
-	local_nobility = {
-		nobles_loyalty_modifier = 0.1
-	}	
-	noble_knights = {
-		cavalry_power = 0.15
-		cav_to_inf_ratio = 0.15
-	}
 	international_nobility = {
 		diplomats = 1
+		general_cost = -0.15
 	}
-	military_traditions = {
+	noble_knights = {
+		cavalry_power = 0.15
+		cav_to_inf_ratio = 0.20
+	}	
+	local_nobility = {
+		land_maintenance_modifier = -0.05
+		siege_ability = 0.05
+	}	
+	serfdom = {
 		global_manpower_modifier = 0.20
 	}		
 	
@@ -249,7 +251,7 @@ horde_gov_ideas = {
 	}
 	
 	horse_lords = {
-		cavalry_cost = -0.33
+		cavalry_cost = -0.25
 	}
 	beyond_the_sun = {
 		ae_impact = -0.15
@@ -298,16 +300,15 @@ theocracy_gov_ideas = {
 		}	
 	}
 	servants_of_god = {
-		devotion = 1
+		#devotion = 1
+		#monthly_reform_progress = 0.25
+		discipline = 0.03
 	}
 	by_the_grace_of_god = {
 		fire_damage_received = -0.1
 	}
 	friends_in_high_places = {
-		leader_cost = -0.2
-	}
-	flesh_is_weak = {
-		land_morale = 0.1
+		leader_cost = -0.10
 	}
 	alpha_and_omega = {
 		missionaries = 1
@@ -318,6 +319,9 @@ theocracy_gov_ideas = {
 	martyrs = {
 		manpower_in_true_faith_provinces = 0.25
 	}
+	flesh_is_weak = {
+		land_morale = 0.1
+	}	
 	ai_will_do = {
 		factor = 0.9
 		modifier = {
@@ -606,32 +610,34 @@ defensive_ideas = {
 
 	bonus = {
 		hostile_attrition = 1
-		garrison_size = 0.25
+		#garrison_size = 0.25
 		possible_condottieri = 0.25
 	}
 
 	battlefield_commisions = {
-		army_tradition = 1
+		shock_damage_received = -0.10
 	}
 	military_drill = {
 		land_morale = 0.15
 	}
+	improved_foraging = {
+		land_attrition = -0.20
+		naval_attrition = -0.20
+	}	
 	improved_manuever = {
 		leader_land_manuever = 1
-	}
-	regimental_system = {
-		land_maintenance_modifier = -0.05
 	}
 	defensive_mentality = {
 		defensiveness = 0.2
 		fort_maintenance_modifier = -0.1
 	}
 	supply_trains = {
-		reinforce_speed = 0.33
-	}
-	improved_foraging = {
-		land_attrition = -0.25
-	}
+		reinforce_speed = 0.20
+		reinforce_cost_modifier = -0.20
+	}	
+	regimental_system = {
+		fire_damage_received = -0.10
+	}	
 
 	ai_will_do = {
 		factor = 0.62
@@ -792,7 +798,7 @@ exploration_ideas = {
 		#sea_repair = yes
 		#naval_attrition = -0.25
 		colonists = 1
-		allowed_marine_fraction = 0.25
+		allowed_marine_fraction = 0.10
 	}
 
 
@@ -966,7 +972,7 @@ maritime_ideas = {
 		global_sailors = 10000
 		naval_forcelimit = 15
 		#global_manpower = -2.5
-		allowed_marine_fraction = 0.20
+		allowed_marine_fraction = 0.25
 	}
 	merchant_traditions = {
 		#naval_tradition_from_trade = 1.0
@@ -1210,7 +1216,7 @@ administrative_ideas = {
 		# monthly_reform_progress = 0.15
 	# }
 	bookkeeping = {
-		monthly_reform_progress = 0.15
+		monthly_reform_progress = 0.20
 	}
 	centrialize_the_governorships = {
 		governing_capacity = 125
@@ -1364,7 +1370,7 @@ naval_ideas = {
 	}
 	naval_cadets = {
 		leader_naval_fire = 1
-		sunk_ship_morale_hit_recieved = -0.25
+		sunk_ship_morale_hit_recieved = -0.20
 	}
 	naval_glory = {
 		navy_tradition = 1

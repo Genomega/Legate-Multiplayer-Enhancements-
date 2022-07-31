@@ -2,12 +2,12 @@
 
 graphical_culture = muslimgfx
 
-# color = { 62  129  20 }
+color = { 62  129  20 }
 
 # color = { 28 57 187 }
 # color = { 106  68  172 }
 # color = { 112  194  63 }
-color = { 202 217 170 }
+#color = { 202 217 170 }
 historical_score = 600
 revolutionary_colors = { 10  0  5 }
 

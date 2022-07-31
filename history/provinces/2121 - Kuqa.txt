@@ -9,10 +9,10 @@ capital = "Kuqa"
 trade_goods = gold
 hre = no
 base_tax = 2 
-base_production = 5
+base_production = 3
 base_manpower = 3
 is_city = yes
-
+center_of_trade = 2
 
 
 

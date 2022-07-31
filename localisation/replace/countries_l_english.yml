@@ -36,7 +36,7 @@
  CMI_ideas_start:0 "Yunnanese Traditions"
  CMI_ideas_bonus:0 "Yunnanese Ambition"
  
- ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:1 "§YImmediate Gain:§!\nRecruit General: §G+1%§!\nRecruiting Mercenaries §R-5%§!\nBuilding or upgrading a Fort: §G+0.3%§!\nDestroying a Fort: §R-0.1%§!"
+ ARMY_PROFESSIONALISM_STATIC_MODIFIERS_DESC:1 "§YImmediate Gain:§!\nRecruit General: §G+0.75%§!\nRecruiting Mercenaries §R-4%§!\nBuilding or upgrading a Fort: §G+0.3%§!\nDestroying a Fort: §R-0.1%§!"
  cb_chinese_unification_desc:1 "Unify lands of the Chinese Subcontinent."
  estate_burghers_control_over_the_mint_gt:0 "Every owned §YGold§! province will receive §R-5.0%§! Goods Produced Modifier."
  estate_burghers_control_over_the_mint_rt:0 "Remove the Goods Produced Modifier penalty from every owned §YGold§! province."
@@ -74,11 +74,9 @@
  enuchs:2 "Offices of Maritime Trade"
  bureaucrats:2 "Grand Secretariat"
  
- TEX_ideas: "Albania in Exile"
- TEX_ideas_start:0 "Greater Albania Traditions"
- TEX_ideas_bonus:0 "Greater Albania Ambition"
- TEX:0 "Greater Albania"
- IRQ_ADJ:0 "Greater Albanian" 
+ MODIFIER_GREAT_PROJECT_UPGRADE_COST: "Great Projects and Monuments Upgrade Cost"
+ MODIFIER_LOCAL_GREAT_PROJECT_UPGRADE_COST: "Local Great Projects and Monuments Upgrade Cost"
+ manpower: "Local Provincial Manpower"
  
  russian_nation_title: "Proclaim the Tsardom of Russia"
  russian_nation_republic_title: "Proclaim the Grand Republic of Russia"
@@ -91,3 +89,9 @@
  great_veche_republic_new_desc: "The Veche within our country has gained a larger influence on the matters of governmental administration additionally to their legislative and judicial roles. Where others have Tsars or Emperors, we have a council which rules with superior authority than any other republic could dream of."
  st_petersburg_renovations: "Saint Petersburg Renovations"
  st_petersburg_renovations_desc: "Saint Petersburg now sits as the new capital of Russia and as a symbol of Russian Grandeur. Should Saint Petersburg be seized by a foreign power, they will enjoy the luxuries of holding it."
+ 
+ superior_seamanship:0 "Superior Seamanship"
+ superior_seamanship_desc:0 "Enables us to transform our fleet into a supreme naval force with high-class vessels and highly skilled captains and sailors.\n§YAffects only Marine Regiments§! \nDiscipline: §G+10.0%§! \nArmy Drill Gain Modifier: §G+100.0%§! \nRegiment Drill Loss: §G-50.0%§! \n§YGlobal Naval Modifiers§!"
+ 
+ naval_hegemon:0 "Dominus Hegemon"
+ economic_hegemon:0 "Colonial Hegemon"
