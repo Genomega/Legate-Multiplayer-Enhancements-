@@ -21,6 +21,11 @@
  laxed_sect_practies: "Relaxed Laws on Sect Practices"
  laxed_sect_practies_desc: "While heretical, sect practice have been allowed limitedly throughout the nation. While this appeases the heretics and heathens throughout the state, more legalist figures are fiercely opposed." 
  
+ tutor_heir_reform_power: "Request an Advisor tutor our heir"
+ tutor_heir_reform_power_desc: ""
+ recruit_sixty_tradition_general: "Recruit an Elite General"
+ recruit_sixty_tradition_general_desc: "Send your Marshal to recruit an elite General. This action can only be taken once every 15 years."
+ 
  # Triggered Modifiers
  ai_ming_debuff: "Celestial Decadence"
  super_lucky_nations_asia: "Lucky Nation"
@@ -47,12 +52,41 @@
  IS_NOT_ALLIED_WITH_HEGEMON: "Must §RNOT§! have an Alliance with §Y[From.GetName]§!!"
  HEGEMONS_CANNOT_COALITION_OTHER_HEGEMONS: "A Hegemon cannot form Hegemon Coalitions against other Hegemons!"
  
+ rewards_depends_on_meath.tt: "§GReward§! depends on how we handled the §YThe Ireland Campaign§! event!"
+ enables_ireland_formation.tt: "Completing the §YConquer Ireland§! mission will allow us to §Greform Meath§! into §GIreland§!."
+ disables_ireland_formation.tt: "Completing the §YConquer Ireland§! mission will allow us §Gaccept Irish culture§! or take §Rhostile action§! against Irish separatists."
+ forming_britain_reward.tt: "Taking the §YForm British Nation Diplomatically§! decision will inherit §GIreland§!"
+ 
+ NOT_TUTOR_HEIR_THIS_RULER: "Has §RNOT§! requested an Advisor tutor an heir in the current Monarch's lifespan"
+ only_one_heir_education.tt: "§YWe will not be able to tutor another Heir until our next Ruler§!"
+ 
+ HAS_NOT_RECRUITED_GENERAL_15: "Has §RNOT§! recruited a general through this decision within the last 15 years"
+ 
  # New Modifiers
  press_gangs_modifier: "Flotilla Ideas: Superior Seamanships"
  press_gangs_modifier_desc: ""
  military_hegemon_counter: "Military Hegemon: To Surpass Alexander and Caesar"
  military_hegemon_counter_desc: ""
+ english_rule_asserted: "English Rule Asserted"
+ english_rule_asserted_desc: ""
+ the_irish_campaign: "The Ireland Campaign"
+ the_irish_campaign_desc: ""
+ ireland_brought_to_the_fold: "Ireland brought to the fold"
+ ireland_brought_to_the_fold_desc: ""
+ clan_brutalizied: "Clans Brutalized"
+ clan_brutalizied_desc: "Following the conquest of Ireland, the English Monarch issued a decree calling for the heads of the leaders of the Irish clans and the execution of their families. Any forms of dissent among the Irish populace has been quashed."
+ tutored_heir: "Tutored Heir Recently"
+ theocracy_marines_infantry_combat_ability: "Government Reform: Mission on the High Seas"
+ theocracy_marines_infantry_combat_ability_desc: ""
 
+ # Mechanics
+ mechanic_may_request_heir_tuterlage_yes: "Unlocks a decision to have an advisor tutor the heir.\n§G+2§! Skill Advisors have a §Y20%§! chance of improving an heir's skill by §G+1§!.\n§G+3§! Skill Advisors and up have a §Y30%§! chance to improve an heir's skill by §G+1§!." 
+ mechanic_may_recruit_sixty_tradition_general_fifthteen_years_yes: "Unlocks a decision to recruit a free §Y60§! tradition General every 15 years."
+ mechanic_theocratic_marines_improved_yes: "Marine Regiments gain §G+10.0%§! Infantry Combat Ability"
+
+ # Missions
+ relations_with_meath_title: "Relations with Meath"
+ relations_with_meath_desc: "The Hundred Years' war has reduced our authority over Ireland, leaving the region of the Pale as the last region under direct English Suzerainty. We should send an emissary to Viceroy of Meath to ensure the Pale does not drift away as well." 
  
  # Events
  IGE_Events.31.t: "Flotilla Ideas: Superior Seamanships"
@@ -67,9 +101,51 @@
  IGE_Events.33.d: "The Game will now track the amount of battles our nation wins. Don't overdo it!"
  IGE_Events.33.a: "Interesting"
  
+ IGE_Events.34.t: "The Education of $HEIR$ $HEIR_DYNASTY$"
+ IGE_Events.34.d: "The time has come for $HEIR$ $HEIR_DYNASTY$ to receive the next steps in $HEIR_ADJ$ education. Luckily your advisors are more than welcome to tutor the young $MONARCHTITLE$ to be. Who should we entrust $HEIR_ADJ$ too?"
+ IGE_Events.34.a:  "$HEIR_CAP_S_PRONOUN$ shall be educated in the matters of Court and State"
+ IGE_Events.34.b: "$HEIR_CAP_S_PRONOUN$ shall be educated in the matters of Court and State"
+ IGE_Events.34.aa: "$HEIR$ must learn the importance of Foreign affairs"
+ IGE_Events.34.bb: "$HEIR$ must learn the importance of Foreign affairs"
+ IGE_Events.34.aaa: "It is a $MONARCHTITLE$ duty to learn the Arts of Warfare"
+ IGE_Events.34.bbb: "It is a $MONARCHTITLE$ duty to learn the Arts of Warfare"
+ 
+ anjou_england.401.t: "The Ireland Campaign"
+ anjou_england.401.desc: "With the end of the Hundred Years’ war upon us and renewed relations with our Irish subjects in Dublin, it is time we reassess our dominion over Ireland itself. The various clans of Ireland have paid lip service to the English Monarch for generations now, but the Hundred Years’ war has greatly diminished our authority over these clans. However, even with England’s authority diminished, the clans remain locked in a bitter feud with each other, constantly warring against each other. If there was ever a ripe time to strike, it would be now, but the question remains how the region should be governed should the renewed Conquest be successful. We could look to our Irish subjects in Dublin, and attempt to install a Puppet Irish King or instead attempt to bring Ireland under direct English authority."
+ anjou_england.401.a: "Ireland must be brought to heel once more"
+ anjou_england.401.b: "Our Viceroy in Dublin would make a fine Irish King"
+ 
+  anjou_england.402.t: "Crown of Ireland"
+  anjou_england.402.desc: "With the Ireland campaign now over, we have reasserted complete control over Ireland that was lost during the Hundred Years’ war. With the clans now subdued, we will need to take steps to ensure authority over Ireland is never lost again."
+  anjou_england.402.a: "The King of England shall rule both in Ireland and England!"
+  anjou_england.402.b: "Our Irish Viceroy has earned their Crown"
+  anjou_england.402.c: "In time they will learn to respect us"
+  anjou_england.402.d: "Execute the major Clans, England will not suffer further Irish Rebellions!"
+ 
+ 
  # War Names
  HEGEMON_COALITION_WAR: "War of the $ORDER$Coalition"
  hegemon_coalition_war_desc:0 "War goal is to show them superiority by winning battles."
+ 
+ # Governments
+ monarchy_court_politics: "Politics of the Court"
+ welsh_princedom: "Welsh Principality"
+ welsh_princedom_desc: ""
+ legate_heir_tuteladge: "Tutelage of the Heir"
+ legate_heir_tuteladge_desc: ""
+ legate_ties_to_the_guilds: "Ties to the Guilds"
+ legate_ties_to_the_guilds_desc: ""
+ legate_marshal_of_war: "Marshal of War"
+ legate_marshal_of_war_desc: ""
+ legate_connections_clergy: "Clerical Connections"
+ legate_connections_clergy_desc: ""
+ legate_crown_authority: "Authority of the Crown"
+ legate_crown_authority_desc: ""
+ legate_imperial_diplomacy: "Imperial Diplomacy"
+ legate_imperial_diplomacy_desc: ""
+ 
+ 
+ 
  
  # Diplomatic Actions
  

@@ -102,6 +102,7 @@ technology = { #Workshop
 	farm_estate = yes
 	workshop = yes
 	ramparts = yes
+	governing_capacity = 25
 }
 
 technology = { #Renaissance Thought
@@ -125,7 +126,7 @@ technology = { #Courthouse
 		renaissance = 0.5
 	}
 	courthouse = yes
-	governing_capacity = 100
+	governing_capacity = 25
 
 }
 
@@ -140,6 +141,7 @@ technology = { #The Scythe
 	
 	#The Scythe
 	production_efficiency 	=	0.02
+	governing_capacity = 50
 	
 
 }
@@ -169,6 +171,7 @@ technology = { #Textile Manufactory
 	
 	#Textile Manufactory
 	textile = yes  
+	governing_capacity = 50
 
 }
 
@@ -183,7 +186,6 @@ technology = { #Early Modern Administration
 	
 	administrative_monarchy	= yes 
 	administrative_republic	= yes
-	governing_capacity = 100
 	state_house = yes
 	allowed_idea_groups = 4
 }
@@ -200,6 +202,7 @@ technology = { #Improved Drainage
 	
 	#Improved Drainage
 	production_efficiency 	=	0.02
+	governing_capacity = 50
 }
 
 technology = { #Scientific Experimentation
@@ -228,6 +231,7 @@ technology = { #Military Administration
 	
 	may_force_march = yes
 	soldier_households = yes
+	governing_capacity = 100
 }
 
 technology = { #Metallurgy
@@ -258,7 +262,7 @@ technology = { #University
 	}
 	
 	university = yes	
-	governing_capacity = 250
+	governing_capacity = 100
 	
 	administrative_efficiency = 0.10
 	development_efficiency = 0.05
@@ -276,6 +280,7 @@ technology = { #National Sovereignty
 		global_trade = 0.3
 	}	
 	development_efficiency = 0.1
+	governing_capacity = 100
 }
 
 technology = { #Cathedral
@@ -306,7 +311,7 @@ technology = { #Absolute Rulership
 	}
 	
 	republican_dictatorship = yes
-	governing_capacity = 250
+	governing_capacity = 125
 }
 
 technology = { #Land Clearance
@@ -342,6 +347,7 @@ technology = { #The Constitution
 	
 	constitutional_monarchy = yes
 	constitutional_republic = yes  
+	governing_capacity = 125
 
 	town_hall = yes
 }
@@ -377,7 +383,7 @@ technology = { #Bonds and Tontines
 	
 	
 	counting_house = yes  
-	governing_capacity = 250
+	governing_capacity = 125
 	administrative_efficiency = 0.10
 }
 
@@ -412,6 +418,7 @@ technology = { #Separation of Powers
 	}
 	
 	allowed_idea_groups 	= 	8
+	governing_capacity = 125
 }
 
 technology = { #Modern Bureaucracy
@@ -429,7 +436,6 @@ technology = { #Modern Bureaucracy
 
 	administrative_efficiency = 0.1
 	development_efficiency = 0.1	
-	governing_capacity = 250
 }
 
 technology = { #Rotherham Plough
@@ -448,6 +454,7 @@ technology = { #Rotherham Plough
 	
 	#Rotherham Plough
 	production_efficiency 	=	0.02
+	governing_capacity = 125
 }
 
 technology = { #Rights of Man
@@ -484,6 +491,7 @@ technology = { #Advanced Production
 	
 	#Improved Draft Animals
 	production_efficiency 	=	0.02
+	governing_capacity = 200
 }
 
 technology = { #Revolutionary Ideals
@@ -502,7 +510,6 @@ technology = { #Revolutionary Ideals
 	
 	revolutionary_republic = yes
 	revolutionary_empire = yes
-	governing_capacity = 500
 }
 
 technology = { #Four Field Rotation
@@ -521,4 +528,5 @@ technology = { #Four Field Rotation
 	
 	#Four field rotation
 	production_efficiency 	=	0.02
+	governing_capacity = 200	
 }

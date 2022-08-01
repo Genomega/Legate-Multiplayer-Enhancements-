@@ -7,6 +7,13 @@
 #}
 
 
+vassal = {
+	first = ENG
+	second = MTH
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
 # England-Scotland
 union = {
 	first = ENG

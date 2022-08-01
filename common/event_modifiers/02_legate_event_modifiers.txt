@@ -744,3 +744,39 @@ press_gangs_modifier = {
 military_hegemon_counter = {
 	land_forcelimit = 0.5
 }	
+
+
+# England 1.33
+english_rule_asserted = {
+	prestige = -1
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}
+
+the_irish_campaign = {
+	prestige_from_land = 1
+	army_tradition_from_battle = 0.5
+}	
+
+ireland_brought_to_the_fold = {
+	num_accepted_cultures = 1
+	years_of_nationalism = -2
+}	
+
+clan_brutalizied = {
+	local_culture_conversion_cost = -0.33
+	local_unrest = -5
+}	
+
+tutored_heir = {
+}	
+
+hired_sixty_general = {
+}	
+
+theocracy_marines_infantry_combat_ability = {
+	infantry_power = 0.10
+	is_marine_modifier = yes
+}	
+	

@@ -218,7 +218,7 @@ MOS_ideas = {
 	}
 
 	bonus = {
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.25
 	}
 
 	trigger = {
@@ -257,11 +257,15 @@ RUS_ideas = {
 	start = {
 		#core_creation = -0.10
 		reserves_organisation = 0.20
-		global_manpower_modifier = 0.50
+		global_manpower_modifier = 0.33
 	}
 
 	bonus = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 	}
 
 	trigger = {
@@ -280,11 +284,11 @@ RUS_ideas = {
 		native_assimilation = 0.5
 	}
 	russian_artillery_yard = {
-		artillery_cost = -0.1
+		artillery_cost = -0.15
 		artillery_power = 0.1
 	}
 	life_long_conscription  = {
-		land_forcelimit_modifier = 0.50
+		land_forcelimit_modifier = 0.33
 	}
 
 	abolish_the_mestnichestvo = {
@@ -1391,7 +1395,7 @@ GEN_Ideas = {
 SCO_Ideas = {
 	start = {
 		leader_land_shock = 1
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.25
 	}
 	
 	bonus = {
@@ -2137,7 +2141,7 @@ ITA_ideas = {
 		galley_power = 0.20
 	}
 	office_of_censor = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 	italian_tax_reform = {
 		global_tax_modifier = 0.15
@@ -2324,8 +2328,8 @@ PAL_ideas = {
 
 NOV_ideas = {
 	start = {
-		merc_maintenance_modifier = -0.15
-		diplomatic_reputation = 1
+		idea_cost = -0.10
+		diplomatic_reputation = 2
 	}
 	
 	bonus = {
@@ -2339,26 +2343,28 @@ NOV_ideas = {
 	
 	northern_center_of_arts = {
 		prestige = 1
+		advisor_cost = -0.10
 	}
 	city_of_churches = {
-		global_missionary_strength = 0.01
+		global_missionary_strength = 0.015
 	}
 	ivans_hundred = {
 		republican_tradition = 0.3
+		shock_damage_received = -0.10
 	}
 	control_of_the_hanseatic_kontor = {
 		merchants = 1
-		global_trade_power = 0.05
+		global_trade_power = 0.10
 	}
 	grand_dukes_army = {
-		global_manpower_modifier = 0.20
+		global_manpower_modifier = 0.25
 	}
 	exploration_tradition = {
 		navy_tradition = 1
-		privateer_efficiency = 0.15
+		privateer_efficiency = 0.20
 	}
 	baltic_shipyard = {
-		light_ship_cost = -0.20
+		global_ship_trade_power = 0.5
 	}
 }
 
@@ -4675,7 +4681,7 @@ TVE_ideas = {
 		infantry_power = 0.1
 	}
 	tve_national_army = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 }
 
@@ -5995,12 +6001,12 @@ ARM_ideas = {
 
 WLS_ideas = {
 	start = {
-		hostile_attrition = 1
-		land_morale = 0.1
+		country_military_power = 1
+		land_morale = 0.20
 	}
 
 	bonus = {
-		land_forcelimit_modifier = 0.25
+		shock_damage = 0.2
 	}
 	
 	trigger = {
@@ -6009,26 +6015,28 @@ WLS_ideas = {
 	free = yes		#will be added at load.
 	
 	cynulliad = {
-		stability_cost_modifier = -0.2
+		stability_cost_modifier = -0.15
+		prestige = 0.5
 	}
 	bardic_literature = {
-		prestige = 1
+		idea_cost = -0.07
 	}
 	cyfraith_hywel = {
-		global_unrest = -1
+		global_unrest = -2
 	}
 	unbennaeth_prydain = {
 		legitimacy = 1
 	}
 	economic_revival = {
 		production_efficiency = 0.1
+		development_cost = -0.05
 	}
 	prifysgolion_cymru = {
-		idea_cost = -0.1
+		build_cost = -0.1
 	}
 	welsh_church = {
-		tolerance_own = 1
-		global_heretic_missionary_strength = 0.01
+		tolerance_own = 2
+		missionaries = 1
 	}
 }
 
@@ -8413,7 +8421,7 @@ ROM_ideas = {
 	}
 	
 	bonus = {
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 	
 	trigger = {
@@ -12784,13 +12792,12 @@ ORD_ideas = {
 
 irish_ideas = {
 	start = {
-		land_morale = 0.1
-		trade_efficiency = 0.1
+		development_cost = -0.10
+		build_cost = -0.10
 	}
 	
 	bonus = {
-		legitimacy = 1
-		republican_tradition = 0.3
+		land_morale = 0.10
 	}
 	
 	trigger = {
@@ -12799,23 +12806,24 @@ irish_ideas = {
 	free = yes
 	
 	irish_endurance = {
-		shock_damage_received = -0.1
+		shock_damage_received = -0.15
 	}
 	the_clanns = {
-		same_culture_advisor_cost = -0.2
+		same_culture_advisor_cost = -0.15
+		advisor_cost = -0.10
 	}
 	more_than_irish = {
 		global_unrest = -2
 	}
 	loyal_catholics = {
-		papal_influence = 1
-		global_heretic_missionary_strength = 0.02
+		papal_influence = 2
+		global_heretic_missionary_strength = 0.01
 	}
 	ire_abundant_harvests = {
-		global_trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier = 0.15
 	}
 	unconquerable_ireland = {
-		war_exhaustion = -0.02
+		war_exhaustion = -0.04
  	}
 	ire_gallowglasses = {
 		discipline = 0.05
@@ -12981,7 +12989,7 @@ KOI_ideas = {
 MTH_ideas = {
 	start = {
 		fort_maintenance_modifier = -0.2
-		global_garrison_growth = 0.25
+		core_creation = -0.20
 	}
 	
 	bonus = {
@@ -14336,7 +14344,7 @@ SNA_ideas = {
 		privateer_efficiency = 0.1
 	}
 	SNA_uniting_the_outlaws = {
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.25
 	}
 	SNA_taking_the_fight_south = {
 		movement_speed = 0.15
@@ -15343,7 +15351,7 @@ GMI_ideas = {
 	}
 
 	bonus = {
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.25
 	}
 	
 	trigger = {

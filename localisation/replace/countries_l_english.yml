@@ -1,4 +1,6 @@
 ﻿l_english:
+
+    #### Replaces Vanilla Assets
  JIN:0 "Taiyuan"
  JIN_ADJ:0 "Taiyuan"
  QIN:0 "Shaanxi"
@@ -95,3 +97,5 @@
  
  naval_hegemon:0 "Dominus Hegemon"
  economic_hegemon:0 "Colonial Hegemon"
+ 
+ estate_cossacks_exploration_expedition_effect_tooltip:1 "§G-10%§! local development cost in all Steppe provinces"

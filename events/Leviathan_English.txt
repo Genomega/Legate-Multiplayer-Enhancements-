@@ -301,3 +301,205 @@ country_event = { # Birth of Edward of Westminster
 		}		
 	}	
 }
+
+
+country_event = { # Irish conquest
+	id = anjou_england.401
+	title = anjou_england.401.t
+	desc = anjou_england.401.desc
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = anjou_england.401.a
+		ai_chance = { factor = 75 }
+		custom_tooltip = disables_ireland_formation.tt
+		set_country_flag = eng_direct_irish_conquest	
+		inherit = MTH
+		add_country_modifier = {
+			name = "the_irish_campaign"
+			duration = 3650
+		}		
+		munster_area = {
+			add_permanent_claim = ROOT
+		}
+		connacht_area = {
+			add_permanent_claim = ROOT
+		}
+		ulster_area = {
+			add_permanent_claim = ROOT
+		}
+		leinster_area = {
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = anjou_england.401.b
+		ai_chance = { factor = 25 }
+		highlight = yes
+		set_country_flag = eng_puppet_irish_conquest
+		custom_tooltip = enables_ireland_formation.tt
+		MTH = {
+			add_country_modifier = {
+				name = "english_rule_asserted"
+				duration = 9125
+			}
+		}			
+		munster_area = {
+			add_core = MTH
+		}
+		connacht_area = {
+			add_core = MTH
+		}
+		ulster_area = {
+			add_core = MTH
+		}
+		leinster_area = {
+			add_core = MTH
+		}	
+	}	
+}
+
+
+country_event = { # Irish conquest
+	id = anjou_england.402
+	title = anjou_england.402.t
+	desc = anjou_england.402.desc
+	picture = CONQUEST_eventPicture
+
+	#fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # King of England and Ireland
+		name = anjou_england.402.a
+		ai_chance = { factor = 75 }
+		trigger = {
+			has_country_flag = eng_puppet_irish_conquest
+		}	
+		custom_tooltip = forming_britain_reward.tt
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 20
+		}
+		munster_area = {
+			cede_province = MTH
+		}
+		connacht_area = {
+			cede_province = MTH
+		}
+		ulster_area = {
+			cede_province = MTH
+		}
+		leinster_area = {
+			cede_province = MTH
+		}
+		create_union = MTH
+		set_country_flag = ireland_inherit_yes
+		MTH = {
+			add_liberty_desire = 25
+			set_government_rank = 2
+			change_tag = IRE
+			swap_free_idea_group = yes
+		}	
+	}
+	
+	option = { # Vassal Kingdom of Ireland
+		name = anjou_england.402.b
+		ai_chance = { factor = 75 }
+		add_legitimacy = 25
+		add_prestige = 25
+			trigger = {
+			has_country_flag = eng_puppet_irish_conquest
+		}		
+		munster_area = {
+			cede_province = MTH
+		}
+		connacht_area = {
+			cede_province = MTH
+		}
+		ulster_area = {
+			cede_province = MTH
+		}
+		leinster_area = {
+			cede_province = MTH
+		}
+		MTH = {
+			change_tag = IRE
+			swap_free_idea_group = yes
+			set_government_rank = 2
+		}	
+		add_historical_friend = IRE
+		IRE = {
+			add_historical_friend = ENG
+			add_historical_friend = GBR
+		}	
+	}	
+	option = { # In time they will learn to love me
+		name = anjou_england.402.c
+		ai_chance = { factor = 25 }
+		trigger = {
+			has_country_flag = eng_direct_irish_conquest
+		}			
+		add_adm_power = 100
+		add_dip_power = 100
+		add_country_modifier = {
+			name = "ireland_brought_to_the_fold"
+			duration = -1
+		}	
+		add_accepted_culture = irish
+		munster_area = {
+			add_nationalism = -3
+		}
+		connacht_area = {
+			add_nationalism = -3
+		}
+		ulster_area = {
+			add_nationalism = -3
+		}
+		leinster_area = {
+			add_nationalism = -3
+		}		
+	}	
+	option = { # Execute them all!
+		name = anjou_england.402.d
+		ai_chance = { factor = 25 }
+		trigger = {
+			has_country_flag = eng_direct_irish_conquest
+		}		
+		add_treasury = 200
+		munster_area = {
+			add_devastation = 50
+			add_nationalism = -50
+			add_permanent_province_modifier = {
+				name = "clan_brutalizied"
+				duration = 18250
+			}	
+		}
+		connacht_area = {
+			add_devastation = 50
+			add_nationalism = -50
+			add_permanent_province_modifier = {
+				name = "clan_brutalizied"
+				duration = 18250
+			}				
+		}
+		ulster_area = {
+			add_devastation = 50
+			add_nationalism = -50
+			add_permanent_province_modifier = {
+				name = "clan_brutalizied"
+				duration = 18250
+			}				
+		}
+		leinster_area = {
+			add_devastation = 50
+			add_nationalism = -50
+			add_permanent_province_modifier = {
+				name = "clan_brutalizied"
+				duration = 18250
+			}				
+		}	
+	}	
+}

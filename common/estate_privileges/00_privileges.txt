@@ -2120,25 +2120,34 @@ estate_nobles_nobility_primacy = {
 
 estate_nobles_officer_corp = {
 	icon = privilege_promote_purbias
-	max_absolutism = -10
+	max_absolutism = -5
 	influence = 0.15
 	loyalty = 0.05
 	land_share = 5
 	can_select = {
-		army_tradition = 45
+		army_tradition = 35
 	}
 	on_granted = {
-		add_army_tradition = -10
+		add_army_tradition = -15
 	}
 	penalties = {
 	}
 	benefits = {
 		#general_cost = -0.15
-		yearly_army_professionalism = 0.001
+		yearly_army_professionalism = 0.002
 		army_tradition_decay = -0.007
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_estate_privilege = estate_nobles_officer_corp }
+			NOT = { army_tradition = 50 }
+		}
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
 	}
 }
 
@@ -2317,7 +2326,7 @@ estate_nobles_french_strong_duchies = {
 	}
 	benefits = {
 		diplomatic_upkeep = 3
-		reduced_liberty_desire_on_same_continent = 10
+		reduced_liberty_desire_on_same_continent = 20
 	}
 	ai_will_do = {
 		factor = 2
@@ -3150,9 +3159,11 @@ estate_cossacks_cossack_self_governance = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
 		power_projection_from_insults = 0.25
 	}
+	modifier_by_land_ownership = {
+		governing_capacity = 150
+	}		
 	ai_will_do = {
 		factor = 10
 		modifier = {
@@ -3563,7 +3574,7 @@ estate_nomadic_tribes_guaranteed_leadgership_in_host = {
 	penalties = {
 	}
 	benefits = {
-		general_cost = -0.15
+		general_cost = -0.10
 		army_tradition_decay = -0.007
 	}
 	ai_will_do = {
@@ -4430,21 +4441,21 @@ estate_rajput_loyalty_privilege = {
 
 estate_rajput_officer_corp = {
 	icon = privilege_recruit_rajput_general
-	max_absolutism = -10
+	max_absolutism = -5
 	influence = 0.15
 	loyalty = 0.05
 	land_share = 5
 	can_select = {
-		army_tradition = 45
+		army_tradition = 35
 	}
 	on_granted = {
-		add_army_tradition = -10
+		add_army_tradition = -15
 	}
 	penalties = {
 	}
 	benefits = {
 		#general_cost = -0.15
-		yearly_army_professionalism = 0.001
+		yearly_army_professionalism = 0.002
 		army_tradition_decay = -0.007
 	}
 	ai_will_do = {

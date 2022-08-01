@@ -648,12 +648,14 @@ age_of_absolutism = {
 	
 	
 	objectives = {
-		obj_3_trade_companies = {
-			allow = {
-				ai = no
-			}			
-			num_of_trade_companies = 3
-		}
+		
+		obj_emperor = {
+			OR = {	
+				is_emperor = yes
+				government_rank = 3
+				is_emperor_of_china = yes
+			}
+		}		
 		
 		obj_universities = {
 			allow = {
@@ -899,13 +901,13 @@ age_of_revolutions = {
 			has_parliament = yes
 		}
 		
-		obj_emperor = {
-			OR = {	
-				is_emperor = yes
-				government_rank = 3
-				is_emperor_of_china = yes
-			}
+		obj_3_trade_companies = {
+			allow = {
+				ai = no
+			}			
+			num_of_trade_companies = 3
 		}
+		
 		obj_large_subject = {
 			any_subject_country = {
 				total_development = 250

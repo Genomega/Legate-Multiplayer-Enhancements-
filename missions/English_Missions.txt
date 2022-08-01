@@ -50,34 +50,6 @@ eng_british_conquest = {
 					target = SCO
 				}
 			}			
-			munster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			connacht_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			ulster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			leinster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			lowlands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -124,9 +96,43 @@ eng_british_conquest_ire = {
 	
 	has_country_shield = yes
 	
+	
+	
+	relations_with_meath = {
+		icon = mission_rb_conquer_leinster
+		required_missions = { }
+		position = 1
+		completed_by = 1603.1.1
+		
+		provinces_to_highlight = {
+			province_id = 373
+		}
+		
+		trigger = {
+			is_at_war = no
+			OR = {
+				MTH = {
+					has_opinion = {
+						who = root
+						value = 200
+					}
+				}
+				MTH = {
+					exists = no
+				}
+			}	
+		}
+		
+		effect = {
+			add_dip_power = 50
+			country_event = { id = anjou_england.401 } #Meath Crown of Ireland?			
+		}
+	}	
+	
+	
 	conquer_ireland = {
-		icon = mission_unite_home_region
-		required_missions = { eng_mighty_army }
+		icon = mission_rb_conquer_the_isles
+		required_missions = { relations_with_meath }
 		position = 2
 		completed_by = 1603.1.1
 		
@@ -137,53 +143,31 @@ eng_british_conquest_ire = {
 				area = ulster_area
 				area = leinster_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			munster_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			connacht_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			ulster_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			leinster_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
 		effect = {
-			munster_area = { 
-				add_province_modifier = {
-					name = "eng_irish_revolts"
-					duration = 5475
-				}
-			}
-			connacht_area = { 
-				add_province_modifier = {
-					name = "eng_irish_revolts"
-					duration = 5475
-				}
-			}
-			ulster_area = { 
-				add_province_modifier = {
-					name = "eng_irish_revolts"
-					duration = 5475
-				}
-			}
-			leinster_area = { 
-				add_province_modifier = {
-					name = "eng_irish_revolts"
-					duration = 5475
-				}
-			}
+			custom_tooltip = rewards_depends_on_meath.tt
+			country_event = { id = anjou_england.402 } #Meath Crown of Ireland?			
 		}
 	
 	}

@@ -229,6 +229,17 @@ country_decisions = {
 				}
 				inherit = ENG
 			}
+			if = {
+				limit = {
+					tag = ENG
+					has_country_flag = ireland_inherit_yes
+					IRE = {	junior_union_with = ENG	}
+					IRE = {
+						ai = yes
+					}
+				}
+				inherit = IRE
+			}			
 			hidden_effect = {
 				if = {
 					limit = {

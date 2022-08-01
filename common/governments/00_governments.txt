@@ -61,7 +61,8 @@ monarchy = {
 				the_crown_of_lothair_reform
 				county_in_the_lowlands_dutch
 				kingdom_in_the_lowlands_dutch
-				duchy_of_burgundy_reform				
+				duchy_of_burgundy_reform	
+				welsh_princedom				
 			}
 		}
 		hereditary_vs_nobility = {
@@ -87,6 +88,16 @@ monarchy = {
 				jan_hus_teaching_spreading
 			}
 		}
+		monarchy_court_politics = {
+			reforms = {
+				legate_heir_tuteladge
+				legate_ties_to_the_guilds
+				legate_marshal_of_war
+				legate_connections_clergy
+				legate_crown_authority
+				legate_imperial_diplomacy
+			}
+		}		
 		bureaucracy = {
 			reforms = {
 				centralize_reform
@@ -396,6 +407,7 @@ republic = {
 				liberte_reform
 				egalite_reform
 				fraternite_reform
+				legate_imperial_diplomacy
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -788,6 +800,19 @@ theocracy = {
 				mission_to_kill_pirates_reform
 			}
 		}
+		clergy_in_administration = {
+			reforms = {
+				subservient_administrators_reform
+				religious_administrators_reform
+				permanent_marathas_council_reform
+				governmental_purbias_register_reform
+				loyal_nobility_reform
+				pious_merchants_reform
+				monastic_breweries_reform
+				warrior_monks_reform
+				legate_imperial_diplomacy
+			}
+		}		
 		divine_cause = {
 			reforms = {
 				safeguard_holy_sites_reform
@@ -841,18 +866,6 @@ theocracy = {
 				# japanbakuhan
 			# }
 		# }			
-		clergy_in_administration = {
-			reforms = {
-				subservient_administrators_reform
-				religious_administrators_reform
-				permanent_marathas_council_reform
-				governmental_purbias_register_reform
-				loyal_nobility_reform
-				pious_merchants_reform
-				monastic_breweries_reform
-				warrior_monks_reform
-			}
-		}
 		secularization = {
 			reforms = {
 				partial_secularisation_reform

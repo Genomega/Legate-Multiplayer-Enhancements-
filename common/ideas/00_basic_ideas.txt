@@ -252,6 +252,7 @@ horde_gov_ideas = {
 	
 	horse_lords = {
 		cavalry_cost = -0.25
+		cav_to_inf_ratio = 0.20
 	}
 	beyond_the_sun = {
 		ae_impact = -0.15
@@ -305,10 +306,10 @@ theocracy_gov_ideas = {
 		discipline = 0.03
 	}
 	by_the_grace_of_god = {
-		fire_damage_received = -0.1
+		fire_damage = 0.1
 	}
 	friends_in_high_places = {
-		leader_cost = -0.10
+		mil_advisor_cost = -0.15
 	}
 	alpha_and_omega = {
 		missionaries = 1
@@ -317,7 +318,7 @@ theocracy_gov_ideas = {
 		tolerance_own = 2
 	}
 	martyrs = {
-		manpower_in_true_faith_provinces = 0.25
+		manpower_in_true_faith_provinces = 0.20
 	}
 	flesh_is_weak = {
 		land_morale = 0.1
@@ -612,6 +613,7 @@ defensive_ideas = {
 		hostile_attrition = 1
 		#garrison_size = 0.25
 		possible_condottieri = 0.25
+		war_exhaustion = -0.05
 	}
 
 	battlefield_commisions = {

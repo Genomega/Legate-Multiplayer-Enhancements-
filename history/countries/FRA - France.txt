@@ -11,15 +11,15 @@ historical_rival = HAB
 
 change_estate_land_share = {
 	estate = estate_nobles
-	share = 10
+	share = -10
 }
 change_estate_land_share = {
 	estate = estate_church
-	share = -5
+	share = -10
 }
 change_estate_land_share = {
 	estate = estate_burghers
-	share = -5
+	share = -15
 }
 
 
@@ -144,7 +144,12 @@ change_estate_land_share = {
 
 1444.10.1 = {
 	set_estate_privilege = estate_nobles_french_strong_duchies
-	add_manpower = 10
+	set_estate_privilege = estate_nobles_better_integration
+	set_estate_privilege = estate_church_religious_state
+	set_estate_privilege = estate_church_papal_emissary
+	set_estate_privilege = estate_burghers_land_rights
+	set_estate_privilege = estate_burghers_land_of_commerce
+	add_manpower = 7.5
 	add_army_tradition = 35	
 	add_casus_belli = {
 		type = cb_vassalize_mission

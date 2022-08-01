@@ -88,6 +88,97 @@ country_event = { # Trigger for Military Hegemons
 }
 
 
+country_event = { # Heir Tutorledge options
+	id = IGE_Events.34
+	title = IGE_Events.34.t
+	desc = IGE_Events.34.d
+	picture = BIG_BOOK_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+		hidden_effect = {
+			add_ruler_modifier = { 
+				name = "tutored_heir" 
+				duration = -1 
+				hidden = yes
+			}
+		}
+	}
+	
+	option = { 
+		name = IGE_Events.34.a 
+		trigger = {
+			has_adm_advisor_2 = yes
+			NOT = { has_adm_advisor_3 = yes }
+		}
+		custom_tooltip = only_one_heir_education.tt
+		random = {
+			chance = 20
+			change_heir_adm = 1
+		}	
+	}
+	option = { 
+		name = IGE_Events.34.b
+		trigger = {
+			has_adm_advisor_3 = yes
+		}
+		custom_tooltip = only_one_heir_education.tt
+		random = {
+			chance = 30
+			change_heir_adm = 1
+		}	
+	}	
+	
+	option = { 
+		name = IGE_Events.34.aa
+		trigger = {
+			has_dip_advisor_2 = yes
+			NOT = { has_dip_advisor_3 = yes }
+		}
+		custom_tooltip = only_one_heir_education.tt
+		random = {
+			chance = 20
+			change_heir_dip = 1
+		}	
+	}
+	option = { 
+		name = IGE_Events.34.bb
+		trigger = {
+			has_dip_advisor_3 = yes
+		}
+		custom_tooltip = only_one_heir_education.tt
+		random = {
+			chance = 30
+			change_heir_dip = 1
+		}	
+	}	
+
+	option = { 
+		name = IGE_Events.34.aaa 
+		trigger = {
+			has_mil_advisor_2 = yes
+			NOT = { has_mil_advisor_3 = yes }
+		}
+		custom_tooltip = only_one_heir_education.tt
+		random = {
+			chance = 20
+			change_heir_mil = 1
+		}	
+	}
+	option = { 
+		name = IGE_Events.34.bbb
+		trigger = {
+			has_mil_advisor_3 = yes
+		}
+		custom_tooltip = only_one_heir_education.tt
+		random = {
+			chance = 30
+			change_heir_mil = 1
+		}	
+	}		
+}
+
 
 
 
