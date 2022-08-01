@@ -780,3 +780,15 @@ theocracy_marines_infantry_combat_ability = {
 	is_marine_modifier = yes
 }	
 	
+	
+new_shogunate_pretender = {
+	reinforce_cost_modifier = -1
+	land_forcelimit = 9
+	global_regiment_cost = -0.5
+	siege_ability = 0.3
+	war_exhaustion = -0.08
+}	
+
+authority_challenged_ask = {
+	reduced_liberty_desire = -50
+}	

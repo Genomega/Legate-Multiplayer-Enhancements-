@@ -51,7 +51,6 @@ NDefines.NMilitary.LOOT_DEVASTATION_IMPACT = 15
 NDefines.NMilitary.LOOTED_MAX = 8
 
 NDefines.NGovernment.GOVERNMENT_REFORM_BASE_COST = 100.0
-NDefines.NGovernment.GOVERNMENT_REFORM_COST_INCREASE = 50.0
 NDefines.NGovernment.GOVERNMENT_REFORM_YEARLY_BASE_PROGRESS = 10.0
 NDefines.NGovernment.GOVERNMENT_REFORM_HISTORIC_AUTONOMY = 0.25
 NDefines.NGovernment.GOVERNMENT_REFORM_CHANGE_PROGRESS_COST = 50.0
@@ -219,7 +218,7 @@ NDefines.NDiplomacy.MAX_PEACE_COST_CANCEL_SUBJECT = 100
 	
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.65 				-- _DDEF_PO_DEMAND_PROVINCES_AE = 10, (Per development)
 NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.4 					-- (Per core, only applied if returning cores to vassals of winner)
-NDefines.NDiplomacy.PO_FORM_PU_AE = 0.125						-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
+NDefines.NDiplomacy.PO_FORM_PU_AE = 0.15						-- _DDEF_PO_FORM_PU_AE = 10, (Per development)
 NDefines.NDiplomacy.PO_CONCEDE_COLONIAL_AE = 0.20
 NDefines.NDiplomacy.PO_BECOME_VASSAL_AE = 0.4 					-- _DDEF_PO_BECOME_VASSAL_AE = 10, (Per development)
 NDefines.NDiplomacy.PO_TRANSFER_VASSAL_AE = 0.25
@@ -262,3 +261,5 @@ NDefines.NReligion.ORTHODOX_ICON_DURATION_MONTHS = 300
 NDefines.NReligion.ORTHODOX_ICON_AUTHORITY_COST = 0.2
 NDefines.NCountry.PS_REDUCE_WAREXHAUSTION = 120
 NDefines.NGovernment.GOVERNMENT_REFORM_COST_INCREASE = 40.0
+
+NDefines.NCountry.EXPLOIT_ADM_INCOME = 48

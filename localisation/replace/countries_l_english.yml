@@ -99,3 +99,16 @@
  economic_hegemon:0 "Colonial Hegemon"
  
  estate_cossacks_exploration_expedition_effect_tooltip:1 "§G-10%§! local development cost in all Steppe provinces"
+ 
+ 
+ inquisition:0 "Inquisition"
+ inquisition_desc:0 "Establish a state-sanctioned Inquisition to maintain the religious purity of our populace by rooting out heretics and blasphemers.\nEnables the §YReligious Culture§! Clergy Estate Privilege"
+ 
+ estate_church_one_faith_one_culture:0 "Religious Culture"
+ estate_church_one_faith_one_culture_desc:0 "Unity in a society can only be achieved when the [Root.GetClergyName] not only takes the spiritual matters in hand but also takes a more crucial role in the cultural and social questions of the realm."
+ estate_church_one_faith_one_culture_gta:0 "Every owned province of the §Y[Root.Religion.GetName]§! faith, which is either in the §Y[Root.Culture.GetGroupName]§! culture group or has an §Yaccepted culture§!, gains '§YReligious Society§!', giving the following effects:\nLocal Unrest: §G-1.00§!\nLocal Tax Modifier: §G+15.0%§!\nLocal Production Efficiency: §G+15.0%§!\nLocal Manpower Modifier: §G+15.0%§!"
+ estate_church_one_faith_one_culture_gtb:2 "Every owned province, which is NOT in the §Y[Root.Culture.GetGroupName]§! culture group and has NOT an §Yaccepted culture§!, gains '§YHeretic Culture§!', giving the following effects:\nLocal Unrest: §R+3.00§!\nLocal Culture Conversion Cost: §G-15.0%§!"
+ estate_church_one_faith_one_culture_rta:0 "The modifier '§YReligious Society§!' is removed from all §Y[Root.Religion.GetName]§! provinces with an §Yaccepted culture§! or with a culture of the §Y[Root.Culture.GetGroupName]§! culture group."
+ estate_church_one_faith_one_culture_rtb:0 "The modifier '§YHeretic Culture§!' is removed from all provinces without an §Yaccepted culture§! and without a culture of the §Y[Root.Culture.GetGroupName]§! culture group."
+ estate_brahmins_one_faith_one_culture:0 "Religious Culture"
+ estate_brahmins_one_faith_one_culture_desc:0 "Unity in a society can only be achieved when the [Root.GetClergyName] not only takes the spiritual matters in hand but also takes a more crucial role in the cultural and social questions of the realm."

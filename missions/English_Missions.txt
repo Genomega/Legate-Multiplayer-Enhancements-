@@ -240,7 +240,6 @@ eng_british_conquest_scotland = {
 				reverse_remove_opinion = {
 					who = SCO
 					modifier = they_force_unioned_us
-					
 				}
 			}		
 			add_accepted_culture = scottish

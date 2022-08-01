@@ -100,9 +100,9 @@ capital = 4186	# Iyo
 		name = "Norimichi"
 		dynasty = "Kono"
 		birth_date = 1420.1.1
-		adm = 4
+		adm = 3
 		dip = 4
-		mil = 5
+		mil = 4
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = bold_fighter_personality

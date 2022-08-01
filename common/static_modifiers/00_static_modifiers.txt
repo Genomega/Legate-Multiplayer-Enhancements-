@@ -797,7 +797,7 @@ war_exhaustion = {
 	stability_cost_modifier = 0.025
 	war_exhaustion_cost = -0.03
 	global_trade_power = -0.01
-	reinforce_speed = -0.02
+	reinforce_speed = -0.01
 	harsh_treatment_cost = 0.05
 }
 

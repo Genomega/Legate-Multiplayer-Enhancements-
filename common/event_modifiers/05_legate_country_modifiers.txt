@@ -32,3 +32,10 @@ culture_change_delay = {
 in_papal_select_screen = {
 	liberty_desire = -1
 }	
+
+settle_hokkaido_kurils = {
+	colonists = 1
+	colonist_placement_chance = 0.05
+	global_colonial_growth = 20
+	native_assimilation = 0.25
+}	

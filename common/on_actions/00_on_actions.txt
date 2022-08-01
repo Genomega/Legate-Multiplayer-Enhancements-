@@ -5,6 +5,7 @@ on_startup = {
 	set_global_flag = colonial_control_penalties_n_benefits
 	events = {
 		leg_danish_flavor.1		# Danish Worrying Succession
+		information_events.2 # French event
 	}
 	if = {
 		limit = {

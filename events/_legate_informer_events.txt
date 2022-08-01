@@ -29,3 +29,129 @@ country_event = {
 		custom_tooltip = daimyo_info.1.tt
 	}
 }
+# French Startup informer
+country_event = {
+	id = information_events.2
+	title = information_events.2.t
+	desc = information_events.2.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	trigger = {
+		#has_country_flag = avoids_colonist_settlement_growth
+		tag = FRA
+		NOT = { has_country_flag = french_player_knows }
+	}
+	
+	immediate = {
+		set_country_flag = french_player_knows
+	}
+	
+	option = {
+		name = information_events.2.a
+		custom_tooltip = french_info.1.tt
+	}
+}
+# Fate of Lorraine
+country_event = {
+	id = information_events.3
+	title = information_events.3.t
+	desc = information_events.3.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		tag = FRA
+	}	
+	
+	option = {
+		name = information_events.3.a
+		add_stability = 2
+		add_dip_power = 100
+		LOR = {
+			grant_independence = yes
+			define_ruler = {
+				adm = 4
+				dip = 3
+				mil = 4
+				claim = 100
+			}
+			define_heir = {
+				adm = 3
+				dip = 2
+				mil = 3
+				claim = 50
+			}
+			remove_opinion = {
+				who = FRA
+				modifier = they_force_unioned_us
+			}
+			remove_opinion = {
+				who = FRA
+				modifier = break_alliance
+			}		
+			remove_opinion = {
+				who = FRA
+				modifier = aggressive_expansion
+			}				
+		}		
+	}
+	option = {
+		name = information_events.3.b
+		add_prestige = 10
+		vassalize = LOR
+		LOR = {
+			#grant_independence = yes
+			define_ruler = {
+				adm = 3
+				dip = 3
+				mil = 3
+				claim = 50
+			}	
+			define_heir = {
+				adm = 2
+				dip = 2
+				mil = 2
+				claim = 50
+			}			
+			add_stability = 2
+			add_liberty_desire = -20
+			remove_opinion = {
+				who = FRA
+				modifier = they_force_unioned_us
+			}
+			remove_opinion = {
+				who = FRA
+				modifier = break_alliance
+			}		
+			remove_opinion = {
+				who = FRA
+				modifier = aggressive_expansion
+			}				
+		}	
+	}
+	option = {
+		name = information_events.3.c
+		add_dip_power = 50
+		PRO = {
+			#grant_independence = yes
+			remove_opinion = {
+				who = FRA
+				modifier = they_force_unioned_us
+			}
+			remove_opinion = {
+				who = FRA
+				modifier = break_alliance
+			}		
+			remove_opinion = {
+				who = FRA
+				modifier = aggressive_expansion
+			}				
+		}			
+	}	
+}

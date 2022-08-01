@@ -1,0 +1,240 @@
+#
+change_name_to_shogunate_check = {
+	if = {
+		limit = {
+			tag = SOO
+		}
+		override_country_name = SOO_shogunate
+	}
+	if = {
+		limit = {
+			tag = AMA
+		}
+		override_country_name = AMA_shogunate
+	}
+	if = {
+		limit = {
+			tag = ASA
+		}
+		override_country_name = ASA_shogunate
+	}
+	if = {
+		limit = {
+			tag = CSK
+		}
+		override_country_name = CSK_shogunate
+	}
+	if = {
+		limit = {
+			tag = DTE
+		}
+		override_country_name = DTE_shogunate
+	}
+	if = {
+		limit = {
+			tag = HJO
+		}
+		override_country_name = HJO_shogunate
+	}
+	if = {
+		limit = {
+			tag = HSK
+		}
+		override_country_name = HSK_shogunate
+	}
+	if = {
+		limit = {
+			tag = HTK
+		}
+		override_country_name = HTK_shogunate
+	}
+	if = {
+		limit = {
+			tag = IKE
+		}
+		override_country_name = IKE_shogunate
+	}
+	if = {
+		limit = {
+			tag = IMG
+		}
+		override_country_name = IMG_shogunate
+	}	
+	if = {
+		limit = {
+			tag = MAE
+		}
+		override_country_name = MAE_shogunate
+	}
+	if = {
+		limit = {
+			tag = MRI
+		}
+		override_country_name = MRI_shogunate
+	}
+	if = {
+		limit = {
+			tag = ODA
+		}
+		override_country_name = ODA_shogunate
+	}
+	if = {
+		limit = {
+			tag = OTM
+		}
+		override_country_name = OTM_shogunate
+	}
+	if = {
+		limit = {
+			tag = OUC
+		}
+		override_country_name = OUC_shogunate
+	}
+	if = {
+		limit = {
+			tag = SBA
+		}
+		override_country_name = SBA_shogunate
+	}
+	if = {
+		limit = {
+			tag = SMZ
+		}
+		override_country_name = SMZ_shogunate
+	}
+	if = {
+		limit = {
+			tag = TKD
+		}
+		override_country_name = TKD_shogunate
+	}
+	if = {
+		limit = {
+			tag = TKG
+		}
+		override_country_name = TKG_shogunate
+	}
+	if = {
+		limit = {
+			tag = UES
+		}
+		override_country_name = UES_shogunate
+	}
+	if = {
+		limit = {
+			tag = YMN
+		}
+		override_country_name = YMN_shogunate
+	}
+	if = {
+		limit = {
+			tag = RFR
+		}
+		override_country_name = RFR_shogunate
+	}
+	if = {
+		limit = {
+			tag = ASK
+		}
+		override_country_name = ASK_shogunate
+	}
+	if = {
+		limit = {
+			tag = KTB
+		}
+		override_country_name = KTB_shogunate
+	}
+	if = {
+		limit = {
+			tag = AKM
+		}
+		override_country_name = AKM_shogunate
+	}
+	if = {
+		limit = {
+			tag = AKT
+		}
+		override_country_name = AKT_shogunate
+	}
+	if = {
+		limit = {
+			tag = CBA
+		}
+		override_country_name = CBA_shogunate
+	}
+	if = {
+		limit = {
+			tag = ISK
+		}
+		override_country_name = ISK_shogunate
+	}
+	if = {
+		limit = {
+			tag = ITO
+		}
+		override_country_name = ITO_shogunate
+	}	
+	if = {
+		limit = {
+			tag = KKC
+		}
+		override_country_name = KKC_shogunate
+	}	
+	if = {
+		limit = {
+			tag = KNO
+		}
+		override_country_name = KNO_shogunate
+	}	
+	if = {
+		limit = {
+			tag = OGS
+		}
+		override_country_name = OGS_shogunate
+	}	
+	if = {
+		limit = {
+			tag = SHN
+		}
+		override_country_name = SHN_shogunate
+	}	
+	if = {
+		limit = {
+			tag = STK
+		}
+		override_country_name = STK_shogunate
+	}		
+	if = {
+		limit = {
+			tag = TKI
+		}
+		override_country_name = TKI_shogunate
+	}	
+	if = {
+		limit = {
+			tag = UTN
+		}
+		override_country_name = UTN_shogunate
+	}	
+	if = {
+		limit = {
+			tag = TTI
+		}
+		override_country_name = TTI_shogunate
+	}	
+	if = {
+		limit = {
+			tag = RYU
+		}
+		override_country_name = RYU_shogunate
+	}	
+	if = {
+		limit = {
+			tag = X47
+		}
+		override_country_name = X47_shogunate
+	}		
+	else = {
+		add_prestige = 25
+	}
+}

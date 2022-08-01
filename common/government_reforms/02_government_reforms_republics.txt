@@ -1836,7 +1836,7 @@ provincial_governments_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		years_of_nationalism = -3
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	ai = {
 		factor = 1
@@ -2052,7 +2052,7 @@ devolution_of_powers_reform = {
 		free_leader_pool = 1
 		max_absolutism = -10
 		republican_tradition = 0.1
-		candidate_random_bonus = 1
+		#candidate_random_bonus = 1 #Its just too strong
 	}
 	ai = {
 		factor = 1.5

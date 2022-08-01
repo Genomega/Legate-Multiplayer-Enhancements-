@@ -693,6 +693,7 @@ shogunate = {
 	allow_normal_conversion = yes
 	potential = {
 		NOT = { has_country_flag = formed_japan_flag }
+		NOT = { has_country_flag = formed_shogunate_flag }
 		OR = {
 			AND = {
 				capital_scope = {
@@ -737,8 +738,9 @@ daimyo = {
 	icon = "daimyo"
 	allow_normal_conversion = no
 	potential = {
-		NOT = { has_country_flag = formed_japan_flag }
 		overlord = { has_reform = shogunate }
+		NOT = { has_country_flag = formed_japan_flag }
+		NOT = { has_country_flag = formed_shogunate_flag }
 	}
 	replacement_on_independence_war = indep_daimyo
 	legacy_equivalent = daimyo_legacy
@@ -770,6 +772,7 @@ indep_daimyo = {
 	allow_normal_conversion = no
 	potential = {
 		NOT = { has_country_flag = formed_japan_flag }
+		NOT = { has_country_flag = formed_shogunate_flag }
 		OR = {
 			AND = {
 				OR = {
@@ -1266,13 +1269,12 @@ prussian_monarchy = {
 	legacy_equivalent = prussian_monarchy_legacy
 
 	modifiers = {
-		war_exhaustion = -0.02
-		global_unrest = -2
+		global_unrest = -1.5
 		global_autonomy = -0.075
 		max_absolutism = 10
-		monarch_military_power = 3
+		monarch_military_power = 2
 		nobles_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.25
 	}
 
 	conditional = {
@@ -3176,6 +3178,8 @@ french_feudal_nobility_reform = {
 		#global_tax_income = 12
 		nobles_influence_modifier = 0.15
 		legitimacy = 0.5
+		diplomatic_annexation_cost = -0.05
+		reduced_liberty_desire_on_same_continent = 10
 	}
 }
 
@@ -3473,4 +3477,81 @@ swahili_colonial_ventures_reform = {
 			tag = ZAN
 		}
 	}	
+}
+
+
+edo_shogunate = {
+	icon = "shogunate"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = { has_country_flag = formed_japan_flag }
+		has_country_flag = formed_shogunate_flag
+		OR = {
+			AND = {
+				capital_scope = {
+					province_id = 1020
+				}
+				culture_group = japanese_g
+				NOT = { exists = JAP }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = edo_shogunate
+			}
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 50
+	nation_designer_trigger = {
+		culture_group = japanese_g
+		technology_group = chinese
+		capital_scope = { region = japan_region }
+		owns = 1020
+	}
+	maintain_dynasty = yes
+	lock_level_when_selected = yes
+
+	modifiers = {
+		diplomats = 1
+		monarch_military_power = 2
+		max_absolutism = 10
+		governing_capacity = 100
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+yamato_monarchy = {
+	icon = "warrior_monks_reform"
+	allow_normal_conversion = yes
+	potential = {
+		tag = JAP
+	}
+	trigger = {
+		tag = JAP
+	}	
+	valid_for_nation_designer = no
+	nation_designer_cost = 50
+	nation_designer_trigger = {
+		culture_group = japanese_g
+		technology_group = chinese
+		capital_scope = { region = japan_region }
+		owns = 1020
+	}
+	maintain_dynasty = yes
+	lock_level_when_selected = yes
+
+	modifiers = {
+		tolerance_own = 1
+		monarch_military_power = 1
+		monarch_admin_power = 1
+		max_absolutism = 10
+		governing_capacity = 100
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }

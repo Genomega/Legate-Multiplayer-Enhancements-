@@ -1391,20 +1391,73 @@ holy_roman_electors_republic = {
 
 japanese_shogunate = {
 	rank = {
-		3 = EMPIRE
-		2 = KINGDOM
+		3 = SHOGUNATE
+		2 = SHOGUNATE
 		1 = DAIMYO
 	}
 
 	ruler_male = {
 		3 = SHOGUN
-		2 = KING
+		2 = SHOGUN
 		1 = LORD		
 	}
 	
 	ruler_female = {
 		3 = SHOGUNESS
-		2 = QUEEN
+		2 = SHOGUNESS
+		1 = LADY		
+	}
+	
+	consort_male = {
+		1 = LORD
+		2 = LORD
+		3 = LORD
+	}
+
+	consort_female = {
+		1 = LADY
+		2 = LADY
+		3 = LADY
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	trigger = {
+		#tag = JAP
+		government = monarchy
+		OR = {
+			has_reform = shogunate
+			has_reform = edo_shogunate
+		}	
+	}
+}
+
+
+yamato_monarchy = {
+	rank = {
+		3 = EMPIRE
+		2 = EMPIRE
+		1 = KINGDOM
+	}
+
+	ruler_male = {
+		3 = EMPEROR
+		2 = EMPEROR
+		1 = LORD		
+	}
+	
+	ruler_female = {
+		3 = EMPRESS
+		2 = EMPRESS
 		1 = LADY		
 	}
 	
@@ -1434,7 +1487,7 @@ japanese_shogunate = {
 	trigger = {
 		tag = JAP
 		government = monarchy
-		NOT = { has_reform = shogunate }
+		has_reform = yamato_monarchy
 	}
 }
 

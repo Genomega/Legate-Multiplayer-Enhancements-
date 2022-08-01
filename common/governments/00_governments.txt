@@ -63,6 +63,8 @@ monarchy = {
 				kingdom_in_the_lowlands_dutch
 				duchy_of_burgundy_reform	
 				welsh_princedom				
+				edo_shogunate	
+				yamato_monarchy						
 			}
 		}
 		hereditary_vs_nobility = {

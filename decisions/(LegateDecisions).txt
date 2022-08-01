@@ -1,4 +1,4 @@
-#country_decisions = {
+country_decisions = {
 
 	# Previously only Marine Decision. Now home to AI related decisions
 	
@@ -113,55 +113,83 @@
 		# ai_importance = 400
 	# }	
 
-	# taungu_attack_hsipaw = {
-		# potential = {
-			# tag = TAU
-			# ai = yes
-			# NOT = { has_country_flag = declared_war_hsipaw }
-			# HSI = { exists = yes } 
-		# }	
-		# allow = {
-			# is_year = 1456
-			# is_at_war = no
-			# total_development = 85
-			# HSI = { exists = yes } 
-			# HSI = { ai = yes } 
-			# NOT = { truce_with = HSI }
-			# NOT = { overextension_percentage = 0.10 }
-		# }
-		# effect = {
-			# set_country_flag = declared_war_hsipaw
-			# HSI = {
-				# add_country_modifier = {
-					# name = "death_note_modifier"
-					# duration = 20
-				# }	
-			# }	
-			# declare_war_with_cb = {
-				# who = HSI
-				# casus_belli = cb_annex
-			# }	
-		# }
-		# ai_will_do = {
-			# factor = 1
-		# }
-		# ai_importance = 400
-	# }	
+	taungu_attack_hsipaw = {
+		potential = {
+			tag = TAU
+			ai = yes
+			NOT = { has_country_flag = declared_war_hsipaw }
+			HSI = { exists = yes } 
+		}	
+		allow = {
+			is_year = 1456
+			is_at_war = no
+			total_development = 85
+			HSI = { exists = yes } 
+			HSI = { ai = yes } 
+			NOT = { truce_with = HSI }
+			NOT = { overextension_percentage = 0.10 }
+		}
+		effect = {
+			set_country_flag = declared_war_hsipaw
+			HSI = {
+				add_country_modifier = {
+					name = "death_note_modifier"
+					duration = 20
+				}	
+			}	
+			declare_war_with_cb = {
+				who = HSI
+				casus_belli = cb_annex
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	daimyo_annex_shogun = {
+		potential = {
+			has_reform = daimyo
+			ai = yes
+			NOT = { has_global_flag = shogun_annex_war }
+			ASK = { exists = yes } 
+		}	
+		allow = {
+			is_year = 1485
+			is_at_war = no
+			total_development = 200
+			ASK = { ai = yes } 
+			NOT = { truce_with = ASK }
+			NOT = { overextension_percentage = 0.10 }
+		}
+		effect = {
+			set_global_flag = shogun_annex_war
+			1020 = {
+				add_core = ROOT
+			}	
+			declare_war_with_cb = {
+				who = ASK
+				casus_belli = cb_annex
+			}	
+			add_government_reform = indep_daimyo
+			add_country_modifier = {
+				name = "new_shogunate_pretender"
+				duration = 3650
+			}	
+			ASK = {
+				add_country_modifier = {
+					name = "authority_challenged_ask"
+					duration = 3650
+				}	
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}	
 
 
 	# establish_marine_corp = {
@@ -208,6 +236,6 @@
 		# }
 		# ai_importance = 400
 	# }
-#}	
+}	
 
 

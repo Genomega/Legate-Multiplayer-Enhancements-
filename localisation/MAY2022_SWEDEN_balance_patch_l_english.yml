@@ -21,10 +21,17 @@
  laxed_sect_practies: "Relaxed Laws on Sect Practices"
  laxed_sect_practies_desc: "While heretical, sect practice have been allowed limitedly throughout the nation. While this appeases the heretics and heathens throughout the state, more legalist figures are fiercely opposed." 
  
- tutor_heir_reform_power: "Request an Advisor tutor our heir"
- tutor_heir_reform_power_desc: ""
- recruit_sixty_tradition_general: "Recruit an Elite General"
+ tutor_heir_reform_power_title: "Request an Advisor tutor our heir"
+ tutor_heir_reform_power_desc: "With $HEIR$ now in $HEIR_ADJ$ early teens, it is time to begin the next phase of $HEIR_ADJ$ royal education. A trusted and competent advisor will need to be entrusted with continuing $HEIR$ final education years in a specific field."
+ recruit_sixty_tradition_general_title: "Recruit an Elite General"
  recruit_sixty_tradition_general_desc: "Send your Marshal to recruit an elite General. This action can only be taken once every 15 years."
+ 
+ supremacy_of_the_shogungate_title: "Supremacy of the Shogunate"
+ supremacy_of_the_shogungate_desc: "Following the tumultuous Sengoku Jidai, the [Root.GetAdjective] clan stands at the precipice of being the dominant power in Japan. Given the devastation wrought by the Sengoku Jidai, it is time the [Root.GetAdjective] clan takes the mantle of Shogun and usher in a new period of peace and tranquility. May the [Root.GetAdjective] Shogunate last for generations!"
+ restore_the_yamato_dynasty_title: "Restore the Yamato Dynasty"
+ restore_the_yamato_dynasty_desc: "The Sengoku Jidai has proven the Shoguns of old to be unwise and incapable of bringing stability to Japan. It is long past the time that the Yamato Dynasty be restored and the office of Shogun be completely dissolved. Let the Emperors of old guide Japan into a new era!"
+ 
+ 
  
  # Triggered Modifiers
  ai_ming_debuff: "Celestial Decadence"
@@ -62,6 +69,15 @@
  
  HAS_NOT_RECRUITED_GENERAL_15: "Has §RNOT§! recruited a general through this decision within the last 15 years"
  
+ RESTORED_YAMATO_OR_EDO: "Took the §YSupremacy of the Shogunate§! decision or restored the §YYamato§! dynasty to Japan!"
+ 
+ SHOGUNATE: "Shogunate"
+ 
+ disables_shogunate_tt: "Disables the §YSupremacy of the Shogunate§! decision!"
+ disables_yamato_tt: "Disables the §YRestore the Yamato Dynasty§! decision!"
+ french_info.1.tt: "France starts the game with a §OSubjugation Casus Belli§! against §YBrittany§! until December of 1469\nShould the §OBurgundian Succession§! fire, France will gain §Gcores§! on all Burgundian (And Burgundian subjects) provinces located in §YFrance region§!.\nThe English claim to the French throne exists in the form of §YGascony§! and the former Kingdom of Aquitaine. Completing the §YReconquer Gascony§! mission will §Rremove§! all existing Gascon cores and with it, the last vestiges of English claim to France.\nFurthermore, the §YReconquer Gascony§! mission also grants a §ORestoration of Union Casus Belli§! on §YProvence§! (and by extension Lorraine)."
+ lorraine_subject_note.tt: "If §YLorraine§! comes under Personal Union, we will recieve an event to manage our relations with them"
+ 
  # New Modifiers
  press_gangs_modifier: "Flotilla Ideas: Superior Seamanships"
  press_gangs_modifier_desc: ""
@@ -78,6 +94,7 @@
  tutored_heir: "Tutored Heir Recently"
  theocracy_marines_infantry_combat_ability: "Government Reform: Mission on the High Seas"
  theocracy_marines_infantry_combat_ability_desc: ""
+ settle_hokkaido_kurils: "Settling Hokkaido" 
 
  # Mechanics
  mechanic_may_request_heir_tuterlage_yes: "Unlocks a decision to have an advisor tutor the heir.\n§G+2§! Skill Advisors have a §Y20%§! chance of improving an heir's skill by §G+1§!.\n§G+3§! Skill Advisors and up have a §Y30%§! chance to improve an heir's skill by §G+1§!." 
@@ -122,6 +139,17 @@
   anjou_england.402.c: "In time they will learn to respect us"
   anjou_england.402.d: "Execute the major Clans, England will not suffer further Irish Rebellions!"
  
+ information_events.2.t: "The State of France"
+ information_events.2.d: "Following the signing of the treaty of Arras in 1435, France and Burgundy have known peace, with Charles VII being acknowledged as King by the Burgundians branch of Anjous. However, while there is a moment of peace between the French and English, war could break out again at any moment. While the Ducal vassals of France may answer the call to arms if war breaks out again, its best to begin centralization of France. The Dukes of Burgundy and Brittany however will need to be brought to heel as currently they only exist as subjects in name."
+ information_events.2.a: "The final years of the Hundred Years' war are upon us"
+ 
+ 
+  information_events.3.t: "Union of Lorraine"
+  information_events.3.d: "Following the unification between the French and Provencal thrones, France now also finds itself in Union with the County of Lorraine. Previously Lorraine existed in union with the former Duke of Provence by marriage, following the former Duchess inheriting Lorraine in 1431. Given Lorraine is considered Imperial land of the Holy Roman empire, we should think carefully about how we manage this inheritance."
+  information_events.3.a: "Lorraine shall be reinstated as a independent county in the empire"
+  information_events.3.b: "Appoint a Lorraine noble and transition Lorraine into a Ducal vassal"
+  information_events.3.c: "We shall respect the former Duke of Provence, Lorraine will remain a junior partner"
+  
  
  # War Names
  HEGEMON_COALITION_WAR: "War of the $ORDER$Coalition"
@@ -132,18 +160,22 @@
  welsh_princedom: "Welsh Principality"
  welsh_princedom_desc: ""
  legate_heir_tuteladge: "Tutelage of the Heir"
- legate_heir_tuteladge_desc: ""
+ legate_heir_tuteladge_desc: "One great Ruler legacy should not be diminished by a line of incompetent successors. Let's ensure that the children of the Monarch are well educated in all manners of zrulership. As one day, a time will come when they must take the throne."
  legate_ties_to_the_guilds: "Ties to the Guilds"
- legate_ties_to_the_guilds_desc: ""
+ legate_ties_to_the_guilds_desc: "The various merchant guilds throughout the nation have strong ties to commerce throughout the continent. We should strive to have a close relationship with these guilds to protect our trade interests at home."
  legate_marshal_of_war: "Marshal of War"
- legate_marshal_of_war_desc: ""
+ legate_marshal_of_war_desc: "There will come a time when war will be at our doorsteps, as such we should create the office of the Marshal of War. During peacetime the Marshal will be charged with keeping the quality of our troops up while also ensuring there are competent generals to lead them into battle."
  legate_connections_clergy: "Clerical Connections"
- legate_connections_clergy_desc: ""
+ legate_connections_clergy_desc: "While the Monarch rules the state, the clergy possess considerable influence. For many, the church offers a pathway to salvation, and as such the clergy holds great sway over the peasantry of the state. A close alliance with the clergy will also guarantee the loyalty of the major religious leaders throughout the nation."
  legate_crown_authority: "Authority of the Crown"
- legate_crown_authority_desc: ""
+ legate_crown_authority_desc: "The Monarch sits upon the top of the Feudal structure, as such all below must respect the authority of the crown. By reinforcing the Monarch as the head of state, subjects will think twice before aspiring rebellious sentiments. "
  legate_imperial_diplomacy: "Imperial Diplomacy"
- legate_imperial_diplomacy_desc: ""
+ legate_imperial_diplomacy_desc: "The Holy Roman empire at its core is a decentralized entity comprising hundreds of political states. While the Emperor has always protected the Imperial free cities, the lesser princes and counties throughout the empire are more susceptible to being brought to heel. Through dutiful acts of Diplomacy with the Emperor and the various electorate states, we may be able to carve out a sizable realm."
  
+ edo_shogunate: "Edo Shogunate"
+ edo_shogunate_desc: "Founded by Tokugawa Ieyasu in 1603, the Edo Shogunate would see Japan enter a period of isolation and reconsolidation along with perpetual peace. The Shogun also held supreme authority over Japan during this time, challenging the authority of even the Yamato Emperors."
+ yamato_monarchy: "Yamato Monarchy"
+ yamato_monarchy_desc: "Having crushed the Authority of the Shoguns, the Yamato dynasty has once again been restored as the rightful rulers of Japan. The Yamato are believed to be direct descendants of the Sun Goddess Amaterasu."
  
  
  
@@ -158,3 +190,88 @@
  napoleonic_hegemon_war_title: "Declare Coalition War"
  napoleonic_hegemon_war_tooltip: "Declares the Coalition War against §Y[From.GetName]§! with the §YContain Hegemon§! Casus Belli!"
  napoleonic_hegemon_war_desc: "Declare war on §Y[From.GetName]§! with the §YContain Hegemon§! Casus Belli. §RAll members of the Coalition will be dragged into this war§!. \nFighting while using the Contain Hegemony Casus Belli will make Provinces and Aggressive Expansion §G50%§! cheaper. \n \n§YThis Casus Belli also functions as a Show Superiority Wargoal, with Battles contributing a large chunk to Warscore.§!"
+ 
+ 
+ # Countries Renames
+ ## Shoguns
+  SOO_shogunate: "So Shogunate"
+  SOO_shogunate_ADJ: "So"
+  AMA_shogunate: "Amago Shogunate"
+  AMA_shogunate_ADJ: "Amago"
+  ASA_shogunate: "Asakura Shogunate"
+  ASA_shogunate_ADJ: "Asakura" 
+  CSK_shogunate: "Chosokabe Shogunate"
+  CSK_shogunate_ADJ: "Chosokabe"  
+  DTE_shogunate: "Date Shogunate"
+  DTE_shogunate_ADJ: "Date" 
+  HJO_shogunate: "Hojo Shogunate"
+  HJO_shogunate_ADJ: "Hojo"     
+  HSK_shogunate: "Hosokawa Shogunate"
+  HSK_shogunate_ADJ: "Hosokawa"     
+  HTK_shogunate: "Hatakeyama Shogunate"
+  HTK_shogunate_ADJ: "Hatakeyama"    
+  IKE_shogunate: "Ikeda Shogunate"
+  IKE_shogunate_ADJ: "Ikeda" 
+  IMG_shogunate: "Imagawa Shogunate"
+  IMG_shogunate_ADJ: "Imagawa"   
+  MAE_shogunate: "Maeda Shogunate"
+  MAE_shogunate_ADJ: "Maeda"  
+  MRI_shogunate: "Mori Shogunate"
+  MRI_shogunate_ADJ: "Mori"    
+  
+  ODA_shogunate: "Oda Shogunate"
+  ODA_shogunate_ADJ: "Oda"
+  OTM_shogunate: "Otomo Shogunate"
+  OTM_shogunate_ADJ: "Otomo"
+  OUC_shogunate: "Ouchi Shogunate"
+  OUC_shogunate_ADJ: "Ouchi" 
+  SNA_shogunate: "Shiba Shogunate"
+  SBA_shogunate_ADJ: "Shiba"  
+  SMZ_shogunate: "Shimazu Shogunate"
+  SMZ_shogunate_ADJ: "Shimazu" 
+  TKD_shogunate: "Takeda Shogunate"
+  TKD_shogunate_ADJ: "Takeda"     
+  TKG_shogunate: "Tokugawa Shogunate"
+  TKG_shogunate_ADJ: "Tokugawa"     
+  UES_shogunate: "Uesugi Shogunate"
+  UES_shogunate_ADJ: "Uesugi"    
+  YMN_shogunate: "Yamana Shogunate"
+  YMN_shogunate_ADJ: "Yamana" 
+  RFR_shogunate: "Nanbu Shogunate"
+  RFR_shogunate_ADJ: "Nanbu"   
+  ASK_shogunate: "Ashikaga Shogunate"
+  ASK_shogunate_ADJ: "Ashikaga"  
+  KTB_shogunate: "Kitabatake Shogunate"
+  KTB_shogunate_ADJ: "Kitabatake"     
+  
+  AKM_shogunate: "Akamatsu Shogunate"
+  AKM_shogunate_ADJ: "Akamatsu"
+  AKT_shogunate: "Ando Shogunate"
+  AKT_shogunate_ADJ: "Ando"
+  CBA_shogunate: "Chiba Shogunate"
+  CBA_shogunate_ADJ: "Chiba" 
+  ISK_shogunate: "Isshiki Shogunate"
+  ISK_shogunate_ADJ: "Isshiki"  
+  ITO_shogunate: "Ito Shogunate"
+  ITO_shogunate_ADJ: "Ito" 
+  KKC_shogunate: "Kikuchi Shogunate"
+  KKC_shogunate_ADJ: "Kikuchi"     
+  KNO_shogunate: "Kono Shogunate"
+  KNO_shogunate_ADJ: "Kono"     
+  OGS_shogunate: "Ogasawara Shogunate"
+  OGS_shogunate_ADJ: "Ogasawara"    
+  SHN_shogunate: "Shoni Shogunate"
+  SHN_shogunate_ADJ: "Shoni" 
+  STK_shogunate: "Satake Shogunate"
+  STK_shogunate_ADJ: "Satake"   
+  TKI_shogunate: "Toki Shogunate"
+  TKI_shogunate_ADJ: "Toki"  
+  UTN_shogunate: "Utsunomiya Shogunate"
+  UTN_shogunate_ADJ: "Utsunomiya"  
+  
+  TTI_shogunate: "Tsutsui Shogunate"
+  TTI_shogunate_ADJ: "Tsutsui"  
+  RYU_shogunate: "Ryukyuan Shogunate"
+  RYU_shogunate_ADJ: "Ryukyuan"   
+  X47_shogunate: "Honma Shogunate"
+  X47_shogunate_ADJ: "Honma"    

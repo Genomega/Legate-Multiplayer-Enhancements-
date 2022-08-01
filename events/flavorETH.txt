@@ -1533,7 +1533,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 0
+			factor = 50
 		}
 	}
 	
@@ -1605,7 +1605,7 @@ country_event = {
 		add_splendor = 150
 		change_religion = jewish
 		ai_chance = {
-			factor = 100
+			factor = 50
 		}
 	}		
 	

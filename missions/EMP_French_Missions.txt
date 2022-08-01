@@ -30,6 +30,12 @@ emp_france_missions_1 = {
 		}
 		effect = {
 			add_dip_power = 50
+			BRI = {
+				remove_opinion = {
+					who = FRA
+					modifier = they_force_vassalized_us
+				}
+			}	
 		}
 		ai_priority = {
 			factor = 100
@@ -1085,6 +1091,9 @@ emp_france_missions_3 = {
 			}
 		}
 		trigger = {
+			GUY = {
+				exists = no
+			}	
 			174 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1106,7 +1115,10 @@ emp_france_missions_3 = {
 					months = 300
 					target = PRO
 				}
-			}		
+			}	
+			france_region = {
+				remove_core = GUY
+			}			
 			provence_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1120,7 +1132,7 @@ emp_france_missions_3 = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
+			}			
 		}
 		ai_priority = {
 			factor = 100
@@ -1156,6 +1168,17 @@ emp_france_missions_3 = {
 			}
 		}
 		effect = {
+			custom_tooltip = lorraine_subject_note.tt
+			if = {
+				limit = {
+					exists = LOR
+					LOR = {
+						junior_union_with = FRA
+					}	
+					#senior_union_with = FRA
+				}
+				country_event = { id = information_events.3 }
+			}	
 			bourgogne_area = {
 				limit = {
 					NOT = { is_core = ROOT }

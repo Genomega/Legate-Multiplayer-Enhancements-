@@ -9259,14 +9259,14 @@ estate_brahmins_religious_diplomats = {
 }
 estate_church_one_faith_one_culture = {
 	icon = privilege_one_faith_one_culture
-	max_absolutism = -5
-	influence = 0.2
+	max_absolutism = 5
+	influence = 0.1
 	loyalty = 0.1
-	land_share = 5
 	is_valid = {
 		NOT = { religion = confucianism }
 	}
 	can_select = {
+		full_idea_group = religious_ideas
 	}
 	on_granted = {
 		custom_tooltip = estate_church_one_faith_one_culture_gta
@@ -9365,7 +9365,8 @@ estate_church_one_faith_one_culture = {
 		dhimmi_loyalty_modifier = -0.50
 	}
 	benefits = {
-		global_missionary_strength = 0.01
+		global_missionary_strength = 0.015
+		missionaries = 1
 	}
 	cooldown_years = 15
 	ai_will_do = {
